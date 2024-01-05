@@ -185,7 +185,7 @@ $('.sidebar-search').on('keyup keypress', function (e) {
             $(this).closest('.dropdown-content').hide();
 			
 			// Save selected value to local storage
-			localStorage.setItem('version', version);
+			sessionStorage.setItem('version', version);
 			
 			// Load the selected version
 			var url = window.location.href;
@@ -269,6 +269,9 @@ $(document).ready(function () {
 		setLink(value);
 		$(".docs-tooltip").html("Open " + value + " docs");
 		$('.tabbed-label:contains("' + value + '")').prev().prop('checked', true);
+	}
+	if ("version" in sessionStorage) {
+		$('#version button').html(sessionStorage.version);
 	}
 });
 

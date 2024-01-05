@@ -261,7 +261,7 @@ article {
   content: '';
   height: 5px;
   transform: rotate(135deg);
-  margin-top: 7px;
+  margin-top: 6px;
   margin-left:5px;
   float: right;
 }
