@@ -190,12 +190,12 @@ $('.sidebar-search').on('keyup keypress', function (e) {
 			// Load the selected version
 			var url = window.location.href;
 			if (url.indexOf('4.1') > 0 || url.indexOf('3.x') >= 0) {
-				url = url.split("docs/" )[1].slice(4);
-			} else url = url.split("docs/")[1];
+				url = url.split("docs/" )[1].slice(3);
+			} else {url = url.split("docs")[1]};
 			if (version === '4.2') {
-				let newUrl = window.location.protocol + "//" + window.location.host +  "/docs/" + url;
+				newUrl = window.location.protocol + "//" + window.location.host +  "/docs" + url;
 			  } else {
-				let newUrl = window.location.protocol + "//" + window.location.host +  "/docs/" + version + "/" + url;
+				newUrl = window.location.protocol + "//" + window.location.host +  "/docs/" + version + url;
 			  }
 		    window.location.href = newUrl;
         });
