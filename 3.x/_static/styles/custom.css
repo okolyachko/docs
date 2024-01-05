@@ -53,7 +53,7 @@ p {
 }
 
 .page {
-	margin-top: 60px !important;
+	margin-top: 120px !important;
 }
 
 a {
@@ -260,11 +260,12 @@ article {
   width: 5px;
   content: '';
   height: 5px;
-  transform: rotate(135deg);
-  margin-top: 6px;
-  margin-left:5px;
+  transform: rotate(225deg);
+  margin-top: 5px;
+  margin-left:8px;
   float: right;
 }
+
 
 .goto {
 	display: none;
@@ -352,6 +353,22 @@ article {
 .dropdown-content a:hover {background-color: #f6f6f6}
 
 .show {display:block;}
+
+/* Version bar */
+
+.version-note {
+    text-align: center;
+    margin: 0px !important;
+    line-height: 50px;
+}
+
+.version-note p {
+	margin-left: auto;
+    margin-right: auto;
+    background-color: #F4F6FF;
+    height: 50px;
+	margin: 0px !important;
+}
 
 
 /* Fixing anchors */
