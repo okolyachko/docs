@@ -1,0 +1,7 @@
+.. code-block:: objective-c
+   :caption: Client app
+
+   /// Deactivating the Alan AI button programmatically
+   - (void)deactivate {
+     [self.button deactivate];
+   }

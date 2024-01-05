@@ -1,0 +1,8 @@
+.. code-block:: swift
+   :caption: Client app
+
+   /// Sending any text message
+   func sendText() {
+     /// Providing text as string param
+     self.button.sendText("Hello Alan, can you help me?")
+   }

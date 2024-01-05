@@ -1,0 +1,443 @@
+Alan AI React Native Framework
+==============================
+
+**Available on**: :badge:`Android,badge-danger` :badge:`iOS,badge-danger`
+
+Integrating with Alan AI
+------------------------
+
+To integrate a React Native app with Alan AI, you need to do the following:
+
+1. `Set up the environment <#step-1-set-up-the-environment>`__
+2. `Install the Alan AI React Native plugin <#step-2-install-the-alan-ai-react-native-plugin>`__
+3. `Add the Alan AI button to the app <#step-3-add-the-alan-ai-button-to-the-app>`__
+4. `Run the app on iOS <#running-the-app-on-ios>`__ or `run the app on Android <#running-the-app-on-android>`__ or `use the debug mode <#running-the-app-in-the-debug-mode>`__
+
+Step 1. Set up the environment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Before you start integrating a React Native app with Alan AI, make sure all necessary tools are installed on your computer.
+
+-  Install ``react-native-cli`` globally:
+
+   .. code-block::
+      :caption: Terminal
+   
+      npm install -g react-native-cli
+
+-  (For iOS) Install CocoaPods to manage dependencies for Xcode projects:
+
+   .. code-block::
+      :caption: Terminal
+
+      sudo gem install cocoapods
+
+Step 2. Install the Alan AI React Native plugin
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To add the Alan AI React Native plugin to your app:
+
+1. Navigate to the app folder:
+
+   .. code-block::
+      :caption: Terminal
+
+      cd myapp
+
+2. Install the plugin:
+
+   .. code-block::
+      :caption: Terminal
+
+      npm i @alan-ai/alan-sdk-react-native --save
+
+
+Step 3. Add the Alan AI button to the app
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Once the plugin is installed, you need to add the Alan AI button to your React Native app.
+
+1. Add the Alan AI button and Alan AI text panel to the app. In the app folder, open ``App.js`` and add the following import statement at the top of the file:
+
+   .. code-block:: typescript
+      :caption: App.js
+
+      import { AlanView } from '@alan-ai/alan-sdk-react-native';
+
+2. In the ``App.js`` file, add a view with the Alan AI button and Alan AI text panel:
+
+   .. code-block:: typescript
+      :caption: App.js
+
+      return (
+        <AlanView
+          projectid={
+            ''
+          }
+        />
+      );
+
+3. In ``projectID``, specify the Alan AI SDK key for your Alan AI Studio project. To get the key, in Alan AI Studio, at the top of the code editor, click **Integrations** and copy the value from the **Alan SDK Key** field.
+
+   .. code-block:: typescript
+      :caption: App.js
+
+      return (
+        <AlanView
+          projectid={
+            'cc2b0aa23e5f90d2974f1bf6b6929c1b2e956eca572e1d8b807a3e2338fdd0dc/prod'
+          }
+        />
+      );
+
+4. You need to add a listener for events that will be coming from the dialog script. To start listening for events, in ``App.js``, add the following import statement:
+
+   .. code-block:: typescript
+      :caption: App.js
+       
+      import { NativeEventEmitter, NativeModules } from 'react-native';
+
+5. In ``App.js``, create a new ``NativeEventEmitter`` object:
+
+   .. code-block:: typescript
+      :caption: App.js
+
+      const { AlanManager, AlanEventEmitter } = NativeModules;
+      const alanEventEmitter = new NativeEventEmitter(AlanEventEmitter);
+
+6. And subscribe to the dialog script events:
+
+   .. code-block:: typescript
+      :caption: App.js
+   
+      const subscription = alanEventEmitter.addListener('command', (data) => {
+        console.log(`got command event ${JSON.stringify(data)}`);
+      });
+
+7. Do not forget to remove the listener in your ``App()`` class:
+
+   .. code-block:: typescript
+      :caption: App.js
+
+      componentWillUnmount() {
+        subscription.remove();
+      }
+	   
+.. note::
+
+	  
+   Regularly update the Alan AI package your project depends on. To check if a newer version is available, run ``npm outdated``. To update the package, run ``npm update @alan-ai/alan-sdk-react-native``. For more details, see `npm documentation <https://docs.npmjs.com/updating-packages-downloaded-from-the-registry>`__.
+   
+
+Running the app
+---------------
+
+After you have integrated your app with Alan AI, you can build and deploy your project as a native iOS or Android app.
+
+Running on iOS
+~~~~~~~~~~~~~~
+
+To run your app integrated with Alan AI on the iOS platform, you need to update the app settings for iOS.
+
+1. In the Terminal, navigate to the ``ios`` folder in your app:
+
+   .. code-block::
+      :caption: Terminal
+
+      cd ios
+
+2. In the ``ios`` folder, open the Podfile and change the minimum iOS version to 11:
+
+   .. code-block:: ruby
+      :caption: Podfile
+
+      platform :ios, '11.0'
+
+3. In the Terminal, run the following command to install dependencies for the project:
+
+   .. code-block::
+      :caption: Terminal
+
+      pod install
+
+4. In the ``ios`` folder, open the generated XCode workspace file: ``<appname>.xcworkspace``. You should use this file to open your Xcode project from now on.
+
+5. In iOS, the user must explicitly grant permission for an app to `access the user's data and resources <https://developer.apple.com/documentation/bundleresources/information_property_list/protected_resources>`__. An app with the Alan AI button requires access to:
+
+   - User's device microphone for voice interactions
+   - User's device camera for testing Alan AI projects on mobile
+
+   To comply with this requirement, you must add ``NSMicrophoneUsageDescription`` and ``NSCameraUsageDescription`` keys to the ``Info.plist`` file of your app and provide a message why your app requires access to the microphone and camera. The message will be displayed only when Alan AI needs to activate the microphone or camera.
+   
+
+   To add the keys:
+
+   a. In Xcode, go to the **Info** tab.
+
+   b. In the **Custom iOS Target Properties** section, hover over any key in the list and click the plus icon to the right.
+
+   c. From the list, select **Privacy - Microphone Usage Description**.
+
+   d. In the **Value** field to the right, provide a description for the added key. This description will be displayed to the user when the app is launched.
+
+   e. Repeat the steps above to add the **Privacy - Camera Usage Description** key.
+
+   .. image:: /_static/assets/img/ios-quickstart-objc/pods-mic.png
+      
+6. In the Terminal, navigate to the app folder, up one folder level:
+
+   .. code-block::
+      :caption: Terminal
+
+      cd ..
+
+7. To run your app on the iOS platform, use one of the following command:
+
+   .. code-block::
+      :caption: Terminal
+
+      react-native run-ios
+      yarn ios
+     
+
+You can also open the ``<appname>.xcworkspace`` file in XCode and test drive the app on the simulator or device.
+
+Running on Android
+~~~~~~~~~~~~~~~~~~
+
+To run your React Native app integrated with Alan AI on the Android platform:
+
+1. Make sure the correct minimum SDK version is set for your app: ``minSdkVersion 21``. To check the version, open the
+   ``/android/app/build.gradle`` file, under ``defaultConfig``, locate ``minSdkVersion`` and update its value if necessary.
+
+2. To run your app on the Android platform, use one of the following command:
+
+   .. code-block::
+      :caption: Terminal
+
+      react-native run-android
+      yarn android
+       
+
+You can also launch the app from the Android Studio: open ``<app>/android`` in the IDE and run the app in a usual way.
+
+Running in the Debug mode
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can run your app on iOS or Android in the debug mode. The debug mode allows you to hot reload the app on the device or simulator as soon as you update anything in the app.
+
+To run the app in the debug mode, make sure the Metro bundler is started. To start the Metro bundler, in the Terminal, run the following command:
+
+.. code-block::
+   :caption: Terminal
+
+   react-native start
+
+The Terminal window with the Metro bundler will be launched. You can then run your app as usual with the following commands:
+
+-  For iOS: 
+
+   .. code-block::
+      :caption: Terminal
+   
+      react-native run-ios
+      yarn ios
+	   
+-  For Android: 
+
+   .. code-block::
+      :caption: Terminal
+       
+      react-native run-android
+      yarn android
+
+.. note::
+
+   After integration, you may get a warning related to the ``onButton`` state. You can safely ignore it: the warning will be removed as soon as you add the :doc:`onCommand handler <../../client-api/methods/command-handler>` to your app. 
+   
+   
+Specifying the Alan AI button parameters
+----------------------------------------
+
+You can specify the following parameters for the Alan AI button added to your app:
+
++--------------------------------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Name**                             | **Type**      | **Description**                                                                                                                                     |
++======================================+===============+=====================================================================================================================================================+
+| ``projectid``                        | string        | The Alan AI SDK key for a project in Alan AI Studio.                                                                                                |
++--------------------------------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``authData``                         | JSON object   | The authentication or configuration data to be sent to the dialog script. For details, see :doc:`authData <../../server-api/sending-data/authdata>`.|
++--------------------------------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Using client API methods
+------------------------
+
+You can use the following :doc:`client API methods <../methods/common-api>` in your app:
+
+-  `setVisualState()`_
+-  `callProjectApi()`_
+-  `playText()`_
+-  `sendText()`_
+-  `playCommand()`_
+-  `activate()`_
+-  `deactivate()`_
+-  `isActive()`_
+-  `getWakewordEnabled()`_
+-  `setWakewordEnabled()`_
+
+setVisualState()
+~~~~~~~~~~~~~~~~
+
+Use the ``setVisualState()`` method to inform the AI assistant about the app’s visual context. For details, see :ref:`setVisualState() <setVisualState()>`.
+
+.. include:: ../snippets/visual-state-rn.rst
+   
+callProjectApi()
+~~~~~~~~~~~~~~~~
+
+Use the ``callProjectApi()`` method to send data from the client app to the dialog script and trigger activities without voice and text commands. For details, see :ref:`callProjectApi() <callProjectApi()>`.
+
+.. code-block:: alan
+   :caption: Dialog script
+
+   projectAPI.setClientData = function(p, param, callback) {
+     console.log(param);
+   };
+
+.. include:: ../snippets/project-api-rn.rst
+   
+playText()
+~~~~~~~~~~
+
+Use the ``playText()`` method to play specific text in the client app. For details, see :ref:`playText() <playText()>`.
+
+.. include:: ../snippets/playtext-rn.rst
+
+
+sendText()
+~~~~~~~~~~
+
+Use the ``sendText()`` method to send a text message to Alan AI as the user's input. For details, see :ref:`sendText() <sendText()>`.
+
+.. include:: ../snippets/sendtext-rn.rst
+   
+playCommand()
+~~~~~~~~~~~~~
+
+Use the ``playCommand()`` method to execute a specific command in the client app. For details, see :ref:`playCommand() <playCommand()>`.
+
+.. include:: ../snippets/playcommand-rn.rst
+   
+   
+activate()
+~~~~~~~~~~
+
+Use the ``activate()`` method to activate the Alan AI button programmatically. For details, see :ref:`activate() <activate()>`.
+
+.. include:: ../snippets/activate-rn.rst
+   
+deactivate()
+~~~~~~~~~~~~
+
+Use the ``deactivate()`` method to deactivate the Alan AI button programmatically. For details, see :ref:`deactivate() <deactivate()>`.
+
+.. include:: ../snippets/deactivate-rn.rst
+   
+isActive()
+~~~~~~~~~~
+
+Use the ``isActive()`` method to check the Alan AI button state: active or not. For details, see :ref:`isActive() <isActive()>`.
+
+.. include:: ../snippets/isactive-rn.rst
+   
+   
+getWakewordEnabled()
+~~~~~~~~~~~~~~~~~~~~
+
+Use the ``getWakewordEnabled()`` method to check the state of the wake word for the Alan AI button. For details, see :ref:`getWakewordEnabled() <getWakewordEnabled()>`.
+
+.. include:: ../snippets/getwakeword-rn.rst 
+   
+setWakewordEnabled()
+~~~~~~~~~~~~~~~~~~~~
+
+Use the ``setWakewordEnabled()`` method to enable or disable the wake word for the Alan AI button. For details, see :ref:`setWakewordEnabled() <setWakewordEnabled()>`.
+
+.. include:: ../snippets/setwakeword-rn.rst
+
+Using handlers
+--------------
+
+You can use the following :doc:`Alan AI handlers <../methods/handlers>` in your app:
+
+-  `onCommand handler`_
+-  `onButtonState handler`_
+-  `onEvent handler`_
+
+onCommand handler
+~~~~~~~~~~~~~~~~~
+
+Use the ``onCommand`` handler to :ref:`handle commands sent from the dialog script <Sending commands to the app>`. For details, see :doc:`onCommand handler <../methods/command-handler>`.
+
+.. include:: ../snippets/command-handler-rn.rst
+
+onButtonState handler
+~~~~~~~~~~~~~~~~~~~~~
+
+Use the ``onButtonState`` handler to capture and handle the Alan AI button state changes. For details, see :doc:`onButtonState handler <../methods/state-handler>`.
+
+.. include:: ../snippets/state-handler-rn.rst
+
+onEvent handler
+~~~~~~~~~~~~~~~
+
+Use the ``onEvent`` handler to capture and handle events emitted by Alan AI: get user's utterances, assistant responses and so on. For details, see :doc:`onEvent handler <../methods/event-handler>`.
+
+.. include:: ../snippets/event-handler-rn.rst
+
+Troubleshooting
+---------------
+
+- If you encounter the following error: ``Execution failed for task ':app:mergeDebugNativeLibs'`` for files like: ``lib/arm64-v8a/libc++_shared.so``, ``lib/x86/libc++_shared.so``, ``lib/x86_64/libc++_shared.so``, ``lib/armeabi-v7a/libc++_shared.so``,  open the ``build.gradle`` file at the ``Module`` level and add packaging options:
+
+  .. code-block::
+     :caption: build.gradle (module level)
+   
+     android {
+       packagingOptions {
+         pickFirst 'lib/arm64-v8a/libc++_shared.so'
+         pickFirst 'lib/x86/libc++_shared.so'
+         pickFirst 'lib/x86_64/libc++_shared.so'
+         pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+       }
+     } 
+
+- If you encounter the following error: ``Execution failed for task ':alan-ai_alan-sdk-react-native:verifyReleaseResources'``, make sure your environment satisfies all conditions described in `Setting up the development environment <https://reactnative.dev/docs/environment-setup>`__ in React Native documentation.
+
+- The minimum possible Android SDK version required by the Alan AI SDK is 21. If the version in your project is lower, you may encounter the following error: ``AndroidManifest.xml Error: uses-sdk:minSdkVersion 16 cannot be smaller than version 21 declared in library [:alan_voice]``. Open the ``app/android/build.gradle`` file, under ``defaultConfig``, locate ``minSdkVersion`` and change the version to 21.
+
+What's next?
+------------
+
+.. panels::
+   :column: col-lg-12 col-md-12 col-sm-12 col-xs-12 p-2
+   
+   ---
+   :card: border-0 + custom-style-blue
+   
+   .. image:: /_static/assets/img/about/git-purple.svg
+   
+   .. raw:: html
+	 
+	  <p style="font-size: 20px; font-weight: 700;">Example apps</p>
+	  <p>Find and explore examples of voice-enabled apps on the <a href="https://github.com/alan-ai" target="_blank">Alan AI GitHub repository.</p>
+	  
+   .. link-button:: https://github.com/alan-ai/alan-sdk-reactnative/tree/master/examples
+        :type: url
+        :text: View on GitHub
+        :classes: btn-outline-primary
+
+
+.. raw:: html
+
+   <div id="purple-background"></div>

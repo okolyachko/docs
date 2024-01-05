@@ -1,0 +1,41 @@
+Multimodal conversations design guide
+=====================================
+
+To craft an intelligent multimodal interface with Alan AI, it is essential to understand the Alan AI Platform principles and toolkit. By using Alan AI's dialog script concepts and Alan AI SDK, you can create an AI assistant that will recognize what your customers intend to do and fulfill their requests.  
+
+However, capturing the user’s input and providing the output is only a part of the conversational design. To let your AI assistant be effective, engaging and sound natural, you must adapt it to customer expectations, human behavior and speech specifics. 
+
+This section provides you with voice user interface design best practices, covering important aspects at each step of the development process. Read it through or click a block in the picture below to refer to the area of your interest. 
+
+.. raw:: html
+   
+   <p><img src="../../../../_static/assets/img/about/guidelines-scheme.png"/ style="border:0px" usemap="#scheme"></p>
+
+   <map name="scheme">
+	   <area alt="Plan and draft" title="Plan & draft" href="../planning" coords="0,0,135,500" shape="rect">
+	   <area alt="Build the dialog flow" title="Build the dialog" href="../building" coords="140,0,265,500" shape="rect">
+	   <area alt="Test the dialog" title="Test the dialog" href="../testing" coords="270,0,450,500" shape="rect">
+	   <area alt="Roll it out" title="Roll it out" href="../publishing" coords="430,0,600,500" shape="rect">
+	   <area alt="Analyze and plan for new release" title="Analyze & plan for new release" href="../analyzing" coords="600,0,730,500" shape="rect">
+	</map>
+	
+.. link-button:: planning
+     :type: ref
+     :text: Start reading
+     :classes: btn-outline-primary
+
+.. raw:: html
+
+   <div id="orange-background"></div>
+   <div id="wide-content"></div>
+
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+   
+   Planning and drafting<planning>
+   Building the dialog<building>
+   Testing<testing>
+   Preparing for rollout and releasing<publishing>
+   Analyzing users' behavior<analyzing>
+   

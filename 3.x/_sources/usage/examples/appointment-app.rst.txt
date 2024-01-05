@@ -1,0 +1,35 @@
+Appointment scheduling app (React)
+==================================
+
+.. image:: /_static/assets/img/about/appointment-app.png
+
+App demo
+--------
+
+The Appointment scheduling app is live: you can `play with a demo app <https://appointment-demo.alan.app/>`__.
+
+App source code
+---------------
+
+The app source code is available on `Alan AI GitHub <https://github.com/alan-ai/alan-sdk-web/tree/master/examples/alan-example-integeration-react-appointment>`__. To use the code example:
+
+1. Clone the repository to your computer.
+2. Navigate to the ``appointment-frontend`` folder.
+3. In the ``appointment-frontend`` root folder, rename the ``.env-example`` file to the ``.env`` file.
+4. Replace the ``REACT_APP_ALAN_KEY`` value with your Alan AI SDK key in following format: ``KEY=VALUE``.
+5. Run ``npm run build``.
+6. Navigate to the ``appointment-backend`` folder.
+7. In ``appointment-backend`` folder, rename the ``.env-example`` file to the ``.env`` file.
+8. Replace the ``MONGO_URL`` value with your Alan AI Studio key in following format: ``KEY=VALUE``.
+
+Where to find the code?
+-----------------------
+
+To understand how the AI assistant works, refer to the following files:
+
+- ``appointment-frontend/src/mainComponents/alanContainer.js``: here you can find the code for the Alan AI button component added to the app. 
+- ``scripts/Appointment.js``: here you can find the dialog script for the Appointment scheduling app. 
+   
+.. raw:: html
+
+   <div id="orange-background"></div>

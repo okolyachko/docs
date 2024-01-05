@@ -1,0 +1,8 @@
+.. code-block:: typescript
+   :caption: Client app
+
+   const alanBtnComponent = useRef<any>(null);
+
+   alanBtnComponent.current.callProjectApi("myFunc", {myData: 123}, function (error, result) {
+     console.log("cb from myFunc was received", error, result);
+   });

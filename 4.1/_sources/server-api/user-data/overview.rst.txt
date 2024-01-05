@@ -1,0 +1,40 @@
+User data
+=========
+
+While writing dialog scripts, you can use the following tools to make the dialog with the user specific:
+
+.. panels::
+   :column: col-lg-12 col-md-12 col-sm-12 col-xs-12 p-2
+
+   ---
+   :card: border-0 + custom-style-list
+   
+   .. link-button:: events
+      :type: ref
+      :text: User events
+      :classes: stretched-link panel
+	  
+   Learn how to listen to events driven by the user's interaction with the AI assistant
+   
+   ---
+   :card: border-0 + custom-style-list
+   
+   .. link-button:: client-object
+      :type: ref
+      :text: Client object
+      :classes: stretched-link panel
+	  
+   Learn how to get general information about the user
+
+.. raw:: html
+
+   <div id="green-background"></div>
+   <div id="wide-content"></div>
+
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+   
+   User events<events>
+   Client object<client-object> 
+

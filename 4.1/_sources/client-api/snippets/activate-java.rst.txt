@@ -1,0 +1,7 @@
+.. code-block:: java
+   :caption: Client app
+
+   /// Activating the Alan AI button programmatically
+   void activate() {
+     alanButton.activate();
+   }

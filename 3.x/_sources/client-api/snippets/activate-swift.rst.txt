@@ -1,0 +1,7 @@
+.. code-block:: swift
+   :caption: Client app
+
+   /// Activating the Alan AI button programmatically
+   func activate() {
+     self.button.activate()
+   }

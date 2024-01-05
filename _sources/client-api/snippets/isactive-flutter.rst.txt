@@ -1,0 +1,11 @@
+.. code-block:: dart
+   :caption: Client app
+
+   void _checkIsActive() async {
+     var isActive = await AlanVoice.isActive();
+     if (isActive) {
+       _showDialog("Active");
+     } else {
+       _showDialog("NOT active");
+     }
+   }

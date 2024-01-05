@@ -1,0 +1,19 @@
+.. code-block:: java
+   :caption: Client app
+
+   AlanCallback alanCallback = new AlanCallback() {
+     /// Handle commands from Alan AI Studio
+     @Override
+     public void onCommand(final EventCommand eventCommand) {
+       try {
+         JSONObject command = eventCommand.getData();
+         String commandName = command.getJSONObject("data").getString("command");
+         Log.d("AlanButton", "onCommand: commandName: " + commandName);
+       } catch (JSONException e) {
+         Log.e("AlanButton", e.getMessage());
+       }
+     }
+   };
+		
+   /// Register callbacks
+   alanButton.registerCallback(alanCallback);

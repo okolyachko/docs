@@ -1,0 +1,9 @@
+.. code-block:: dart
+   :caption: Client app
+
+   _MyHomePageState() {	  
+     /// Handle button state
+     AlanVoice.onButtonState.add((state) {
+       debugPrint("got new button state ${state.name}");
+     });
+   }

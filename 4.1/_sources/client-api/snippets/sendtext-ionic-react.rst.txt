@@ -1,0 +1,6 @@
+.. code-block:: typescript
+   :caption: Client app
+
+   const alanBtnComponent = useRef<any>(null);
+
+   alanBtnComponent.current.sendText("Hello, Alan, can you help me?");

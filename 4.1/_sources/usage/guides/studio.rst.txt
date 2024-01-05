@@ -1,0 +1,21 @@
+Alan AI Studio
+==============
+
+With Alan AI’s powerful web-based IDE, you can write, test and debug dialog scenarios for your AI assistants.
+
+.. raw:: html
+
+   <div id="blue-background"></div>
+   <div id="wide-content"></div>
+
+.. toctree::
+   :maxdepth: 1
+   :titlesonly:
+   
+   Alan AI projects<projects>
+   Dialog scripts<scripts>
+   Versions and environments<versioning>
+   Testing and debugging<script-testing>
+   Alan AI Playground<playground>
+   Conversational analytics<analytics>
+   Billing and subscriptions<billing>

@@ -1,0 +1,215 @@
+
+Requests and responses
+======================
+
+To let users interact with your AI assistant, you need to add to the dialog script commands that users can give. A voice or text command describes a task or action that the user wants to fulfil. Learn how :ref:`voice and text commands<Intent>` can be defined and what :ref:`response actions<Response>` can be triggered for these commands.
+
+.. _Intent:
+
+Intent
+------
+
+You can define a voice or text command in the script with the ``intent()`` function. This function can be used to complete tasks requested by users or answer users' questions.
+
+In the ``intent()`` function, you must specify one or more :doc:`patterns <patterns>` — user's utterances that invoke the command, and one or more :ref:`response actions<Responding to the user>` that must be triggered when the command is invoked. In the example below, the command is invoked when the user says: ``Hello world``. As a response action, Alan AI plays ``Hello`` to the user.
+
+
+.. code-block:: alan
+   :caption: Dialog script
+
+   intent('Hello world', p => {
+       p.play('Hello');
+   });
+
+When writing commands, you can add predefined and user-defined :doc:`slots <slots>` to intent patterns. Slots are 'variables' in user's utterance that allow Alan AI to identify and retrieve useful information.
+
+
+.. code-block:: alan
+   :caption: Dialog script
+
+   intent('I want to go to $(LOC) on $(DATE)', p => {
+       p.play(`Wait a second, I will check available flights on ${p.DATE.value} for you`);
+   });
+
+
+.. _Response:
+
+Response
+--------
+
+You can trigger response actions for commands with the following functions:
+
+-  `play() <#play>`__
+-  `reply() <#reply>`__
+
+
+.. _play():
+
+Play
+~~~~
+
+``play()`` is a predefined function for response actions. You can use it to :ref:`respond to the user<Responding to the user>` or :ref:`send commands to the client app<Sending commands to the app>`.
+
+.. _Responding to the user:
+
+Responding to the user
+^^^^^^^^^^^^^^^^^^^^^^
+
+To play a response to the user, you need to define a :doc:`pattern <patterns>` in the ``play()`` function. Alan AI will use this phrase as a response.
+
+.. code-block:: alan
+   :caption: Dialog script
+
+   intent('Talk to me', p => {
+       p.play('Sure, what do you want to talk about?');
+   });
+
+You can define more than one pattern. In this case, only one of them will be picked at random and played back to the user. To provide multiple patterns, separate them with a comma.
+
+.. code-block:: alan
+   :caption: Dialog script
+
+   intent('Talk to me', p => {
+       p.play('Sure, what do you want to talk about?',
+              'Sorry, I am not in the mood to talk to anyone');
+   });
+
+You can also use :doc:`slots <slots>` in responses.
+
+.. code-block:: alan
+   :caption: Dialog script
+
+   intent('Say $(W hello|goodbye)', p => {
+       p.play(`${p.W.value}`);
+   });
+
+
+.. _Sending commands to the app:
+	
+Sending commands to the app
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The ``play()`` function can be used to send commands to the client app integrated with Alan AI. Such commands let you perform specific activities on the app side, for example, navigate to another page in the app, highlight UI elements on the screen and so on. This way, you can synchronize voice and visuals and create a multi-modal interface for your app.
+
+To send a command, pass JSON to the ``play()`` function.
+
+.. code-block:: alan
+   :caption: Dialog script
+
+   intent('Open the menu', p => {
+       p.play({command: 'navigate', screen: 'menu'});
+       p.play('Opening the menu');
+   });
+
+   intent('Go back', p => {
+       p.play({command: 'navigate', screen: 'back'});
+       p.play('Going back');
+   });
+
+To handle the command on the app side, you must define a handler for commands received from the dialog script. For details, see :doc:`onCommand handler <../client-api/methods/command-handler>`.
+
+When you send a command to the app, you most commonly accompany this command with Alan AI's comment so that the user understands what actions are taking place at the moment. If you place the command before Alan AI's message, Alan AI will send the command right after the intent is matched.
+If you place the command after Alan AI's message, the command will be sent after the text has finished playing. For example:
+
+.. code-block:: alan
+   :caption: Dialog script
+
+   // Sending a command when the intent is matched
+   intent('Open the menu', p => {
+       p.play({command: 'navigate', screen: 'menu'});
+       p.play('Opening the menu');
+   });
+
+   // Sending a command after the message is played
+   intent('Open the menu', p => {
+       p.play('Opening the menu');
+       p.play({command: 'navigate', screen: 'menu'}); 
+   });
+   
+   
+.. note::
+
+   To send a command to the app via the text input channel in the Alan AI Web Chat, you must set the play options for the command to ``force:true``. The AI assistant button is inactive in the text conversation, and commands cannot be executed without the ``force`` option enabled.  For details, see :ref:`Play options <play-options>`.
+	
+	
+.. _play-options:
+	
+Specifying play options
+^^^^^^^^^^^^^^^^^^^^^^^
+
+By default, Alan AI plays a response or executes a command specified in the ``play()`` function only if the AI assistant button in the client app is active. To change this behavior, you can add the ``opts()`` parameter to the ``play()`` function. In the parameter, you need to specify one or more play options that define how the AI assistant must behave when the ``play()`` function is executed.
+
+You can define the following options:
+
++-------------------+----------------------+----------------+-----------------------------------------------------------------------------------------------------------+
+| **Option**        | **Action type**      | **SLU version**|**Description**                                                                                            | 
++===================+======================+================+===========================================================================================================+
+|``force:true``     | command              | 3.x or later   | Execute a command even if the AI assistant button is not active in the client app                         |
++-------------------+----------------------+----------------+-----------------------------------------------------------------------------------------------------------+
+|``activate:true``  | response, command    | 3.x or later   | Activate the AI assistant button in the client app before a response is played or command is executed     |
++-------------------+----------------------+----------------+-----------------------------------------------------------------------------------------------------------+
+|``deactivate:true``| response, command    | 3.x or later   | Deactivate the AI assistant button in the client app after a response is played or command is executed    |
++-------------------+----------------------+----------------+-----------------------------------------------------------------------------------------------------------+
+|``markdown:true``  | response             | 4.1 or later   | Allows displaying markdown-formatted text in responses (Alan AI Chat)                                     |
++-------------------+----------------------+----------------+-----------------------------------------------------------------------------------------------------------+
+|``audio:false``    | response             | 4.1 or later   | Disables voice output for responses  (Alan AI Chat)                                                       |
++-------------------+----------------------+----------------+-----------------------------------------------------------------------------------------------------------+
+
+Let's assume you want to allow users to set a timer that behaves in the following way:
+
+1. After the timer is set, the in-app assistant button is deactivated.
+2. Once half the time is over, a command is sent to notify the user with a text message in the client app.
+3. Once the time is over, the in-app assistant button is activated, the ``Time is over`` phrase is played, and the button is deactivated. 
+
+.. code-block:: alan
+   :caption: Dialog script
+
+   intent('Set a 1-minute timer', p => {
+       p.play({command: 'setTimer'});
+       p.play('Sure, 1 minute, starting now',  opts({deactivate:true}));
+       setTimeout(() => {
+           p.play({command: 'notifyUser', text: 'You are half way there'}, opts({force:true}));
+       }, 30000)
+       setTimeout(() => {
+           p.play({command: 'stopTimer'}, opts({force:true}));
+           p.play('Time is up', opts({activate:true, deactivate:true}))
+       }, 60000)
+   })
+
+
+.. _reply():
+
+Reply
+~~~~~
+
+``reply()`` is a predefined function that can be used if you only need to give a response to the user, without making any complex actions.
+
+.. code-block:: alan
+   :caption: Dialog script
+
+   intent('Hello world',
+       reply('Hello'));
+
+In the ``reply()`` function, you can use :doc:`patterns <patterns>` and :doc:`slots <slots>` in
+the same way as in the ``play()`` function.
+
+.. code-block:: alan
+   :caption: Dialog script
+
+   intent('Say $(W hello|goodbye)',
+       reply('$(W)'));
+		
+.. note:: 
+   You can pass multiple patterns as arrays to the ``reply()`` function. For details, see :ref:`Multiple patterns <Multiple patterns>`.
+   
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+   
+   Intent matching<intent-matching>
+   Voice settings <voice-settings>
+
+
+.. raw:: html
+
+   <div id="green-background"></div>

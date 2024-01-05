@@ -1,0 +1,279 @@
+Get started
+===========
+
+.. raw:: html
+
+   <div id="main-page"></div>
+
+   <p style="font-size: 20px">Want to create an AI assistant? <br/>Follow the steps below to get started with the Alan AI Platform.</p>
+   
+.. panels::
+
+   ---
+   :card: border-0 + custom-style-white
+   
+   .. raw:: html
+	
+	  <p style="font-size: 28px; font-weight: 700">1. Create an Alan AI Studio account</p>
+	  
+   Sign up for Alan AI Studio, Alan AI's web-based IDE, to create a project for the AI assistant, test the dialog and customize your assistant.
+   
+   .. link-button:: https://studio.alan.app
+        :text: Sign up for Alan AI Studio
+        :classes: btn-outline-primary
+
+   ---
+   :card: border-0 + custom-style-white
+	
+   .. raw:: html
+
+	  <div class="video-container">
+	  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/j__wtb5CDCM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	  </div>
+   
+
+.. panels::
+
+   ---
+   :card: border-0 + custom-style-white
+   
+   .. image:: /_static/assets/img/about/alan-studio.png
+   
+   ---
+   :card: border-0 + custom-style-white
+   
+   
+   .. raw:: html
+   
+      <p style="font-size: 28px; font-weight: 700">2. Write a dialog script</p>
+	  
+   In Alan Studio, write a dialog script. Dialog scripts describe the structure of the dialog with the user, or the expected conversation scenario.
+
+   Get started swiftly:
+   
+	
+   - Go to :doc:`Dialog script concepts <server-api/script-concepts>` to learn what Alan AI's functionality you can use to create a dialog script.
+
+   - Check out `Example scripts <https://github.com/alan-ai/voice-assistant-scripts>`__ in Alan AI Studio to see how dialog scripts can be organized.
+   
+   
+   
+.. raw:: html
+   
+   <p style="font-size: 28px; font-weight: 700; text-align:center">3. Integrate the AI assistant with your app</p>
+   
+Alan AI offers SDKs for different platforms to embed an AI assistant to your app. Select your platform to learn about :doc:`integration details <client-api/integration>`. Upon integration, you'll see a small draggable button on top of the app's UI.
+  
+   
+.. raw:: html
+
+   
+   <div class="logos">  
+	  <div class="tooltip"><a href="client-api/web/vanilla"><img src="_static/assets/img/about/js01.svg"/></a>
+	  <span class="tooltiptext">Javascript</span>
+	  </div>
+	  <div class="tooltip"><a href="client-api/web/react"><img src="_static/assets/img/about/react01.svg"/></a>
+	  <span class="tooltiptext">React</span>
+	  </div>
+	  <div class="tooltip"><a href="client-api/web/angular"><img src="_static/assets/img/about/angular.svg"/></a>
+	  <span class="tooltiptext">Angular</span>
+	  </div>
+	  <div class="tooltip"><a href="client-api/web/vue"><img src="_static/assets/img/about/vue.svg"/></a>
+	  <span class="tooltiptext">Vue.js</span>
+	  </div>
+	  <div class="tooltip"><a href="client-api/web/ember"><img src="_static/assets/img/about/ember.svg"/></a>
+	  <span class="tooltiptext">Ember</span>
+	  </div>
+	  
+	
+	  <div class="tooltip"><a href="client-api/web/electron"><img src="_static/assets/img/about/electron.svg"/></a>
+	  <span class="tooltiptext">Electron</span>
+	  </div>
+	  <div class="tooltip"><a href="client-api/ios/ios-api"><img src="_static/assets/img/about/swift.svg"/></a>
+	  <span class="tooltiptext">Swift</span>
+	  </div>
+	  </div>
+	<br/>
+	<div class="logos">
+	  <div class="tooltip"><a href="client-api/ios/ios-api"><img src="_static/assets/img/about/objc.svg"/></a>
+	  <span class="tooltiptext">Objective-C</span>
+	  </div>
+	  <div class="tooltip"><a href="client-api/android/android-api"><img src="_static/assets/img/about/kotlin.svg"/></a>
+	  <span class="tooltiptext">Kotlin</span>
+	  </div>
+	  <div class="tooltip"><a href="client-api/android/android-api"><img src="_static/assets/img/about/java.svg"/></a>
+	  <span class="tooltiptext">Java</span>
+	  </div>
+	  <div class="tooltip"><a href="client-api/cross-platform/ionic"><img src="_static/assets/img/about/ionic.svg"/></a>
+	  <span class="tooltiptext">Ionic</span>
+	  </div>
+	  <div class="tooltip"><a href="client-api/cross-platform/cordova"><img src="_static/assets/img/about/cordova.svg"/></a>
+	  <span class="tooltiptext">Apache Cordova</span>
+	  </div>
+	  <div class="tooltip"><a href="client-api/cross-platform/flutter"><img src="_static/assets/img/about/flutter.svg"/></a>
+	  <span class="tooltiptext">Flutter</span>
+	  </div>
+	  <div class="tooltip"><a href="client-api/cross-platform/react-native"><img src="_static/assets/img/about/react01.svg"/></a>
+	  <span class="tooltiptext">React Native</span>
+	  </div>
+	 
+	  
+    </div>
+	<br/>
+	
+Check out the :doc:`Alan AI resource library <usage/additional/library>` to explore helpful resources and start creating an AI assistant for your app.
+   
+   
+.. panels::
+
+   ---
+   :card: border-0 + custom-style-white
+   
+   .. raw:: html
+	
+	  <p style="font-size: 28px; font-weight: 700">4. Analyze and iterate</p>
+	  
+   Alan AI provides you with advanced conversational analytics and success metrics through its :doc:`Logs <usage/guides/logs>` and :doc:`Analytics View<usage/guides/analytics-view>`. Use these tools to:
+
+   - Gain insight into the users' experience
+   - Analyze their behavior and flows
+   - Identify unhandled requests 
+   - Optimize the AI assistant effectiveness
+   
+
+   ---
+   :card: border-0 + custom-style-white
+	
+   .. image:: /_static/assets/img/about/analytics.png
+   
+   
+.. raw:: html
+   
+   <p style="font-size: 28px; font-weight: 700; text-align:center">Still have questions?</p>
+   
+.. panels::
+   :column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-2
+   
+
+
+   ---
+   :card: border-0 + custom-style-res + lib
+   
+   .. link-button:: https://alan.app/docs/usage/additional/library
+      :type: url
+      :text: Library
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Resource Library</p>
+   
+   Explore and study different types of resources to get started with Alan AI
+   
+   ---
+   :card: border-0 + custom-style-res + doc
+   
+   .. link-button:: https://alan.app/docs/usage/additional/faq
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">FAQ</p>
+   
+   Find answers to the questions that you may have
+
+   ---
+   :card: border-0 + custom-style-res + doc
+   
+   .. link-button:: https://alan.app/docs/tutorials/how-tos
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">How-Tos</p>
+   
+   Learn how to implement common scenarios and workflows with Alan AI
+   
+   ---
+   :card: border-0 + custom-style-res + tutorial
+   
+   .. link-button:: https://alan.app/blog/
+      :type: url
+      :text: Blog
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Alan AI Blog</p>
+   
+   Find the most recent articles, stories and insights on the Alan AI blog
+
+   ---
+   :card: border-0 + custom-style-res + video
+   
+   .. link-button:: https://www.youtube.com/channel/UCrsg0b32nL6L2j5jG7uxOuw
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Alan AI YouTube</p>
+   
+   Watch AI assistant implementation scenarios, code-along videos, webinars and more
+   
+   ---
+   :card: border-0 + custom-style-res + course
+   
+   .. link-button:: https://www.udemy.com/course/alan-ai-course/
+      :type: url
+      :text: Course
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Alan AI Course</p>
+   
+   Enroll to the Alan AI Udemy course to quickly build an AI assistant for your app
+   
+   ---
+   :card: border-0 + custom-style-res + slack
+   
+   .. link-button:: https://alanaigroup.slack.com/join/shared_invite/enQtNzMzOTE5MTIwMjg4LWI4ZmM4MTNkMTdmY2M0ZWEwODlmZDQ5Y2ZkMjUzNmMyZDJiMzA0Y2M1NDdhYzZjYWFlZTA5NjM4OTU0MWFmNWU
+      :type: url
+      :text: Slack
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Alan AI Group</p>
+   
+   Join our Slack community for support, latest news and info about upcoming events
+   
+   ---
+   :card: border-0 + custom-style-res + ln
+   
+   .. link-button:: http://linkedin.com/company/alanvoiceai
+      :type: url
+      :text: Linkedin
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Alan AI LinkedIn</p>
+   
+   Follow Alan AI on LinkedIn
+    
+.. raw:: html
+
+   <div id="blue-background"></div>  
+   <script type="text/javascript">
+		const canonical = document.querySelector('link[rel="canonical"]');
+		canonical.href = window.location.protocol + "//" + window.location.host +  "/docs/";
+   </script>
+   
+

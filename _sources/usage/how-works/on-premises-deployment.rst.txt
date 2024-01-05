@@ -1,0 +1,30 @@
+On-premises deployment
+======================
+
+In the on-premises deployment scenario, all components required for AI assistant implementation are hosted at the on-premises location. 
+
+This deployment option is available with Kubernetes cluster or Docker Compose.
+
+.. image:: /_static/assets/img/about/onpremise.svg
+
+The on-premises deployment option involves the following roles and components:
+
+1. **Script developer**: a person who writes scripts that define the dialog and business logic of the conversational experience, manages script deployment, analyzes conversational data and customers’ behavior in interactions with the AI assistant.
+2. **Application users**: users interacting with the application with the Alan AI SDK embedded. The application users communicate directly with the Action Transformer VM (4) through the client's DMZ (7).
+3. **Alan AI Studio**: an interface to the Alan AI Platform, a web-based IDE comprising a script editor, version and deployment control, dialog script testing tools, logs and analytics.
+4. **Action Transformer VM**: a VM allocated for each AI assistant project. This VM is responsible for dialog management and execution of the business logic defined in the dialog script.
+5. **Storage**: the Alan AI Studio storage containing dialog scripts with version history, user behavior analytics and statistics.
+6. **Conversational services**: components responsible for speech recognition and generation.
+7. **DMZ**: client’s demilitarized zone. The DMZ must have an externally visible IP address with a DNS name through which the Alan AI SDK (2) will connect to the Action Transformer (4) in Docker (8).
+8. **Docker**: an environment running Alan AI component images on the client’s machine.
+
+See also
+--------
+
+- :doc:`Cloud deployment <cloud-deployment>`
+- :doc:`Hybrid deployment <hybrid-deployment>`
+- :doc:`Alan AI infrastructure <infrastructure>`
+
+.. raw:: html
+
+   <div id="blue-background"></div>

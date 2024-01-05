@@ -1,0 +1,40 @@
+Question answering
+==================
+
+Alan AI provides a set of AI tools that enable your AI assistants to understand users' queries and provide human-like responses based on the existing data provided to it. You can quickly add a conversational layer on top of your content and data and create a conversational AI experience that is tailored to your app's requirements.
+
+.. panels::
+   :column: col-lg-12 col-md-12 col-sm-12 col-xs-12 p-2
+
+   ---
+   :card: border-0 + custom-style-list
+   
+   .. link-button:: ../qna
+      :type: ref
+      :text: Q&A service
+      :classes: stretched-link panel
+	  
+   Learn how to add a conversational experience on top of the existing content: web-based data, plain text and PDFs
+
+   ---
+   :card: border-0 + custom-style-list
+   
+   .. link-button:: query-api
+      :type: ref
+      :text: Query API
+      :classes: stretched-link panel
+	  
+   Learn how to query corpus data programmatically and retrieve a response to use it further in the dialog logic
+  
+.. raw:: html
+
+   <div id="green-background"></div>
+   <div id="wide-content"></div>
+
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+   
+   Q&A service<../qna>
+   Query API<query-api>
+

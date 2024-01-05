@@ -1,0 +1,2712 @@
+Alan AI resource library
+------------------------
+
+.. raw:: html
+
+   <div id="res-buttons">	 
+	 <div class='res-group'>
+		<div class='res-cat'><b>Platform:</b></div>
+		<div class='res-btn-group platform'>
+			<button class='res-btn active' id='all-plat'>All</button>
+			<button class='res-btn' id='web'>Web</button>
+			<button class='res-btn' id='ios'>iOS</button>
+			<button class='res-btn' id='android'>Android</button>
+		</div>
+	 </div>
+	 <div class='res-group'>
+		<div class='res-cat'><b>Framework/language:</b></div>
+		<div class='res-btn-group framework'>
+			<button class='res-btn active all-plat' id='all-lang'>All</button>
+			<button class='res-btn all-plat web' id='react'>React</button>
+			<button class='res-btn all-plat web' id='angular'>Angular</button>
+			<button class='res-btn all-plat web' id='vue'>Vue</button>
+			<button class='res-btn all-plat web' id='ember'>Ember</button>
+			<button class='res-btn all-plat web' id='ember'>Electron</button>
+			<button class='res-btn all-plat web' id='js'>JavaScript</button>
+			<button class='res-btn all-plat ios' id='swift'>Swift</button>
+			<button class='res-btn all-plat ios' id='obj'>Obj-C</button>
+			<button class='res-btn all-plat android' id='kotlin'>Kotlin</button>
+			<button class='res-btn all-plat android' id='java'>Java</button>
+			<button class='res-btn all-plat ios android' id='flutter'>Flutter</button>
+			<button class='res-btn all-plat ios android' id='rn'>React Native</button>
+			<button class='res-btn all-plat web ios android' id='ionic'>Ionic</button>
+			<button class='res-btn all-plat ios android' id='cordova'>Apache Cordova</button>
+		</div>
+	 </div>
+		<div class='res-group'>
+		<div class='res-cat'><b>Input channel:</b></div>
+		<div class='res-btn-group'>
+		    <button class='res-btn active' id='all-channel'>All</button>
+			<button class='res-btn' id='voice'>Voice</button>
+			<button class='res-btn' id='text'>Text</button>
+		</div>
+	</div>
+	<div class='res-group'>
+		<div class='res-cat'><b>Resource type:</b></div>
+		<div class='res-btn-group'>
+			<button class='res-btn active' id='all-type'>All</button>
+			<button class='res-btn' id='git'>GitHub repo</button>
+			<button class='res-btn' id='sdk'>SDK package</button>
+			<button class='res-btn' id='doc'>Docs</button>
+			<button class='res-btn' id='tutorial'>Tutorial</button>
+			<button class='res-btn' id='video'>Video</button>
+			<button class='res-btn' id='code'>Code example</button>
+			<button class='res-btn' id='demo'>Live demo</button>
+			<button class='res-btn' id='course'>Online course</button>
+			<button class='res-btn' id='cheat'>Cheat sheet</button>
+		</div>
+	 </div>
+	<div class='res-group'>
+		<div class='res-cat'><b>Component:</b></div>
+		<div class='res-btn-group'>
+			<button class='res-btn active' id='all-comp'>All</button>
+			<button class='res-btn' id='studio'>Alan AI Studio</button>
+			<button class='res-btn' id='ai-sdk'>Alan AI SDK</button>
+		</div>
+	 </div>
+
+  </div>
+  
+GitHub repositories
+===================
+
+.. panels::
+   :column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-2
+
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + react + angular + vue + ember + electron + js + git + voice + text
+   
+   .. link-button:: https://github.com/alan-ai/alan-sdk-web
+      :type: url
+      :text: GitHub repo
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Alan AI SDK for Web</p>
+   
+   Check out Conversational AI SDK for Web on GitHub
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + ios + swift + obj + git + voice
+   
+   .. link-button:: https://github.com/alan-ai/alan-sdk-ios
+      :type: url
+      :text: GitHub repo
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Alan AI SDK for iOS</p>
+   
+   Check out Conversational AI SDK for iOS on GitHub
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + kotlin + java + git + voice
+   
+   .. link-button:: https://github.com/alan-ai/alan-sdk-android
+      :type: url
+      :text: GitHub repo
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Alan AI SDK for Android</p>
+   
+   Check out Conversational AI SDK for Android on GitHub
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + flutter + git + voice
+   
+   .. link-button:: https://github.com/alan-ai/alan-sdk-flutter
+      :type: url
+      :text: GitHub repo
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Alan AI SDK for Flutter</p>
+   
+   Check out Conversational AI SDK for Flutter on GitHub
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + rn + git + voice
+   
+   .. link-button:: https://github.com/alan-ai/alan-sdk-reactnative
+      :type: url
+      :text: GitHub repo
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Alan AI SDK for React Native</p>
+   
+   Check out Conversational AI SDK for React Native on GitHub
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + android + ios + ionic + git + voice 
+   
+   .. link-button:: https://github.com/alan-ai/alan-sdk-ionic
+      :type: url
+      :text: GitHub repo
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Alan AI SDK for Ionic</p>
+   
+   Check out Conversational AI SDK for Ionic on GitHub
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + cordova + git + voice
+   
+   .. link-button:: https://github.com/alan-ai/alan-sdk-cordova
+      :type: url
+      :text: GitHub repo
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Alan AI SDK for Apache Cordova</p>
+   
+   Check out Conversational AI SDK for Apache Cordova on GitHub
+   
+   
+SDK packages
+============
+
+.. panels::
+   :column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-2
+
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + react + angular + vue + ember + electron + js + sdk + voice + text
+   
+   .. link-button:: https://www.npmjs.com/package/@alan-ai/alan-sdk-web
+      :type: url
+      :text: SDK
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Alan AI SDK for Web</p>
+   
+   Get the latest or a specific version of Conversational AI SDK for Web in the NPM registry
+
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + ios + swift + obj + sdk + voice
+   
+   .. link-button:: https://github.com/alan-ai/alan-sdk-ios/releases
+      :type: url
+      :text: SDK
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Alan AI SDK for iOS</p>
+   
+   Get the latest or a specific version of Conversational AI SDK for iOS on GitHub
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + kotlin + java + sdk + voice
+   
+   .. link-button:: https://github.com/alan-ai/alan-sdk-android/releases
+      :type: url
+      :text: SDK
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Alan AI SDK for Android</p>
+   
+   Get the latest or a specific version of Conversational AI SDK for Android on GitHub
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + flutter + sdk + voice
+   
+   .. link-button:: https://pub.dev/packages/alan_voice
+      :type: url
+      :text: SDK
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Alan AI SDK for Flutter</p>
+   
+   Get the latest or a specific version of Conversational AI SDK for Flutter on pub.dev
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + rn + sdk + voice
+   
+   .. link-button:: https://www.npmjs.com/package/@alan-ai/alan-sdk-react-native
+      :type: url
+      :text: SDK
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Alan AI SDK for React Native</p>
+   
+   Get the latest or a specific version of Conversational AI SDK for React Native in the NPM registry
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + android + ios + ionic + sdk + voice
+   
+   .. link-button:: https://www.npmjs.com/package/@alan-ai/alan-button
+      :type: url
+      :text: SDK
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Alan AI Web Component</p>
+   
+   Get the latest or a specific version of the Alan AI Web Component in the NPM registry
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + ionic + cordova + sdk + voice
+   
+   .. link-button:: https://www.npmjs.com/package/@alan-ai/cordova-plugin-alan-voice
+      :type: url
+      :text: SDK
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Alan AI Cordova Plugin</p>
+   
+   Get the latest or a specific version of the Alan AI Cordova Plugin in the NPM registry
+   
+   
+Live demo
+=========
+
+.. panels::
+   :column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-2
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + js + code + demo + text
+   
+   .. link-button:: https://alan-ai.github.io/website-chat-demo/
+      :type: url
+      :text: Live demo
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Web: Text Chat Demo</p>
+   
+   Try a live demo of Alan AI Web Chat
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + js + code + git + text
+   
+   .. link-button:: https://github.com/alan-ai/website-chat-demo
+      :type: url
+      :text: Code example
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Web: Text Chat</p>
+   
+   Review a sample web page with Alan AI Web Chat added to it
+   
+ 
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + react + code + demo + voice
+   
+   .. link-button:: https://alan-ai.github.io/alan-sdk-web/
+      :type: url
+      :text: Live demo
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">React: Voice Assistant</p>
+   
+   Try a live demo of a voice assistant built into a React app
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + react + code + git + voice
+   
+   .. link-button:: https://github.com/alan-ai/alan-sdk-web/tree/master/examples/alan-example-integration-react
+      :type: url
+      :text: Code example
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">React: Voice Assistant</p>
+   
+   Review the code of a React app with an voice assistant embedded
+   
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + react + code + demo + voice
+   
+   .. link-button:: https://appointment-demo.alan.app/
+      :type: url
+      :text: Live demo
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">React: Appointment App</p>
+   
+   Try a live demo of a multimodal doctor appoinment app
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + react + code + git + voice
+   
+   .. link-button:: https://github.com/alan-ai/alan-sdk-web/tree/master/examples/alan-example-integeration-react-appointment
+      :type: url
+      :text: Code example
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">React: Appointment App</p>
+   
+   Review the code of a multimodal doctor appoinment app written in React
+
+
+
+Integration
+===========
+
+.. panels::
+   :column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-2
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + js + doc + voice + text
+   
+   .. link-button:: https://alan.app/docs/usage/button/customization/#enabling-the-text-chat
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Alan AI Web Chat: Settings</p>
+   
+   Learn how to enable and customize a text and voice AI chat for your website or web app
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + js + doc + tutorial + voice + text
+   
+   .. link-button:: https://alan.app/docs/tutorials/list/building-ai-chat/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Alan AI Web Chat: Integration</p>
+   
+   Follow this tutorial to learn how to create an AI chat for a website or web app
+   
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + js + doc + tutorial + voice + text
+   
+   .. link-button:: https://alan.app/docs/tutorials/list/navigating-text-chat/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Alan AI Web Chat: Navigation</p>
+   
+   Follow this tutorial to learn how to navigate the website through the AI chat
+   
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + js + doc + tutorial + voice + text
+   
+   .. link-button:: https://alan.app/docs/tutorials/list/collecting-data-chat/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Alan AI Web Chat: Collecting Data</p>
+   
+   Follow this tutorial to learn how to collect users' data with the Alan AI Web Chat
+
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + react + doc + voice + text
+   
+   .. link-button:: https://alan.app/docs/client-api/web/react
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">React: Integration</p>
+   
+   Learn how to embed an AI assistant created with Alan AI into your React app or website
+
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + react + doc + tutorial + voice
+   
+   .. link-button:: https://alan.app/docs/tutorials/web/integrating-react-app/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">React: Voice Assistant</p>
+   
+   Follow a tutorial to build a voice AI assistant for a React app or website
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + angular + doc + voice + text
+   
+   
+   .. link-button:: https://alan.app/docs/client-api/web/angular
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Angular: Integration</p>
+   
+   Learn how to embed an AI assistant created with Alan AI into your Angular app or website
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + angular + doc + tutorial + voice
+   
+   .. link-button:: https://alan.app/docs/tutorials/web/integrating-angular-app/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Angular: Voice Assistant</p>
+   
+   Follow a tutorial to build a voice AI assistant for an Angular app or website
+   
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + angular + code + git + voice
+   
+   .. link-button:: https://github.com/alan-ai/alan-sdk-web/tree/master/examples/alan-example-integration-angular
+      :type: url
+      :text: Code example
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Angular: Integration example</p>
+   
+   Review a sample Angular app integrated with Alan AI
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + vue + doc + voice + text
+   
+   .. link-button:: https://alan.app/docs/client-api/web/vue
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Vue: Integration</p>
+   
+   Learn how to embed an AI assistant created with Alan AI into your Vue app or website
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + vue + doc + tutorial + voice
+   
+   .. link-button:: https://alan.app/docs/tutorials/web/integrating-vue-app/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Vue: Voice Assistant</p>
+   
+   Follow a tutorial to build a voice AI assistant for a Vue app or website
+   
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + vue + code + git + voice
+   
+   .. link-button:: https://github.com/alan-ai/alan-sdk-web/tree/master/examples/alan-example-integration-vue
+      :type: url
+      :text: Code example
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Vue: Integration example</p>
+   
+   Review a sample Vue app integrated with Alan AI
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + ember + doc + voice + text
+   
+   .. link-button:: https://alan.app/docs/client-api/web/ember
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Ember: Integration</p>
+   
+   Learn how to embed an AI assistant created with Alan AI into your Ember app or website
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + ember + doc + tutorial + voice
+   
+   .. link-button:: https://alan.app/docs/tutorials/web/integrating-ember-app/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Ember: Voice Assistant</p>
+   
+   Follow a tutorial to build a voice AI assistant for an Ember app or website
+   
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + ember + code + git + voice
+   
+   .. link-button:: https://github.com/alan-ai/alan-sdk-web/tree/master/examples/alan-example-integration-ember
+      :type: url
+      :text: Code example
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Ember: Integration example</p>
+   
+   Review a sample Ember app integrated with Alan AI
+   
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + electron + doc + voice + text
+   
+   .. link-button:: https://alan.app/docs/client-api/web/electron
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Electron: Integration</p>
+   
+   Learn how to embed an AI assistant created with Alan AI into your Electron app
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + electron + doc + tutorial + voice
+   
+   .. link-button:: https://alan.app/docs/tutorials/web/integrating-electron-app/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Electron: Voice Assistant</p>
+   
+   Follow a tutorial to build a voice AI assistant for an Electron app
+   
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + electron + code + git + voice
+   
+   .. link-button:: https://github.com/alan-ai/alan-sdk-web/tree/master/examples/alan-example-integration-electron
+      :type: url
+      :text: Code example
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Electron: Integration example</p>
+   
+   Review a sample Electron app integrated with Alan AI
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + js + doc + voice + text
+   
+   .. link-button:: https://alan.app/docs/client-api/web/vanilla
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">JavaScript: Integration</p>
+   
+   Learn how to embed an AI assistant created with Alan AI into your app or website written in JavaScript
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + js + doc + tutorial + voice
+   
+   .. link-button:: https://alan.app/docs/tutorials/list/adding-voice-to-a-web-application/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">JavaScript: Voice Assistant</p>
+   
+   Follow a tutorial to build a voice AI assistant for a JavaScript page or website
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + js + doc + tutorial + voice
+   
+   .. link-button:: https://alan.app/docs/tutorials/list/food-delivery-tutorial/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">JavaScript: Food Delivery App</p>
+   
+   Follow a tutorial to a voice-enabled food delivery app
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + ios + swift + doc + voice
+   
+   .. link-button:: https://alan.app/docs/client-api/ios/ios-api
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Swift: Integration</p>
+   
+   Learn how to embed an AI assistant created with Alan AI into your iOS app written in Swift
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + ios + swift + doc + tutorial + voice
+   
+   .. link-button:: https://alan.app/docs/tutorials/ios/integrating-swift/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Swift: Voice Assistant</p>
+   
+   Follow a tutorial to build a voice AI assistant for an iOS app written in Swift
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + ios + swift + code + git + voice
+   
+   .. link-button:: https://github.com/alan-ai/alan-sdk-ios/tree/master/examples/alan-example-integration-swift
+      :type: url
+      :text: Code example
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Swift: Integration example</p>
+   
+   Review a sample Swift app integrated with Alan AI
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + ios + obj + doc + voice
+   
+   .. link-button:: https://alan.app/docs/client-api/ios/ios-api
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Objective-C: Integration</p>
+   
+   Learn how to embed an AI assistant created with Alan AI into your iOS app written in Objective-C
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + ios + obj + code + git + voice
+   
+   .. link-button:: https://github.com/alan-ai/alan-sdk-ios/tree/master/examples/alan-example-integration-objectivec
+      :type: url
+      :text: Code example
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Objective-C: Integration example</p>
+   
+   Review a sample Objective-C app integrated with Alan AI
+
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + kotlin + doc + voice
+   
+   .. link-button:: https://alan.app/docs/client-api/android/android-api
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Kotlin: Integration</p>
+   
+   Learn how to embed an AI assistant created with Alan AI into your Android app written in Kotlin
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + kotlin + doc + tutorial + voice
+   
+   .. link-button:: https://alan.app/docs/tutorials/android/integrating-java-kotlin/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Kotlin: Voice Assistant</p>
+   
+   Follow a tutorial to build a voice AI assistant for an Android app written in Kotlin
+   
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + kotlin + video + voice
+   
+   .. link-button:: https://www.youtube.com/watch?v=V2KevCENy70
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Kotlin: Voice Assistant</p>
+   
+   Watch the video to learn how to build a voice AI assistant for a Kotlin app  
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + kotlin + code + git + voice
+   
+   .. link-button:: https://github.com/alan-ai/alan-sdk-android/tree/master/examples/alan-example-integration-kotlin
+      :type: url
+      :text: Code example
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Kotlin: Integration example</p>
+   
+   Review a sample Kotlin app integrated with Alan AI
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + java + doc + voice
+   
+   .. link-button:: https://alan.app/docs/client-api/android/android-api
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Java: Integration</p>
+   
+   Learn how to embed an AI assistant created with Alan AI into your Android app written in Java
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + java + doc + tutorial + voice
+   
+   .. link-button:: https://alan.app/docs/tutorials/android/integrating-java-kotlin/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Java: Voice Assistant</p>
+   
+   Follow a tutorial to build a voice AI assistant for an Android app written in Java
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + java + code + git + voice
+   
+   .. link-button:: https://github.com/alan-ai/alan-sdk-android/tree/master/examples/alan-example-integration-java
+      :type: url
+      :text: Code example
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Kotlin: Integration example</p>
+   
+   Review a sample Kotlin app integrated with Alan AI
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + flutter + doc + voice
+   
+   .. link-button:: https://alan.app/docs/client-api/cross-platform/flutter
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Flutter: Integration</p>
+   
+   Learn how to embed an AI assistant created with Alan AI into your Flutter app
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + flutter + doc + tutorial + voice
+   
+   .. link-button:: https://alan.app/docs/tutorials/flutter/integrating-flutter/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Flutter: Voice Assistant</p>
+   
+   Follow a tutorial to build a voice AI assistant for a Flutter app written in Dart
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + flutter + video + voice
+   
+   .. link-button:: https://www.youtube.com/watch?v=Dxgx0MI3ENk
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Flutter: Integration</p>
+   
+   Watch the video to learn how to integrate an AI assistant built with Alan AI into a Flutter app
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + flutter + video + voice
+   
+   .. link-button:: https://www.youtube.com/watch?v=BXp1yGZURUM
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Flutter: Voice Assistant</p>
+   
+   Watch the video to learn how to build a voice AI assistant for a Flutter app  
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + flutter + code + git + voice
+   
+   .. link-button:: https://github.com/alan-ai/alan-sdk-flutter/tree/master/examples/alan_simple_app
+      :type: url
+      :text: Code example
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Flutter: Integration example</p>
+   
+   Review a sample Flutter app integrated with Alan AI
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + rn + doc + voice
+   
+   .. link-button:: https://alan.app/docs/client-api/cross-platform/react-native
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">React Native: Integration</p>
+   
+   Learn how to embed an AI assistant created with Alan AI into your React Native app
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + rn + doc + tutorial + voice
+   
+   .. link-button:: https://alan.app/docs/tutorials/react-native/integrating-react-native/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">React Native: Voice Assistant</p>
+   
+   Follow a tutorial to build a voice AI assistant for a React Native app
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + rn + video + voice
+   
+   .. link-button:: https://www.youtube.com/watch?v=ttGfydUvg6A
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">React Native: Voice Assistant</p>
+   
+   Watch this video to learn how to build a voice AI assistant for a React Native app
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + rn + code + git + voice
+   
+   .. link-button:: https://github.com/alan-ai/alan-sdk-reactnative/tree/master/examples/testapp
+      :type: url
+      :text: Code example
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">React Native: Integration example</p>
+   
+   Review a sample React Native app integrated with Alan AI
+ 
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + web + ionic + doc + voice
+   
+   .. link-button:: https://alan.app/docs/client-api/cross-platform/ionic
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Ionic: Integration</p>
+   
+   Learn how to embed an AI assistant created with Alan AI into your Ionic app built with React, Angular or Vue
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + web + ionic + doc + tutorial + voice
+   
+   .. link-button:: https://alan.app/docs/tutorials/ionic/integrating-react/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Ionic React: Voice Assistant</p>
+   
+   Follow a tutorial to build a voice AI assistant for an Ionic app written in React
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + web + ionic + doc + tutorial + voice
+   
+   .. link-button:: https://alan.app/docs/tutorials/ionic/integrating-angular/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Ionic Angular: Voice Assistant</p>
+   
+   Follow a tutorial to build a voice AI assistant for an Ionic app written in Angular
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + web + ionic + video + voice
+   
+   .. link-button:: https://www.youtube.com/watch?v=NK8B5Qc-8x8
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Ionic Angular: Integration</p>
+   
+   Watch this video to learn how to integrate an Ionic Angular app with Alan AI
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + web + ionic + code + git + voice
+   
+   .. link-button:: https://github.com/alan-ai/alan-sdk-ionic/tree/master/examples/AlanBasicExample
+      :type: url
+      :text: Code example
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Ionic Angular: Integration example</p>
+   
+   Review a sample Ionic Angular app integrated with Alan AI
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + cordova + doc + voice
+   
+   .. link-button:: https://alan.app/docs/client-api/cross-platform/cordova
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Cordova: Integration</p>
+   
+   Learn how to embed an AI assistant created with Alan AI into your Apache Cordova app
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + cordova + code + git + voice
+   
+   .. link-button:: https://github.com/alan-ai/alan-sdk-cordova/tree/master/examples/AlanBasicExample
+      :type: url
+      :text: Code example
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Apache Cordova: Integration example</p>
+   
+   Review a sample Apache Cordova app integrated with Alan AI
+   
+
+Conversational UX design
+========================
+
+.. panels::
+   :column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-2
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + react + angular + vue + ember + electron + js + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=wYlzjuQilao
+      :type: url
+      :text: Webinar
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Web: AI Assistant in 10 Minutes</p>
+   
+   Watch this webinar to learn how to create an AI assistant for a web app
+
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + react + doc + voice + text
+   
+   .. link-button:: https://alan.app/docs/client-api/web/react/#using-client-api-methods
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">React: Client API Methods</p>
+   
+   Learn how to use Alan AI SDK client API methods in React
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + react + doc + voice + text
+   
+   .. link-button:: https://alan.app/docs/client-api/web/react/#using-handlers
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">React: Handlers</p>
+   
+   Learn how to use Alan AI SDK handlers in React
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + react + video + voice
+   
+   .. link-button:: https://www.youtube.com/watch?v=S685nW4bMJE
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">React: Form Filling</p>
+   
+   Watch this video to learn how to fill a form in a React app with voice commands
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + react + video + voice
+   
+   .. link-button:: https://www.youtube.com/watch?v=rqw3OftE5sA
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">React: News App</p>
+   
+   Watch this code-along video to build a voice-assisted news app
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + react + video + voice
+   
+   .. link-button:: https://www.youtube.com/watch?v=4xwruFAvEHA
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">React: E-commerce app</p>
+   
+   Watch this code-along video to build an AI-powered e-commerce app
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + react + video + voice
+   
+   .. link-button:: https://www.youtube.com/watch?v=roqwqDr-yRw
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">React: FAQ</p>
+   
+   Watch this code-along video to build a voice-assisted FAQ app
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + react + video + voice
+   
+   .. link-button:: https://www.youtube.com/watch?v=ShufCBZi_r8
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">React: Shopping Cart</p>
+   
+   Watch this code-along video to create a shopping AI assistant
+
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + react + code + git + voice + text
+   
+   .. link-button:: https://github.com/alan-ai/alan-sdk-web/tree/master/examples/alan-example-app-react-api-test
+      :type: url
+      :text: Code example
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">React: Demo app</p>
+   
+   Review a sample app to learn how to use Alan AI client API methods and handlers in React
+
+
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + angular + doc + voice + text
+   
+   .. link-button:: https://alan.app/docs/client-api/web/angular/#using-client-api-methods
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Angular: Client API Methods</p>
+   
+   Learn how to use Alan AI SDK client API methods in Angular
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + angular + doc + voice + text
+   
+   .. link-button:: https://alan.app/docs/client-api/web/angular/#using-handlers
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Angular: Handlers</p>
+   
+   Learn how to use Alan AI SDK handlers in Angular
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + angular + code + git + voice
+   
+   .. link-button:: https://github.com/alan-ai/alan-sdk-web/tree/master/examples/alan-example-app-angular-order-drinks
+      :type: url
+      :text: Code example
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Angular: Food Ordering App</p>
+   
+   Review a sample app to learn how to create a multimodal conversational AI experience
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + vue + doc + voice + text
+   
+   .. link-button:: https://alan.app/docs/client-api/web/vue/#using-client-api-methods
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Vue: Client API Methods</p>
+   
+   Learn how to use Alan AI SDK client API methods in Vue
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + vue + doc + voice + text
+   
+   .. link-button:: https://alan.app/docs/client-api/web/vue/#using-handlers
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Vue: Handlers</p>
+   
+   Learn how to use Alan AI SDK handlers in Vue
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + ember + doc + voice + text
+   
+   .. link-button:: https://alan.app/docs/client-api/web/ember/#using-client-api-methods
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Ember: Client API Methods</p>
+   
+   Learn how to use Alan AI SDK client API methods in Ember
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + ember + doc + voice + text
+   
+   .. link-button:: https://alan.app/docs/client-api/web/ember/#using-handlers
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Ember: Handlers</p>
+   
+   Learn how to use Alan AI SDK handlers in Ember
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + electron + doc + voice + text
+   
+   .. link-button:: https://alan.app/docs/client-api/web/electron/#using-client-api-methods
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Electron: Client API Methods</p>
+   
+   Learn how to use Alan AI SDK client API methods in Electron
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + electron + doc + voice + text
+   
+   .. link-button:: https://alan.app/docs/client-api/web/electron/#using-handlers
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Electron: Handlers</p>
+   
+   Learn how to use Alan AI SDK handlers in Electron
+   
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + js + doc + voice + text
+   
+   .. link-button:: https://alan.app/docs/client-api/web/vanilla/#using-client-api-methods
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">JavaScript: Client API Methods</p>
+   
+   Learn how to use Alan AI SDK client API methods in JavaScript
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + js + doc + voice + text
+   
+   .. link-button:: https://alan.app/docs/client-api/web/vanilla/#using-handlers
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">JavaScript: Handlers</p>
+   
+   Learn how to use Alan AI SDK handlers in JavaScript
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + js + video + voice
+   
+   .. link-button:: https://www.youtube.com/watch?v=kBVaH3D92H8
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">JavaScript: Pacman</p>
+   
+   Watch this code-along video to create a voice-driven Pacman game in JavaScript
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + ios + swift + doc + voice
+   
+   .. link-button:: https://alan.app/docs/client-api/ios/ios-api/#using-client-api-methods
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Swift: Client API Methods</p>
+   
+   Learn how to use Alan AI SDK client API methods in Swift
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + ios + swift + doc + voice
+   
+   .. link-button:: https://alan.app/docs/client-api/ios/ios-api/#using-handlers
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Swift: Handlers</p>
+   
+   Learn how to use Alan AI SDK handlers in Swift
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + ios + swift + code + git + voice
+   
+   .. link-button:: https://github.com/alan-ai/alan-sdk-ios/tree/master/examples/FoodApp
+      :type: url
+      :text: Code example
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Swift: Food Ordering App</p>
+   
+   Review a sample app to learn how to create a voice-enabled food delivery app
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + ios + swift + video + voice
+   
+   .. link-button:: https://www.youtube.com/watch?v=vZWmj6A4Ztk
+      :type: url
+      :text: video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Swift: SAP Integration Demo</p>
+   
+   Watch this video to learn how to integrate a SAP app with Alan AI
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + ios + swift + code + git + voice
+   
+   .. link-button:: https://github.com/alan-ai/alan-sdk-ios/tree/master/examples/SAP_SampleApplication
+      :type: url
+      :text: Code example
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Swift: SAP Integration Demo</p>
+   
+   Review a sample app to learn how to integrate a SAP app with Alan AI
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + ios + swift + code + git + voice
+   
+   .. link-button:: https://github.com/alan-ai/alan-sdk-ios/tree/master/examples/SwiftTutorial
+      :type: url
+      :text: Code example
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Swift: Tutorial</p>
+   
+   Review the code for a tutorial series to learn how to use Alan AI client API methods and handlers
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + ios + swift + doc + tutorial + voice
+   
+   .. link-button:: https://alan.app/docs/tutorials/ios/navigating-swift/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Swift: Navigation</p>
+   
+   Follow this tutorial to learn how to navigate in a Swift app with voice commands
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + ios + swift + doc + tutorial + voice
+   
+   .. link-button:: https://alan.app/docs/tutorials/ios/sending-data-swift/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Swift: Visual State</p>
+   
+   Follow this tutorial to learn how to pass the app's visual context to Alan AI
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + ios + swift + doc + tutorial + voice
+   
+   .. link-button:: https://alan.app/docs/tutorials/ios/highlighting-swift/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Swift: Items Highlighting</p>
+   
+   Follow this tutorial to learn how to highlight items in the app with voice
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + ios + swift + doc + tutorial + voice
+   
+   .. link-button:: https://alan.app/docs/tutorials/ios/triggering-info-swift/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Swift: Data Sending</p>
+   
+   Follow this tutorial to learn how to send data from the app to Alan AI
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + ios + swift + doc + tutorial + voice
+   
+   .. link-button:: https://alan.app/docs/tutorials/ios/greeting-swift/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Swift: Greeting</p>
+   
+   Follow this tutorial to learn how to greet a user on dialog start
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + ios + swift + obj + video + voice
+   
+   .. link-button:: https://www.youtube.com/watch?v=gLyEcmGS8XY
+      :type: url
+      :text: Webinar
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">iOS: Voice AI Assistant in 10 Minutes</p>
+   
+   Watch this webinar to learn how to create a voice AI assistant for an iOS app
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + ios + obj + doc + voice
+   
+   .. link-button:: https://alan.app/docs/client-api/ios/ios-api/#using-client-api-methods
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Obj-C: Client API Methods</p>
+   
+   Learn how to use Alan AI SDK client API methods in Objective-C
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + ios + obj + doc + voice
+   
+   .. link-button:: https://alan.app/docs/client-api/ios/ios-api/#using-handlers
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Objective-C: Handlers</p>
+   
+   Learn how to use Alan AI SDK handlers in Objective-C
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + kotlin + doc + voice
+   
+   .. link-button:: https://alan.app/docs/client-api/android/android-api/#using-client-api-methods
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Kotlin: Client API Methods</p>
+   
+   Learn how to use Alan AI SDK client API methods in Kotlin
+   
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + kotlin + doc + voice
+   
+   .. link-button:: https://alan.app/docs/client-api/android/android-api/#using-handlers
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Kotlin: Handlers</p>
+   
+   Learn how to use Alan AI SDK handlers in Kotlin
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + kotlin + doc + tutorial + voice
+   
+   .. link-button:: https://alan.app/docs/tutorials/android/navigating-kotlin/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Kotlin: Navigation</p>
+   
+   Follow this tutorial to learn how to navigate in a Kotlin app with voice commands
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + kotlin + doc + tutorial + voice
+   
+   .. link-button:: https://alan.app/docs/tutorials/android/sending-state-kotlin/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Kotlin: Visual State</p>
+   
+   Follow this tutorial to learn how to pass the app's visual context to Alan AI
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + kotlin + doc + tutorial + voice
+   
+   .. link-button:: https://alan.app/docs/tutorials/android/sending-data-kotlin/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Kotlin: Data Sending</p>
+   
+   Follow this tutorial to learn how to send data from the app to Alan AI
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + kotlin + video + voice
+   
+   .. link-button:: https://www.youtube.com/watch?v=XkO1FnwSGGo
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Kotlin: Task Completion</p>
+   
+   Watch the video to learn how to complete tasks with voice
+   
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + kotlin + video + voice
+   
+   .. link-button:: https://www.youtube.com/watch?v=xTR_rxcSJnM
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Kotlin: Visual State</p>
+   
+   Watch the video to learn how to pass the app's visual context to the app
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + kotlin + video + voice
+   
+   .. link-button:: https://www.youtube.com/watch?v=aZUkLMWWfJQ
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Kotlin: Data Sending</p>
+   
+   Watch the video to learn how send data from the app to Alan AI
+  
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + java + doc + voice
+   
+   .. link-button:: https://alan.app/docs/client-api/android/android-api/#using-client-api-methods
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Java: Client API Methods</p>
+   
+   Learn how to use Alan AI SDK client API methods in Java
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + java + doc + voice
+   
+   .. link-button:: https://alan.app/docs/client-api/android/android-api/#using-handlers
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Java: Handlers</p>
+   
+   Learn how to use Alan AI SDK handlers in Java
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + flutter + doc + voice
+   
+   .. link-button:: https://alan.app/docs/client-api/cross-platform/flutter/#using-client-api-methods
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Flutter: Client API Methods</p>
+   
+   Learn how to use Alan AI SDK client API methods in Flutter (iOS and Android)
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + flutter + doc + voice
+   
+   .. link-button:: https://alan.app/docs/client-api/cross-platform/flutter/#using-handlers
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Flutter: Handlers</p>
+   
+   Learn how to use Alan AI SDK handlers in Flutter (iOS and Android)
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + flutter + doc + tutorial + voice
+   
+   .. link-button:: https://alan.app/docs/tutorials/flutter/navigating-flutter/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Flutter: Navigation</p>
+   
+   Follow this tutorial to learn how to navigate in a Flutter app with voice commands
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + flutter + doc + tutorial + voice
+   
+   .. link-button:: https://alan.app/docs/tutorials/flutter/sending-data-flutter/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Flutter: Visual State</p>
+   
+   Follow this tutorial to learn how to pass the app's visual context to Alan AI
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + flutter + doc + tutorial + voice
+   
+   .. link-button:: https://alan.app/docs/tutorials/flutter/project-api-flutter/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Flutter: Data Sending</p>
+   
+   Follow this tutorial to learn how to send data from the app to Alan AI
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + flutter + video + voice
+   
+   .. link-button:: https://www.youtube.com/watch?v=AgcJwuCpUvs
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Flutter: Task Completion</p>
+   
+   Watch the video to learn how to complete tasks in a Flutter app with voice commands
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + flutter + video + voice
+   
+   .. link-button:: https://www.youtube.com/watch?v=2qZIUGDa37Y
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Flutter: Navigation</p>
+   
+   Watch the video to learn how to navigate in a Flutter app with voice commands
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + flutter + video + voice
+   
+   .. link-button:: https://www.youtube.com/watch?v=aVQlgLVMSxk
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Flutter: Visual Context</p>
+   
+   Watch the video to learn how to pass the app's visual context to Alan AI
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + flutter + video + voice
+   
+   .. link-button:: https://www.youtube.com/watch?v=rv9DN7JuJr0
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Flutter: Data Sending</p>
+   
+   Watch the video to learn how to send data from the app to Alan AI
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + flutter + video + voice
+   
+   .. link-button:: https://www.youtube.com/watch?v=roP_Yon7LN0
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Flutter: Form Filling</p>
+   
+   Watch the video to learn how to fill out a form with voice in a Flutter app
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + flutter + video + voice
+   
+   .. link-button:: https://www.youtube.com/watch?v=p4xh7zTt6i0
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Flutter: Radio App</p>
+   
+   Watch this code-along video to build a Flutter radio app
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + flutter + code + git + voice
+   
+   .. link-button:: https://github.com/alan-ai/alan-sdk-flutter/tree/master/examples/ShrineApp
+      :type: url
+      :text: Code example
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Flutter: Shrine App</p>
+   
+   Review a sample app to learn how to create a multomodal conversational AI experience
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + rn + doc + voice
+   
+   .. link-button:: https://alan.app/docs/client-api/cross-platform/react-native/#using-client-api-methods
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">React Native: Client API Methods</p>
+   
+   Learn how to use Alan AI SDK client API methods in React Native (iOS and Android)
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + rn + doc + voice
+   
+   .. link-button:: https://alan.app/docs/client-api/cross-platform/react-native/#using-handlers
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">React Native: Handlers</p>
+   
+   Learn how to use Alan AI SDK handlers in React Native (iOS and Android)
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + rn + doc + tutorial + voice
+   
+   .. link-button:: https://alan.app/docs/tutorials/react-native/sending-commands-react-native/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">React Native: Command Sending</p>
+   
+   Follow this tutorial to learn how to send commands from the dialog script to the app
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + rn + doc + tutorial + voice
+   
+   .. link-button:: https://alan.app/docs/tutorials/react-native/sending-state-react-native/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">React Native: Visual State</p>
+   
+   Follow this tutorial to learn how to pass the app's visual context to Alan AI
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + rn + doc + tutorial + voice
+   
+   .. link-button:: https://alan.app/docs/tutorials/react-native/triggering-activities-react-native/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">React Native: Data Sending</p>
+   
+   Follow this tutorial to learn how to send data from the app to Alan AI
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + rn + doc + tutorial + voice
+   
+   .. link-button:: https://alan.app/docs/tutorials/react-native/navigating-react-native/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">React Native: Navigation</p>
+   
+   Follow this tutorial to learn how to navigate in a React Native app with voice commands
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + rn + video + voice
+   
+   .. link-button:: https://www.youtube.com/watch?v=NglNsoPNJO0
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">React Native: Task Completion</p>
+   
+   Watch this video to learn how to complete tasks in the app with voice commands
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + rn + video + voice
+   
+   .. link-button:: https://www.youtube.com/watch?v=rDppX34CNRw
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">React Native: Data Retrieval</p>
+   
+   Watch this video to learn how to dynamically get data from the app
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + web + ionic + doc + voice
+   
+   .. link-button:: https://alan.app/docs/client-api/cross-platform/ionic-react/#using-client-api-methods
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Ionic React: Client API Methods</p>
+   
+   Learn how to use Alan AI SDK client API methods in Ionic React (Web, iOS and Android)
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + web + ionic + doc + voice
+   
+   .. link-button:: https://alan.app/docs/client-api/cross-platform/ionic-react/#using-handlers
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Ionic React: Handlers</p>
+   
+   Learn how to use Alan AI SDK handlers in Ionic React (Web, iOS and Android)
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + web + ionic + doc + tutorial + voice
+   
+   .. link-button:: https://alan.app/docs/tutorials/ionic/navigating-react/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Ionic React: Navigation</p>
+   
+   Follow this tutorial to learn how to navigate in an Ionic React app with voice commands
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + web + ionic + doc + voice
+   
+   .. link-button:: https://alan.app/docs/client-api/cross-platform/ionic-angular/#using-client-api-methods
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Ionic Angular: Client API Methods</p>
+   
+   Learn how to use Alan AI SDK client API methods in Ionic Angular (Web, iOS and Android)
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + web + ionic + doc + voice
+   
+   .. link-button:: https://alan.app/docs/client-api/cross-platform/ionic-angular/#using-handlers
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Ionic Angular: Handlers</p>
+   
+   Learn how to use Alan AI SDK handlers in Ionic Angular (Web, iOS and Android)
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + web + ionic + doc + tutorial + voice
+   
+   .. link-button:: https://alan.app/docs/tutorials/ionic/navigating-angular/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Ionic Angular: Navigation</p>
+   
+   Follow this tutorial to learn how to navigate in an Ionic Angular app with voice commands
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + web + ionic + doc + tutorial + voice
+   
+   .. link-button:: https://alan.app/docs/tutorials/ionic/sending-data-angular/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Ionic Angular: Data Sending</p>
+   
+   Follow this tutorial to learn how to send data from the app to Alan AI
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + web + ionic + code + git + voice
+   
+   .. link-button:: https://github.com/alan-ai/alan-sdk-ionic/tree/master/examples/AlanFoodDelivery
+      :type: url
+      :text: Code example
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Ionic Angular: Food Delivery App</p>
+   
+   Review a sample app to learn how to create a multomodal conversational AI experience
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + web + ionic + doc + voice
+   
+   .. link-button:: https://alan.app/docs/client-api/cross-platform/ionic-vue/#using-client-api-methods
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Ionic Vue: Client API Methods</p>
+   
+   Learn how to use Alan AI SDK client API methods in Ionic Vue (Web, iOS and Android)
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + android + ios + web + ionic + doc + voice
+   
+   .. link-button:: https://alan.app/docs/client-api/cross-platform/ionic-vue/#using-handlers
+      :type: url
+      :text: Docs
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Ionic Vue: Handlers</p>
+   
+   Learn how to use Alan AI SDK handlers in Ionic Vue (Web, iOS and Android)
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + web + doc + tutorial + voice + text
+   
+   .. link-button:: https://alan.app/docs/tutorials/list/using-dynamic-slots/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Dynamic Slots</p>
+   
+   Follow this tutorial to learn how to pass data to Alan AI and use it as dynamic slot values
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + doc + tutorial + voice + text
+   
+   .. link-button:: https://alan.app/docs/tutorials/list/making-web-api-call/
+      :type: url
+      :text: Tutorial
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">API Calls</p>
+   
+   Follow this tutorial to learn how to make API calls to external services from a dialog script
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=exj5Gr5tRB0
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Google Firebase</p>
+   
+   Watch this video to learn how to integrate Alan AI with Google Firebase
+   
+   ---
+   :card: border-0 + custom-style-res + ai-sdk + all-plat + all-comp + all-lang + all-type + all-channel + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=ivQEBNtKly8
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Google Firestore</p>
+   
+   Watch this video to learn how to integrate Alan AI with Google Firestore
+   
+Alan AI Platform
+================
+
+.. panels::
+   :column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-2
+   
+   ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + ai-sdk + web + ios + android + react + angular + vue + ember + electron + js + swift + obj + kotlin + java + flutter + rn + ionic + cordova + doc + cheat + voice + text
+   
+   .. link-button:: https://alan.app/docs/_static/pdf/alan-cheatsheet.pdf
+      :type: url
+      :text: Cheat sheet
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Alan AI Cheat Sheet</p>
+   
+   Get all major script concepts, client API methods, handlers and more at a glance
+   
+   ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + studio + ai-sdk + web + ios + android + react + angular + vue + ember + electron + js + swift + obj + kotlin + java + flutter + rn + ionic + cordova + course + voice
+   
+   .. link-button:: https://www.udemy.com/course/alan-ai-course/
+      :type: url
+      :text: Course
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Alan AI Course</p>
+   
+   Follow Alan AI's Udemy course to quickly build an AI assistant using custom voice commands
+   
+   ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + studio + ai-sdk + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=V8hnPlbejDc
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Alan AI Platform: Overview</p>
+   
+   Get a high-level overview of the Alan AI Platform
+   
+   ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + studio + ai-sdk + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=yJwiG3cB1js
+      :type: url
+      :text: Webinar
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Alan AI Platform: How It Works</p>
+   
+   Watch this video to understand how the Alan AI Platform works
+
+   ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + studio + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=j__wtb5CDCM
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Alan AI Studio Walkthrough</p>
+   
+   Watch this video to understand how Alan AI Studio works
+   
+   ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + studio  + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=XizKYIi40pY
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Alan AI Studio: Project Creation</p>
+   
+   Watch this video to learn about AI assistant projects in Alan AI Studio
+   
+   ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + studio  + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=XizKYIi40pY
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Alan AI Studio: Dialog Design</p>
+   
+   Watch this video to learn how to build a dialog in Alan AI Studio
+   
+   ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + studio  + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=nuMVnqHuATA
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Alan AI Studio: AI Assistant Launch</p>
+   
+   Watch this video to learn how to launch an AI assistant
+   
+   ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + studio + ai-sdk + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=oFWqOHc4Fmc
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Alan AI Studio: AI Assistant Embedding</p>
+   
+   Watch this video to learn how to embed an AI assistant into the app
+   
+   ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + studio + ai-sdk + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=iFGB0MlcJjI
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">AI Assistant Customization</p>
+   
+   Watch this video to learn about AI assistant customization options
+   
+   ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + studio + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=Tzk9AkVNFrk
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Conversational Analytics</p>
+   
+   Watch this video to learn about Alan AI Analytics
+   
+Use cases
+=========
+
+.. panels::
+   :column: col-lg-3 col-md-4 col-sm-6 col-xs-12 p-2
+
+   ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + web + ios + android + react + angular + vue + ember + electron + js + swift + obj + kotlin + java + flutter + rn + ionic + cordova + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=mG8tMYLcJLI
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Use Case: Banking</p>
+   
+   Watch a demo of an AI assistant in the banking business
+   
+   ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + web + ios + android + react + angular + vue + ember + electron + js + swift + obj + kotlin + java + flutter + rn + ionic + cordova + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=iVhR6ksM1oA
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Use Case: Customer Survey</p>
+   
+   Watch a demo of customer survey conducted by an AI assistant
+   
+   ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + web + ios + android + react + angular + vue + ember + electron + js + swift + obj + kotlin + java + flutter + rn + ionic + cordova + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=HLehTMjQDZs
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Use Case: Delivery and Updates</p>
+   
+   Watch a demo of AI-enabled e-commerce activities: product delivery and updates
+   
+   ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + web + ios + android + react + angular + vue + ember + electron + js + swift + obj + kotlin + java + flutter + rn + ionic + cordova + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=HLehTMjQDZs
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Use Case: Navigation and Checkout</p>
+   
+   Watch a demo of AI-enabled e-commerce activities: navigation and checkout
+   
+   ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + web + ios + android + react + angular + vue + ember + electron + js + swift + obj + kotlin + java + flutter + rn + ionic + cordova + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=eDuouOxsLTA
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Use Case: Product Return</p>
+   
+   Watch a demo of AI-enabled e-commerce activities: product return
+   
+   ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + web + ios + android + react + angular + vue + ember + electron + js + swift + obj + kotlin + java + flutter + rn + ionic + cordova + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=OtGEi3F6IM0
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Use Case: Voice Ads</p>
+   
+   Watch a demo of a voice AI assistant showcasing voice ads
+   
+   ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + web + ios + android + react + angular + vue + ember + electron + js + swift + obj + kotlin + java + flutter + rn + ionic + cordova + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=j-HzF9NJFsA
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Use Case: Field Maintenance</p>
+   
+   Watch a demo of an AI assistant in field maintenance
+  
+   ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + web + ios + android + react + angular + vue + ember + electron + js + swift + obj + kotlin + java + flutter + rn + ionic + cordova + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=fKLr2mXTRIY
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Use Case: Fleet Management</p>
+   
+   Watch a demo of an AI assistant in fleet management
+   
+   ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + web + ios + android + react + angular + vue + ember + electron + js + swift + obj + kotlin + java + flutter + rn + ionic + cordova + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=UQ9sF_VxKNg
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Use Case: Food Ordering</p>
+   
+   Watch a demo of food ordering with voice commands
+   
+   ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + web + ios + android + react + angular + vue + ember + electron + js + swift + obj + kotlin + java + flutter + rn + ionic + cordova + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=6o-dZMD-Cxw
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Use Case: Heath and Fitness</p>
+   
+   Watch a demo of a health and fitness AI assistant
+   
+    ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + web + ios + android + react + angular + vue + ember + electron + js + swift + obj + kotlin + java + flutter + rn + ionic + cordova + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=W5Vj4LEQeNU
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Use Case: Healthcare Patient Experience</p>
+   
+   Watch a demo of a AI-enabled healthcare patient experience
+   
+    ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + web + ios + android + react + angular + vue + ember + electron + js + swift + obj + kotlin + java + flutter + rn + ionic + cordova + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=R7oJx3d1GSM
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Use Case: Heathcare</p>
+   
+   Watch a demo of a healthcare AI assistant
+   
+    ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + web + ios + android + react + angular + vue + ember + electron + js + swift + obj + kotlin + java + flutter + rn + ionic + cordova + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=GmhbH9SlCaY
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Use Case: Med Tech</p>
+   
+   Watch a demo of an AI assistant in the med tech industry
+   
+    ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + web + ios + android + react + angular + vue + ember + electron + js + swift + obj + kotlin + java + flutter + rn + ionic + cordova + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=_agyzSK6ZLc
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Use Case: Murphy Oil</p>
+   
+   Watch a demo of an assistant for Murphy Oil
+
+    ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + web + ios + android + react + angular + vue + ember + electron + js + swift + obj + kotlin + java + flutter + rn + ionic + cordova + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=iF3mMUpQres
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Use Case: Oil and Gas</p>
+   
+   Watch a demo of an AI assistant in the Oil and Gas industry
+   
+    ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + web + ios + android + react + angular + vue + ember + electron + js + swift + obj + kotlin + java + flutter + rn + ionic + cordova + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=xtbRPUzhzJM
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Use Case: Onbording and Adoption</p>
+   
+   Watch a demo showcasing an assistant for customer onboarding and app adoption
+
+    ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + web + ios + android + react + angular + vue + ember + electron + js + swift + obj + kotlin + java + flutter + rn + ionic + cordova + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=qNEVEXMaVWw
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Use Case: Field Operations</p>
+   
+   Watch a demo showcasing an assistant in daily field operations
+   
+    ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + web + ios + android + react + angular + vue + ember + electron + js + swift + obj + kotlin + java + flutter + rn + ionic + cordova + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=Rjpf6a09Iro
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Use Case: Pizza Delivery</p>
+   
+   Watch a demo of AI-enabled pizza delivery
+   
+    ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + web + ios + android + react + angular + vue + ember + electron + js + swift + obj + kotlin + java + flutter + rn + ionic + cordova + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=T4GaIDKzCMc
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Use Case: Public Safety</p>
+   
+   Watch a demo showcasing an AI assistant for public safety
+   
+    ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + web + ios + android + react + angular + vue + ember + electron + js + swift + obj + kotlin + java + flutter + rn + ionic + cordova + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=FmUSCWjbcNY
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Use Case: Retail Operations</p>
+   
+   Watch a demo showcasing an AI assistant for retail operations
+   
+    ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + web + ios + android + react + angular + vue + ember + electron + js + swift + obj + kotlin + java + flutter + rn + ionic + cordova + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=dMut9L0RLoM
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Use Case: Sales App</p>
+   
+   Watch a demo showcasing an AI-enabled sales app
+   
+    ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + web + ios + android + react + angular + vue + ember + electron + js + swift + obj + kotlin + java + flutter + rn + ionic + cordova + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=rFLIyop8f9g
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Use Case: Sales CRM</p>
+   
+   Watch a demo showcasing an AI-enabled sales CRM
+   
+    ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + web + ios + android + react + angular + vue + ember + electron + js + swift + obj + kotlin + java + flutter + rn + ionic + cordova + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=sW4thrEcyPE
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Use Case: SAP Deliveries</p>
+   
+   Watch a demo showcasing AI-enabled SAP deliveries
+   
+    ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + web + ios + android + react + angular + vue + ember + electron + js + swift + obj + kotlin + java + flutter + rn + ionic + cordova + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=YUGQynli66w
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Use Case: Task Management</p>
+   
+   Watch a demo showcasing AI-enabled task management
+   
+    ---
+   :card: border-0 + custom-style-res + all-plat + all-comp + all-lang + all-type + all-channel + web + ios + android + react + angular + vue + ember + electron + js + swift + obj + kotlin + java + flutter + rn + ionic + cordova + video + voice + text
+   
+   .. link-button:: https://www.youtube.com/watch?v=8C018E8qBaM
+      :type: url
+      :text: Video
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-size: 1.1em; font-weight: 600">Use Case: Utilities Industry</p>
+   
+   Watch a demo showcasing an AI assistant in the Utilities industry
+
+
+.. raw:: html
+
+   <div id="blue-background"></div>
+   <div id="main-page"></div>

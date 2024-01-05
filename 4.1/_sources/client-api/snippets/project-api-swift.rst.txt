@@ -1,0 +1,7 @@
+.. code-block:: swift
+   :caption: Client app
+
+   func callProjectApi() {
+     /// Providing any params
+     self.button.callProjectApi("script::funcName", withData: ["data":"your data"], callback: nil)
+   }

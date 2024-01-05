@@ -1,0 +1,7 @@
+.. code-block:: objective-c
+   :caption: Client app
+	
+   /// Activating the Alan AI button programmatically
+   - (void)activate {
+     [self.button activate];
+   }

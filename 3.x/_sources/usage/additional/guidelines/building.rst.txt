@@ -1,0 +1,162 @@
+Building the dialog
+===================
+
+After you have defined your goals and decided on the flow, you are ready to write a dialog script. Follow the advice below to make the dialog straightforward, robust and efficient. 
+
+1. Start the dialog
+-------------------
+
+With a graphic interface, users can typically see where to go and what they can do in the app. With a multimodal interface, the initial steps and whole path may seem unclear at first. Tell the user where to start and how the AI assistant can help. There are several ways to do it with Alan AI: use any of the methods below or a combination of them.
+
+Show engaging popups
+~~~~~~~~~~~~~~~~~~~~
+To engage the user to start the dialog with the AI assistant, use :doc:`popups <../../../server-api/popups>` --- small windows next to the Alan AI button. Attract the user's attention with images added to popups and examples of conversation starters. 
+
+Play a greeting
+~~~~~~~~~~~~~~~
+
+Let the AI assistant :ref:`greet the user <how-to-activate-the-alan-button-programmatically-and-play-a-greeting>` and provide hints on what phrases to use to start and move on in the dialog. 
+
+Use voice to onboard users
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Conduct a small tour around the product for new users. With :ref:`intents <Intent>` and :ref:`commands <Sending commands to the app>`, your AI assistant can show how to use the product. You can:
+
+- Demo how to navigate through the app
+- Highlight important blocks and controls in the app
+- Show where and how the user can complete tasks and get the info
+
+.. note::
+   
+   Onboarding is a must for first-time users. There is no need to repeat hints or display welcome popups to returning customers. To differentiate first-time and repeat experiences, use :doc:`Alan AI events <../../../server-api/user-data/events>`.
+
+2. Design intents
+-----------------
+
+Intents are the core of the dialog. Each intent must be designed to complete a specific finite task --- answer the user's question or perform one requested action. 
+
+Decide what intents to add
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When writing intents, first cover a "happy path" ---  a default scenario featuring no exceptions or errors. Then, add alternative paths: for example, think about the cases when the user does not provide all the requested information at once or gets lost in the dialog. 
+
+Use :doc:`contexts <../../../server-api/contexts>` to successfully lead the user along the conversation paths and :doc:`fallbacks <../../../server-api/error-handling>` to get users back on track.
+
+
+Write effective patterns
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+When writing patterns:
+
+- **Use close-ended questions**. Design the assistant to ask direct or closed-ended questions -- questions that ask to choose from a limited set of predefined options. Avoid using open-ended questions that are difficult to answer and process, like: ``Why have you chosen this option?`` 
+
+- **Do not make it too wordy**. Avoid giving verbose instructions to the user.  Try to keep it simple and let the user spend less time navigating in the dialog. 
+
+- **Split large information blocks**. Avoid asking several questions at a time or a question that is immediately followed by an information block. In case of compound and complex phrases, the user is likely to hang on the first part of the message and miss the rest. 
+
+- **Collapse numerous options**. If you need to provide multiple of options, list only 3-4 of them and enclose the remaining ones in the ``learn more`` option. For example: ``You have the following options: <Option 1>, <Option 2>, <Option 3>. Do you want to hear more?``
+
+Identify slots in intents
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When writing patterns, identify variable pieces of data in users' utterances and turn them to :doc:`slots <../../../server-api/slots>`. Slots will help you pick out important facts from the users' voice commands and move on in dialog keeping this information in mind.
+
+
+3. Guide the user in the dialog
+-------------------------------
+
+Try to create an assistive interface that leads the user with the voice. 
+
+Provide a direct route
+~~~~~~~~~~~~~~~~~~~~~~
+
+If you want the user to answer a question or move ahead in the conversation, :ref:`play a message <play()>` to make it explicit.
+
+Ask for confirmation
+~~~~~~~~~~~~~~~~~~~~
+
+When triggering critical events such as placing orders or making payments, ask the user for confirmation. Formulate confirmations as questions, not statements. 
+
+- If the user's input to the question is valid, repeat the user's intention and move on. 
+- If the input is not valid, use :doc:`fallbacks <../../../server-api/error-handling>` to 'lock' the user in the conversation branch.
+
+Minor tasks, such as navigating to another page, do not require user's confirmation. Accompany a :ref:`command sent to the app <Sending commands to the app>` with an assistant's :ref:`message <Response>` describing the requested action -- that'll be enough. For example, if the user asks to open product details, you can send a command to open the necessary page in the app and play a message: ``Opening <item> details``.
+
+Handle errors and provide prompts
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When designing a multimodal interface, think through all possible failure scenarios and allow users to correct errors every step of the way. 
+
+- **Prompt help when needed**. If your users feel lost, do not leave them hanging. Provide suggestions and help messages or repeat information when needed. 
+
+- **Allow making corrections without starting over**. Add intents to edit the information the user has already provided without restarting the conversation.
+
+- **Provide cancel actions**. While interacting with the application through voice, users can make mistakes. Allow them to move out from unwanted situations: add intents for undo or cancel operations. 
+
+Make the dialog finite
+~~~~~~~~~~~~~~~~~~~~~~
+
+If no more conversation turns are available for the user, end the dialog session. Do not ask for additional confirmation from the user to exit the conversation. 
+
+
+4. Leverage the visual context
+------------------------------
+
+To design a multimodal interface for your app, consider the following:
+
+- **Keep in mind the app context** and the user's environment when giving responses. All messages must be contextually relevant. To provide the assistant with the information about the app context, use Alan AI's :doc:`visual state functionality <../../../server-api/sending-data/visual-state>`.
+
+- **Accompany voice responses with relevant actions in the app**. :ref:`Send commands <Sending commands to the app>` to open the desired page, highlight the block being asked about, select an option on the screen and so on. 
+
+- **Mind the command and response order**. It is recommended that you send a command first and play a response accompanying this command after that. This way, the user will be able to see the relevant visual context while the assistant's message is being played. For example, if you want to highlight a specific button and at the same time play: ``Please tap the button on the screen``, in the intent, send the highlight command first and then play the message. 
+
+- **Think about the hands-free mode**. If your application should be able to operate completely hands-free, design the multimodal interface accordingly. Do not ask the user to touch the screen to perform an action.
+
+- **Avoid displaying private data**. If you still need to show private data on the screen, ask for confirmation first.
+
+- **Choose the right modality**. Decide when to use voice and when to leverage visuals. Voice works better for:
+
+
+  - Simple questions
+  - Instructions
+  - Actions in the app
+  - Feedback
+  - Questionnaires and quizzes and so on
+
+  The visual interface works better for:
+
+  - Data that cannot go without visualizing like charts, graphs and so on
+  - Complex data with many attributes or series of items
+  - Things that need to be displayed for the user to decide, for example, products in an online store
+  
+  
+5. Fine-tune speech recognition for your domain
+-----------------------------------------------
+
+Although Alan AI automatically creates and updates the domain language model for your app, you can still use some means to bias speech recognition and make sure your AI assistant captures and correctly processes terms specific for your domain.
+
+Provide recognition hints
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Use :ref:`recognitionHints <recognition hints>` to help Alan AI recognize specific terms, words or phrase patterns that are not used in everyday life but are expected in the user's input.
+
+Use slots for terms
+~~~~~~~~~~~~~~~~~~~
+
+To increase the significance of key words and terms, :ref:`wrap them in a slot <how-to-indicate-meaningful-words-terms-and-names>`. This way, you will increase the chances that Alan AI will match the user's input to the correct intent.
+
+
+6. Maintain script versions
+---------------------------
+
+While building and editing a dialog script for your assistant, save your work in multiple :doc:`script versions <../../guides/versioning>`. Script versioning helps keeping track of every modification made to the code. If a mistake is made, you can easily switch back to a working version of your AI assistant.
+
+Name new versions in a meaningful way so that you can easily tell what functionality chunk has been added, enhanced or removed between versions. 
+
+
+.. raw:: html
+
+   <div id="orange-background"></div>
+
+
+   

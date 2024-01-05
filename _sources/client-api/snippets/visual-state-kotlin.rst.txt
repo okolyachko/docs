@@ -1,0 +1,13 @@
+.. code-block:: kotlin
+   :caption: Client app
+
+   fun setVisualState() {
+     /// Providing any params
+     val params = JSONObject()
+     try {
+       params.put("data", "your data")
+     } catch (e: JSONException) {
+       Log.e("AlanButton", e.message)
+     }
+     alanButton?.setVisualState(params.toString())
+   }

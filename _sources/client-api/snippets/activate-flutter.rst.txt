@@ -1,0 +1,9 @@
+.. code-block:: dart
+   :caption: Client app
+
+   _MyHomePageState() {
+     /// Activating the Alan AI button programmatically
+     void _activate() {
+       AlanVoice.activate();
+     }
+   }

@@ -1,0 +1,58 @@
+Alan AI Infrastructure
+======================
+
+To let you build voice and text virtual assistants, Alan AI offers a conversational AI platform. The platform comprises a set of tools and components to
+design, embed and host multimodal conversational experiences for your apps:
+
+-  `Alan AI Studio <#alan-studio>`__
+-  `Alan AI SDKs <#alan-sdks>`__
+-  `Alan AI Cloud <#alan-cloud>`__
+
+.. image:: /_static/assets/img/about/alan-scheme.png
+
+Alan AI Studio
+--------------
+
+Alan AI Studio is a web IDE where developers can create dialog scripts for their apps. The Studio provides a set of tools for convenient script writing and testing, including:
+
+-  :doc:`Source code editor <../guides/scripts>`: a simple but powerful web-based IDE
+-  :doc:`Testing and debug tools <../guides/script-testing>`: Debugging Chat, Test View and Alan AI Playground
+-  :doc:`Analytics tools <../guides/analytics>` for getting statistics on user interactions
+
+Alan AI Studio allows saving different script versions and getting back to them when required. Furthermore, it offers independent environments for developing, testing and rolling out dialog scripts to production.
+
+Alan AI SDKs
+------------
+
+To allow users to communicate with your app via voice and text commands, you need to add the Alan AI button to your app. You can do it with Alan AI SDKs. Alan AI offers SDKs for different platforms:
+
+-  :doc:`Web frameworks <../../client-api/web/web-api>`: :doc:`React <../../client-api/web/react>`,
+   :doc:`Angular <../../client-api/web/angular>`, :doc:`Vue <../../client-api/web/vue>`,
+   :doc:`Ember <../../client-api/web/ember>`,
+   :doc:`JavaScript <../../client-api/web/vanilla>`,
+   :doc:`Electron <../../client-api/web/electron>`
+-  :doc:`iOS <../../client-api/ios/ios-api>`: Swift and Objective-C
+-  :doc:`Android <../../client-api/android/android-api>`: Kotlin and Java
+-  :doc:`Cross-platform frameworks <../../client-api/cross-platform/overview>`: :doc:`Flutter <../../client-api/cross-platform/flutter>`, :doc:`Ionic <../../client-api/cross-platform/ionic>`, :doc:`React Native <../../client-api/cross-platform/react-native>`, :doc:`Apache Cordova <../../client-api/cross-platform/cordova>` 
+
+Once you integrate your app with Alan AI, you will see a small draggable button on top of the app UI. The Alan AI button allows users to start and end dialog sessions and indicates the processing state.
+
+The integration process for all platforms is straightforward and easy. Upon integration, you will not have to rebuild and redesign your app. If you need to enhance your conversational experience, you only need to update the dialog script in Alan AI Studio. All changes will be applied on the fly, and users will not have to even restart their apps.
+
+Alan AI Cloud
+-------------
+
+With Alan AI, you do not need to plan for and deploy any components to run dialog scripts. The solution architecture is serverless: dialog scripts are run on VMs in the cloud managed for you.
+
+Being backed by the cloud, the Alan AI's infrastructure is highly scalable. It can scale up to millions of users as your requirements grow. All resources to support the necessary workloads are automatically provisioned by Alan AI.
+
+The cloud is where dialog scripts you create are executed and all :doc:`voice processing <voice-processing>` takes place. Alan AI leverages advanced algorithms to handle voice and text commands and dialog flows of any complexity. You do not need to perform any speech training: Alan AI trains on intents using the terminology for your application and learns
+to understand the logic of your domain.
+
+.. note::
+
+   If necessary, you can migrate your data to a private cloud or on premises. For details, see :doc:`Deployment options <deployment>`.
+   
+.. raw:: html
+
+   <div id="blue-background"></div>

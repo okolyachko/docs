@@ -1,0 +1,50 @@
+Testing the dialog
+==================
+
+In-app assistant testing can be a challenging task. While talking to your AI assistant, users can say virtually anything. That is why it is hard to standardize how to test your multimodal interface. 
+
+To lift the burden of the assistant testing, Alan AI provides several testing tools out of the box. You can use them throughout the whole development cycle to verify your conversational experience.
+
+1. Set up environments
+----------------------
+
+As approaching the testing and release stages, set up :ref:`Development, Testing and Production environments <Environments>` for your Alan AI Studio project and decide what :doc:`script versions <../../guides/versioning>` to publish to a specific environment. We recommend that you:
+
+- Keep the working draft in the **Development** environment
+- Publish a version to be tested to the **Testing** environment
+- Promote the tested script version to **Production**
+
+Switching dialog script versions while dialog sessions are active may cause errors in the assistant's behavior. Plan to change versions during off-peak hours to avoid user disruption.
+
+
+2. Test while coding
+--------------------
+
+As you write a dialog script, you need to check how the newly added features work fast. Alan AI's :doc:`Debugging Chat <../../guides/debugging-chat>` and :doc:`logs <../../guides/logs>` help make sure your code and logic are correct. Think of this type of tests as **unit testing**: you can check single intents in your script locally and ensure the code works as expected.
+
+3. Automate testing
+-------------------
+
+When the dialog script is ready, prepare a **test plan** and lay out **test cases** using :doc:`Test View <../../guides/test-view>` in Alan AI Studio. The Test View lets you cover basic scenarios and run tens and hundreds of tests without manual input. 
+
+In future, when a new version of your dialog script is ready, you can run the existing test cases against it to make sure the previously added functionality works in a proper way.
+   
+4. Perform end-to-end testing
+-----------------------------
+
+To ensure the entire system -- the dialog script and your app -- work correctly, perform :doc:`in-app testing <../../guides/in-app-testing>` using **Alan AI's Playground** or your app directly. With this type of tests, you can check how your voice-enabled app operates in different environments and on different platforms.
+   
+5. Perform crowd testing
+------------------------
+
+The more people test your AI assistant, the more confident you can be to actually release it. Before you roll out your assistant to everyone, you can use :doc:`Alan AI's cohorts <../../button/cohorts>` to involve a group of end users in beta testing. 
+
+Cohorts provide are a great way to collect feedback from the real audience using :doc:`Alan AI's analytics <../../guides/analytics-view>` and polish your dialog before publishing it to all of your customers. 
+
+
+.. raw:: html
+
+   <div id="orange-background"></div>
+
+
+   

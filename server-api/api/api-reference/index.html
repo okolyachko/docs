@@ -1,0 +1,1847 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex/" /><link rel="search" title="Search" href="../../../search/" />
+
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/><meta name="generator" content="sphinx-3.5.4, furo 2021.04.11.beta34"/>
+        <title>API Reference | Alan Docs</title>
+      <link rel="stylesheet" href="../../../_static/styles/furo.css?digest=59ab60ac09ea94ccfe6deddff6d715cce948a6fc">
+    <link rel="stylesheet" href="../../../_static/pygments.css">
+    <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../../../_static/pygments_dark.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+
+
+<style>
+  :root {
+    --color-code-background: #ffffff;
+  --color-code-foreground: black;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+
+  /* For allowing end-user-specific overrides */
+  .override-light {
+    --color-code-background: #ffffff;
+  --color-code-foreground: black;
+  
+  }
+  .override-dark {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+</style><link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/algolia.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/typesense-docsearch.js@latest/dist/cdn/docsearch.min.css" />
+    <link rel="stylesheet" href="../../../_static/styles/furo-extensions.css?digest=d391b54134226e4196576da3bdb6dddb7e05ba2b">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../_static/favicon.ico">
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+	<link rel="canonical" href="https://alan.app/docs/server-api/api/api-reference/"/>
+    <script type="text/javascript" src= "https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-QTCQV2T397"></script>
+        <script>
+        	window.dataLayer = window.dataLayer || [];
+        	function gtag(){dataLayer.push(arguments);}
+        	gtag('js', new Date());
+		
+        	gtag('config', window.location.hostname === "alan.app" ? 'G-QTCQV2T397' : 'G-H4F9QS7RMX');
+	</script>
+</head>
+  <body dir="">
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z"/>
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="-5 -3 24 24"
+      stroke="currentColor"
+      class="feather feather-chevron-right">
+      <path d="M11 9l-6 5.25V3.75z"></path>
+    </svg>
+  </symbol>
+</svg>
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="../../../_static/favicon.ico">
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+	<link rel="canonical" href="https://alan.app/docs/server-api/api/api-reference/"/>
+    <script type="text/javascript" src= "https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-QTCQV2T397"></script>
+        <script>
+        	window.dataLayer = window.dataLayer || [];
+        	function gtag(){dataLayer.push(arguments);}
+        	gtag('js', new Date());
+		
+        	gtag('config', window.location.hostname === "alan.app" ? 'G-QTCQV2T397' : 'G-H4F9QS7RMX');
+	</script>
+
+
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+
+<div class="header-new">
+<div class="header-content">
+		<div class="logo-part">
+			<div class="logo"> 
+			
+             <div class="sidebar-logo-container">
+				<a href="https://alan.app"><img class="sidebar-logo" src="../../../_static/alan-logo.svg" alt="Logo"/></a>
+				<div class="docs">
+					
+					<a href="../../../"> 
+					
+					</div>
+				</div>
+			
+			</div>
+			
+			
+			</a>
+		</div>
+        
+		
+		<div class="right-block">
+		
+		<!--<div class="dropdown" id="version">
+		  <button class="dropbtn">4.2</button><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i>
+		  <div id="myDropdown" class="dropdown-content">
+			<a href="javascript:void(0);" class="drop-link">4.2</a>
+			<a href="javascript:void(0);" class="drop-link">4.1</a>
+			<a href="javascript:void(0);" class="drop-link">3.x</a>
+		  </div>
+		</div>
+		
+		<div class="dropdown" id="platform">
+		  <button class="dropbtn">Framework/language</button><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i>
+		  <div id="myDropdown" class="dropdown-content">
+			<a href="javascript:void(0);" class="drop-link">Web (React, Angular, etc.)</a>
+			<a href="javascript:void(0);" class="drop-link">Objective-C</a>
+			<a href="javascript:void(0);" class="drop-link">Swift</a>
+			<a href="javascript:void(0);" class="drop-link">Kotlin</a>
+			<a href="javascript:void(0);" class="drop-link">Java</a>
+			<a href="javascript:void(0);" class="drop-link">Flutter</a>
+			<a href="javascript:void(0);" class="drop-link">Ionic</a>
+			<a href="javascript:void(0);" class="drop-link">React Native</a>
+		  </div>
+		</div>-->
+		
+		<!-- First Dropdown -->
+		<div class="dropdown" id="version">
+			<button>Version</button>
+			<div class="dropdown-content">
+				<a href="javascript:void(0);">4.2</a>
+				<a href="javascript:void(0);">4.1</a>
+				<a href="javascript:void(0);">3.x</a>
+			</div>
+		</div>
+
+		<!-- Second Dropdown -->
+		<div class="dropdown" id="platform">
+			<button>Framework/language</button>
+			<div class="dropdown-content">
+				<a href="javascript:void(0);">Web (React, Angular, etc.)</a>
+				<a href="javascript:void(0);">Objective-C</a>
+				<a href="javascript:void(0);">Swift</a>
+				<a href="javascript:void(0);">Kotlin</a>
+				<a href="javascript:void(0);">Java</a>
+				<a href="javascript:void(0);">Flutter</a>
+				<a href="javascript:void(0);">Ionic</a>
+				<a href="javascript:void(0);">React Native</a>
+
+			</div>
+		</div>
+		
+		
+		<div class="goto"><a class="docs-tooltip-link" target="_blank"></a>
+		<span class="docs-tooltip">Go to docs</span>
+		</div>
+		
+		<div class="search-box">   
+			<form class="sidebar-search-container" >
+				<input class="sidebar-search" placeholder=Search name="q" ={sendRequestDebounce}>
+				<input type="hidden" name="check_keywords" value="yes">
+				<input type="hidden" name="area" value="default">
+			</form>
+			
+			
+		</div>
+		<div class="social">
+			<a href="https://alanaigroup.slack.com/join/shared_invite/enQtNzMzOTE5MTIwMjg4LWI4ZmM4MTNkMTdmY2M0ZWEwODlmZDQ5Y2ZkMjUzNmMyZDJiMzA0Y2M1NDdhYzZjYWFlZTA5NjM4OTU0MWFmNWU#/shared-invite/email" target="_blank" class="fa-brands fa-slack fa-lg"></a>
+			<a href="https://github.com/alan-ai" target="_blank" class="fa-brands fa-github fa-lg"></a>
+        </div>
+		</div>
+		</div>
+    </div>
+
+	  
+		
+		
+	
+	</div>
+<div class="page">
+  
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <div class="logo-part">
+			<div class="logo"> 
+			
+             <div class="sidebar-logo-container">
+				<a href="https://alan.app"><img class="sidebar-logo" src="../../../_static/alan-logo.svg" alt="Logo"/></a>
+			</div>
+			
+			</div>
+			
+			<div class="docs">
+			
+			<a href="../../../"> 
+			
+			</div>
+			</a>
+		</div>
+    </div>
+    <div class="header-right">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="../../../contents/">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../../../_static/alan-logo.svg" alt="Logo"/>
+  </div>
+  
+  
+</a><form class="sidebar-search-container">
+  <input class="sidebar-search search-mobile" placeholder=Search name="q">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../">Get started</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../usage/how-works/about/">How Alan AI works</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/how-works/basics/">Alan AI basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/how-works/infrastructure/">Alan AI infrastructure</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../usage/how-works/deployment/">Deployment options</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label for="toctree-checkbox-2"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/how-works/cloud-deployment/">Cloud deployment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/how-works/hybrid-deployment/">Hybrid deployment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/how-works/on-premises-deployment/">On-premises deployment</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/how-works/voice-processing/">Voice processing</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../usage/guides/studio/">Alan AI Studio</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label for="toctree-checkbox-3"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/guides/projects/">Alan AI projects</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../usage/guides/scripts/">Dialog scripts</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label for="toctree-checkbox-4"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/guides/managing-scripts/">Managing scripts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/guides/importing-scripts/">Exporting and importing scripts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/guides/sharing-github/">Sharing and keeping scripts in GitHub</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/guides/using-shortcuts/">Using shortcuts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/guides/changing-theme/">Changing the theme and font size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/guides/viewing-flowchart/">Viewing the script flowchart</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/guides/versioning/">Versions and environments</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../usage/guides/script-testing/">Testing and debugging</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label for="toctree-checkbox-5"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/guides/debugging-chat/">Debugging Chat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/guides/studio-test-tools/">Tools to simulate in-app behavior</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/guides/test-view/">Test View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/guides/logs/">Alan AI Studio logs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/guides/in-app-testing/">In-app testing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/guides/playground/">Alan AI Playground</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../usage/guides/analytics/">Conversational analytics</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label for="toctree-checkbox-6"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/guides/dashboard/">Projects dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/guides/analytics-view/">Analytics View</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/guides/billing/">Billing and subscriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../usage/button/overview/">Alan AI assistant</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label for="toctree-checkbox-7"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/button/customization/">Customizing the AI assistant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/button/chat/">Enabling the Alan AI Chat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/button/cohorts/">Setting up cohorts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/button/activation/">Starting and stopping dialog sessions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usage/additional/supported-platforms/">Supported platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usage/additional/library/">Alan AI resource library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../release-notes/updates/">Recent Alan AI Platform updates</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <main class="main">
+    <div class="content">
+      <article role="main">
+        <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+        </label>
+        <div class="section" id="api-reference">
+<h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="commands-and-responses">
+<h2>Commands and responses<a class="headerlink" href="#commands-and-responses" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="intent">
+<h3>Intent<a class="headerlink" href="#intent" title="Permalink to this headline">¶</a></h3>
+<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
+<p><code class="docutils literal notranslate"><span class="pre">intent()</span></code> is a predefined function to define a voice or text command. In the function, you specify expected user inputs — <a class="reference internal" href="../../patterns/"><span class="doc">patterns</span></a>, conditions on when the command must be available for the user — <a class="reference internal" href="../../sending-data/visual-state/"><span class="doc">visual
+filters</span></a>, and actions that must occur when the user’s input matches one of the <a class="reference internal" href="../../patterns/"><span class="doc">patterns</span></a>. For details, see <a class="reference internal" href="../../commands-and-responses/#intent"><span class="std std-ref">Intent</span></a>.</p>
+<p><strong>Syntax</strong></p>
+<div class="syntax admonition">
+<p class="admonition-title">Function syntax</p>
+<p>intent([filter,] [noctx,] pattern1 [, pattern2, …, patternN], action)</p>
+</div>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 7%"/>
+<col style="width: 6%"/>
+<col style="width: 87%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">filter</span></code></p></td>
+<td><p>function</p></td>
+<td><p>Defines the conditions on when the intent can be invoked.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">noctx</span></code></p></td>
+<td><p>function</p></td>
+<td><p>Signals that the intent must not switch the current context. For details, see <a class="reference internal" href="../../contexts/#nocontext-intents"><span class="std std-ref">noContext intents</span></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pattern</span></code></p></td>
+<td><p>string</p></td>
+<td><p>Comma separated strings, each represents a <a class="reference internal" href="../../patterns/"><span class="doc">pattern</span></a> invoking the intent.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">action</span></code></p></td>
+<td><p>function</p></td>
+<td><p>Defines what actions must be taken when one of the intent <a class="reference internal" href="../../patterns/"><span class="doc">patterns</span></a> is matched. Either an anonymous arrow function or the <a class="reference internal" href="../../commands-and-responses/#reply"><span class="std std-ref">reply()</span></a> function.</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="play">
+<h3>Play<a class="headerlink" href="#play" title="Permalink to this headline">¶</a></h3>
+<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
+<p><code class="docutils literal notranslate"><span class="pre">play()</span></code> is a predefined function used to provide voice or text responses or to send <code class="docutils literal notranslate"><span class="pre">JSON</span></code> commands to the web/mobile client app. If more than one response is passed to the <code class="docutils literal notranslate"><span class="pre">play()</span></code> function, only one response will be played at random. For details, see <a class="reference internal" href="../../commands-and-responses/#play"><span class="std std-ref">play()</span></a>.</p>
+<p><strong>Syntax</strong></p>
+<div class="syntax admonition">
+<p class="admonition-title">Function syntax</p>
+<p>play([voice(lang),] response1 [, response2, …, responseN] [, opts(options)])</p>
+</div>
+<p>Or</p>
+<div class="syntax admonition">
+<p class="admonition-title">Function syntax</p>
+<p>play(command [, opts(options)])</p>
+</div>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 8%"/>
+<col style="width: 8%"/>
+<col style="width: 84%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">voice</span></code></p></td>
+<td><p>function</p></td>
+<td><p>Settings defining how the voice of the assistant must be customized. <code class="docutils literal notranslate"><span class="pre">voice()</span></code> takes the following settings:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">language</span></code>: language, or accent, in which the response must be played - en, fr, de, it, ru, es</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gender</span></code>: Voice gender - male or female</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code>: voice type - 0 (standard for the selected gender) or 1 (custom voice)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pitch</span></code>: Speaking pitch in the range [-20.0, 20.0]</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rate</span></code>: Speaking rate in the range [0.25, 4]</p></li>
+</ul>
+<p>For details, see <a class="reference internal" href="../../voice-settings/"><span class="doc">Voice settings</span></a>.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">response</span></code></p></td>
+<td><p>string/number</p></td>
+<td><p>Comma separated strings or numbers, each represents a <a class="reference internal" href="../../patterns/"><span class="doc">pattern</span></a> of a voice response from Alan AI.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">command</span></code></p></td>
+<td><p>object</p></td>
+<td><p>An arbitrary JSON object used to send commands to the client app.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">opts</span></code></p></td>
+<td><p>function</p></td>
+<td><p>Options defining how the <code class="docutils literal notranslate"><span class="pre">play()</span></code> function must be executed in the client app. <cite>opts()</cite> takes an object with the one or more options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">force:true</span></code>: execute a command even if the assistant button is not active in the client app</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">activate:true</span></code>: activate the assistant button in the client app before a response is played or command is executed</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deactivate:true</span></code>: deactivate the assistant button in the client app after a response is played or command is executed</p></li>
+</ul>
+<p>For details, see <a class="reference internal" href="../../commands-and-responses/#play-options"><span class="std std-ref">Specifying play options</span></a>.</p>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="reply">
+<h3>Reply<a class="headerlink" href="#reply" title="Permalink to this headline">¶</a></h3>
+<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
+<p><code class="docutils literal notranslate"><span class="pre">reply()</span></code> is a predefined action function providing the specified voice or text response to the user. If more than one response is passed to the <code class="docutils literal notranslate"><span class="pre">reply()</span></code> function, only one response will be played at random. For details, see <a class="reference internal" href="../../commands-and-responses/#reply"><span class="std std-ref">reply()</span></a>.</p>
+<p><strong>Syntax</strong></p>
+<div class="syntax admonition">
+<p class="admonition-title">Function syntax</p>
+<p>reply(response1 [, response2, …, responseN])</p>
+</div>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 12%"/>
+<col style="width: 9%"/>
+<col style="width: 79%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">response</span></code></p></td>
+<td><p>string</p></td>
+<td><p>Comma separated strings, each represents a <a class="reference internal" href="../../patterns/"><span class="doc">pattern</span></a> of a response from Alan AI.</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="section" id="contexts">
+<h2>Contexts<a class="headerlink" href="#contexts" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="then">
+<span id="id1"></span><h3>Then<a class="headerlink" href="#then" title="Permalink to this headline">¶</a></h3>
+<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
+<p><code class="docutils literal notranslate"><span class="pre">then()</span></code> is a predefined function used to activate the <a class="reference internal" href="../../contexts/"><span class="doc">context</span></a>. If you need to share data between the current context and the activated one, you can pass this data with the <a class="reference internal" href="../../objects/#state"><span class="std std-ref">state</span></a> object. For details, see <a class="reference internal" href="../../contexts/#activating-contexts"><span class="std std-ref">Activating contexts</span></a>.</p>
+<p><strong>Syntax</strong></p>
+<div class="syntax admonition">
+<p class="admonition-title">Function syntax</p>
+<p>then(context[, state])</p>
+</div>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 17%"/>
+<col style="width: 13%"/>
+<col style="width: 70%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">context</span></code></p></td>
+<td><p>function</p></td>
+<td><p>Represents the variable name with which context is defined.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">state</span></code></p></td>
+<td><p>object</p></td>
+<td><p>Predefined object that exists in every context.</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="resolve">
+<h3>Resolve<a class="headerlink" href="#resolve" title="Permalink to this headline">¶</a></h3>
+<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
+<p><code class="docutils literal notranslate"><span class="pre">resolve()</span></code> is a predefined function used to manually deactivate the current <a class="reference internal" href="../../contexts/"><span class="doc">context</span></a> and return to its parent context. You can pass any data to it, this data will be available in the parrent context. For details, see <a class="reference internal" href="../../contexts/#exiting-contexts"><span class="std std-ref">Exiting contexts</span></a>.</p>
+<p><strong>Syntax</strong></p>
+<div class="syntax admonition">
+<p class="admonition-title">Function syntax</p>
+<p>resolve([returnValue])</p>
+</div>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 22%"/>
+<col style="width: 14%"/>
+<col style="width: 65%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">returnValue</span></code></p></td>
+<td><p>object</p></td>
+<td><p>Represents the object returned to the parent context.</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="fallback">
+<span id="id2"></span><h3>Fallback<a class="headerlink" href="#fallback" title="Permalink to this headline">¶</a></h3>
+<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
+<p>For each <a class="reference internal" href="../../contexts/"><span class="doc">context</span></a>, you can define a fallback response which will be activated if this context is active and no <a class="reference internal" href="../../commands-and-responses/#intent"><span class="std std-ref">intent</span></a> from this context has been matched. For details, see <a class="reference internal" href="../../error-handling/"><span class="doc">Error handling and re-prompts</span></a>.</p>
+<p><strong>Syntax</strong></p>
+<div class="syntax admonition">
+<p class="admonition-title">Function syntax</p>
+<p>fallback(pattern1 [, pattern2, …, patternN])</p>
+</div>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 11%"/>
+<col style="width: 9%"/>
+<col style="width: 80%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pattern</span></code></p></td>
+<td><p>string</p></td>
+<td><p>Comma separated strings, each represents a <a class="reference internal" href="../../patterns/"><span class="doc">pattern</span></a> of a response from Alan AI.</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="nocontext">
+<h3>noContext<a class="headerlink" href="#nocontext" title="Permalink to this headline">¶</a></h3>
+<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">noContext</span></code> function wraps all intents that must not switch the current context, for example, general questions in the dialog. For details, see <a class="reference internal" href="../../contexts/#nocontext-intents"><span class="std std-ref">noContext intents</span></a>.</p>
+<p><strong>Syntax</strong></p>
+<div class="syntax admonition">
+<p class="admonition-title">Function syntax</p>
+<p>noContext(() =&gt; {intent1 [, intent2, …, intentN]});</p>
+</div>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 15%"/>
+<col style="width: 13%"/>
+<col style="width: 72%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">intent</span></code></p></td>
+<td><p>function</p></td>
+<td><p>An intent that must not switch the current context when invoked.</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="state">
+<h3>State<a class="headerlink" href="#state" title="Permalink to this headline">¶</a></h3>
+<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
+<p>Each <a class="reference internal" href="../../contexts/"><span class="doc">context</span></a> has a special predefined object — <code class="docutils literal notranslate"><span class="pre">state</span></code>. You can access it via <code class="docutils literal notranslate"><span class="pre">p.state</span></code>. This object should be treated as the knowledge base that is available to Alan AI in the current conversational context. You can store any data in it. For details, see <a class="reference internal" href="../../objects/#state"><span class="std std-ref">state</span></a>.</p>
+</div>
+<div class="section" id="onenter">
+<span id="id3"></span><h3>onEnter<a class="headerlink" href="#onenter" title="Permalink to this headline">¶</a></h3>
+<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
+<p><code class="docutils literal notranslate"><span class="pre">onEnter()</span></code> is a special predefined callback activated each time the script enters a <a class="reference internal" href="../../contexts/"><span class="doc">context</span></a>. For details, see <a class="reference internal" href="../../contexts/#using-onenter-function"><span class="std std-ref">Using onEnter() function</span></a>.</p>
+<p><strong>Syntax</strong></p>
+<div class="syntax admonition">
+<p class="admonition-title">Function syntax</p>
+<p>onEnter(action)</p>
+</div>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 15%"/>
+<col style="width: 13%"/>
+<col style="width: 73%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">action</span></code></p></td>
+<td><p>function</p></td>
+<td><p>Defines what actions must be taken when the context is activated.</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="title">
+<h3>Title<a class="headerlink" href="#title" title="Permalink to this headline">¶</a></h3>
+<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
+<p><code class="docutils literal notranslate"><span class="pre">title()</span></code> is a special predefined function used to label a <a class="reference internal" href="../../contexts/"><span class="doc">context</span></a>. For details, see <a class="reference internal" href="../../contexts/#labeling-contexts"><span class="std std-ref">Labeling contexts</span></a>.</p>
+<p><strong>Syntax</strong></p>
+<div class="syntax admonition">
+<p class="admonition-title">Function syntax</p>
+<p>title(contextName)</p>
+</div>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 20%"/>
+<col style="width: 13%"/>
+<col style="width: 67%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">contextName</span></code></p></td>
+<td><p>string</p></td>
+<td><p>Represents the name of a context that will be shown in logs</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="resetcontext">
+<span id="id4"></span><h3>resetContext<a class="headerlink" href="#resetcontext" title="Permalink to this headline">¶</a></h3>
+<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
+<p><code class="docutils literal notranslate"><span class="pre">resetContext()</span></code> is a special predefined function used to deactivate all current contexts at a time. For details, see <a class="reference internal" href="../../contexts/#resetting-contexts"><span class="std std-ref">Resetting contexts</span></a>.</p>
+<p><strong>Syntax</strong></p>
+<div class="syntax admonition">
+<p class="admonition-title">Function syntax</p>
+<p>resetContext()</p>
+</div>
+</div>
+</div>
+<div class="section" id="session-specific-objects-and-methods">
+<h2>Session-specific objects and methods<a class="headerlink" href="#session-specific-objects-and-methods" title="Permalink to this headline">¶</a></h2>
+<p>Session-specific objects and methods are available via the predefined <code class="docutils literal notranslate"><span class="pre">p</span></code> object. These methods and objects persist during a user session, until the session is terminated. The user session is terminated after 30 minutes of inactivity or if the user quits the app.</p>
+<div class="section" id="userdata">
+<h3>userData<a class="headerlink" href="#userdata" title="Permalink to this headline">¶</a></h3>
+<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
+<p><code class="docutils literal notranslate"><span class="pre">p.userData</span></code> is a runtime object that can be used to store any data. You can access it at any time from any script of your project regardless of the context. Take a note that the data stored in <code class="docutils literal notranslate"><span class="pre">p.userData</span></code> is available only during the given user session. For details, see <a class="reference internal" href="../../objects/#userdata"><span class="std std-ref">userData</span></a>.</p>
+</div>
+<div class="section" id="authdata">
+<h3>authData<a class="headerlink" href="#authdata" title="Permalink to this headline">¶</a></h3>
+<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
+<p><code class="docutils literal notranslate"><span class="pre">p.authData</span></code> is a runtime object that can be used to provide static device- or user-specific data, such as the user’s credentials, to Alan AI. If you need to receive dynamic data from the app, use the <a class="reference internal" href="../../sending-data/visual-state/"><span class="doc">visual state</span></a> instead.</p>
+<p>For details, see <a class="reference internal" href="../../sending-data/authdata/"><span class="doc">authData</span></a>.</p>
+</div>
+<div class="section" id="visual">
+<h3>visual<a class="headerlink" href="#visual" title="Permalink to this headline">¶</a></h3>
+<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
+<p><code class="docutils literal notranslate"><span class="pre">p.visual</span></code> is a runtime object that can contain an arbitrary JSON object. It should be used to provide any dynamic data of the app state to Alan’s script or project. For details, see <a class="reference internal" href="../../sending-data/visual-state/"><span class="doc">Visual state</span></a>.</p>
+</div>
+</div>
+<div class="section" id="global-objects-and-methods">
+<h2>Global objects and methods<a class="headerlink" href="#global-objects-and-methods" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="project">
+<h3>project<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h3>
+<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
+<p><code class="docutils literal notranslate"><span class="pre">project</span></code> is a global object that can be used to store any data you may need in separate dialog scripts of your project. When Alan AI builds the dialog model for your project, it loads scripts in the order defined in the scripts panel, from top to bottom. The <code class="docutils literal notranslate"><span class="pre">project</span></code> object will be available in any script that is below the script where it is defined.</p>
+<div class="literal-block-wrapper docutils container" id="id16">
+<div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id16" title="Permalink to this code">¶</a></div>
+<div class="highlight-alan notranslate"><div class="highlight"><pre><span></span><span class="c1">// Script 1</span>
+<span class="kp">project</span><span class="p">.</span><span class="nv">config = </span><span class="p">{</span><span class="nv">initValue: </span><span class="mf">1</span><span class="p">};</span>
+
+<span class="c1">// Script 2</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Init value is </span><span class="si">${</span><span class="kp">project</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">initValue</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="project-api">
+<h3>project API<a class="headerlink" href="#project-api" title="Permalink to this headline">¶</a></h3>
+<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
+<p>The project API can be used if you want to send data from the client app to the dialog script or perform some script logic without a voice or text command from the user. This can be done by setting up the logic for the project API and then calling it with Alan AI SDK method — <a class="reference internal" href="../../../client-api/methods/common-api/#callprojectapi"><span class="std std-ref">callProjectApi()</span></a>. For details, see <a class="reference internal" href="../../sending-data/project-api/"><span class="doc">Project API</span></a>.</p>
+<p><strong>Syntax</strong></p>
+<div class="syntax admonition">
+<p class="admonition-title">Function syntax</p>
+<p>projectAPI.functionName = function(p, data, callback) {}</p>
+</div>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 14%"/>
+<col style="width: 11%"/>
+<col style="width: 75%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">p</span></code></p></td>
+<td><p>object</p></td>
+<td><p>Predefined object containing the user session data and exposing Alan AI’s methods.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">data</span></code></p></td>
+<td><p>object</p></td>
+<td><p>An object containing the data you want to pass to your script.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">callback</span></code></p></td>
+<td><p>function</p></td>
+<td><p>A callback function used to receive data back to the app.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Example</strong></p>
+<div class="literal-block-wrapper docutils container" id="id17">
+<div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id17" title="Permalink to this code">¶</a></div>
+<div class="highlight-alan notranslate"><div class="highlight"><pre><span></span><span class="nv">projectAPI.setToken = </span><span class="kd">function</span><span class="p">(</span><span class="nx">p</span><span class="p">,</span> <span class="nx">param</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">param</span> <span class="o">||</span> <span class="o">!</span><span class="nx">param</span><span class="p">.</span><span class="nx">token</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">callback</span><span class="p">(</span><span class="s2">"error: token is undefined"</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k k-Alan">p.</span><span class="nv">userData.token = </span><span class="nx">param</span><span class="p">.</span><span class="nx">token</span><span class="p">;</span>
+    <span class="nx">callback</span><span class="p">();</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="generative-ai">
+<h2>Generative AI<a class="headerlink" href="#generative-ai" title="Permalink to this headline">¶</a></h2>
+<p>You can use the following functions and APIs to let your AI assistant query the data corpus and provide a response to the user:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="#corpus">corpus</a></p></li>
+<li><p><a class="reference external" href="#generator-api">generator API</a></p></li>
+<li><p><a class="reference external" href="#query-api">query API</a></p></li>
+</ul>
+<div class="section" id="corpus">
+<span id="id5"></span><h3>corpus<a class="headerlink" href="#corpus" title="Permalink to this headline">¶</a></h3>
+<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
+<p><code class="docutils literal notranslate"><span class="pre">corpus</span></code> is a predefined function that allow specifying from which websites and resources to retrieve content to conduct a conversation between the AI assistant and users. For details, see <a class="reference internal" href="../../qna/"><span class="doc">Q&amp;A virtual assistant</span></a>.</p>
+<p><strong>Syntax</strong></p>
+<div class="syntax admonition">
+<p class="admonition-title">Function syntax</p>
+<p>corpus(resource1 [, resource2, …, resourceN])</p>
+</div>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 7%"/>
+<col style="width: 10%"/>
+<col style="width: 83%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">resource</span></code></p></td>
+<td><p>object or string</p></td>
+<td><p>Defines:</p>
+<ul class="simple">
+<li><p>URL of a resource from which data is retrieved, the crawl dept and maximum number of pages to index</p></li>
+<li><p>Plain text string to be used for user queries</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Example</strong></p>
+<div class="literal-block-wrapper docutils container" id="id18">
+<div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id18" title="Permalink to this code">¶</a></div>
+<div class="highlight-alan notranslate"><div class="highlight"><pre><span></span><span class="kp">corpus</span><span class="p">(</span>
+    <span class="p">{</span><span class="nv">url: </span><span class="s2">"https://alan.app/"</span><span class="p">,</span> <span class="nv">depth: </span><span class="mf">2</span><span class="p">,</span> <span class="nv">maxPages: </span><span class="mf">50</span><span class="p">},</span>
+    <span class="p">{</span><span class="nv">url: </span><span class="s2">"https://alan.app/docs/"</span><span class="p">,</span> <span class="nv">depth: </span><span class="mf">2</span><span class="p">,</span> <span class="nv">maxPages: </span><span class="mf">100</span><span class="p">},</span>
+<span class="p">);</span>
+
+<span class="kp">corpus</span><span class="p">(</span><span class="sb">`</span>
+<span class="sb">    Alan AI is a complete Actionable AI platform to build, deploy and manage AI Assistants in a few days.</span>
+<span class="sb">    With Alan AI, a conversational experience for your app can be built by a single developer, rather than a team of Machine Learning and DevOps experts.</span>
+<span class="sb">`</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="generator-api">
+<span id="id6"></span><h3>generator API<a class="headerlink" href="#generator-api" title="Permalink to this headline">¶</a></h3>
+<p><strong>Runtime version</strong>: <span class="versions">v4.1 or later</span></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">generator</span> <span class="pre">API</span></code> allows generating a structured response — report, product descrription and so on — based on the JSON-formatted data provided to it. For details, see <a class="reference internal" href="../../generative-ai/generator-api/"><span class="doc">Generator API</span></a>.</p>
+<p><strong>Syntax</strong></p>
+<div class="syntax admonition">
+<p class="admonition-title">Function syntax</p>
+<p>api.generator_v1({format, formatting});</p>
+<p>generator.generate({data, query});</p>
+</div>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 7%"/>
+<col style="width: 10%"/>
+<col style="width: 83%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">format</span></code></p></td>
+<td><p>format type</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">format:</span> <span class="pre">'markdown'</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">formatting</span></code></p></td>
+<td><p>string</p></td>
+<td><p>Prompt on how to format the response, for example: <code class="docutils literal notranslate"><span class="pre">formatting:</span> <span class="pre">'highlight</span> <span class="pre">headers</span> <span class="pre">and</span> <span class="pre">bold</span> <span class="pre">key</span> <span class="pre">entities</span> <span class="pre">such</span> <span class="pre">as</span> <span class="pre">names,</span> <span class="pre">dates,</span> <span class="pre">addresses</span> <span class="pre">etc.'</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">data</span></code></p></td>
+<td><p>object</p></td>
+<td><p>Object with data used for response generation, for example: <code class="docutils literal notranslate"><span class="pre">data:productInfo</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">query</span></code></p></td>
+<td><p>string</p></td>
+<td><p>Prompt on what to include in the response</p></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Output</strong></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">generator</span> <span class="pre">API</span></code> returns an output data stream with the response to the query.</p>
+<p><strong>Methods</strong></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">gather()</span></code> method is used to collect (gather) the final response.</p>
+<p><strong>Example</strong></p>
+<p>In the example below, when the user says: <code class="docutils literal notranslate"><span class="pre">Tell</span> <span class="pre">me</span> <span class="pre">about</span> <span class="pre">iPhone</span> <span class="pre">13</span> <span class="pre">Pro,</span> <span class="pre">include</span> <span class="pre">only</span> <span class="pre">its</span> <span class="pre">characteristics</span> <span class="pre">and</span> <span class="pre">image</span></code>, Alan AI generates a structured response in a form of a product card containing the product characteristics and image provided in the <code class="docutils literal notranslate"><span class="pre">productList</span></code> array.</p>
+<div class="literal-block-wrapper docutils container" id="id19">
+<div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id19" title="Permalink to this code">¶</a></div>
+<div class="highlight-alan notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nv">productList = </span><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"iPhone 13 Pro"</span><span class="p">,</span>
+        <span class="s2">"min_price"</span><span class="o">:</span><span class="s2">"$999"</span><span class="p">,</span>
+        <span class="s2">"vendor"</span><span class="o">:</span><span class="s2">"Apple"</span><span class="p">,</span>
+        <span class="s2">"spec"</span><span class="o">:</span><span class="s2">"A15 Bionic chip, Super Retina XDR display, ProMotion technology, Triple 12MP camera system, 5G capability, Face ID, Ceramic Shield front cover, and Water and dust resistance."</span><span class="p">,</span>
+        <span class="s2">"image"</span><span class="o">:</span><span class="s2">"https://www.apple.com/newsroom/images/product/iphone/standard/Apple_iPhone-13-Pro_iPhone-13-Pro-Max_09142021_inline.jpg"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Samsung Galaxy S21 Ultra"</span><span class="p">,</span>
+        <span class="s2">"min_price"</span><span class="o">:</span><span class="s2">"$1,199"</span><span class="p">,</span>
+        <span class="s2">"vendor"</span><span class="o">:</span><span class="s2">"Samsung"</span><span class="p">,</span>
+        <span class="s2">"spec"</span><span class="o">:</span><span class="s2">"Exynos 2100 or Snapdragon 888 processor, Dynamic AMOLED 2X display, Quad HD+ resolution, 108MP quad camera system, 5G capability, In-display fingerprint sensor, S Pen support, and Water and dust resistance."</span><span class="p">,</span>
+        <span class="s2">"image"</span><span class="o">:</span><span class="s2">"https://image-us.samsung.com/us/smartphones/galaxy-s21/galaxy-s21-5g/v6/models/images/galaxy-s21-plus-5g_models_colors_phantom-violet.png"</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+
+<span class="kd">let</span> <span class="nv">generator = </span><span class="nx">api</span><span class="p">.</span><span class="nx">generator_v1</span><span class="p">({</span>
+    <span class="nv">format: </span><span class="s1">'markdown'</span><span class="p">,</span>
+    <span class="nv">formatting: </span><span class="s1">'highlight headers and bold key entities such as names, dates, addresses etc.'</span>
+<span class="p">});</span>
+
+<span class="kp">intent</span><span class="p">(</span>
+    <span class="sb">`Tell me about $(MODEL iPhone 13 Pro|Samsung Galaxy S21 Ultra), (include|) $(R* .+)`</span><span class="p">,</span>
+    <span class="k">async</span> <span class="nx">p</span><span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nv">productInfo = </span><span class="nx">productList</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">el</span> <span class="p">=&gt;</span> <span class="nx">el</span><span class="p">.</span><span class="nx">name</span> <span class="o">===</span> <span class="k k-Alan">p.</span><span class="nx">MODEL</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+        <span class="kd">let</span> <span class="nv">instruct = </span><span class="s1">'product details: '</span> <span class="o">+</span> <span class="k k-Alan">p.</span><span class="nx">R</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
+        <span class="kd">let</span> <span class="nv">stream = </span><span class="nx">generator</span><span class="p">.</span><span class="nx">generate</span><span class="p">({</span><span class="nv">data: </span><span class="nx">productInfo</span><span class="p">,</span> <span class="nx">instruct</span><span class="p">});</span>
+
+        <span class="k k-Alan">p.</span><span class="nx">play</span><span class="p">(</span><span class="sb">`Retrieving product data...`</span><span class="p">);</span>
+        <span class="k k-Alan">p.</span><span class="nx">play</span><span class="p">(</span><span class="nx">stream</span><span class="p">);</span>
+        <span class="kd">let</span> <span class="nv">answer = </span><span class="k">await</span> <span class="nx">stream</span><span class="p">.</span><span class="nx">gather</span><span class="p">();</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">answer</span><span class="p">.</span><span class="nx">answer</span><span class="p">);</span>
+    <span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="query-api">
+<span id="id7"></span><h3>query API<a class="headerlink" href="#query-api" title="Permalink to this headline">¶</a></h3>
+<p><strong>Runtime version</strong>: <span class="versions">v4.1 or later</span></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">query</span> <span class="pre">API</span></code> allows querying corpus data programmatically to retrieve a response that can be further used in the dialog flow. For details, see <a class="reference internal" href="../../question-answering/query-api/"><span class="doc">Query API</span></a>.</p>
+<p><strong>Syntax</strong></p>
+<div class="syntax admonition">
+<p class="admonition-title">Function syntax</p>
+<p>api.query_v1({corpus, query})</p>
+</div>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 7%"/>
+<col style="width: 10%"/>
+<col style="width: 83%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">corpus</span></code></p></td>
+<td><p>text corpus</p></td>
+<td><p>Corpus data to be queried, for example: <code class="docutils literal notranslate"><span class="pre">corpus:</span> <span class="pre">FAQ</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">query</span></code></p></td>
+<td><p>string</p></td>
+<td><p>Query to be run against the corpus, for example: <code class="docutils literal notranslate"><span class="pre">query:</span> <span class="pre">"How</span> <span class="pre">to</span> <span class="pre">reset</span> <span class="pre">a</span> <span class="pre">smartphone?"</span></code></p></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Output</strong></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">query</span> <span class="pre">API</span></code> returns a response object with the following data:</p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 8%"/>
+<col style="width: 92%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">summary</span></code></p></td>
+<td><p>Summary of the answer generated by the query API</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">query</span></code></p></td>
+<td><p>Detailed answer generated by the query API</p></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Methods</strong></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">gather()</span></code> method is used to collect (gather) the final response.</p>
+<p><strong>Example</strong></p>
+<p>In the example below, when the user asks a question: <code class="docutils literal notranslate"><span class="pre">Can</span> <span class="pre">you</span> <span class="pre">tell</span> <span class="pre">me</span> <span class="pre">why</span> <span class="pre">my</span> <span class="pre">smartphone</span> <span class="pre">battery</span> <span class="pre">is</span> <span class="pre">draining</span> <span class="pre">quickly?</span></code>, Alan AI queries the <code class="docutils literal notranslate"><span class="pre">FAQ</span></code> corpus and collects the final response with the <code class="docutils literal notranslate"><span class="pre">gather()</span></code> method. The final response is played to the user, the response summary and detailed answer are written to Alan Studio logs.</p>
+<div class="literal-block-wrapper docutils container" id="id20">
+<div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id20" title="Permalink to this code">¶</a></div>
+<div class="highlight-alan notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nv">FAQ = </span><span class="kp">corpus</span><span class="p">(</span><span class="sb">`</span>
+<span class="sb">    Why is my smartphone battery draining quickly? Possible causes include excessive app usage, background processes, high screen brightness, push notifications, and weak cellular signals. To address this, close unnecessary apps, reduce screen brightness, disable push notifications for non-essential apps, and keep your device updated.</span>
+<span class="sb">    How do I fix a frozen or unresponsive smartphone? Try a soft reset by holding the power button for 10 seconds. If that fails, perform a force restart by holding the power and volume down buttons for 10-15 seconds.</span>
+<span class="sb">`</span><span class="p">);</span>
+
+<span class="kp">intent</span><span class="p">(</span><span class="s2">"Can you tell me $(QUERY* .+)"</span><span class="p">,</span> <span class="k">async</span> <span class="nx">p</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="k k-Alan">p.</span><span class="nx">play</span><span class="p">(</span><span class="s2">"Just a second..."</span><span class="p">);</span>
+    <span class="kd">let</span> <span class="nv">answer = </span><span class="k">await</span> <span class="nx">api</span><span class="p">.</span><span class="nx">query_v1</span><span class="p">({</span><span class="kp">corpus</span><span class="o">:</span> <span class="nx">FAQ</span><span class="p">,</span> <span class="nv">question: </span><span class="k k-Alan">p.</span><span class="nx">QUERY</span><span class="p">.</span><span class="nx">value</span><span class="p">});</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">answer</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k k-Alan">p.</span><span class="nx">play</span><span class="p">(</span><span class="nx">answer</span><span class="p">);</span>
+        <span class="kd">let</span> <span class="kr">final</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">answer</span><span class="p">.</span><span class="nx">gather</span><span class="p">();</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="kr">final</span><span class="p">.</span><span class="nx">summary</span><span class="p">);</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="kr">final</span><span class="p">.</span><span class="nx">answer</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k k-Alan">p.</span><span class="nx">play</span><span class="p">(</span><span class="sb">`Sorry, I cannot help you with that`</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="semantic-search">
+<h2>Semantic search<a class="headerlink" href="#semantic-search" title="Permalink to this headline">¶</a></h2>
+<p>You can use the following API for semantic search: <a class="reference external" href="#table-api">table API</a>.</p>
+<div class="section" id="table-api">
+<span id="id8"></span><h3>table API<a class="headerlink" href="#table-api" title="Permalink to this headline">¶</a></h3>
+<p><strong>Runtime version</strong>: <span class="versions">v4.1 or later</span></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">table</span> <span class="pre">API</span></code> allows creating a table with data passed to it and enables semantic search across this data. For details, see <a class="reference internal" href="../../semantic-search/table-api/"><span class="doc">Table API</span></a>.</p>
+<p><strong>Syntax</strong></p>
+<div class="syntax admonition">
+<p class="admonition-title">Function syntax</p>
+<p>api.table_v1({tableName, columns});</p>
+<p>table.update({columnList});</p>
+<p>table.commit();</p>
+<p>table.search({description: {q, score, top_k}});</p>
+</div>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 8%"/>
+<col style="width: 10%"/>
+<col style="width: 82%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">tableName</span></code></p></td>
+<td><p>string</p></td>
+<td><p>Table name</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">columns</span></code></p></td>
+<td><p>object</p></td>
+<td><p>List of columns and value types, for example: <code class="docutils literal notranslate"><span class="pre">{id:</span> <span class="pre">'str,unique',</span> <span class="pre">name:</span> <span class="pre">'str',</span> <span class="pre">description:</span> <span class="pre">'str,semantic'}</span></code></p>
+<p>Value parameters:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">unique</span></code> - ensures all values in a column are different</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">semantic</span></code> - enables semantic search for the column content</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">columnsList</span></code></p></td>
+<td><p>object</p></td>
+<td><p>List of table columns mapped to data keys of the passed object from which data is retrieved, for example: <code class="docutils literal notranslate"><span class="pre">{id:</span> <span class="pre">id,</span> <span class="pre">name:</span> <span class="pre">name,</span> <span class="pre">description:</span> <span class="pre">productDetails}</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">q</span></code></p></td>
+<td><p>string</p></td>
+<td><p>Query to be run against the table with data</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">score</span></code></p></td>
+<td><p>decimal</p></td>
+<td><p>Degree of similarity in the range between 0 (no similarity) to 1 (the query is identical to the column value)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">top_k</span></code></p></td>
+<td><p>decimal</p></td>
+<td><p>Maximum number of top results matching the query to be returned</p></td>
+</tr>
+</tbody>
+</table></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you need to add table columns after the table has been created, update the <code class="docutils literal notranslate"><span class="pre">tableName</span></code> as well.</p>
+</div>
+<p><strong>Output</strong></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">table</span> <span class="pre">API</span></code> returns an array of records  in the JSON format that match the query run against the table.</p>
+<p><strong>Example</strong></p>
+<p>In the example below, when the user asks: <code class="docutils literal notranslate"><span class="pre">Find</span> <span class="pre">a</span> <span class="pre">model</span> <span class="pre">with</span> <span class="pre">an</span> <span class="pre">improved</span> <span class="pre">camera</span></code>, Alan AI understands the conceptual meaning behind the search query and delivers relevant results that are displayed as product cards in the chat. Even though the words from the query – <code class="docutils literal notranslate"><span class="pre">improved</span> <span class="pre">camera</span></code>– may not be directly mentioned in the product description, it retrieves the list of products whose description contains information about camera enhancements.</p>
+<div class="literal-block-wrapper docutils container" id="id21">
+<div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id21" title="Permalink to this code">¶</a></div>
+<div class="highlight-alan notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nv">productList = </span><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">"id"</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
+        <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"iPhone 13 Pro"</span><span class="p">,</span>
+        <span class="s2">"min_price"</span><span class="o">:</span><span class="s2">"$999"</span><span class="p">,</span>
+        <span class="s2">"vendor"</span><span class="o">:</span><span class="s2">"Apple"</span><span class="p">,</span>
+        <span class="s2">"spec"</span><span class="o">:</span><span class="s2">"A15 Bionic chip, Super Retina XDR display, ProMotion technology, Triple 12MP camera system, 5G capability, Face ID, Ceramic Shield front cover, and Water and dust resistance."</span><span class="p">,</span>
+        <span class="s2">"productDetails"</span><span class="o">:</span> <span class="s2">"Major upgrades over its predecessor include improved battery life, improved cameras and computational photography, rack focus for video in a new 'Cinematic Mode' at 1080p 30 fps, Apple ProRes video recording, a new A15 Bionic system on a chip, and a variable 10–120 Hz display, marketed as ProMotion."</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">"id"</span><span class="o">:</span> <span class="mf">2</span><span class="p">,</span>
+        <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Samsung Galaxy S21 Ultra"</span><span class="p">,</span>
+        <span class="s2">"min_price"</span><span class="o">:</span><span class="s2">"$1,199"</span><span class="p">,</span>
+        <span class="s2">"vendor"</span><span class="o">:</span><span class="s2">"Samsung"</span><span class="p">,</span>
+        <span class="s2">"spec"</span><span class="o">:</span><span class="s2">"Exynos 2100 or Snapdragon 888 processor, Dynamic AMOLED 2X display, Quad HD+ resolution, 108MP quad camera system, 5G capability, In-display fingerprint sensor, S Pen support, and Water and dust resistance."</span><span class="p">,</span>
+        <span class="s2">"productDetails"</span><span class="o">:</span> <span class="s2">"The Galaxy S21 Ultra comes in a sleeker design and offers faster performance from Qualcomm's Snapdragon 888 chip. And, unlike the regular Galaxy S21, you don't have to make nearly as many trade-offs. You get a better main 108MP camera, a glass back (instead of plastic), more RAM and a higher-res display."</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">"id"</span><span class="o">:</span> <span class="mf">3</span><span class="p">,</span>
+        <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Google Pixel 6 Pro"</span><span class="p">,</span>
+        <span class="s2">"min_price"</span><span class="o">:</span><span class="s2">"$899"</span><span class="p">,</span>
+        <span class="s2">"vendor"</span><span class="o">:</span><span class="s2">"Google"</span><span class="p">,</span>
+        <span class="s2">"spec"</span><span class="o">:</span><span class="s2">"Google Tensor chip, 6.7-inch QHD+ OLED display, 50MP main camera, 12MP ultra-wide camera, 5G capability, Titan M2 security chip, In-display fingerprint sensor, and Android 12 operating system."</span><span class="p">,</span>
+        <span class="s2">"productDetails"</span><span class="o">:</span><span class="s2">"With its unique design and high-quality build, impressive display and good battery life, and its consistently good cameras and feature-rich software, the Google Pixel 6 Pro stands toe-to-toe with the very best from Apple and Samsung. This is the Google flagship we've been waiting for."</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">];</span>
+
+<span class="c1">// Create a table</span>
+<span class="kd">let</span> <span class="nv">table = </span><span class="kc">null</span><span class="p">;</span>
+
+<span class="k">async</span> <span class="kd">function</span> <span class="nx">reloadTable</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nv">table = </span><span class="nx">api</span><span class="p">.</span><span class="nx">table_v1</span><span class="p">({</span>
+        <span class="nv">tableName: </span><span class="s1">'products'</span><span class="p">,</span>
+        <span class="nv">columns: </span><span class="p">{</span><span class="nv">id: </span><span class="s1">'str,unique'</span><span class="p">,</span> <span class="nv">name: </span><span class="s1">'str'</span><span class="p">,</span> <span class="nv">price: </span><span class="s1">'str'</span><span class="p">,</span> <span class="nv">description: </span><span class="s1">'str,semantic'</span><span class="p">,</span> <span class="nv">specification: </span><span class="s1">'str,semantic'</span><span class="p">}</span>
+    <span class="p">});</span>
+    <span class="c1">// Populate the table</span>
+    <span class="kd">let</span> <span class="nv">products = </span><span class="nx">productList</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="k k-Alan">p </span><span class="k">of</span> <span class="nx">products</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">table</span><span class="p">.</span><span class="nx">update</span><span class="p">({</span>
+            <span class="nv">id: </span><span class="k k-Alan">p.</span><span class="nx">id</span><span class="p">,</span>
+            <span class="nv">name: </span><span class="k k-Alan">p.</span><span class="nx">name</span><span class="p">,</span>
+            <span class="nv">price: </span><span class="k k-Alan">p.</span><span class="nx">min_price</span><span class="p">,</span>
+            <span class="nv">description: </span><span class="k k-Alan">p.</span><span class="nx">productDetails</span><span class="p">,</span>
+            <span class="nv">specification: </span><span class="k k-Alan">p.</span><span class="nx">spec</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+    <span class="c1">// Commit changes to the table</span>
+    <span class="k">await</span> <span class="nx">table</span><span class="p">.</span><span class="nx">commit</span><span class="p">();</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">reloadTable</span><span class="p">,</span> <span class="mf">5000</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">reloadTable</span><span class="p">();</span>
+
+<span class="kp">intent</span><span class="p">(</span><span class="sb">`Find a model with $(QUERY* .+)`</span><span class="p">,</span> <span class="k">async</span> <span class="nx">p</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="k k-Alan">p.</span><span class="nx">play</span><span class="p">(</span><span class="s2">"Please give me a moment..."</span><span class="p">)</span>
+    <span class="kd">let</span> <span class="nv">query = </span><span class="k k-Alan">p.</span><span class="nx">QUERY</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
+    <span class="kd">let</span> <span class="nv">products = </span><span class="k">await</span> <span class="nx">table</span><span class="p">.</span><span class="nx">search</span><span class="p">({</span><span class="nv">description: </span><span class="p">{</span><span class="nv">q: </span><span class="nx">query</span><span class="p">,</span> <span class="nv">score: </span><span class="mf">0.3</span><span class="p">,</span> <span class="nv">top_k: </span><span class="mf">3</span><span class="p">}});</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">products</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k k-Alan">p.</span><span class="nx">play</span><span class="p">(</span><span class="sb">`Here is a list of models you may like:`</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">product</span> <span class="k">of</span> <span class="nx">products</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k k-Alan">p.</span><span class="nx">play</span><span class="p">(</span><span class="sb">`**Name**: </span><span class="si">${</span><span class="nx">product</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="sb"> \n\n **Price**: </span><span class="si">${</span><span class="nx">product</span><span class="p">.</span><span class="nx">price</span><span class="si">}</span><span class="sb"> \n\n **Details**: </span><span class="si">${</span><span class="nx">product</span><span class="p">.</span><span class="nx">description</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span> <span class="kp">opts</span><span class="p">({</span><span class="nx">markdown</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span> <span class="nx">audio</span><span class="o">:</span><span class="kc">false</span><span class="p">}));</span>
+        <span class="p">}</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k k-Alan">p.</span><span class="nx">play</span><span class="p">(</span><span class="sb">`Nothing found`</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="data-transformation">
+<h2>Data transformation<a class="headerlink" href="#data-transformation" title="Permalink to this headline">¶</a></h2>
+<p>You can use the following function for data preprocessing and transformation: <a class="reference external" href="#transforms">transforms</a>.</p>
+<div class="section" id="transforms">
+<h3>transforms<a class="headerlink" href="#transforms" title="Permalink to this headline">¶</a></h3>
+<p><strong>Runtime version</strong>: <span class="versions">v4.2 or later</span></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">transforms()</span></code> function can be used to pre-process and format the input data to the required format using the defined template. For details, see <a class="reference internal" href="../../transforms/overview/"><span class="doc">Data transformation</span></a>.</p>
+<p><strong>Syntax</strong></p>
+<div class="syntax admonition">
+<p class="admonition-title">Function syntax</p>
+<p>transforms.transformName({input, query})</p>
+</div>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 15%"/>
+<col style="width: 11%"/>
+<col style="width: 74%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">tranformName</span></code></p></td>
+<td><p>string</p></td>
+<td><p>Name of the transform created in the AI assistant project.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">input</span></code></p></td>
+<td><p>object</p></td>
+<td><p>An object containing the data input passed to the transform.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">query</span></code></p></td>
+<td><p>function</p></td>
+<td><p>An object containing the transform query.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Example</strong></p>
+<p>In the example below, the text in the input is formatted by the rules specified in the <code class="docutils literal notranslate"><span class="pre">format</span></code> transform:</p>
+<ul class="simple">
+<li><p><strong>Common query</strong>: <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">input</span> <span class="pre">contains</span> <span class="pre">user</span> <span class="pre">data</span> <span class="pre">in</span> <span class="pre">JSON,</span> <span class="pre">the</span> <span class="pre">query</span> <span class="pre">contains</span> <span class="pre">fields</span> <span class="pre">description,</span> <span class="pre">the</span> <span class="pre">result</span> <span class="pre">contains</span> <span class="pre">formatted</span> <span class="pre">text</span></code></p></li>
+<li><p><strong>Input</strong>: JSON, <code class="docutils literal notranslate"><span class="pre">{"name":</span> <span class="pre">"Jerry</span> <span class="pre">Welsh",</span> <span class="pre">"age":</span> <span class="pre">"16",</span> <span class="pre">"address":</span> <span class="pre">"3456</span> <span class="pre">Oak</span> <span class="pre">Street"}</span></code></p></li>
+<li><p><strong>Query</strong>: <code class="docutils literal notranslate"><span class="pre">Name</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">user's</span> <span class="pre">name,</span> <span class="pre">age</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">user's</span> <span class="pre">age,</span> <span class="pre">address</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">user's</span> <span class="pre">address</span></code></p></li>
+<li><p><strong>Result</strong>: Markdown</p></li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id22">
+<div class="code-block-caption"><span class="caption-text">Results field</span><a class="headerlink" href="#id22" title="Permalink to this code">¶</a></div>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gu">## User: user's name</span>
+
+<span class="k">-</span><span class="w"> </span><span class="gs">**Name**</span>: user's name
+<span class="k">-</span><span class="w"> </span><span class="gs">**Age**</span>: user's age
+<span class="k">-</span><span class="w"> </span><span class="gs">**Address**</span>: user's address
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id23">
+<div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id23" title="Permalink to this code">¶</a></div>
+<div class="highlight-alan notranslate"><div class="highlight"><pre><span></span><span class="kp">intent</span><span class="p">(</span><span class="sb">`Show user data`</span><span class="p">,</span> <span class="k">async</span> <span class="p">(</span><span class="nx">p</span><span class="p">)=&gt;</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nv">u = </span><span class="k">await</span> <span class="nx">transforms</span><span class="p">.</span><span class="nx">format</span><span class="p">({</span>
+        <span class="nv">input: </span><span class="p">{</span><span class="s2">"name"</span><span class="o">:</span> <span class="s2">"John Smith"</span><span class="p">,</span> <span class="s2">"age"</span><span class="o">:</span> <span class="s2">"56"</span><span class="p">,</span> <span class="s2">"address"</span><span class="o">:</span> <span class="s2">"1234 Main Street"</span><span class="p">},</span>
+        <span class="nv">query: </span><span class="s2">"Name is the user's name, age is the user's age, address is the user's address"</span>
+    <span class="p">});</span>
+    <span class="k k-Alan">p.</span><span class="nx">play</span><span class="p">(</span><span class="nx">u</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="speech-recognition-biasing">
+<h2>Speech recognition biasing<a class="headerlink" href="#speech-recognition-biasing" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="recognition-hints">
+<span id="id9"></span><h3>Recognition hints<a class="headerlink" href="#recognition-hints" title="Permalink to this headline">¶</a></h3>
+<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
+<p><code class="docutils literal notranslate"><span class="pre">recognitionHints</span></code> allow you to provide a list of hints for the AI assistant to help it recognize specific terms, words or phrase patterns that are not used in everyday life but are expected in the user’s input. Use it to avoid frequent errors in speech recognition.</p>
+<p><strong>Syntax</strong></p>
+<div class="syntax admonition">
+<p class="admonition-title">Function syntax</p>
+<p>recognitionHints(recognitionHint1 [, recognitionHint2, …, recognitionHintN])</p>
+</div>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 16%"/>
+<col style="width: 8%"/>
+<col style="width: 75%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">recognitionHint</span></code></p></td>
+<td><p>string</p></td>
+<td><p>Comma separated strings (hints), each represents a <a class="reference internal" href="../../patterns/"><span class="doc">pattern</span></a> of the user’s input.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Example</strong></p>
+<div class="literal-block-wrapper docutils container" id="id24">
+<div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id24" title="Permalink to this code">¶</a></div>
+<div class="highlight-alan notranslate"><div class="highlight"><pre><span></span><span class="kp">recognitionHints</span><span class="p">(</span><span class="s2">"Open ICIK"</span><span class="p">);</span>
+
+<span class="kp">intent</span><span class="p">(</span><span class="s1">'Open $(PARAM~ ICIK~ICIK)'</span><span class="p">,</span> <span class="nx">p</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="k k-Alan">p.</span><span class="nx">play</span><span class="p">(</span><span class="sb">`Opening </span><span class="si">${</span><span class="k k-Alan">p.</span><span class="nx">PARAM</span><span class="p">.</span><span class="nx">label</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="homophone">
+<span id="homophones"></span><h3>Homophone<a class="headerlink" href="#homophone" title="Permalink to this headline">¶</a></h3>
+<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
+<p><code class="docutils literal notranslate"><span class="pre">homophone()</span></code> helps eliminate ambiguity and improve matching of intents containing terminology or domain-specific words. In the <code class="docutils literal notranslate"><span class="pre">homophone</span></code> function, you must specify a term expected in the user’s input and a list of its homophones — words that are pronounced in a similar way but are different in meaning. This will prevent the AI assistant from failing to match the intent when the user mispronounces or mistypes this term.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To create a list of homophones for a term, you can check unrecognized phrases in <a class="reference internal" href="../../../usage/guides/analytics-view/"><span class="doc">Alan AI analytics</span></a>.</p>
+</div>
+<p><strong>Syntax</strong></p>
+<div class="syntax admonition">
+<p class="admonition-title">Function syntax</p>
+<p>homophone(term, homophone1 [, homophone2, …, homophoneN] )</p>
+</div>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 11%"/>
+<col style="width: 9%"/>
+<col style="width: 80%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">term</span></code></p></td>
+<td><p>string</p></td>
+<td><p>The expected term to be matched.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">homophone</span></code></p></td>
+<td><p>string</p></td>
+<td><p>List of homophones for the term.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Example</strong></p>
+<div class="literal-block-wrapper docutils container" id="id25">
+<div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id25" title="Permalink to this code">¶</a></div>
+<div class="highlight-alan notranslate"><div class="highlight"><pre><span></span><span class="nx">homophone</span><span class="p">(</span><span class="s1">'flour'</span><span class="p">,</span> <span class="s1">'flower'</span><span class="p">,</span> <span class="s1">'floor'</span><span class="p">);</span>
+<span class="nx">homophone</span><span class="p">(</span><span class="s1">'cereal'</span><span class="p">,</span> <span class="s1">'serial'</span><span class="p">);</span>
+
+<span class="kp">intent</span><span class="p">(</span><span class="s1">'Add $(ITEM flour|cereal) to my shopping list'</span><span class="p">,</span> <span class="nx">p</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="k k-Alan">p.</span><span class="nx">play</span><span class="p">(</span><span class="sb">`Sure, how much </span><span class="si">${</span><span class="k k-Alan">p.</span><span class="nx">ITEM</span><span class="p">.</span><span class="nx">value</span><span class="si">}</span><span class="sb"> would you like to add?`</span><span class="p">)</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="predefined-callbacks">
+<span id="id10"></span><h2>Predefined callbacks<a class="headerlink" href="#predefined-callbacks" title="Permalink to this headline">¶</a></h2>
+<p>After you create an AI assistant with Alan AI, the dialog goes through several states: the project is created, the user connects to the app and so on. When the dialog state changes, you may want to perform activities that are appropriate to this state. For example, when a new user connects to the dialog session, it may be necessary to set user-specific
+data.</p>
+<p>To perform actions at different stages of the dialog lifecycle, you can use the following predefined callback functions:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="#oncreateproject">onCreateProject</a></p></li>
+<li><p><a class="reference external" href="#oncreateuser">onCreateUser</a></p></li>
+<li><p><a class="reference external" href="#oncleanupuser">onCleanupUser</a></p></li>
+<li><p><a class="reference external" href="#onvisualstate">onVisualState</a></p></li>
+<li><p><a class="reference external" href="#onuserevent">onUserEvent</a></p></li>
+</ul>
+<div class="section" id="oncreateproject">
+<span id="id11"></span><h3>onCreateProject<a class="headerlink" href="#oncreateproject" title="Permalink to this headline">¶</a></h3>
+<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
+<p><code class="docutils literal notranslate"><span class="pre">onCreateProject</span></code> is invoked when the dialog model for the dialog script is created. You can use this function to perform activities required immediately after the dialog model is built, for example, for any data initialization.</p>
+<p><strong>Syntax</strong></p>
+<div class="syntax admonition">
+<p class="admonition-title">Function syntax</p>
+<p>onCreateProject(()=&gt; {action})</p>
+</div>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 11%"/>
+<col style="width: 10%"/>
+<col style="width: 79%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">action</span></code></p></td>
+<td><p>function</p></td>
+<td><p>Defines what actions must be taken when the dialog model is created on the server in Alan AI Cloud.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Example</strong></p>
+<p>In the example below, <code class="docutils literal notranslate"><span class="pre">onCreateProject</span></code> is used to define values for <code class="docutils literal notranslate"><span class="pre">project.drinks</span></code>.</p>
+<div class="literal-block-wrapper docutils container" id="id26">
+<div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id26" title="Permalink to this code">¶</a></div>
+<div class="highlight-alan notranslate"><div class="highlight"><pre><span></span><span class="kp">onCreateProject</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="kp">project</span><span class="p">.</span><span class="nv">drinks = </span><span class="s2">"green tea|black tea|oolong"</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="oncreateuser">
+<span id="id12"></span><h3>onCreateUser<a class="headerlink" href="#oncreateuser" title="Permalink to this headline">¶</a></h3>
+<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
+<p><code class="docutils literal notranslate"><span class="pre">onCreateUser</span></code> is invoked when a new user starts a dialog session. You can use this function to set user-specific data.</p>
+<p><strong>Syntax</strong></p>
+<div class="syntax admonition">
+<p class="admonition-title">Function syntax</p>
+<p>onCreateUser(p =&gt; {action})</p>
+</div>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 12%"/>
+<col style="width: 10%"/>
+<col style="width: 78%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">p</span></code></p></td>
+<td><p>object</p></td>
+<td><p>Predefined object containing the user session data and exposing Alan AI’s methods.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">action</span></code></p></td>
+<td><p>function</p></td>
+<td><p>Defines what actions must be taken when a new user starts a dialog session.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Example</strong></p>
+<p>In the example below, the <code class="docutils literal notranslate"><span class="pre">onCreateUser</span></code> function is used to assign the value to <code class="docutils literal notranslate"><span class="pre">p.userData.favorites</span></code>:</p>
+<div class="literal-block-wrapper docutils container" id="id27">
+<div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id27" title="Permalink to this code">¶</a></div>
+<div class="highlight-alan notranslate"><div class="highlight"><pre><span></span><span class="kp">onCreateUser</span><span class="p">(</span><span class="nx">p</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="k k-Alan">p.</span><span class="nv">userData.favorites = </span><span class="s2">"nature|landscape|cartoons"</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="oncleanupuser">
+<span id="id13"></span><h3>onCleanupUser<a class="headerlink" href="#oncleanupuser" title="Permalink to this headline">¶</a></h3>
+<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
+<p><code class="docutils literal notranslate"><span class="pre">onCleanupUser</span></code> is invoked when the user session ends. You can use this function for any cleanup activities.</p>
+<p><strong>Syntax</strong></p>
+<div class="syntax admonition">
+<p class="admonition-title">Function syntax</p>
+<p>onCleanupUser(p =&gt; {action})</p>
+</div>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 12%"/>
+<col style="width: 10%"/>
+<col style="width: 78%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">p</span></code></p></td>
+<td><p>object</p></td>
+<td><p>Predefined object containing the user session data and exposing Alan AI’s methods.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">action</span></code></p></td>
+<td><p>function</p></td>
+<td><p>Defines what actions must be taken when the user session ends.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Example</strong></p>
+<p>In the example below, the <code class="docutils literal notranslate"><span class="pre">onCleanupUser</span></code> function is used to reset <code class="docutils literal notranslate"><span class="pre">p.userData.favorites</span></code> value:</p>
+<div class="literal-block-wrapper docutils container" id="id28">
+<div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id28" title="Permalink to this code">¶</a></div>
+<div class="highlight-alan notranslate"><div class="highlight"><pre><span></span><span class="kp">onCleanupUser</span><span class="p">(</span><span class="nx">p</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="k k-Alan">p.</span><span class="nv">userData.favorites = </span><span class="s2">""</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="onvisualstate">
+<span id="id14"></span><h3>onVisualState<a class="headerlink" href="#onvisualstate" title="Permalink to this headline">¶</a></h3>
+<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
+<p><code class="docutils literal notranslate"><span class="pre">onVisualState</span></code> is invoked when the visual state object is set. You can use this function, for example, to process data passed in the visual state.</p>
+<p><strong>Syntax</strong></p>
+<div class="syntax admonition">
+<p class="admonition-title">Function syntax</p>
+<p>onVisualState((p, s) =&gt; {action})</p>
+</div>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 12%"/>
+<col style="width: 10%"/>
+<col style="width: 78%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">p</span></code></p></td>
+<td><p>object</p></td>
+<td><p>Predefined object containing the user session data and exposing Alan AI’s methods.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">s</span></code></p></td>
+<td><p>object</p></td>
+<td><p>JSON object passed with the visual state.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">action</span></code></p></td>
+<td><p>function</p></td>
+<td><p>Defines what actions must be taken when the visual state is sent.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Example</strong></p>
+<p>In the example below, the <code class="docutils literal notranslate"><span class="pre">onVisualState</span></code> function is used to define values for <a class="reference internal" href="../../dynamic-slots/"><span class="doc">dynamic slots</span></a> created with the help of the visual state.</p>
+<p>Setting the visual state in the app:</p>
+<div class="literal-block-wrapper docutils container" id="id29">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id29" title="Permalink to this code">¶</a></div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">myFunction</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"pasta"</span><span class="p">,</span><span class="w"> </span><span class="s2">"burger"</span><span class="p">,</span><span class="w"> </span><span class="s2">"quesadilla"</span><span class="p">]</span>
+<span class="w">    </span><span class="nx">alanBtnInstance</span><span class="p">.</span><span class="nx">setVisualState</span><span class="p">({</span><span class="nx">values</span><span class="p">});</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>Retrieving values and making the items list in the dialog script</p>
+<div class="literal-block-wrapper docutils container" id="id30">
+<div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id30" title="Permalink to this code">¶</a></div>
+<div class="highlight-alan notranslate"><div class="highlight"><pre><span></span><span class="kp">onVisualState</span><span class="p">((</span><span class="nx">p</span><span class="p">,</span> <span class="nx">s</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">values</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k k-Alan">p.</span><span class="kp">visual</span><span class="p">.</span><span class="nv">menu = </span><span class="p">{</span> <span class="nv">en: </span><span class="s2">""</span><span class="p">};</span>
+        <span class="k k-Alan">p.</span><span class="kp">visual</span><span class="p">.</span><span class="nv">menu.en = </span><span class="nx">s</span><span class="p">.</span><span class="nx">values</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">'|'</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="kp">intent</span><span class="p">(</span><span class="s1">'Give me a $(ITEM~ v:menu)'</span><span class="p">,</span> <span class="nx">p</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="k k-Alan">p.</span><span class="nx">play</span><span class="p">(</span><span class="sb">`Adding one </span><span class="si">${</span><span class="k k-Alan">p.</span><span class="nx">ITEM</span><span class="p">.</span><span class="nx">value</span><span class="si">}</span><span class="sb"> to your order`</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="onuserevent">
+<span id="id15"></span><h3>onUserEvent<a class="headerlink" href="#onuserevent" title="Permalink to this headline">¶</a></h3>
+<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
+<p><code class="docutils literal notranslate"><span class="pre">onUserEvent</span></code> is invoked when Alan AI emits a specific event driven by users’ interactions with the AI assistant. For the events list, see <a class="reference internal" href="../../user-data/events/"><span class="doc">User events</span></a>.</p>
+<p><strong>Syntax</strong></p>
+<div class="syntax admonition">
+<p class="admonition-title">Function syntax</p>
+<p>onUserEvent((p, e) =&gt; {action})</p>
+</div>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 12%"/>
+<col style="width: 10%"/>
+<col style="width: 78%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">p</span></code></p></td>
+<td><p>object</p></td>
+<td><p>Predefined object containing the user session data and exposing Alan AI’s methods.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">e</span></code></p></td>
+<td><p>object</p></td>
+<td><p>Event fired by Alan AI.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">action</span></code></p></td>
+<td><p>function</p></td>
+<td><p>Defines what actions must be taken when the event is fired.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Example</strong></p>
+<p>In the example below, the AI assistant listens to the <code class="docutils literal notranslate"><span class="pre">firstActivate</span></code> event and, if the user activates the assistant for the first time, plays a greeting to the user.</p>
+<div class="literal-block-wrapper docutils container" id="id31">
+<div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id31" title="Permalink to this code">¶</a></div>
+<div class="highlight-alan notranslate"><div class="highlight"><pre><span></span><span class="kp">onUserEvent</span><span class="p">((</span><span class="nx">p</span><span class="p">,</span> <span class="nx">e</span><span class="p">)=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">event</span> <span class="o">===</span> <span class="s2">"firstActivate"</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k k-Alan">p.</span><span class="nx">play</span><span class="p">(</span><span class="s1">'Hi, this is Alan, your AI assistant! You can talk to me, ask questions and perform tasks with voice or text commands.'</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="debugging">
+<h2>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="console-log">
+<h3>console.log<a class="headerlink" href="#console-log" title="Permalink to this headline">¶</a></h3>
+<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">console.log()</span></code> function is used to write all sort of info messages to <a class="reference internal" href="../../../usage/guides/logs/"><span class="doc">Alan AI Studio logs</span></a>. With it, you can check objects, variables and slots values, capture events and so on.</p>
+<p><strong>Syntax</strong></p>
+<div class="syntax admonition">
+<p class="admonition-title">Function syntax</p>
+<p>console.log(message)</p>
+</div>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 20%"/>
+<col style="width: 17%"/>
+<col style="width: 63%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">message</span></code></p></td>
+<td><p>string</p></td>
+<td><p>Message to be logged.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Example</strong></p>
+<div class="literal-block-wrapper docutils container" id="id32">
+<div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id32" title="Permalink to this code">¶</a></div>
+<div class="highlight-alan notranslate"><div class="highlight"><pre><span></span><span class="kp">intent</span><span class="p">(</span><span class="s1">'Save this location as my $(L home|office|work) (address|)'</span><span class="p">,</span> <span class="nx">p</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k k-Alan">p.</span><span class="nx">L</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+    <span class="k k-Alan">p.</span><span class="nx">play</span><span class="p">(</span><span class="s1">'The location is saved'</span><span class="p">);</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="console-error">
+<h3>console.error<a class="headerlink" href="#console-error" title="Permalink to this headline">¶</a></h3>
+<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">console.error()</span></code> function is used to write error messages to <a class="reference internal" href="../../../usage/guides/logs/"><span class="doc">Alan AI Studio logs</span></a>. With it, you can troubleshoot and debug your dialog script.</p>
+<p><strong>Syntax</strong></p>
+<div class="syntax admonition">
+<p class="admonition-title">Function syntax</p>
+<p>console.error(message)</p>
+</div>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 20%"/>
+<col style="width: 17%"/>
+<col style="width: 63%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">message</span></code></p></td>
+<td><p>string</p></td>
+<td><p>Message to be logged.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Example</strong></p>
+<div class="literal-block-wrapper docutils container" id="id33">
+<div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id33" title="Permalink to this code">¶</a></div>
+<div class="highlight-alan notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
+    <span class="c1">// your code</span>
+<span class="p">}</span>
+<span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div id="green-background"></div></div>
+</div>
+</div>
+
+      </article>
+	  <div class="alan-btn"></div>
+	  <script>
+		function isLocalStorageAvailable() {
+            var result;
+
+            try {
+                localStorage.setItem('test', 1);
+                localStorage.getItem('test');
+                localStorage.removeItem('test');
+                result = true;
+            } catch (e) {
+                result = false;
+            }
+            return result;
+        }
+
+        function getProjectId() {
+            var key = 'beae1a6e1f7e512c4d0bf347580da6fd2e956eca572e1d8b807a3e2338fdd0dc/prod';
+            if (key) {
+                return key.substr(0, key.indexOf('/'));
+            }
+
+            return null;
+        }
+
+        console.info("Alan Lib is laoded.");
+        window.alanBtnInstance = window.alanBtn({
+            key: 'beae1a6e1f7e512c4d0bf347580da6fd2e956eca572e1d8b807a3e2338fdd0dc/prod',
+            zIndex: 999999,
+            onCommand: function (commandData) {
+
+                if (commandData && commandData.command === 'openURL') {
+                    if (commandData.target === '_blank'){
+                        window.open(commandData.url,'_newtab' + Math.floor(Math.random()*999999));
+                    } else {
+                        window.location.href = commandData.url;
+                    }
+
+                }
+            },
+            onConnectionStatus: function (status) {
+                if (status === 'authorized') {
+                    window.alanBtnInstance.setVisualState({ page: window.location.pathname, url: window.location.href });
+                    if(isLocalStorageAvailable()){
+                        if(!localStorage.getItem('alan-btn-session-'+ getProjectId())) {
+                            localStorage.setItem('alan-btn-session-'+ getProjectId(), 1)
+                            window.alanBtnInstance.callProjectApi("sendGreetingMessage");
+                        }
+                    }
+                }
+            },
+        });
+	  </script>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        
+	  <div class="alan-footer">
+	  <div class="footer-logo-and-social-icons">
+		<div class="footer-logo-and-text">
+		<a class="footer-logo" aria-label="Link to alan.app" href="https://alan.app/"></a>
+		</div>
+		<div class="footer-text">
+		<span>Alan AI<sup>®</sup> is a trademark of Alan AI, Inc.</span>
+		<span>Handcrafted in Sunnyvale, California</span>
+		</div>
+		<div class="footer-other">
+		<div class="footer-social">
+			<a href="https://twitter.com/alanvoiceai" target="_blank" class="fa-brands fa-twitter"></a>
+			<a href="http://linkedin.com/company/alanvoiceai" target="_blank" class="fa-brands fa-linkedin"></a>
+			<a href="https://www.facebook.com/alanvoiceai/" target="_blank" class="fa-brands fa-facebook"></a>
+			<a href="https://www.instagram.com/alanvoiceai/" target="_blank" class="fa-brands fa-instagram"></a>
+			<a href="https://www.youtube.com/channel/UCrsg0b32nL6L2j5jG7uxOuw" target="_blank" class="fa-brands fa-youtube"></a>
+			<a href="https://alanaigroup.slack.com/join/shared_invite/enQtNzMzOTE5MTIwMjg4LWI4ZmM4MTNkMTdmY2M0ZWEwODlmZDQ5Y2ZkMjUzNmMyZDJiMzA0Y2M1NDdhYzZjYWFlZTA5NjM4OTU0MWFmNWU#/shared-invite/email" target="_blank" class="fa-brands fa-slack"></a>
+			<a href="https://github.com/alan-ai" target="_blank" class="fa-brands fa-github"></a>
+        </div>
+		</div>
+	  </div>
+	  <div class="footer-badges">
+	  <div class="footer-badges-info">
+	  <div class="footer-badges-info-icon"></div>
+	  <div>Download Alan Playground to see how Conversational Voice Experiences can add value to your application or test your Alan Studio Projects.</div>
+	  </div>
+	  
+	  </div>
+	  <div class="footer-badges-imgs">
+	  <a class="footer_badges_imgs_app-store" href="https://apps.apple.com/ca/app/alan-playground/id1474478921"></a>
+	  <a class="footer_badges_imgs_google-play" href="https://play.google.com/store/apps/details?id=app.alan.playground"></a>
+	  </div>
+	  
+	  </div>
+	  
+      </footer>
+	
+    </div>
+	
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">API Reference</a><ul>
+<li><a class="reference internal" href="#commands-and-responses">Commands and responses</a><ul>
+<li><a class="reference internal" href="#intent">Intent</a></li>
+<li><a class="reference internal" href="#play">Play</a></li>
+<li><a class="reference internal" href="#reply">Reply</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#contexts">Contexts</a><ul>
+<li><a class="reference internal" href="#then">Then</a></li>
+<li><a class="reference internal" href="#resolve">Resolve</a></li>
+<li><a class="reference internal" href="#fallback">Fallback</a></li>
+<li><a class="reference internal" href="#nocontext">noContext</a></li>
+<li><a class="reference internal" href="#state">State</a></li>
+<li><a class="reference internal" href="#onenter">onEnter</a></li>
+<li><a class="reference internal" href="#title">Title</a></li>
+<li><a class="reference internal" href="#resetcontext">resetContext</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#session-specific-objects-and-methods">Session-specific objects and methods</a><ul>
+<li><a class="reference internal" href="#userdata">userData</a></li>
+<li><a class="reference internal" href="#authdata">authData</a></li>
+<li><a class="reference internal" href="#visual">visual</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#global-objects-and-methods">Global objects and methods</a><ul>
+<li><a class="reference internal" href="#project">project</a></li>
+<li><a class="reference internal" href="#project-api">project API</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#generative-ai">Generative AI</a><ul>
+<li><a class="reference internal" href="#corpus">corpus</a></li>
+<li><a class="reference internal" href="#generator-api">generator API</a></li>
+<li><a class="reference internal" href="#query-api">query API</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#semantic-search">Semantic search</a><ul>
+<li><a class="reference internal" href="#table-api">table API</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data-transformation">Data transformation</a><ul>
+<li><a class="reference internal" href="#transforms">transforms</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#speech-recognition-biasing">Speech recognition biasing</a><ul>
+<li><a class="reference internal" href="#recognition-hints">Recognition hints</a></li>
+<li><a class="reference internal" href="#homophone">Homophone</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#predefined-callbacks">Predefined callbacks</a><ul>
+<li><a class="reference internal" href="#oncreateproject">onCreateProject</a></li>
+<li><a class="reference internal" href="#oncreateuser">onCreateUser</a></li>
+<li><a class="reference internal" href="#oncleanupuser">onCleanupUser</a></li>
+<li><a class="reference internal" href="#onvisualstate">onVisualState</a></li>
+<li><a class="reference internal" href="#onuserevent">onUserEvent</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#debugging">Debugging</a><ul>
+<li><a class="reference internal" href="#console-log">console.log</a></li>
+<li><a class="reference internal" href="#console-error">console.error</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  
+  </main>
+</div>
+</div>
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/custom.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/typesense-docsearch.js@latest/dist/cdn/docsearch.min.js"></script>
+    <script defer="defer" src="../../../_static/scripts/algolia.js"></script>
+    <script defer="defer" src="../../../_static/scripts/algolia-mobile.js"></script>
+    <script src="../../../_static/scripts/main.js?digest=e931d09b2a40c1bb82b542effe772014573baf67"></script></body>
+</html>
