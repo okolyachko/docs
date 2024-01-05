@@ -270,9 +270,6 @@ $(document).ready(function () {
 		$(".docs-tooltip").html("Open " + value + " docs");
 		$('.tabbed-label:contains("' + value + '")').prev().prop('checked', true);
 	}
-	if ("version" in localStorage) {
-		$('#version button').html(localStorage.version);
-	}
 });
 
 // Scroll to the selected tab
