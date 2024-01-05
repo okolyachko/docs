@@ -247,10 +247,23 @@ article {
   padding: 8px;
   font-size: 15px;
   font-weight:500;
-  width:210px;
+  width:100%px;
   text-align:right;
   border: none;
   cursor: pointer;
+  margin-left:20px;
+}
+
+.dropbtn:after {
+  border-left: 2px solid #212529;
+  border-top: 2px solid #212529;
+  width: 5px;
+  content: '';
+  height: 5px;
+  transform: rotate(135deg);
+  margin-top: 7px;
+  margin-left:5px;
+  float: right;
 }
 
 .goto {
