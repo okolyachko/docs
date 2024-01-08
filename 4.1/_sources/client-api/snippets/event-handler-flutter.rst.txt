@@ -1,9 +1,0 @@
-.. code-block:: dart
-   :caption: Client app
-
-   _MyHomePageState() {
-     /// Handle events
-     AlanVoice.onEvent.add((event) {
-       debugPrint("got new event ${event.data.toString()}");
-     });
-   }

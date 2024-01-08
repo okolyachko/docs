@@ -1,8 +1,0 @@
-.. code-block:: swift
-   :caption: Client app
-
-   /// Executing a command locally
-   func playCommand() {
-     /// Providing any params
-     self.button.playCommand(["action":"openSomePage"])
-   }

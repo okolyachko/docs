@@ -1,7 +1,0 @@
-.. code-block:: typescript
-   :caption: Client app
-
-   alanBtnComponent.current.addEventListener('event', (data: CustomEvent) => {
-     const eventData = data.detail;
-     console.info('Received event: ', eventData.text);
-   });

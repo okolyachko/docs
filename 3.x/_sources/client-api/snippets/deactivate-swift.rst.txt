@@ -1,7 +1,0 @@
-.. code-block:: swift
-   :caption: Client app
-
-   /// Deactivating the Alan AI button programmatically
-   func deactivate() {
-     self.button.deactivate()
-   }

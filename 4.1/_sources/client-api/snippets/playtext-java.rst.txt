@@ -1,8 +1,0 @@
-.. code-block:: java
-   :caption: Client app
-
-   /// Playing any text message
-   void playText() {
-     /// Providing text as string param
-     alanButton.playText("Hi");
-   }

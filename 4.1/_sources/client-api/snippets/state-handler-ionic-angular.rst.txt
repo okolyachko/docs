@@ -1,7 +1,0 @@
-.. code-block::
-   :caption: Client app
-  
-   this.alanBtnComponent.nativeElement.addEventListener('buttonState', (data) => {
-     const buttonState = (<CustomEvent>data).detail;
-     this.buttonStatusSectionEl.nativeElement.innerText = this.buttonStatusSectionEl.nativeElement.innerText + buttonState + '\n';
-   });

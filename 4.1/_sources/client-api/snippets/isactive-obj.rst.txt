@@ -1,4 +1,0 @@
-.. code-block:: objective-c
-   :caption: Client app
-
-   [alanBtnInstance isActive];

@@ -317,7 +317,6 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../additional/supported-platforms/">Supported platforms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../additional/library/">Alan AI resource library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../release-notes/updates/">Recent Alan AI Platform updates</a></li>
 </ul>
 
 </div>
@@ -408,62 +407,62 @@
 <p>The Alan AI Platform offers a set of tools and functions for dialog design.</p>
 <div class="section" id="q-a-service">
 <h3>Q&amp;A service<a class="headerlink" href="#q-a-service" title="Permalink to this headline">¶</a></h3>
-<p>The <a class="reference internal" href="../../../server-api/qna/"><span class="doc">Q&amp;A service</span></a> enables you to develop dialog scripts using the intentless approach. With it, you can instantly build an AI assistant that responds to users’ questions in the natural language without requiring to specify their intent first.</p>
+<p>The <span class="xref std std-doc">Q&amp;A service</span> enables you to develop dialog scripts using the intentless approach. With it, you can instantly build an AI assistant that responds to users’ questions in the natural language without requiring to specify their intent first.</p>
 <p>To use the Q&amp;A service, the script developer needs to provide a collection of texts in the <code class="docutils literal notranslate"><span class="pre">corpus()</span></code> function in the dialog script. These can be any types of materials: product manuals, guidelines, FAQ pages, articles, policies and so on, provided as plain-text strings or URL-based data. The Q&amp;A service ingests the text input and crawls the specified URLs to obtain the content and build an app-specific AI model for the AI assistant, which is then used in dialogs with users.</p>
 </div>
 <div class="section" id="intents">
 <h3>Intents<a class="headerlink" href="#intents" title="Permalink to this headline">¶</a></h3>
-<p>To create dialogs using the intent-based approach, the script developer must add a set of <a class="reference internal" href="../../../server-api/commands-and-responses/#intent"><span class="std std-ref">intents</span></a> to the dialog script. A typical dialog script includes many intents that can be used to satisfy various types of user requests to the AI assistant.</p>
+<p>To create dialogs using the intent-based approach, the script developer must add a set of <span class="xref std std-ref">intents</span> to the dialog script. A typical dialog script includes many intents that can be used to satisfy various types of user requests to the AI assistant.</p>
 <p>An intent is essentially a function with some logic that is used to handle a specific user’s request or intent in the dialog. When a user sends a voice or text message to the AI assistant, Alan AI identifies the user’s message as matching one of the intents in the dialog script and triggers this intent.</p>
-<p>An intent is triggered by a specific utterance that the user says or types. In Alan AI, this invoking phrase is known as a <a class="reference internal" href="../../../server-api/patterns/"><span class="doc">pattern</span></a>. When designing a dialog script, the script developer needs to think of the different ways users may formulate their requests and come up with a list of likely spoken phrases. For example, the list of phrases for a coffee ordering intent may be the following:</p>
+<p>An intent is triggered by a specific utterance that the user says or types. In Alan AI, this invoking phrase is known as a <span class="xref std std-doc">pattern</span>. When designing a dialog script, the script developer needs to think of the different ways users may formulate their requests and come up with a list of likely spoken phrases. For example, the list of phrases for a coffee ordering intent may be the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">want</span> <span class="pre">a</span> <span class="pre">cup</span> <span class="pre">of</span> <span class="pre">coffee</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">One</span> <span class="pre">coffee,</span> <span class="pre">please</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Can</span> <span class="pre">I</span> <span class="pre">get</span> <span class="pre">a</span> <span class="pre">coffee?</span></code></p></li>
 </ul>
-<p>Along with the pattern, the script developer defines the action that must be executed when this intent is triggered. For example, the AI assistant can <a class="reference internal" href="../../../server-api/commands-and-responses/#responding-to-the-user"><span class="std std-ref">play a response to the user</span></a>  or <a class="reference internal" href="../../../server-api/commands-and-responses/#sending-commands-to-the-app"><span class="std std-ref">send a command to the client app</span></a> to do some app-side activity.</p>
+<p>Along with the pattern, the script developer defines the action that must be executed when this intent is triggered. For example, the AI assistant can <span class="xref std std-ref">play a response to the user</span>  or <span class="xref std std-ref">send a command to the client app</span> to do some app-side activity.</p>
 </div>
 <div class="section" id="slots">
 <h3>Slots<a class="headerlink" href="#slots" title="Permalink to this headline">¶</a></h3>
-<p>Alan AI allows the script developer to define <a class="reference internal" href="../../../server-api/slots/"><span class="doc">slots</span></a> in intent patterns. A slot is a variable or parameter indicating a specific piece of information that the AI assistant needs to collect from the user’s input to fulfill their request or intent. For example, the script developer can use a slot to collect information about the user’s location for a booking app or the essential product category for a shopping app.</p>
+<p>Alan AI allows the script developer to define <span class="xref std std-doc">slots</span> in intent patterns. A slot is a variable or parameter indicating a specific piece of information that the AI assistant needs to collect from the user’s input to fulfill their request or intent. For example, the script developer can use a slot to collect information about the user’s location for a booking app or the essential product category for a shopping app.</p>
 <p>Alan AI allows using the following types of slots:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../../../server-api/user-defined-slots/"><span class="doc">User-defined slots</span></a> to get custom values</p></li>
-<li><p><a class="reference internal" href="../../../server-api/predefined-slots/"><span class="doc">Predefined slots</span></a> to get specific type of information: location, time, numbers and so on</p></li>
+<li><p><span class="xref std std-doc">User-defined slots</span> to get custom values</p></li>
+<li><p><span class="xref std std-doc">Predefined slots</span> to get specific type of information: location, time, numbers and so on</p></li>
 </ul>
 </div>
 <div class="section" id="contexts">
 <h3>Contexts<a class="headerlink" href="#contexts" title="Permalink to this headline">¶</a></h3>
-<p>Similar to real-world conversations, dialog scripts can involve user queries that are only meaningful within a particular <a class="reference internal" href="../../../server-api/contexts/"><span class="doc">context</span></a>. For example, when interacting with a weather forecast assistant, the user can ask: <code class="docutils literal notranslate"><span class="pre">And</span> <span class="pre">what</span> <span class="pre">about</span> <span class="pre">tomorrow?</span></code> To provide an optimal response, the assistant needs to comprehend the specific context the user is referring to — the location the user is asking about.</p>
+<p>Similar to real-world conversations, dialog scripts can involve user queries that are only meaningful within a particular <span class="xref std std-doc">context</span>. For example, when interacting with a weather forecast assistant, the user can ask: <code class="docutils literal notranslate"><span class="pre">And</span> <span class="pre">what</span> <span class="pre">about</span> <span class="pre">tomorrow?</span></code> To provide an optimal response, the assistant needs to comprehend the specific context the user is referring to — the location the user is asking about.</p>
 <p>Contexts are especially useful in multi-step dialogs where certain steps can only occur under certain conditions. In such cases, the script developer can place a certain portion of the dialog in a context and activate this context when the user says a specific phrase or reaches a given point in the conversation. For example, when creating a dialog for an online store, the script developer can define a context to collect address and time details and activate it only after the checkout process has been initiated.</p>
 </div>
 <div class="section" id="predefined-script-objects">
 <h3>Predefined script objects<a class="headerlink" href="#predefined-script-objects" title="Permalink to this headline">¶</a></h3>
 <p>Alan AI offers a set of predefined objects that the script developer can use to store and communicate data in dialog scripts:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../../../server-api/objects/#authdata"><span class="std std-ref">authData</span></a></p></li>
-<li><p><a class="reference internal" href="../../../server-api/objects/#project"><span class="std std-ref">project</span></a></p></li>
-<li><p><a class="reference internal" href="../../../server-api/objects/#score"><span class="std std-ref">score</span></a></p></li>
-<li><p><a class="reference internal" href="../../../server-api/objects/#state"><span class="std std-ref">state</span></a></p></li>
-<li><p><a class="reference internal" href="../../../server-api/objects/#userdata"><span class="std std-ref">userData</span></a></p></li>
-<li><p><a class="reference internal" href="../../../server-api/objects/#visual"><span class="std std-ref">visual</span></a></p></li>
+<li><p><span class="xref std std-ref">authData</span></p></li>
+<li><p><span class="xref std std-ref">project</span></p></li>
+<li><p><span class="xref std std-ref">score</span></p></li>
+<li><p><span class="xref std std-ref">state</span></p></li>
+<li><p><span class="xref std std-ref">userData</span></p></li>
+<li><p><span class="xref std std-ref">visual</span></p></li>
 </ul>
 </div>
 <div class="section" id="lifecycle-callbacks">
 <h3>Lifecycle callbacks<a class="headerlink" href="#lifecycle-callbacks" title="Permalink to this headline">¶</a></h3>
 <p>The script developer may need to perform specific actions or execute some code at a given point in the dialog lifecycle. Alan AI offers a set of predefined callbacks that get called as the dialog state transitions from one state to another:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../../../server-api/api/api-reference/#oncreateproject"><span class="std std-ref">onCreateProject</span></a></p></li>
-<li><p><a class="reference internal" href="../../../server-api/api/api-reference/#oncreateuser"><span class="std std-ref">onCreateUser</span></a></p></li>
-<li><p><a class="reference internal" href="../../../server-api/api/api-reference/#oncleanupuser"><span class="std std-ref">onCleanupUser</span></a></p></li>
-<li><p><a class="reference internal" href="../../../server-api/api/api-reference/#onvisualstate"><span class="std std-ref">onVisualState</span></a></p></li>
-<li><p><a class="reference internal" href="../../../server-api/api/api-reference/#onenter"><span class="std std-ref">onEnter</span></a></p></li>
-<li><p><a class="reference internal" href="../../../server-api/api/api-reference/#onuserevent"><span class="std std-ref">onUserEvent</span></a></p></li>
+<li><p><span class="xref std std-ref">onCreateProject()</span></p></li>
+<li><p><span class="xref std std-ref">onCreateUser()</span></p></li>
+<li><p><span class="xref std std-ref">onCleanupUser()</span></p></li>
+<li><p><span class="xref std std-ref">onVisualState()</span></p></li>
+<li><p><span class="xref std std-ref">onEnter()</span></p></li>
+<li><p><span class="xref std std-ref">onUserEvent()</span></p></li>
 </ul>
 </div>
 <div class="section" id="built-in-javascript-libraries">
 <h3>Built-in JavaScript libraries<a class="headerlink" href="#built-in-javascript-libraries" title="Permalink to this headline">¶</a></h3>
-<p>The script developer can utilize the following <a class="reference internal" href="../../../server-api/built-in-javascript-libraries/"><span class="doc">JavaScript libraries</span></a> when developing dialog scripts:</p>
+<p>The script developer can utilize the following <span class="xref std std-doc">JavaScript libraries</span> when developing dialog scripts:</p>
 <ul class="simple">
 <li><p><strong>axios</strong> and <strong>request</strong> to make API calls from the dialog script</p></li>
 <li><p><strong>moment-timezone</strong> and <strong>luxon</strong> to work with time</p></li>
@@ -477,16 +476,16 @@
 <p>Alan AI integrates with client apps through Alan’s AI SDKs. To learn about integration details, check out:</p>
 <ul class="simple">
 <li><p>The <strong>Integrations</strong> view in Alan AI Studio</p></li>
-<li><p><a class="reference internal" href="../../../client-api/integration/"><span class="doc">Alan AI SDK</span></a> documentation</p></li>
+<li><p><span class="xref std std-doc">Alan AI SDK</span> documentation</p></li>
 <li><p><a class="reference external" href="https://github.com/alan-ai">Alan AI’s app examples on GitHub</a></p></li>
 </ul>
 <div class="section" id="client-api-methods">
 <h3>Client API methods<a class="headerlink" href="#client-api-methods" title="Permalink to this headline">¶</a></h3>
-<p>To let businesses design customized and personalized conversational experiences, the Alan AI SDK exposes a set of <a class="reference internal" href="../../../client-api/methods/common-api/"><span class="doc">client API methods</span></a>. The client API methods can be used to implement any business logic in the client app. Through client API methods, the client can interact with Alan AI and initiate conversational activities in the app.</p>
+<p>To let businesses design customized and personalized conversational experiences, the Alan AI SDK exposes a set of <span class="xref std std-doc">client API methods</span>. The client API methods can be used to implement any business logic in the client app. Through client API methods, the client can interact with Alan AI and initiate conversational activities in the app.</p>
 </div>
 <div class="section" id="handlers">
 <h3>Handlers<a class="headerlink" href="#handlers" title="Permalink to this headline">¶</a></h3>
-<p>The Alan AI SDK provides a collection of <a class="reference internal" href="../../../client-api/methods/handlers/"><span class="doc">handlers</span></a>, a crucial instrument for creating interactive and responsive conversational experiences. Alan AI handlers can be used to manage specific events or respond to actions triggered by the user or Alan AI in real time.</p>
+<p>The Alan AI SDK provides a collection of <span class="xref std std-doc">handlers</span>, a crucial instrument for creating interactive and responsive conversational experiences. Alan AI handlers can be used to manage specific events or respond to actions triggered by the user or Alan AI in real time.</p>
 <div id="blue-background"></div></div>
 </div>
 </div>

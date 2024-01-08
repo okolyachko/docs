@@ -1,7 +1,0 @@
-.. code-block::
-   :caption: Client app
-  
-   alanBtnComponent.current.addEventListener('buttonState', (data: CustomEvent) => {
-     const stateData = data.detail;
-     console.info('Button state:', stateData);
-   });

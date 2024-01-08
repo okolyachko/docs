@@ -1,9 +1,0 @@
-.. code-block:: dart
-   :caption: Client app
-	
-   _MyHomePageState() {
-     /// Handle commands from Alan AI Studio
-     AlanVoice.onCommand.add((command) {
-       debugPrint("got new command ${command.toString()}");
-     });
-   }
