@@ -1,32 +1,5 @@
 //Custom JS
 
-// Recolor - experiment
-
-$(document).ready(function () {
-    if ($("#green-background").length) {
-		$("body").get(0).style.setProperty("--main-color", "#12A353");
-		$("body").get(0).style.setProperty("--main-color-background", "#CAFFE2");
-		$("body").get(0).style.setProperty("--link-background", "#12a35312");
-		$(".main").addClass("main-green");
-	} else if ($("#blue-background").length) {
-		$("body").get(0).style.setProperty("--main-color", "#0266FF");
-		$("body").get(0).style.setProperty("--main-color-background", "#D2E4FF");
-		$("body").get(0).style.setProperty("--link-background", "#0066ff0d");
-		$(".main").addClass("main-blue");
-	} else if ($("#purple-background").length) {
-		$("body").get(0).style.setProperty("--main-color", "#9246FF");
-		$("body").get(0).style.setProperty("--main-color-background", "#E4D1FF");
-		$("body").get(0).style.setProperty("--link-background", "#9447ff12");
-		$(".main").addClass("main-purple");
-	} else if ($("#orange-background").length) {
-		$("body").get(0).style.setProperty("--main-color", "#FE5100");
-		$("body").get(0).style.setProperty("--main-color-background", "#FFE9D6");
-		$("body").get(0).style.setProperty("--link-background", "#FFE9D650");
-		$(".main").addClass("main-orange");
-		
-	}
-});
-
 // Footer fixing
 
 $(document).ready(function () {
@@ -174,6 +147,7 @@ $('.sidebar-search').on('keyup keypress', function (e) {
         // Toggle dropdown visibility
         $('.dropdown button').click(function () {
             $(this).next('.dropdown-content').toggle();
+			$(this).parent().siblings().find('.dropdown-content').hide();
         });
 
         // Handle item selection, update the button text, and close the dropdown
@@ -219,11 +193,12 @@ $('.sidebar-search').on('keyup keypress', function (e) {
 			var currentPosition = $('div.section.active').offset().top;
 			$(window).scrollTop(currentPosition - initPosition); 
         });
-
-        // Close dropdowns when clicking outside
-        $(document).click(function (event) {
+		
+		// Close version when clicking outside
+		$(document).click(function (event) {
             if (!$(event.target).closest('.dropdown').length) {
                 $('.dropdown-content').hide();
+				
             }
         });
     });

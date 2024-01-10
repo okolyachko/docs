@@ -1,6 +1,6 @@
 docsearch({
     inputSelector: '.sidebar-search',
-    typesenseCollectionName: 'alan-3.x', 
+    typesenseCollectionName: 'alan-docs', 
     typesenseServerConfig: { 
       nodes: [{
         host: 'bd0q6ipkxs57f1jyp-1.a1.typesense.net', // For Typesense Cloud use xxx.a1.typesense.net
