@@ -1118,6 +1118,7 @@ details.dropdown.fade-in[open] summary~* {
 
 .sphinx-bs .card {
 	box-shadow: none !important;
+	padding: 20px;
 
 }
 
