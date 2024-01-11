@@ -1,0 +1,17 @@
+.. code-block:: javascript
+   :caption: Client app
+	   
+   import { NativeEventEmitter, NativeModules } from 'react-native';
+   const { AlanEventEmitter } = NativeModules;
+   const alanEventEmitter = new NativeEventEmitter(AlanEventEmitter);
+
+   componentDidMount() {
+     // Handle commands from Alan AI Studio
+     alanEventEmitter.addListener('onCommand', (data) => {
+       console.log(`onCommand: ${JSON.stringify(data)}`);
+     });
+   }
+		
+   componentWillUnmount() {
+     alanEventEmitter.removeAllListeners('onCommand');
+   }

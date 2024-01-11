@@ -1,0 +1,7 @@
+.. code-block:: objective-c
+   :caption: Client app
+
+   - (void)callProjectApi {
+     /// Providing any params
+     [self.button callProjectApi:@"script::funcName" withData:@{@"data":@"your data"} callback:nil];
+   }

@@ -19,3 +19,4 @@ With Alan AI’s powerful web-based IDE, you can write, test and debug dialog sc
    Alan AI Playground<playground>
    Conversational analytics<analytics>
    Billing and subscriptions<billing>
+   Alan AI Plugin<plugin>

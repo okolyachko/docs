@@ -1,0 +1,78 @@
+Integration overview
+====================
+
+With the Alan AI SDK, you can integrate Alan AI with any app built with:
+
+-  :doc:`Web frameworks <web/web-api>`: :doc:`React <web/react>`,
+   :doc:`Angular <web/angular>`, :doc:`Vue <web/vue>`,
+   :doc:`Ember <web/ember>`,
+   :doc:`JavaScript <web/vanilla>`,
+   :doc:`Electron <web/electron>`
+-  :doc:`iOS <ios/ios-api>`: Swift and Objective-C
+-  :doc:`Android <android/android-api>`: Kotlin and Java
+-  :doc:`Cross-platform frameworks <cross-platform/overview>`: :doc:`Flutter <cross-platform/flutter>`, :doc:`Ionic <cross-platform/ionic>`, :doc:`React Native <cross-platform/react-native>`, :doc:`Apache Cordova <cross-platform/cordova>` 
+
+Upon integration, your app gets the in-app assistant that can be activated with the Alan button displayed on top of the app's UI. The users can interact with the in-app assistant by giving the voice commands defined in the script of your Alan Studio project.
+
+To enable communication between Alan AI and the app and let you implement conversational experience functionality on the client side, Alan AI exposes its methods and handlers.
+
+.. panels::
+   :column: col-lg-12 col-md-12 col-sm-12 col-xs-12 p-2
+
+   ---
+   :card: border-0 + custom-style-list
+   
+   .. link-button:: methods/common-api
+      :type: ref
+      :text: Client API methods
+      :classes: stretched-link panel
+	  
+   Enable communication between the client app and Alan AI and allow triggering activities on the client side.
+   
+   
+   ---
+   :card: border-0 + custom-style-list
+   
+   .. link-button:: methods/command-handler
+      :type: ref
+      :text: onCommand handler
+      :classes: stretched-link panel
+	  
+   Handle commands sent from the dialog scripts to the app. Use this handler to perform tasks or actions on commands in the client app: navigate between the app screens, highlight a UI element on the screen and so on.
+
+   ---
+   :card: border-0 + custom-style-list
+   
+   .. link-button:: methods/state-handler
+      :type: ref
+      :text: onButtonState handler
+      :classes: stretched-link panel
+	  
+   Handle the Alan AI button state change events
+   
+   ---
+   :card: border-0 + custom-style-list
+   
+   .. link-button:: methods/connection-handler
+      :type: ref
+      :text: onConnectionStatus handler
+      :classes: stretched-link panel
+	  
+   Handle the connection status to the virtual assistant project in the Alan AI Cloud.
+   
+   ---
+   :card: border-0 + custom-style-list
+   
+   .. link-button:: methods/event-handler
+      :type: ref
+      :text: onEvent handler
+      :classes: stretched-link panel
+	  
+   Handle events received from Alan AI when the user’s input is being recognized.
+
+.. raw:: html
+
+   <div id="purple-background"></div>
+   <div id="wide-content"></div>
+
+

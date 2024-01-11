@@ -1,0 +1,20 @@
+.. raw:: html
+
+   <div id="orange-background"></div>
+   <div id="wide-content"></div>
+
+Step 2: Create a voice assistant
+================================
+
+To add a voice assistant to the app, we need to create a project in Alan AI Studio. In the project, we will write a dialog, or the dialog script, with commands for our app.
+
+1. Sign up for Alan AI Studio or sign in if you are already registered.
+
+   .. note::
+   
+      When you sign up, Alan AI adds free interactions to your balance to let you get started. To get additional interactions to your  balance, sign up with your GitHub account or connect your Alan AI account with your GitHub account and give stars to Alan AI repositories.
+
+2. In Alan AI Studio, click **Create Project**, choose to create an empty project, specify the project name and click **Create**.
+   
+.. image:: /_static/assets/img/tutorial2/tutorial_voice_assistant.png
+

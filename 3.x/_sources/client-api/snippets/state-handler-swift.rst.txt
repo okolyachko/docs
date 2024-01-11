@@ -1,0 +1,6 @@
+.. code-block:: swift
+   :caption: Client app
+
+   self.button.onButtonState = { state in
+     print(state.rawValue)
+   }
