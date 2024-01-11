@@ -1,0 +1,11 @@
+.. code-block:: typescript
+   :caption: Client app
+   
+   import { NativeModules } from 'react-native';
+   const { AlanManager } = NativeModules;
+
+   /// Sending any text message
+   sendText() {
+     /// Providing text as string param
+     AlanManager.sendText("Hello Alan, can you help me?");
+   }

@@ -392,4 +392,4 @@ Web apps
    
 .. raw:: html
 
-   <div id="blue-background"></div>
+   <div id="orange-background"></div>

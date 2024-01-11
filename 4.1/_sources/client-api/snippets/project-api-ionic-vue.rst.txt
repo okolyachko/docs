@@ -1,0 +1,21 @@
+.. code-block:: coffeescript
+   :caption: Client app
+
+   <ion-content :fullscreen="true">
+     <alan-button ref="alanBtn" alan-key="YOUR_KEY_FROM_ALAN_STUDIO_HERE" />  
+   </ion-content>
+		
+   <script lang="ts">
+     import {Components} from '@alan-ai/alan-button';
+
+     export default defineComponent({
+       methods: {
+         callProjectApi() {
+           const alanBtnInst = this.$refs["alanBtn"] as Components.AlanButton;
+           alanBtnInst.callProjectApi("setClientData", {data: "myData"}, function (error:any, result:any) {
+             console.log("cb from myFunc was received", error, result);
+           });
+         },
+       }
+     });
+   </script>

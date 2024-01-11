@@ -1,0 +1,21 @@
+Troubleshooting
+===============
+
+To troubleshoot problems you may have with your Ionic app, check the solutions below:
+
+-  For Mac or Linux, you may need to run commands with ``sudo``.
+
+-  On the iOS platform, you need to disable Bitcode for your app builds. For details, see `Disable Bitcode for Capacitor iOS <https://ionic.zendesk.com/hc/en-us/articles/360051851074-Disable-Bitcode-for-Capacitor-iOS>`__.
+
+-  You can encounter the following problem while running Capacitor: ``unknown option ‘–npm-client’``. Uninstall Ionic and install its latest version:
+
+   .. code-block::
+      :caption: Terminal
+
+      npm uninstall -g ionic
+      npm install -g @ionic/cli@latest
+
+.. raw:: html
+
+   <div id="purple-background"></div>
+   <div id="wide-content"></div>

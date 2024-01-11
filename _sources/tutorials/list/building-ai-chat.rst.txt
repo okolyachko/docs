@@ -1,0 +1,122 @@
+.. raw:: html
+
+   <div id="orange-background"></div>
+   
+Create an AI chat for a website
+===============================
+
+With the Alan AI Platform, you can quickly :doc:`build an AI chat <../../usage/button/chat>`  for your website, webpage or web app. The Alan AI Web Chat transforms the way customers interact with apps and enhances the user experience with:
+
+- **AI question answering**: employ your private data sources --- website pages, documentation, articles, policies and so on --- to automatically respond to user queries in real time
+
+- **Instant access to resources**: streamline navigation to instantly access website sections, pages and related resources
+
+- **Actions in the app**: integrate with any software in your ecosystem and take actions with text or voice commands
+
+- **Semantic search**: grasp the context, intent and true meaning of every user query and provide contextually relevant responses
+
+- **Generative AI**: transform unstructured and semi-structured data into actionable insights and reports
+
+In this tutorial, we will create an AI chat for a university website. The AI chat will leverage the university website content as a source of knowledge. Users will be able to interact with the AI assistant using text commands to get answers to their questions.
+
+What you will learn
+-------------------
+
+- How to add an AI chat with voice and text commands to a website
+- How to create a chat like ChatGPT with custom knowledge for a website
+- How to create a chat driven by Generative AI, AI question answering and LLMs
+- How to build an intentless dialog for an AI assistant
+
+What you will need
+------------------
+
+This is a getting started tutorial. No prior knowledge is required.
+
+Step 1. Sign up for Alan AI Studio
+----------------------------------
+
+First, we need to sign up for Alan AI Studio — Alan AI's web IDE where we will define the data sources for the AI assistant.
+
+1. Go to `Alan AI Studio <https://studio.alan.app/>`__.
+2. Sign up with a Google, GitHub account or with an email address.
+3. In Alan AI Studio, click **Create Project**. Choose to create an empty project and give it any name.
+
+.. image:: /_static/assets/img/tutorial-chat/creating-project.png 
+
+
+Step 2. Define data sources for the AI chat
+-------------------------------------------
+
+To let the AI assistant employ the content of the website for question answering, we will use Alan AI's :doc:`Q&A service <../../server-api/qna>`. The Q&A service allows crawling web and PDF resources to retrieve content and create a private knowledge memory that fuels the AI assistant. 
+
+1. To the dialog script, add the following code:
+
+   .. code-block:: alan
+      :caption: Dialog script
+	  
+      corpus({
+          url:"https://www.iastate.edu/admission-and-aid", 
+          depth: 2, 
+          maxPages: 100
+      });
+   
+   Where:
+   
+   - ``url``: link to the website to be indexed
+   - ``depth``: crawling depth defining how far down the website the crawler must go to retrieve the content
+   - ``maxPages``: maximum number of pages to be indexed
+   
+   .. note::
+      
+      The ``maxPages`` parameter is obligatory. If you do not set the ``maxPages`` parameter, only one page defined in the ``url`` parameter will be indexed.
+
+2. Save the dialog script and make sure that the indexing job has completed. To check the status of the job, at the bottom of the code editor, open Alan AI Studio logs and make sure you see the ``ready`` status.
+
+.. image:: /_static/assets/img/tutorial-chat/indexing-website.png 
+
+
+Step 3. Customize the AI chat
+-----------------------------
+
+Next, we will customize the AI chat to match the style of the website or webpage to which it will be embedded. 
+
+1. At the top of the code editor, click **Integrations**.
+2. In the options section, to the right of **Text chat**, click **Change**.
+3. Customize the AI chat to match your preferences. Alan AI lets you edit the chat name in the header, change the color scheme, bubbles design and so on.
+
+   .. image:: /_static/assets/img/tutorial-chat/customizing-chat.png
+   
+4. Go back to the **Integrations** view. 
+5. To the right of **Alan button visual style**, click **Change**. 
+6. Under **Logos settings**, click **Add custom logos** and upload the image to be displayed on top of the AI chat button. 
+7. In the **Text Chat** section, use the right control to select the uploaded image and define color settings for the AI chat button.
+8. To the right of **Button Style Name**, click **Save** to save the button changes and apply them to the chat.
+
+   .. image:: /_static/assets/img/tutorial-chat/customizing-chat-button.png
+
+
+Step 4. Add the chat to a website
+---------------------------------
+
+Next, we need to add the AI chat to the website. Alan AI supports multiple :doc:`web frameworks <../../client-api/web/web-api/>`. In this tutorial, we will add to a webpage created with HTML and JavaScript.
+
+1. Go back to the **Integrations** view.
+2. Scroll down to the **Embed code example** section, the **JavaScript** tab:
+
+   - To the right of the font block, click **Copy** and paste the code to the ``<head>`` section of the page.
+   - To the right of the Alan AI button container code, click **Copy** and paste the code to the ``<body>`` section of the page.
+   - To the right of the Alan AI button code, click **Copy** and paste the code closer to the end of the ``<body>`` section of the page.
+
+.. image:: /_static/assets/img/tutorial-chat/integrating-chat.png
+
+Step 5. Test the AI chat
+------------------------
+
+Make sure the AI chat is added to the webpage: open webpage and click the AI assistant button to bring up the chat.
+
+In the message field of the chat, type questions to the AI assistant, for example:
+
+- ``What are the minimum high school course requirements for high school applicants?``
+- ``How do I apply for a bachelor's degree in electrical engineering?``
+
+.. image:: /_static/assets/img/tutorial-chat/checking-result.png

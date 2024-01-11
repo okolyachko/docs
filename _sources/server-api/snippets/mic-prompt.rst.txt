@@ -1,0 +1,34 @@
+Fired when a prompt to allow access to the microphone is displayed.
+
+.. code-block:: js
+   :caption: Event object
+
+   {
+       "event": "micPermissionPrompt",
+       "ts": 1666259901443,
+       "userInfo": {
+           "interactions": 25,
+           "recognized": 25,
+           "unrecognized": 0,
+           "lastInteractionTs": 1666255324364,
+           "lastConnectTs": 1666259897357
+       }
+   }
+
++-------------------------+-----------------+--------------------------------------------------------------+
+| **Field name**          | **Data type**   | **Description**                                              |
++=========================+=================+==============================================================+
+| ``event``               | String          | Event name: ``micPermissionPrompt``                          |
++-------------------------+-----------------+--------------------------------------------------------------+
+| ``ts``                  | Integer         | Timestamp of when the prompt was displayed                   |
++-------------------------+-----------------+--------------------------------------------------------------+
+| ``interactions``        | Integer         | Number of interactions with the user                         |
++-------------------------+-----------------+--------------------------------------------------------------+
+| ``recognized``          | Integer         | Number of recognized user’s interactions                     |
++-------------------------+-----------------+--------------------------------------------------------------+
+| ``unrecognized``        | Integer         | Number of unrecognized user’s interactions                   |
++-------------------------+-----------------+--------------------------------------------------------------+
+| ``lastInteractionTs``   | Integer         | Timestamp of the last interaction with the AI assistant      |
++-------------------------+-----------------+--------------------------------------------------------------+
+| ``lastConnectTs``       | Integer         | Timestamp of the last connection to the AI assistant         |
++-------------------------+-----------------+--------------------------------------------------------------+

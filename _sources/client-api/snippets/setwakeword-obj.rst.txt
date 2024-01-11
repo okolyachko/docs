@@ -1,0 +1,4 @@
+.. code-block:: objective-c
+   :caption: Client app
+
+   [alanButton setWakewordEnabled:YES];

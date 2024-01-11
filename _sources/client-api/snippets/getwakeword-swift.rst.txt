@@ -1,0 +1,4 @@
+.. code-block:: swift
+   :caption: Client app
+
+   let enabled = button.getWakewordEnabled()

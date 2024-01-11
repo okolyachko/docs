@@ -1,0 +1,108 @@
+.. role:: hidden
+   :class: hidden
+
+Alan AI button popups
+=====================
+
+To make the Alan AI button more noticeable and encourage users to interact with the AI assistant, you can show an Alan AI popup in the app. 
+
+The popup is a small window next to the AI assistant button that appears when a certain event is fired or action is performed. For example, you can choose to display the popup when the user launches the app or gives a specific voice or text command. For more details, see :doc:`User events <user-data/events>`.
+
+You can customize the popup in any way and add graphics and messages to it to attract the users' attention.
+
+.. note::
+
+   Alan AI button popups are currently supported on the Web platform.
+
+To display a popup window, use the ``showPopup()`` function in the script. In the example below, the popup window appears when the app is launched and the user clicks the AI assistant button for the first time:
+
+.. code-block:: alan
+   :caption: Dialog script
+
+   onUserEvent((p, e) => {
+       console.info('EVENT', e.event);
+       if (e.event == 'firstClick') {
+           p.showPopup({
+               style:".card-img {width: 100%;margin-top: 0px;}.info-popup {background: #fff;max-width: 400px;height: 350px;width: 400px;max-height: 350px;box-shadow: 0px 1px 3px rgba(16, 39, 126, 0.2);overflow: hidden;border-radius: 10px;display: block;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column}.info-popup_header {padding: 0px;display: block;color: #000;font-size: 22px;font-weight: 700;text-align: center;background: #fff;background-repeat: no-repeat;background-position: center center;background-size: 100% 100%;}.info-popup_body {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;font-weight: 400;font-size: 20px;line-height: 18px;text-align: left;color: #000;padding: 9px 50px;height: 100px}.info-text {font-size: 14px;font-weight: 400;display: contents;margin: 0px;}",
+               html: '<div class="info-popup"><div class="info-popup_header"><img type="image/svg+xml" class="card-img" src="https://assets-global.website-files.com/64ec3fc5bb945b48c0a37b1c/6513eeb685e4c3f99bbd76b4_Customization_benefit2.webp"></div><div class="info-popup_body"><span class="info-text">Hi, I am Alan! <br/> Click the button to talk to me, <br/> ask questions and perform tasks</span></div></div>',
+               overlay: true,
+               buttonMarginInPopup: 15,
+               force: false,
+          });
+       }
+   });
+
+.. image:: /_static/assets/img/script-concepts/popup.png
+
+
+Popup parameters
+----------------
+
+The ``showPopup()`` function takes the following parameters:
+
++---------------------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Name**                  | **Type**      | **Description**                                                                                                                                                                                              |
++===========================+===============+==============================================================================================================================================================================================================+
+| ``html``                  | HTML markup   | Contains the HTML markup of the popup window                                                                                                                                                                 |
++---------------------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``css``                   | CSS markup    | Contains the styles of the popup window                                                                                                                                                                      |
++---------------------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``closeIconSrc``          | String        | Contains a path to a custom close popup icon                                                                                                                                                                 |
++---------------------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``overlay``               | Boolean       | Defines whether the overlay effect must be used (``true``) or not (``false``)                                                                                                                                |
++---------------------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``buttonMarginInPopup``   | Pixels        | Defines the margins for the Alan AI button in the popup window                                                                                                                                               |
++---------------------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``force``                 | Boolean       | If ``showPopop()`` is used after the ``play()`` function, defines whether the popup window must be displayed immediately (``true``) or after the text specified in the ``play()`` function has been played   |
++---------------------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``params``                | Object        | Contains an input object to be applied to handlebar templates in the popup code. For details, see `Handlebar templates in popups <#handlebar-templates-in-popups>`__ .                                       |
++---------------------------+---------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+.. note::
+   
+   To ensure users provide microphone access to the AI assistant, you can also enable the overlay fade effect in the browser to make the microphone permission prompt more noticeable. For details, see :ref:`Alan AI button parameters <Alan button parameters>`.
+   
+Handlebar templates in popups
+-----------------------------
+
+Alan AI button popups support `handlebar templates syntax <https://handlebarsjs.com/>`__. Handlebar expressions added to your popup code allow you to customize and personalize the popup appearance and content.
+
+To use handlebars in popups, define an input object in the ``params`` parameter of the popup. After that, you can add handlebar expressions in double curly braces ``{{...}}`` to the necessary place in the popup code.
+
+In the example below, handlebars are used to create a customized popup with the user's name and current day of week with ``{{userName}}`` and ``{{weekDay}}``: 
+
+.. code-block:: alan
+   :caption: Dialog script
+
+   let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+   let today = new Date();
+   let dayName = days[today.getDay()];
+
+   let greetingParams = { weekDay: dayName, userName: "John Smith" }
+
+   onUserEvent((p, e) => {
+       console.info('EVENT', e.event);
+       if (e.event == 'firstClick') {
+           p.showPopup({
+               style:".card-img {width: 100%;margin-top: 0px;}.info-popup {background: #fff;max-width: 400px;height: 350px;width: 400px;max-height: 350px;box-shadow: 0px 1px 3px rgba(16, 39, 126, 0.2);overflow: hidden;border-radius: 10px;display: block;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column}.info-popup_header {padding: 0px;display: block;color: #000;font-size: 22px;font-weight: 700;text-align: center;background: #fff;background-repeat: no-repeat;background-position: center center;background-size: 100% 100%;}.info-popup_body {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;font-weight: 400;font-size: 20px;line-height: 18px;text-align: left;color: #000;padding: 9px 50px;height: 100px}.info-text {font-size: 14px;font-weight: 400;display: contents;margin: 0px;}",
+               html: '<div class="info-popup"><div class="info-popup_header"><img type="image/svg+xml" class="card-img" src="https://assets-global.website-files.com/64ec3fc5bb945b48c0a37b1c/6513eeb685e4c3f99bbd76b4_Customization_benefit2.webp"></div><div class="info-popup_body"><span class="info-text">Happy {{weekDay}}, {{userName}}!<br/> Click the button to talk to me, <br/> ask questions and perform tasks</span></div></div>',
+               overlay: true,
+               buttonMarginInPopup: 15,
+               force: false,
+               params: greetingParams
+           });
+       }
+   });
+
+.. image:: /_static/assets/img/script-concepts/popup_customized.png
+
+.. _Popup editor:
+
+Popup editor
+------------
+
+.. include:: snippets/popup-editor.rst
+
+.. raw:: html
+
+   <div id="green-background"></div>

@@ -1,0 +1,7 @@
+.. code-block:: swift
+   :caption: Client app
+
+   func setVisualState() {
+     /// Providing any params
+     self.button.setVisualState(["data":"your data"])
+   }

@@ -1,0 +1,4 @@
+.. code-block:: dart
+   :caption: Client app
+	   
+   AlanVoice.setWakewordEnabled(enabled);

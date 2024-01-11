@@ -65,13 +65,14 @@ article {
 
 
 .sidebar-sticky, .toc-sticky {
-	top: 120px !important;
+	top: 130px !important;
 	height: calc(100vh - 100px) !important;
 	
 }
 
 .toc-sticky {
-	margin-bottom: 420px;
+	margin-bottom: 440px;
+	padding-right: 10px;
 }
 
 .sidebar-drawer {
@@ -463,15 +464,47 @@ footer {
 	margin-bottom: 35px !important;
 }
 
-.page-info .title:hover  {
-   color: var(--main-color) !important;
-   text-decoration:none !important;
+.related-pages a {
+	font-family: 'Inter Semibold', sans-serif;
+}
+
+.related-pages a.next-page:after {
+  border-left: 1.5px solid #4A515D;
+  border-top: 1.5px solid #4A515D;
+  width: 5px;
+  content: '';
+  height: 5px;
+  transform: rotate(135deg);
+  margin-left:5px;
+  float: right;
+}
+
+.related-pages a.prev-page:before {
+  border-left: 1.5px solid #4A515D;
+  border-top: 1.5px solid #4A515D;
+  width: 5px;
+  content: '';
+  height: 5px;
+  transform: rotate(-45deg);
+  margin-right:5px;
+  float: right;
+}
+
+.related-pages a.next-page:hover, a.prev-page:hover {
+	color:  #2757FF !important;
+}
+
+.related-pages .title {
+	text-decoration: none !important;
+}
+
+
+.page-info .context {
+	display:none;
 }
 
 .related-pages a svg, .related-pages a svg>use {
-	height: 0.85rem !important;
-	width: 0.85rem !important;
-	color: var(--text-color) !important;
+	display:none;
 }
 
 /* Index page */
@@ -657,25 +690,45 @@ p.admonition-title {
 	margin-bottom: 0px !important;
 }
 
-.admonition .literal {
-	background-color: #cc420a1a !important;
-	border: 1px solid #E69400;
-}
+
 /* Code highlighter */
 
 .code-block-caption {
 	text-align: left !important;
-	margin-bottom: -16px;
-	background: #1a2c46;
+	margin-bottom: -18px;
+	background: #191B1F;
 	padding: 0.5em 1.5em;
 	color: #f6f6f6;
 	font-size: 0.85em;
-	border-top-left-radius: 4px;
-	border-top-right-radius: 4px;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
 }
 
+.code-block-caption .caption-text:before {
+	background-image: url("code-client.svg");
+    content: '....  ';
+	background-repeat: no-repeat;
+	background-size: 1.3em;
+	height: 1.3em;
+	min-width: 1.3em;
+	top: -30px;
+	margin-right:5px
+}
+
+
 .alan-caption {
-	background: #34517d;
+	background: #191B1F;
+}
+
+.alan-caption .caption-text:before {
+	background-image: url("code-alan.svg");
+	content: '....  ';
+	background-repeat: no-repeat;
+	background-size: 1.3em;
+	height: 1.3em;
+	min-width: 1.3em;
+	top: -30px;
+	margin-right:5px
 }
 
 
@@ -689,16 +742,16 @@ p.admonition-title {
 }
 
 .highlight  {
-	background: #23395A  !important;
+	background: #32363F  !important;
 	padding-top: 15px !important;
 	padding-bottom: 15px !important;
 	border-radius: 0px;
-	border-bottom-left-radius: 4px;
-	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 12px;
+	border-bottom-right-radius: 12px;
 }
 
 .highlight pre {
-	font-family: monospace !important;
+	font-family: 'Oxygen Mono' !important;
 	font-size: 0.85em !important;
 	color: #f6f6f6 !important;
 	padding-left: 1.5em !important;
@@ -716,16 +769,21 @@ button.copybtn {
 	background-image: url("copy-button.svg");
 	opacity: 1;
 	background-repeat: no-repeat;
-	background-size: 1.5em;
-	height: 1.5em;
-	width: 1.5em;
+	background-size: 1.3em;
+	height: 1.3em;
+	width: 1.3em;
 	border: 0px;
-	top: -29px;
-	background-color: #17263C !important;
+	top: -30px;
+	background-color: #191B1F !important;
+	margin-right: 10px;
+}
+
+button.copybtn:hover {
+	background-image: url("copy-button-light.svg");
 }
 
 .highlight-alan button.copybtn  {
-	background-color: #34517d !important;
+	background-color: #191B1F !important;
 }
 
 .highlight button.copybtn:hover {
@@ -775,38 +833,37 @@ button.copybtn img {
 	background-color: #f6f6f6 !important;
 	border: 1px solid #e1e4e5;
 } 
+
 /* Tabs */
 
 .tabbed-content {
 	box-shadow: none;
-	border-top: solid 1px #dadde1;
-	
 }
 
-.tabbed-set>input:checked+label {
-	border-color: var(--main-color) !important;
-	color: var(--main-color) !important;
-	border-bottom: solid 3px;
+.dropdown.card .tabbed-set > label, .tabbed-set > label {
+	font-size: 0.85em !important;
+	padding: 1em 0.5em .5em !important;
+	font-family: 'Inter Medium';
+	color: #4A515D;
+	font-weight: 500;
 }
 
 .tabbed-set > label {
-	color: #566270 !important;
-	font-size: 15px !important;
-	padding: 1em 0.85em .5em !important;
+	font-size: 0.9em !important;
 }
 
-.dropdown.card .tabbed-set > label {
-	font-size: 15px !important;
-	padding: 1em 0.5em .5em !important;
+.tabbed-set>input:checked+label {
+	color: #2757FF !important;
+	border-bottom: #2757FF solid px;
+	font-weight:600 !important
+	
 }
-
-
 
 
 .tabbed-set > .tabbed-label:hover {
-	background-color:  #f4f4f4 !important;
-	border-top-right-radius: 4px;
-	border-top-left-radius: 4px;	
+	background-color: rgba(233, 238, 255, 0.5) !important;
+	border-top-right-radius: 6px;
+	border-top-left-radius: 6px;	
 }
 
 /*Buttons*/
@@ -964,6 +1021,7 @@ ul.search a {
 .dropdown.card {
 	border: 0px !important;
 	border-bottom: 1px solid #e3e3ed !important;
+    width: 100%;
 }
 
 .card-header {
@@ -972,12 +1030,44 @@ ul.search a {
 	font-size: 18px !important;
 }
 
-details.dropdown .summary-up svg > path, details.dropdown .summary-down svg > path {
-	display: none;
+details.dropdown .summary-title {
+	font-size: 1em !important;
+    font-family: 'Inter Semibold';
+}
+
+details.dropdown .summary-up, details.dropdown .summary-down {
+	top: 0em !important;
 }
 
 
-details.dropdown .summary-up svg {
+details.dropdown .summary-up svg > path, details.dropdown .summary-down svg > path {
+	display: none;
+}
+details.dropdown .summary-up:after{
+  border-left: 1.5px solid #4A515D;
+  border-top: 1.5px solid #4A515D;
+  width: 5px;
+  content: '';
+  height: 5px;
+  transform: rotate(45deg);
+  transition: transform 1s ease-in-out;
+  margin-left:-5px;
+  float: right;
+}
+
+details.dropdown .summary-down:after{
+  border-left: 1.5px solid #4A515D;
+  border-top: 1.5px solid #4A515D;
+  width: 5px;
+  content: '';
+  height: 5px;
+  transform: rotate(-135deg);
+  transition: transform 1s ease-in-out;
+  margin-left:-5px;
+  float: right;
+}
+
+/*details.dropdown .summary-up svg {
 	background-image: url("open.svg") !important;
 	background-repeat: no-repeat;
 	background-size: 24px;
@@ -996,7 +1086,7 @@ details.dropdown .summary-down svg {
 	background-size: 24px;
 	margin-left: 20px;
 	margin-top: 5px !important;
-}
+}*/
 
 .card-body ol, .card-body ol {
 	margin-left: 1em;
@@ -1626,7 +1716,9 @@ div.d-flex.col-lg-2.col-md-4.col-sm-6.col-xs-12.docutils{
 
 	}
 
-	
+	.code-block-caption .caption-text:before, .alan-caption .caption-text:before, button.copybtn {
+		top: -25px;
+	}
 
 @media (max-width: 67em) {
 	 

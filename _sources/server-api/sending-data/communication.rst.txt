@@ -1,0 +1,57 @@
+Sending data from the app
+=========================
+
+You may want your app to communicate with the AI assistant and send data to it. In Alan AI, the app can send data to the dialog script in the following ways:
+
+.. panels::
+   :column: col-lg-12 col-md-12 col-sm-12 col-xs-12 p-2
+   
+   ---
+   :card: border-0 + custom-style-list
+   
+   .. link-button:: authdata
+      :type: ref
+      :text: authData
+      :classes: stretched-link panel
+	  
+   Learn how to send any kind of authentication or configuration data from the app to the dialog script.
+
+   ---
+   :card: border-0 + custom-style-list
+   
+   .. link-button:: visual-state
+      :type: ref
+      :text: Visual state
+      :classes: stretched-link panel
+	  
+   Learn how to send the state of the app to the dialog script. It can be helpful if you want to inform Alan AI about the current visual context and adjust the logic in the dialog, accordingly. For example, you can filter out some commands, give responses applicable to the open page or screen and so on.
+
+   ---
+   :card: border-0 + custom-style-list
+   
+   .. link-button:: project-api
+      :type: ref
+      :text: Project API
+      :classes: stretched-link panel
+	  
+   Learn how to send some information to the dialog script or perform actions --- play messages, call functions, set variable values --- without a voice or text command.
+
+
+See also
+--------
+- :ref:`Sending commands to the app`
+   
+- :ref:`How tos: Client app<Client app>`
+
+.. raw:: html
+
+   <div id="green-background"></div>
+   
+   
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+   
+   authData<authdata> 
+   Visual state<visual-state>
+   Project API<project-api> 

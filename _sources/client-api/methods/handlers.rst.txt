@@ -1,0 +1,63 @@
+Alan AI handlers
+================
+
+To build a conversational user experience with Alan AI, you can use the following handlers in the app:
+
+.. panels::
+   :column: col-lg-12 col-md-12 col-sm-12 col-xs-12 p-2
+   
+   ---
+   :card: border-0 + custom-style-list
+   
+   .. link-button:: command-handler
+      :type: ref
+      :text: onCommand handler
+      :classes: stretched-link panel
+	  
+   Handle commands sent from the dialog scripts to the app. Use this handler to perform tasks or actions on commands in the client app: navigate between the app screens, highlight a UI element on the screen and so on.
+
+   ---
+   :card: border-0 + custom-style-list
+   
+   .. link-button:: state-handler
+      :type: ref
+      :text: onButtonState handler
+      :classes: stretched-link panel
+	  
+   Handle the Alan AI button state change events
+   
+   ---
+   :card: border-0 + custom-style-list
+   
+   .. link-button:: connection-handler
+      :type: ref
+      :text: onConnectionStatus handler
+      :classes: stretched-link panel
+	  
+   Handle the connection status to the virtual assistant project in the Alan AI Cloud.
+   
+   ---
+   :card: border-0 + custom-style-list
+   
+   .. link-button:: event-handler
+      :type: ref
+      :text: onEvent handler
+      :classes: stretched-link panel
+	  
+   Handle events received from Alan AI when the user’s input is being recognized.
+
+.. raw:: html
+
+   <div id="purple-background"></div>
+   <div id="wide-content"></div>
+
+
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+   
+   onCommand handler<command-handler>
+   onButtonState handler<state-handler>
+   onConnectionStatus handler<connection-handler>
+   onEvent handler<event-handler>
+  

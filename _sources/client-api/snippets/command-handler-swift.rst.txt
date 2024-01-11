@@ -1,0 +1,9 @@
+.. code-block:: swift
+   :caption: Client app
+
+   self.button.onCommand = { command in
+     guard let commandName = command?["command"] as? String else {
+       return
+     }
+     print(commandName)
+   }

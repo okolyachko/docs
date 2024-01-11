@@ -1,0 +1,10 @@
+.. code-block:: dart
+   :caption: Client app
+
+   _MyHomePageState() {
+     void _setVisualState() {
+       /// Providing any params with json
+       var visualState = jsonEncode({"data":"your data"});
+       AlanVoice.setVisualState(visualState);
+     }
+   }

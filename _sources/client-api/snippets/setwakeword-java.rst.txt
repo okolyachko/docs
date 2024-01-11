@@ -1,0 +1,4 @@
+.. code-block:: java
+   :caption: Client app
+
+   alanButton.setWakewordEnabled(true);

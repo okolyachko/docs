@@ -1,0 +1,45 @@
+onConnectionStatus handler
+==========================
+
+Responsible for handling the connection status to the AI assistant project in the Alan AI Cloud.
+
+Depending on the current connection state, the Alan AI Cloud returns one of the following statuses:
+
+-  **authorized**: a request to connect to the AI assistant project is authorized
+-  **auth-failed**: a request to connect to the AI assistant project is not authorized
+-  **connected**: a connection to the AI assistant project in the Alan AI Cloud is established
+-  **disconnected**: a connection to the AI assistant project in the Alan AI Cloud is closed
+-  **invalid-auth-response**: an invalid authentication response is received
+
+.. note::
+   
+   At present, the ``onConnectionStatus`` handler is supported only for the Web platform (including cross-platform frameworks, for example, Ionic).
+
+Examples
+--------
+
+.. tabbed:: Web (React, Angular, etc.)
+
+    .. include:: ../snippets/connection-handler-web.rst
+		
+.. tabbed:: Ionic
+
+    **Ionic Angular**
+
+    .. include:: ../snippets/connection-handler-ionic-angular.rst
+
+
+    **Ionic React**
+	
+    .. include:: ../snippets/connection-handler-ionic-react.rst
+	  
+
+    **Ionic Vue**
+
+    .. include:: ../snippets/connection-handler-ionic-vue.rst
+		
+		
+		
+.. raw:: html
+
+   <div id="purple-background"></div>

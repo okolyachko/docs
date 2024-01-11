@@ -10,22 +10,23 @@ You can customize your AI assistant to fit your app's needs and color scheme. To
 
 You can do the following:
 
--  `Enable or disable the AI assistant button in the app <#enabling-or-disabling-the-assistant-button>`__
+-  `Enable or disable the AI assistant button in the app <#enabling-or-disabling-the-ai-assistant-button>`__
 -  `Enable or disable the Speech-to-Text panel <#enabling-or-disabling-the-speech-to-text-panel>`__
 -  `Record intent audio <#recording-intent-audio>`__
 -  (Web) `Play the ready-to-listen sound <#playing-the-ready-to-listen-sound>`__
 -  (Web) `Change the button position <#changing-the-button-position>`__
 -  (Web) `Save the button position after drag-n-drop <#saving-the-button-position>`__
--  `Disable button popups <#disabling-button-popups>`__
+-  (Web) `Send current page state to the server <#sending-the-current-page-state>`__
 -  `Change the button visual style <#changing-the-button-visual-style>`__
 -  `Change the voice type, accent, pitch and rate <#changing-the-voice-type-accent-pitch-and-rate>`__
 -  `Set the microphone timeout <#setting-the-microphone-timeout>`__
+-  (Web) `Enable the Alan AI Chat <#enabling-the-alan-ai-chat>`__
+-  (Web) `Get the app code for the Alan AI Plugin <#getting-the-app-code-for-the-alan-ai-plugin>`__
 -  (iOS/Android) `Take screenshots <#taking-screenshots>`__
 -  (iOS/Android) `Keep the session active <#keeping-the-session-active>`__
 -  (iOS/Android) `Use the wake word <#using-the-wake-word>`__
 -  (iOS/Android) `Use a custom wake word <#using-a-custom-wake-word>`__
 -  (iOS/Android) `Enable the QR code reader <#enabling-the-qr-code-reader>`__
--  (Web) `Turn on the Alan AI Chat <#turning-on-the-alan-ai-chat>`__
 
 .. note:: 
 
@@ -36,118 +37,124 @@ You can do the following:
 Enabling or disabling the AI assistant button
 ---------------------------------------------
 
-Use this option to show or hide the AI assistant button for users of your app.
+Use the **Alan button is visible** option to show or hide the AI assistant button in the app.
 
-+-----------------+-------------------+
-| **Default**     | on/visible        |
-+-----------------+-------------------+
-| **Platforms**   | Web/iOS/Android   |
-+-----------------+-------------------+
++----------------------+-------------------+
+| **Default**          | on/visible        |
++----------------------+-------------------+
+| **Assistant type**   | AI Chat/voice     |
++----------------------+-------------------+
+| **Platforms**        | Web/iOS/Android   |
++----------------------+-------------------+
+
 
 Enabling or disabling the Speech-to-Text panel
 ----------------------------------------------
 
-Use this option to show or hide the Speech-to-Text panel for users of your app. The Speech-to-Text panel is active when the user gives voice commands to the app, showing the recognized input, and helps with visual feedback.
-
-+-----------------+-------------------+
-| **Default**     | on/visible        |
-+-----------------+-------------------+
-| **Platforms**   | Web/iOS/Android   |
-+-----------------+-------------------+
+Use the **Show Speech to text panel** option to show or hide the speech-to-text panel for users of the app. The speech-to-text panel is active when the user gives voice commands to the AI assistant, showing the recognized input, and helps with visual feedback.
 
 .. note::
 
-   The 'Speech To Text' panel is not displayed in mobile web browsers on the Web platform.
+   The speech-to-text panel is not displayed in mobile web browsers on the Web platform.
+
++----------------------+-------------------+
+| **Default**          | on/visible        |
++----------------------+-------------------+
+| **Assistant type**   | voice             |
++----------------------+-------------------+
+| **Platforms**        | Web/iOS/Android   |
++----------------------+-------------------+
    
 .. _Recording intent audio:
 
 Recording intent audio
 ----------------------
 
-Use this option to record every voice command given by users. Audio recordings will be available in the project logs and in the **Analytics** view. 
+Use the **Record intent audio** option to record voice commands given by users. Audio recordings are available in the project logs and in the **Analytics** view. 
 
-Recording audio is a great way to debug user flows and adjust your dialog script accordingly. We have taken extra security measures to ensure that all recordings are protected and available only to you as the project owner.
+Recording audio is a great way to debug user flows and adjust the dialog script. We have taken extra security measures to ensure all recordings are protected and available only to you as the project owner.
 
-+-----------------+-------------------+
-| **Default**     | off               |
-+-----------------+-------------------+
-| **Platforms**   | Web/iOS/Android   |
-+-----------------+-------------------+
++----------------------+-------------------+
+| **Default**          | off               |
++----------------------+-------------------+
+| **Assistant type**   | voice             |
++----------------------+-------------------+
+| **Platforms**        | Web/iOS/Android   |
++----------------------+-------------------+
 
 Playing the ready-to-listen sound
 ---------------------------------
 
-By default, when the user interacts with Alan AI, a special sound is played when Alan AI is ready to listen for user's utterances. If you do not want the sound to be played, disable the **Play ready-to-listen sound** option.
+By default, when the user interacts with an AI assistant, a special sound is played when Alan AI is ready to listen to the user's utterances. If you do not want the sound to be played, disable the **Play ready-to-listen sound** option.
 
-+-----------------+-------+
-| **Default**     | on    |
-+-----------------+-------+
-| **Platforms**   | Web   |
-+-----------------+-------+
++----------------------+-------------------+
+| **Default**          | on                |
++----------------------+-------------------+
+| **Assistant type**   | voice             |
++----------------------+-------------------+
+| **Platforms**        | Web               |
++----------------------+-------------------+
 
 Changing the button position
 ----------------------------
 
-The AI assistant button is draggable, so the user can change the button position in the app. If you do not want users to be able to drag the button around the page, disable this option.
+The AI assistant button is draggable, so the user can change the button position in the app. If you do not want users to be able to drag the button around the page, disable the **Allows changing the button position** option.
 
-+-----------------+-------+
-| **Default**     | on    |
-+-----------------+-------+
-| **Platforms**   | Web   |
-+-----------------+-------+
++----------------------+-------------------+
+| **Default**          | on                |
++----------------------+-------------------+
+| **Assistant type**   | AI Chat/voice     |
++----------------------+-------------------+
+| **Platforms**        | Web               |
++----------------------+-------------------+
 
 Saving the button position
 --------------------------
 
-Enable this option to keep the latest button position after the page refresh. 
+Enable the **Save the button position after drag-n-drop** option to keep the latest button position after the page refresh. 
 
-The button position is kept during the current dialog session. When a new dialog session starts, the button is put to the default position.
+The button position is kept during the current dialog session. When a new dialog session starts, the button is put in the default position.
 
-+-----------------+-------+
-| **Default**     | off   |
-+-----------------+-------+
-| **Platforms**   | Web   |
-+-----------------+-------+
++----------------------+-------------------+
+| **Default**          | off               |
++----------------------+-------------------+
+| **Assistant type**   | AI Chat/voice     |
++----------------------+-------------------+
+| **Platforms**        | Web               |
++----------------------+-------------------+
 
-Disabling button popups
------------------------
+Sending the current page state
+------------------------------
 
-Use this option to disable showing popups next to the AI assistant button in the app. For more details on popups, see :doc:`Alan AI button popups <../../server-api/popups>`.
+By default, Alan AI sends information about the state of the page currently active in the app to the Alan AI Cloud. This information is required to make the dialog more accurate and contextual. If you do not want to send information about the page state to Alan AI, disable the **Send current page state to the server automatically** option.
 
-+-----------------+-------------------+
-| **Default**     | on                |
-+-----------------+-------------------+
-| **Platforms**   | Web               |
-+-----------------+-------------------+
-
-..
-  Enabling the debug chat
-  -----------------------
-
-  Use this option to show the debug chat on iOS and Android devices when the AI assistant button is swiped to the left. For details, see :doc:`Using the debug chat on iOS and Android devices <../guides/device-debug-chat>`.
-
-  +-----------------+---------------+
-  | **Default**     | on            |
-  +-----------------+---------------+
-  | **Platforms**   | iOS/Android   |
-  +-----------------+---------------+
++----------------------+-------------------+
+| **Default**          | on                |
++----------------------+-------------------+
+| **Assistant type**   | AI Chat/voice     |
++----------------------+-------------------+
+| **Platforms**        | Web               |
++----------------------+-------------------+
 
 .. _Changing the button visual style:
 
 Changing the button visual style
 --------------------------------
 
-Use this option to customize the visual style of the AI assistant button to match your brand design and color scheme. You can:
+Use the **Alan button visual style** option to customize the visual style of the AI assistant button to match your brand design and color scheme. You can:
 
 -  `Change the button colors <#changing-the-button-styles>`__
 -  `Change the button size <#changing-the-button-size>`__
 -  `Replace the Alan AI logo with a custom icon <#replacing-the-alan-logo>`__
 
-+-----------------+-------------------+
-| **Default**     | blue              |
-+-----------------+-------------------+
-| **Platforms**   | Web/iOS/Android   |
-+-----------------+-------------------+
+
++----------------------+-------------------+
+| **Default**          | blue              |
++----------------------+-------------------+
+| **Assistant type**   | AI Chat/voice     |
++----------------------+-------------------+
+| **Platforms**        | Web/iOS/Android   |
++----------------------+-------------------+
 
 Changing the button styles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -205,7 +212,7 @@ To switch back to the default logo, select the initial image for the necessary b
 Changing the voice type, accent, pitch and rate
 -----------------------------------------------
 
-Use this option to change Alan's voice:
+Use the **Alan voice** option to change the AI assistant's voice:
 
 1. In the **Integrations** view, to the right of the **Alan voice** field, click **Change**. 
 2. In the languages list, select the language for the AI assistant, the regional accent and the voice type. 
@@ -214,54 +221,92 @@ Use this option to change Alan's voice:
 
 .. image:: /_static/assets/img/customization/language-type.png
 
-+-----------------+-------------------------------------------------------------+
-| **Default**     | English, US, Alan voice, normal speed (1), normal pitch (0) |
-+-----------------+-------------------------------------------------------------+
-| **Platforms**   | Web/iOS/Android                                             |
-+-----------------+-------------------------------------------------------------+
++----------------------+-------------------------------------------------------------------------+
+| **Default**          | English, US, Alan voice, normal speed (1), normal pitch (0)             |
++----------------------+-------------------------------------------------------------------------+
+| **Assistant type**   | AI Chat/voice                                                           |
++----------------------+-------------------------------------------------------------------------+
+| **Platforms**        | Web/iOS/Android                                                         |
++----------------------+-------------------------------------------------------------------------+
 
 Setting the microphone timeout
 ------------------------------
 
 Use this option to set the period after which the AI assistant button is automatically deactivated. This option helps users save on battery/traffic and avoid unwanted commands. The microphone timeout functionality pairs great with `using the wake word <#using-the-wake-word>`__.
 
-+-----------------+-------------------+
-| **Default**     | 10s               |
-+-----------------+-------------------+
-| **Platforms**   | Web/iOS/Android   |
-+-----------------+-------------------+
++----------------------+-------------------+
+| **Default**          | 10 seconds        |
++----------------------+-------------------+
+| **Assistant type**   | AI Chat/voice     |
++----------------------+-------------------+
+| **Platforms**        | Web/iOS/Android   |
++----------------------+-------------------+
+
+Enabling the Alan AI Chat
+-------------------------
+  
+Use the **Text chat** option to display a chat UI for the AI assistant in the app. The Alan AI Chat allows users to interact with the AI assistant through text or use two input channels - voice and text - at the same time.
+
+For details, see :doc:`Enabling the Alan AI Chat <chat>`.
+
++----------------------+-------------------+
+| **Default**          | on/visible        |
++----------------------+-------------------+
+| **Assistant type**   | AI Chat           |
++----------------------+-------------------+
+| **Platforms**        | Web               |
++----------------------+-------------------+
+
+Getting the app code for the Alan AI Plugin
+-------------------------------------------
+
+Use the **Browser plugin** option to copy the code for the Alan AI Plugin and display the AI assistant in any web app. \
+
+For details, see :doc:`Alan AI Plugin <../guides/plugin>`.
+
++----------------------+-------------------+
+| **Default**          | off               |
++----------------------+-------------------+
+| **Assistant type**   | AI Chat           |
++----------------------+-------------------+
+| **Platforms**        | Web               |
++----------------------+-------------------+
 
 .. _Taking screenshots:
 
 Taking screenshots
 ------------------
 
-Use this option to take screenshots of the app with every voice command given by users. Screenshots will be available in the project logs and in the ***Analytics** view.
+Use the **Allows taking screenshots from devices** option to take screenshots of the app with every voice command given by users. Screenshots are available in the Alan AI Studio logs and in the ***Analytics** view.
 Taking screenshots is a great way to debug user flows and adjust your dialog script accordingly. We have taken extra security measures to ensure that all screenshots are protected and available only to you as the project owner.
 
-+-----------------+---------------+
-| **Default**     | off           |
-+-----------------+---------------+
-| **Platforms**   | iOS/Android   |
-+-----------------+---------------+
++----------------------+-------------------+
+| **Default**          | off               |
++----------------------+-------------------+
+| **Assistant type**   | voice             |
++----------------------+-------------------+
+| **Platforms**        | iOS/Android       |
++----------------------+-------------------+
 
 Keeping the session active
 --------------------------
 
-Use this option to keep the dialog session active even when the user puts the app in the background mode. If this option is enabled, the user will be able to continue the conversation with the AI assistant even while actively using other apps.
+Use the **Keep active while the app is in the background** option to keep the dialog session active even when the user puts the app in background mode. If this option is enabled, the user will be able to continue the conversation with the AI assistant even while actively using other apps.
 
-+-----------------+---------------+
-| **Default**     | off           |
-+-----------------+---------------+
-| **Platforms**   | iOS/Android   |
-+-----------------+---------------+
++----------------------+-------------------+
+| **Default**          | off               |
++----------------------+-------------------+
+| **Assistant type**   | voice             |
++----------------------+-------------------+
+| **Platforms**        | iOS/Android       |
++----------------------+-------------------+
 
 .. _Using the wake word:
 
 Using the wake word
 -------------------
   
-Use this option to allows users to activate the AI assistant in the app with a special word or phrase. 
+Use the **Wake word** option to allows users to activate the AI assistant in the app with a special word or phrase. 
 
 The default wake words are ``Hey, Alan`` or ``OK, Alan``. However, you can replace the default wake words with `custom ones <#using-a-custom-wake-word>`__.
 
@@ -309,11 +354,13 @@ To use a custom wake word:
    - `Alan AI SDK for React Native <https://www.npmjs.com/package/@alan-ai/alan-sdk-react-native?activeTab=versions>`__ (version 2.1.0 or higher)
    - `Alan AI SDK for Ionic <https://www.npmjs.com/package/@alan-ai/cordova-plugin-alan-voice?activeTab=versions>`__ (version 3.0.0 or higher)
   
-+-----------------+---------------+
-| **Default**     | off           |
-+-----------------+---------------+
-| **Platforms**   | iOS/Android   |
-+-----------------+---------------+
++----------------------+-------------------+
+| **Default**          | off               |
++----------------------+-------------------+
+| **Assistant type**   | voice             |
++----------------------+-------------------+
+| **Platforms**        | iOS/Android       |
++----------------------+-------------------+
 
 
 .. _Enabling the QR code reader:
@@ -321,23 +368,17 @@ To use a custom wake word:
 Enabling the QR code reader
 ---------------------------
 
-Use this option to enable the QR code reader and :ref:`test how an AI assistant works in the app <In-app testing>`. 
+Use the **Enable QR Code reader** option to enable the QR code reader and :ref:`test how an AI assistant works in the app <In-app testing>`. 
 
 With this option enabled, you can tap the Alan AI button in the app, hold it for 8 seconds and scan the QR code in Alan AI Studio with the device camera to connect to the AI project and evaluate the conversational experience.
 
-+-----------------+---------------+
-| **Default**     | off           |
-+-----------------+---------------+
-| **Platforms**   | iOS/Android   |
-+-----------------+---------------+
-
-Turning on the Alan AI Chat
----------------------------
-  
-Use this option to display a chat for the AI assistant in the app. The chat allows users to interact with the AI assistant through text or use two input channels - voice and text - at the same time. 
-
-For details, see :doc:`Enabling the Alan AI Chat <chat>`
-
++----------------------+-------------------+
+| **Default**          | off               |
++----------------------+-------------------+
+| **Assistant type**   | voice             |
++----------------------+-------------------+
+| **Platforms**        | iOS/Android       |
++----------------------+-------------------+
 
 .. raw:: html
 
