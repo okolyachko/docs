@@ -163,7 +163,8 @@ $('.sidebar-search').on('keyup keypress', function (e) {
 			
 			// Load the selected version
 			var url = window.location.href;
-			if (url.indexOf('4.1') > 0 || url.indexOf('3.x') >= 0) {
+			var versionMatch = url.match(/(\d+\.\d+)/);
+			if ((versionMatch && versionMatch[1]) || (url.indexOf('3.x') >= 0)) {
 				url = url.split("docs/" )[1].slice(3);
 			} else {url = url.split("docs")[1]};
 			if (version === '4.2') {
@@ -250,6 +251,19 @@ $(document).ready(function () {
 	}
 });
 
+// Check if URL contains version
+$(document).ready(function () {
+	var url = window.location.href;
+	var versionMatch = url.match(/(\d+\.\d+)/);
+	if (versionMatch && versionMatch[1]) {
+		version = versionMatch[1];
+		$('#version a').closest('.dropdown').find('button').text(version);
+	} else if (url.indexOf('3.x') >= 0 ) {
+		version = url.split("docs/" )[1].slice(0).substring(0,3);
+		$('#version a').closest('.dropdown').find('button').text(version);
+	}
+});
+    
 // Scroll to the selected tab
 $(document).ready(function() {
   $('.tabbed-label').click(function(e) {

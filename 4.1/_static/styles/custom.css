@@ -109,7 +109,7 @@ article {
 	margin-bottom: 10px;
 }
 
-.toctree-l1 > a, .toctree-l1 > label .icon {
+.sidebar-tree .toctree-l1 > a, .toctree-l1 > label .icon {
 	color: #4A515D !important;
 	font-size: 14px !important;
 }
@@ -415,14 +415,14 @@ button.dropbtn:hover  {
 /* Fixing anchors */
 
 .anchor-fixed {
-	padding-top: 90px !important;
-	margin-top: -75px !important;
+	padding-top: 130px !important;
+	margin-top: -115px !important;
 }
 
 .anchor-fixed-hidden {
     display: none;
-	padding-top: 90px !important;
-	margin-top: -75px !important;
+	padding-top: 130px !important;
+	margin-top: -115px !important;
 }
 
 
@@ -572,7 +572,7 @@ ol.loweralpha {
 .section a {
 	text-decoration: none !important;
 	border-bottom: 1px solid #000;
-	padding-bottom: 3px;
+	padding-bottom: 2px;
 	font-family: Inter Medium, sans-serif !important;
 }
 
@@ -603,8 +603,8 @@ li.scroll-current > a {
 /* Images */
 
 .section img {
-	border: 1px solid #CED3DB;
-	border-radius: 4px;
+	border: 1px solid #8f8f8f;
+	border-radius: 12px;
 }
 
 .wrap-image {
@@ -967,13 +967,11 @@ tr {
 .sidebar-search-container {
 	background: #fff !important;
 	margin: 0 0 0 10px !important;
-	width:420px;
 }
 
 input.sidebar-search {
 	border: 1px solid #E2E4E9 !important;
 	border-radius: 8px !important;
-	width:420px;
 }
 
 .sidebar-search-container:before {
@@ -1016,6 +1014,20 @@ ul.search a {
 }
 
 
+.fa-twitter:before {
+	display: none;
+}
+
+.fa-twitter {
+	background-image: url("twitter-new.svg");
+	background-repeat: no-repeat;
+	min-height: 8px;
+	height:8px;
+	min-width:8px;
+	width:8px;
+	padding-top: 5px;
+	padding-right: 15px;
+}
 
 /* Dropdowns*/
 
@@ -1596,13 +1608,13 @@ div.d-flex.col-lg-2.col-md-4.col-sm-6.col-xs-12.docutils{
 	
 }
 .footer-text {
-	font-size:12px;
+	font-size:16px;
 	font-weight: 400;
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
     letter-spacing: .33px;
-    color: #bbcfe7;
+    color: #667085;
     margin-bottom: 4px;
     display: block;
 }
@@ -1632,8 +1644,8 @@ div.d-flex.col-lg-2.col-md-4.col-sm-6.col-xs-12.docutils{
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     flex-direction: row;
-	color: #bbcfe7;
-	font-size:12px;
+	color: #667085;
+	font-size:16px;
 	margin-top: 90px;
 	max-width: 640px;
 }
@@ -1678,17 +1690,15 @@ div.d-flex.col-lg-2.col-md-4.col-sm-6.col-xs-12.docutils{
 .footer_badges_imgs_google-play {
 	background-image: url("googleplay.svg");
 	background-repeat: no-repeat;
-	min-width: 164px;
-    width: 164px;
-    max-width: 164px;
+	min-width: 144px;
+    width: 144px;
+    max-width: 144px;
     min-height: 48px;
     height: 48px;
     max-height: 48px;
     background-size: contain;
     margin-bottom: 16px;
 }
-
-
 
 @media (max-width: 82em) {
 	.main {
