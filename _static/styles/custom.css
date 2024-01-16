@@ -373,7 +373,8 @@ button.dropbtn:hover  {
   border: #E2E4E9 solid 1px;
   min-width: 190px;
   z-index: 1;
-  margin-left: -70px;
+  margin-left: -60px;
+  margin-top: 5px;
   border-radius: 12px;
   box-shadow: 0px 2px 4px rgba(0,0,0,.1);
   padding: 0.75em;
@@ -603,7 +604,7 @@ li.scroll-current > a {
 /* Images */
 
 .section img {
-	border: 1px solid #8f8f8f;
+	border: 1px solid #f6f6f6;
 	border-radius: 12px;
 }
 
@@ -798,21 +799,24 @@ button.copybtn img {
 
 .badge {
 	height: 25px;
-    border-radius: 4px 10px 10px 4px;
+    border-radius: 6px;
 	padding-top: 4px;
 	font-size: 1em;
 	padding-right: 10px;
 	padding-left:10px;
+	border: 1px solid #E2E4E9;
+	width: 120px;
 }
 
 .badge-primary {
-	background-color: #0066ff0d;
-	color: #0266FF;
+	background-color: rgba(233, 238, 255, 0.5);
+	color: #2757FF;
+	
 }
 
 .badge-info {
-	background-color: #12a35312;
-	color: #12A353;
+	background-color: rgba(237, 239, 243, 0.5);
+	color: #4A515D;
 }
 
 .badge-warning {
@@ -821,8 +825,8 @@ button.copybtn img {
 }
 
 .badge-danger {
-	background-color: #9447ff12;
-	color: #9246FF;
+	background-color: rgba(91, 34, 255, 0.05);
+	color: #5B22FF;
 }
 
 .versions {
@@ -1126,11 +1130,12 @@ details.dropdown.fade-in[open] summary~* {
 }
 
 
+
 /* Cards */
 
 .sphinx-bs .card {
 	box-shadow: none !important;
-	padding: 20px;
+	padding: 10px;
 
 }
 
@@ -1159,11 +1164,12 @@ details.dropdown.fade-in[open] summary~* {
 .custom-style-list {
 	background-color: #fff !important;
 	border: 0px !important;
-	border: 1px solid #e2e2e2 !important;
+	border: 1px solid #E2E4E9 !important;
+	border-radius: 12px;
 }
 
 .custom-style-list:hover {
-	box-shadow: 0 0 20px rgb(0 0 0 / 10%) !important;
+	border: 1px solid #2757FF !important;
 }
 
 .custom-style-list .card-body {
@@ -1237,12 +1243,13 @@ details.dropdown.fade-in[open] summary~* {
 .custom-style-res {
 	background-color: #fff !important;
 	border: 0px !important;
-	border: 1px solid #e2e2e2 !important;
-	min-height: 200px;
+	border: 1px solid #E2E4E9 !important;
+	min-height: 150px;
+	border-radius: 12px;
 }
 
 .custom-style-res:hover {
-	box-shadow: 0 0 20px rgb(0 0 0 / 10%) !important;
+	border: 1px solid #2757FF !important;
 }
 
 .custom-style-res .card-body {
@@ -1271,71 +1278,53 @@ details.dropdown.fade-in[open] summary~* {
 
 .custom-style-res.video .sphinx-bs.btn.panel > span {
 	background-image: url(video.svg);
-	background-color: #9447ff12;
 }
 
 .custom-style-res.course .sphinx-bs.btn.panel > span {
 	background-image: url(course.svg);
-	padding-left: 25px;
-	background-color: #9447ff12;
+	padding-left: 30px;
 }
 
 .custom-style-res.doc .sphinx-bs.btn.panel > span {
 	background-image: url(doc.svg);
-	background-color: #0066ff0d;
 }
 .custom-style-res.lib .sphinx-bs.btn.panel > span {
 	background-image: url(lib.svg);
-	background-color: #0066ff0d;
 }
 
 .custom-style-res.demo .sphinx-bs.btn.panel > span, .custom-style-res.demo.code .sphinx-bs.btn.panel > span {
 	background-image: url(demo.svg);
 	padding-left: 30px;
-	background-color: #ffe9d6b3;
-	color: #495159;
 }
 
 .custom-style-res.code .sphinx-bs.btn.panel > span, .custom-style-res.git.code .sphinx-bs.btn.panel > span {
 	background-image: url(code.svg);
 	padding-left: 30px;
-	background-color: #ffe9d6b3;
-	color: #495159;
 }
 
 .custom-style-res.slack .sphinx-bs.btn.panel > span {
 	background-image: url(slack-small.svg);
 	padding-left: 30px;
-	background-color: #ffe9d6b3;
-	color: #495159;
 }
 
 .custom-style-res.ln .sphinx-bs.btn.panel > span {
 	background-image: url(ln.svg);
 	padding-left: 30px;
-	background-color: #ffe9d6b3;
-	color: #495159;
 }
 
 .custom-style-res.git .sphinx-bs.btn.panel > span  {
 	background-image: url(git-grey.svg);
 	padding-left: 30px;
-	background-color: #f6f6f6;
-	color: #495159;
 }
 
 .custom-style-res.tutorial .sphinx-bs.btn.panel > span {
 	background-image: url(tutorial.svg);
 	padding-left: 30px;
-	background-color: #12a35312;
-	color: #495159;
 }
 
 .custom-style-res.sdk .sphinx-bs.btn.panel > span {
 	background-image: url(sdk.svg);
 	padding-left: 30px;
-	background-color: #f6f6f6;
-	color: #495159;
 }
 
 .res-group {
@@ -1351,23 +1340,22 @@ details.dropdown.fade-in[open] summary~* {
 }
 
 .res-btn {
-	background-color: #f6f6f6;
-	border: #d2d2de 1px solid;
-	color: #495159;
-	border-radius: 4px;
+	background-color: rgb(233, 238, 255, 0.5);
+	border: #E9EEFF 1px solid;
+	color: #4A515D;
+	border-radius: 6px;
 	margin-bottom: 5px;
 	cursor: pointer;
-	padding: 5px;
+	padding: 7px;
 	font-size: 0.85em;
 }
 
 .res-btn.active {
-	background-color: #d2e4ff;
-	border: #c8c8cc 1.5px solid;
-	border: #d2e4ff 1.5px solid;
-	color: #fff;
-	border-radius: 4px;
-	color: #495159;
+	background-color: rgb(233, 238, 255);
+	border: #E9EEFF 1px solid;
+	border-radius: 6px;
+	color: #2757FF;
+	font-weight: 600;
 }
 
 .res-hidden {
@@ -1528,8 +1516,8 @@ div.d-flex.col-lg-2.col-md-4.col-sm-6.col-xs-12.docutils{
     top: 100%;
     left: 50%;
     margin-left: -50px;
-    background-color: #6E7274;
-    color: #fff;
+    background-color: #E9EEFF;
+    color: #4A515D;
     text-align: center;
 	font-size: 16px;
     padding: 5px 0;
@@ -1552,24 +1540,24 @@ div.d-flex.col-lg-2.col-md-4.col-sm-6.col-xs-12.docutils{
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: transparent transparent #6E7274 transparent;
+    border-color: transparent transparent #E9EEFF transparent;
 }
 
 .tooltip a {
 	padding: 20px;
 	background-color:inherit!important;
+	border-bottom: 0px !important;
 	
 }
-
-.tooltip img {
-	border:inherit!important;
-}
-
 
 .logos {
   display: flex;
   align-items:center;
-  justify-content:center;
+  justify-content:space-evenly;
+}
+
+.logos a {
+	border-bottom: 0px;
 }
 
 /* Footer */
