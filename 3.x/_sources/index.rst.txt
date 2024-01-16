@@ -29,7 +29,7 @@ Get started swiftly:
 - Go to :doc:`Dialog script concepts <server-api/script-concepts>` to learn what Alan AI's functionality you can use to create a dialog script.
 - Check `Example scripts <https://github.com/alan-ai/voice-assistant-scripts>`__ on `Alan AI's GitHub <https://github.com/alan-ai>`__.
 
-.. image:: /_static/assets/img/about/get-started-scripts.png 
+.. image:: _static/assets/img/about/get-started-scripts.png 
 
 |
  
@@ -110,7 +110,7 @@ Alan AI provides you with advanced conversational analytics and success metrics 
 - Optimize the AI assistant effectiveness
 
 
-.. image:: /_static/assets/img/about/get-started-analytics.png 
+.. image:: _static/assets/img/about/get-started-analytics.png 
    
 | 
 
