@@ -27,7 +27,6 @@
    Question answering<server-api/question-answering/overview>
    Generative AI<server-api/generative-ai/overview>
    Semantic search<server-api/semantic-search/overview>
-   Data transformation<server-api/transforms/overview>
    UI widgets<server-api/widgets>
    API reference<server-api/api/api-reference>  
 

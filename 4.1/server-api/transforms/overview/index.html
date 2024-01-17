@@ -2,10 +2,10 @@
 <html class="no-js">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex/" /><link rel="search" title="Search" href="../../../search/" /><link rel="next" title="UI widgets" href="../../widgets/" /><link rel="prev" title="Table API" href="../../semantic-search/table-api/" />
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex/" /><link rel="search" title="Search" href="../../../search/" />
 
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/><meta name="generator" content="sphinx-3.5.4, furo 2021.04.11.beta34"/>
-        <title>Data transformation | Alan Docs</title>
+        <title>&lt;no title&gt; | Alan Docs</title>
       <link rel="stylesheet" href="../../../_static/styles/furo.css?digest=59ab60ac09ea94ccfe6deddff6d715cce948a6fc">
     <link rel="stylesheet" href="../../../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../../../_static/pygments_dark.css">
@@ -321,7 +321,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../release-notes/updates/">Recent Alan AI Platform updates</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Server API</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../script-concepts/">Dialog script concepts</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label for="toctree-checkbox-8"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../commands-and-responses/">Requests and responses</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label for="toctree-checkbox-9"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../intent-matching/">Intent matching</a></li>
@@ -367,7 +367,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../semantic-search/table-api/">Table API</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Data transformation</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../widgets/">UI widgets</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label for="toctree-checkbox-16"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../chat-cards/">Chat cards</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../chat-buttons/">Chat buttons</a></li>
@@ -545,336 +544,9 @@
         <label class="toc-overlay-icon toc-content-icon" for="__toc">
           <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
         </label>
-        <div class="section" id="data-transformation">
-<h1>Data transformation<a class="headerlink" href="#data-transformation" title="Permalink to this headline">¶</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The transforms functionality is available in SLU 4.2 and later.</p>
-</div>
-<p>Data preprocessing and transformation is an important step in AI assistant design. When working with raw or semi-structured data, it may be necessary to pass this data through a series of transforms to prepare it for interactions. For example, you may want to modify input data, format it in a proper way and enhance it before it can be displayed in the Alan AI Chat or used in the dialog logic.</p>
-<p>Alan AI supports the following formats for data transformations:</p>
-<ul class="simple">
-<li><p><strong>Input format</strong>: plain text, markdown-formatted text, HTML and JSON</p></li>
-<li><p><strong>Output format</strong>: plain text, markdown-formatted text, HTML and JSON</p></li>
-</ul>
-<p>To apply transformations to the input data, you need to perform the following steps:</p>
-<ol class="arabic simple">
-<li><p><a class="reference external" href="#adding-transforms">Add transforms to your AI assistant project</a></p></li>
-<li><p><a class="reference external" href="#using-transforms">Use transforms in the script</a></p></li>
-</ol>
-<div class="section" id="adding-transforms">
-<h2>Adding transforms<a class="headerlink" href="#adding-transforms" title="Permalink to this headline">¶</a></h2>
-<p>In Alan AI, transforms are templates or predefined rules that must be applied to the input data to transform it to the desired output. Transforms describe the type and structure of the input data, a prompt to Alan AI on how this data must be transformed and the format of the output data.</p>
-<p>To add a transform to your AI assistant project:</p>
-<ol class="arabic">
-<li><p>In the left pane of Alan AI Studio, under <strong>Transforms</strong>, click <strong>Add</strong> and enter the name for the transform.</p></li>
-<li><p>In the <strong>Common prompt</strong> field, enter a transform prompt. The transform prompt is a short sentence that provides specific instructions on how Alan AI should interpret the transform rules.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The common prompt is generic and applied to all examples you provide in the transform. You can extend this generic prompt with additional instructions added to each example.</p>
-</div>
-</li>
-<li><p>In the <strong>Examples</strong> section, add one or more examples showcasing how the input data must be transformed and choose the required input and output data formats.</p>
-<p>To edit transforms data in a convenient way, in the top left corner of any text field in the example, click the expand icon. You can use the following options:</p>
-<ul class="simple">
-<li><p>[For HTML and JSON data] To apply formatting rules and improve data visual structure, at the top of the text field, click <strong>Format HTML/Format JSON</strong>.</p></li>
-<li><p>To edit data and code, in the top right corner of the text field, click <strong>Editor mode</strong>.</p></li>
-<li><p>To preview the output of your data and visualize how it will appear, in the top right corner of the text field, click <strong>Split mode</strong> or <strong>Preview mode</strong>.</p></li>
-<li><p>To expand and collapse specific text fields, in the top left corner of corresponding fields, click <strong>Expand panel</strong>/<strong>Collapse panel</strong>.</p></li>
-</ul>
-<img alt="../../../_images/transforms-modes.png" src="../../../_images/transforms-modes.png"/>
-<p>The rules provided in the example may vary depending on the input data and expected output. For example, to convert input JSON data to markdown-formatted text, you may add the following example:</p>
-<ul class="simple">
-<li><p><strong>Input</strong>: chunk of JSON-formatted input data</p></li>
-<li><p><strong>Query</strong>: instructions to Alan AI on how to interpret specific fields in the input JSON data</p></li>
-<li><p><strong>Result</strong>: example of output text formatted in markdown</p></li>
-</ul>
-</li>
-<li><p>In the left pane of Alan AI Studio, click <strong>Save</strong> to save the transform.</p>
-<img alt="../../../_images/transforms-common.png" src="../../../_images/transforms-common.png"/>
-</li>
-</ol>
-</div>
-<div class="section" id="using-transforms">
-<h2>Using transforms<a class="headerlink" href="#using-transforms" title="Permalink to this headline">¶</a></h2>
-<p>To apply the created transform for data preprocessing, use the <code class="docutils literal notranslate"><span class="pre">transforms()</span></code> function in the dialog script.</p>
-<div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
-<div class="highlight-alan notranslate"><div class="highlight"><pre><span></span><span class="kp">intent</span><span class="p">(</span><span class="s2">"Show user details"</span><span class="p">,</span> <span class="k">async</span> <span class="nx">p</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="kd">let</span> <span class="nv">u = </span><span class="k">await</span> <span class="nx">transforms</span><span class="p">.</span><span class="nx">format</span><span class="p">({</span>
-        <span class="nv">input: </span><span class="p">{</span><span class="s2">"name"</span><span class="o">:</span> <span class="s2">"John Smith"</span><span class="p">,</span> <span class="s2">"age"</span><span class="o">:</span> <span class="s2">"56"</span><span class="p">,</span> <span class="s2">"address"</span><span class="o">:</span> <span class="s2">"1234 Main Street"</span><span class="p">},</span>
-        <span class="nv">query: </span><span class="s2">"Name is the user's name, age is the user's age, address is the user's address"</span>
-    <span class="p">});</span>
-    <span class="k k-Alan">p.</span><span class="nx">play</span><span class="p">(</span><span class="nx">u</span><span class="p">);</span>
-<span class="p">});</span>
-</pre></div>
-</div>
-</div>
-<p>Here, the <code class="docutils literal notranslate"><span class="pre">transforms()</span></code> function takes the following parameters:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">format</span></code>: name of a transform to be applied to transform the input data</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">input</span></code>: input data to be transformed</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code>: instructions to Alan AI on how to interpret the input data or sample queries to be run</p></li>
-</ul>
-</div>
-<div class="section" id="examples-of-use">
-<h2>Examples of use<a class="headerlink" href="#examples-of-use" title="Permalink to this headline">¶</a></h2>
-<p>Here are a few examples of how you can use the transforms in dialog scripts.</p>
-<div class="tabbed-set docutils">
-<input checked="checked" id="6f629b5b-7bed-42ad-a964-a01d669df4b2" name="68e6a842-8f29-4d40-8832-8a126b45d69b" type="radio"/>
-<label class="tabbed-label" for="6f629b5b-7bed-42ad-a964-a01d669df4b2">
-Text to markdown</label><div class="tabbed-content docutils">
-<p>Let’s assume you have the infrastructure description presented as text. You want your AI assistant to be able to answer questions about the infrastructure components and show their details as structured and formatted text in the Alan AI Chat.</p>
-<p>For this, you can do the following:</p>
-<ol class="arabic">
-<li><p>Add a transform named <code class="docutils literal notranslate"><span class="pre">format</span></code> with the following rules:</p>
-<p><strong>Example 1</strong></p>
-<ul>
-<li><p><strong>Common prompt</strong>: <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">input</span> <span class="pre">contains</span> <span class="pre">the</span> <span class="pre">infrastructure</span> <span class="pre">description</span> <span class="pre">in</span> <span class="pre">plain</span> <span class="pre">text,</span> <span class="pre">the</span> <span class="pre">query</span> <span class="pre">contains</span> <span class="pre">sample</span> <span class="pre">questions,</span> <span class="pre">the</span> <span class="pre">result</span> <span class="pre">contains</span> <span class="pre">formatted</span> <span class="pre">text</span></code></p></li>
-<li><p><strong>Input</strong>: <code class="docutils literal notranslate"><span class="pre">Web</span> <span class="pre">Server</span> <span class="pre">VM</span> <span class="pre">(Web-01):</span> <span class="pre">hosting</span> <span class="pre">the</span> <span class="pre">company</span> <span class="pre">website,</span> <span class="pre">Ubuntu</span> <span class="pre">Server</span> <span class="pre">20.04,</span> <span class="pre">4</span> <span class="pre">vCPUs,</span> <span class="pre">8GB</span> <span class="pre">RAM,</span> <span class="pre">IP</span> <span class="pre">address</span> <span class="pre">192.168.1.101</span></code>, input format: <strong>text</strong></p></li>
-<li><p><strong>Query</strong>: <code class="docutils literal notranslate"><span class="pre">What</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">Web-01</span> <span class="pre">configuration?</span></code></p></li>
-<li><p><strong>Result</strong>: example of output data, output format: <strong>markdown</strong>:</p>
-<div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-text">Result field</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
-<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gu">## VM name: Web Server VM (Web-01)</span>
-
-<span class="k">-</span><span class="w"> </span><span class="gs">**Purpose**</span>: Hosting the company website.
-<span class="k">-</span><span class="w"> </span><span class="gs">**Configuration**</span>:
-<span class="w">  </span><span class="k">-</span><span class="w"> </span><span class="gs">**OS**</span>: Ubuntu Server 20.04
-<span class="w">  </span><span class="k">-</span><span class="w"> </span><span class="gs">**Resources**</span>: 4 vCPUs, 8GB RAM
-<span class="w">  </span><span class="k">-</span><span class="w"> </span><span class="gs">**IP Address**</span>: 192.168.1.101
-</pre></div>
-</div>
-</div>
-</li>
-</ul>
-<p><strong>Example 2</strong></p>
-<ul class="simple">
-<li><p><strong>Common prompt</strong>: <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">input</span> <span class="pre">contains</span> <span class="pre">the</span> <span class="pre">infrastructure</span> <span class="pre">description</span> <span class="pre">in</span> <span class="pre">plain</span> <span class="pre">text,</span> <span class="pre">the</span> <span class="pre">query</span> <span class="pre">contains</span> <span class="pre">sample</span> <span class="pre">questions,</span> <span class="pre">the</span> <span class="pre">result</span> <span class="pre">contains</span> <span class="pre">formatted</span> <span class="pre">text</span></code></p></li>
-<li><p><strong>Input</strong>: <code class="docutils literal notranslate"><span class="pre">Web</span> <span class="pre">Server</span> <span class="pre">VM</span> <span class="pre">(Web-01):</span> <span class="pre">hosting</span> <span class="pre">the</span> <span class="pre">company</span> <span class="pre">website,</span> <span class="pre">Ubuntu</span> <span class="pre">Server</span> <span class="pre">20.04,</span> <span class="pre">4</span> <span class="pre">vCPUs,</span> <span class="pre">8GB</span> <span class="pre">RAM,</span> <span class="pre">IP</span> <span class="pre">address</span> <span class="pre">192.168.1.101</span></code>, input format: <strong>text</strong></p></li>
-<li><p><strong>Query</strong>: <code class="docutils literal notranslate"><span class="pre">What</span> <span class="pre">OS</span> <span class="pre">does</span> <span class="pre">the</span> <span class="pre">Web-01</span> <span class="pre">VM</span> <span class="pre">run?</span></code></p></li>
-<li><p><strong>Result</strong>: example of output data: <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">**Web-01**</span> <span class="pre">runs</span> <span class="pre">**Ubuntu</span> <span class="pre">Server</span> <span class="pre">20.04**</span></code>, output format: <strong>markdown</strong></p></li>
-</ul>
-<img alt="../../../_images/transforms-format.png" src="../../../_images/transforms-format.png"/>
-</li>
-<li><p>Add the following code to your dialog script:</p>
-<div class="literal-block-wrapper docutils container" id="id4">
-<div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
-<div class="highlight-alan notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nv">infrastructure = </span><span class="sb">`</span>
-
-<span class="sb">    Data Center: Main Data Center</span>
-
-<span class="sb">    Virtual Machines:</span>
-<span class="sb">    1. Web Server VM (Web-01): hosting the company website, Ubuntu Server 20.04, 4 vCPUs, 8GB RAM, IP address 192.168.1.101</span>
-<span class="sb">    2. App Server VM (App-01): running business applications, CentOS 7, 2 vCPUs, 4GB RAM, IP address: 192.168.1.102</span>
-<span class="sb">    3. Database Server VM (DB-01): hosting relational databases, Windows Server 2019, 8 vCPUs, 16GB RAM, IP address: 192.168.1.103</span>
-<span class="sb">`</span><span class="p">;</span>
-
-<span class="kp">intent</span><span class="p">(</span><span class="s2">"Show the $(VM* .+ ) configuration"</span><span class="p">,</span> <span class="k">async</span> <span class="nx">p</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="k k-Alan">p.</span><span class="nx">play</span><span class="p">(</span><span class="s2">"Just a second..."</span><span class="p">);</span>
-
-        <span class="c1">// Transform review data</span>
-        <span class="kd">let</span> <span class="nv">i = </span><span class="k">await</span> <span class="nx">transforms</span><span class="p">.</span><span class="nx">format</span><span class="p">({</span>
-            <span class="nv">input: </span><span class="nx">infrastructure</span><span class="p">,</span>
-            <span class="nv">query: </span><span class="s1">'What is the configuration of '</span> <span class="o">+</span> <span class="k k-Alan">p.</span><span class="nx">VM</span><span class="p">.</span><span class="nx">value</span>
-        <span class="p">});</span>
-    <span class="k k-Alan">p.</span><span class="nx">play</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
-<span class="p">});</span>
-
-<span class="kp">intent</span><span class="p">(</span>
-    <span class="s2">"(What|How many) $(RESOURCE* .+) does $(VM* .+) (run|have)?"</span><span class="p">,</span>
-    <span class="s2">"(What|How much|How many) $(RESOURCE* .+) (is|are) (available|) on $(VM* .+)?"</span><span class="p">,</span>
-    <span class="k">async</span> <span class="nx">p</span> <span class="p">=&gt;</span> <span class="p">{</span>
-        <span class="k k-Alan">p.</span><span class="nx">play</span><span class="p">(</span><span class="s2">"Just a second..."</span><span class="p">);</span>
-
-       <span class="c1">// Transform review data</span>
-       <span class="kd">let</span> <span class="nv">i = </span><span class="k">await</span> <span class="nx">transforms</span><span class="p">.</span><span class="nx">format</span><span class="p">({</span>
-           <span class="nv">input: </span><span class="nx">infrastructure</span><span class="p">,</span>
-           <span class="nv">query: </span><span class="k k-Alan">p.</span><span class="nx">RESOURCE</span><span class="p">.</span><span class="nx">value</span> <span class="o">+</span> <span class="s1">' available on '</span> <span class="o">+</span> <span class="k k-Alan">p.</span><span class="nx">VM</span><span class="p">.</span><span class="nx">value</span>
-       <span class="p">});</span>
-       <span class="k k-Alan">p.</span><span class="nx">play</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
-   <span class="p">});</span>
-</pre></div>
-</div>
-</div>
-<p>Here, the infrastructure description in plain text is saved to <code class="docutils literal notranslate"><span class="pre">infrastructure</span></code>. When the user asks to show the configuration of a specific VM or asks about resources available on a specific VM, a corresponding intent is invoked and the text is transformed to the necessary format:</p>
-<img alt="../../../_images/transforms-format-example.png" src="../../../_images/transforms-format-example.png"/>
-</li>
-</ol>
-</div>
-<input id="e8098225-5504-44ad-bc3f-e3ff30ce5235" name="68e6a842-8f29-4d40-8832-8a126b45d69b" type="radio"/>
-<label class="tabbed-label" for="e8098225-5504-44ad-bc3f-e3ff30ce5235">
-JSON to markdown</label><div class="tabbed-content docutils">
-<p>Let’s assume you have a JSON-formatted list of product reviews. You want to pre-process this data to:</p>
-<ul class="simple">
-<li><p>Present data in an aesthetic format using markdown</p></li>
-<li><p>Extract pros and cons from the review text and present them as bulleted text</p></li>
-</ul>
-<p>For this, you can do the following:</p>
-<ol class="arabic">
-<li><p>Add a transform named <code class="docutils literal notranslate"><span class="pre">summarize</span></code> with the following rules:</p>
-<ul>
-<li><p><strong>Common prompt</strong>: <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">input</span> <span class="pre">contains</span> <span class="pre">the</span> <span class="pre">initial</span> <span class="pre">JSON,</span> <span class="pre">the</span> <span class="pre">query</span> <span class="pre">contains</span> <span class="pre">fields</span> <span class="pre">description,</span> <span class="pre">the</span> <span class="pre">result</span> <span class="pre">shows</span> <span class="pre">what</span> <span class="pre">fields</span> <span class="pre">should</span> <span class="pre">be</span> <span class="pre">available</span> <span class="pre">and</span> <span class="pre">how</span> <span class="pre">the</span> <span class="pre">text</span> <span class="pre">should</span> <span class="pre">be</span> <span class="pre">formatted</span></code></p></li>
-<li><p><strong>Input</strong>: <code class="docutils literal notranslate"><span class="pre">{"Name":</span> <span class="pre">"Emily",</span> <span class="pre">"Rating":</span> <span class="pre">"4/5",</span> <span class="pre">"Review":</span> <span class="pre">"A</span> <span class="pre">solid</span> <span class="pre">fitness</span> <span class="pre">tracker</span> <span class="pre">with</span> <span class="pre">accurate</span> <span class="pre">measurements.</span> <span class="pre">I</span> <span class="pre">appreciate</span> <span class="pre">the</span> <span class="pre">waterproof</span> <span class="pre">design,</span> <span class="pre">which</span> <span class="pre">allows</span> <span class="pre">me</span> <span class="pre">to</span> <span class="pre">wear</span> <span class="pre">it</span> <span class="pre">while</span> <span class="pre">swimming.</span> <span class="pre">The</span> <span class="pre">battery</span> <span class="pre">life</span> <span class="pre">is</span> <span class="pre">decent,</span> <span class="pre">but</span> <span class="pre">I</span> <span class="pre">wish</span> <span class="pre">it</span> <span class="pre">had</span> <span class="pre">more</span> <span class="pre">customizable</span> <span class="pre">watch</span> <span class="pre">faces."}</span></code>, input format: <strong>JSON</strong></p></li>
-<li><p><strong>Query</strong>: <code class="docutils literal notranslate"><span class="pre">Name</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">name</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">user</span> <span class="pre">who</span> <span class="pre">left</span> <span class="pre">feedback,</span> <span class="pre">rating</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">rating</span> <span class="pre">set,</span> <span class="pre">review</span> <span class="pre">contains</span> <span class="pre">the</span> <span class="pre">product</span> <span class="pre">pro</span> <span class="pre">and</span> <span class="pre">cons</span></code></p></li>
-<li><p><strong>Result</strong>: example of output data, output format: <strong>markdown</strong></p>
-<div class="literal-block-wrapper docutils container" id="id5">
-<div class="code-block-caption"><span class="caption-text">Result field</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
-<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># Product reviews</span>
-
-<span class="gu">## User name</span>
-
-<span class="k">-</span><span class="w"> </span><span class="gs">**Pros**</span>: Accurate measurements, waterproof design, decent battery life
-<span class="k">-</span><span class="w"> </span><span class="gs">**Cons**</span>: Few customizable watch faces
-<span class="k">-</span><span class="w"> </span><span class="gs">**Rating**</span>: rating
-</pre></div>
-</div>
-</div>
-</li>
-</ul>
-<img alt="../../../_images/transforms.png" src="../../../_images/transforms.png"/>
-</li>
-<li><p>Add the following code to your dialog script:</p>
-<div class="literal-block-wrapper docutils container" id="id6">
-<div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
-<div class="highlight-alan notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nv">productReviews = </span><span class="p">{</span>
-    <span class="s2">"reviews"</span><span class="o">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Sarah"</span><span class="p">,</span>
-            <span class="s2">"rating"</span><span class="o">:</span> <span class="s2">"5/5"</span><span class="p">,</span>
-            <span class="s2">"review"</span><span class="o">:</span> <span class="s2">"I've been using this fitness tracker for a few weeks now, and it's been a game-changer for my fitness journey. It accurately tracks my steps and heart rate. The sleep tracking feature is a bonus, helping me improve my sleep patterns. The app is user-friendly, and the battery life is impressive. Highly recommend!"</span>
-        <span class="p">},</span>
-        <span class="p">{</span>
-            <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Chris"</span><span class="p">,</span>
-            <span class="s2">"rating"</span><span class="o">:</span> <span class="s2">"4/5"</span><span class="p">,</span>
-            <span class="s2">"review"</span><span class="o">:</span> <span class="s2">"The fitness tracker is great for tracking my daily activities. The heart rate monitor is quite accurate, and I like the variety of sports modes. My only wish is for a brighter display in direct sunlight. Overall, a solid choice."</span>
-        <span class="p">},</span>
-        <span class="p">{</span>
-            <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Linda"</span><span class="p">,</span>
-            <span class="s2">"rating"</span><span class="o">:</span> <span class="s2">"5/5"</span><span class="p">,</span>
-            <span class="s2">"review"</span><span class="o">:</span> <span class="s2">"I love this fitness tracker. It's lightweight, comfortable to wear, and the battery lasts for days. The sleep tracking is a lifesaver, helping me identify areas for improvement. The app is intuitive, and it syncs seamlessly with my phone. Couldn't be happier!"</span>
-        <span class="p">}</span>
-    <span class="p">]</span>
-<span class="p">}</span>
-
-<span class="kp">intent</span><span class="p">(</span><span class="sb">`Show product reviews`</span><span class="p">,</span> <span class="k">async</span> <span class="p">(</span><span class="nx">p</span><span class="p">)=&gt;</span> <span class="p">{</span>
-    <span class="k k-Alan">p.</span><span class="nx">play</span><span class="p">(</span><span class="sb">`Collecting product reviews...`</span><span class="p">);</span>
-
-    <span class="c1">// Transform review data</span>
-    <span class="kd">let</span> <span class="nv">r = </span><span class="k">await</span> <span class="nx">transforms</span><span class="p">.</span><span class="nx">summarize</span><span class="p">({</span>
-        <span class="nv">input: </span><span class="nx">productReviews</span><span class="p">,</span>
-        <span class="nv">query: </span><span class="s1">'JSON containing a list of product reviews'</span>
-    <span class="p">});</span>
-    <span class="k k-Alan">p.</span><span class="nx">play</span><span class="p">(</span><span class="nx">r</span><span class="p">);</span>
-<span class="p">});</span>
-</pre></div>
-</div>
-</div>
-<p>Here, reviews in JSON format are saved to <code class="docutils literal notranslate"><span class="pre">productReviews</span></code>. When the user asks to show reviews, the review data is summarized and formatted to be presented using the defined template:</p>
-<img alt="../../../_images/transforms-summary.png" src="../../../_images/transforms-summary.png"/>
-</li>
-</ol>
-</div>
-<input id="36ef2df0-f665-4812-be48-2fce41f0cfc5" name="68e6a842-8f29-4d40-8832-8a126b45d69b" type="radio"/>
-<label class="tabbed-label" for="36ef2df0-f665-4812-be48-2fce41f0cfc5">
-JSON to HTML</label><div class="tabbed-content docutils">
-<p>Let’s assume you have a JSON-formatted list of apartments. When the user asks: <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">available</span> <span class="pre">apartments</span></code>, you want to display these appartments in an aesthetic format.</p>
-<p>For this, you can do the following:</p>
-<ol class="arabic">
-<li><p>Add a transform named <code class="docutils literal notranslate"><span class="pre">render</span></code> with the following rules:</p>
-<ul>
-<li><p><strong>Common prompt</strong>: <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">input</span> <span class="pre">contains</span> <span class="pre">the</span> <span class="pre">apartment</span> <span class="pre">description</span> <span class="pre">in</span> <span class="pre">JSON,</span> <span class="pre">the</span> <span class="pre">query</span> <span class="pre">contains</span> <span class="pre">sample</span> <span class="pre">questions,</span> <span class="pre">the</span> <span class="pre">result</span> <span class="pre">contains</span> <span class="pre">formatted</span> <span class="pre">text</span></code></p></li>
-<li><p><strong>Input</strong>: <code class="docutils literal notranslate"><span class="pre">{"name":</span> <span class="pre">"Luxury</span> <span class="pre">Penthouse</span> <span class="pre">with</span> <span class="pre">Panoramic</span> <span class="pre">Views",</span> <span class="pre">"location":</span> <span class="pre">"789</span> <span class="pre">Skyline</span> <span class="pre">Drive,</span> <span class="pre">Metropolis",</span> <span class="pre">"price":</span> <span class="pre">"$1,200,000",</span> <span class="pre">"bedrooms":</span> <span class="pre">3,</span> <span class="pre">"bathrooms":</span> <span class="pre">3,</span> <span class="pre">"image":</span> <span class="pre">"https://vmts.ch/wp-content/uploads/2017/06/Hallenbad_2-1.jpg",</span> <span class="pre">"url":</span> <span class="pre">"https://vmts.ch/en/portfolio/project-hallenbad/"}</span></code>, input format: <strong>JSON</strong></p></li>
-<li><p><strong>Query</strong>: <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">available</span> <span class="pre">apartments?</span></code>, <code class="docutils literal notranslate"><span class="pre">What</span> <span class="pre">apartments</span> <span class="pre">do</span> <span class="pre">you</span> <span class="pre">offer?</span></code></p></li>
-<li><p><strong>Result</strong>: example of output data, output format: <strong>HTML</strong></p>
-<div class="literal-block-wrapper docutils container" id="id7">
-<div class="code-block-caption"><span class="caption-text">Result field</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://vmts.ch/wp-content/uploads/2017/06/Hallenbad_2-1.jpg"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"Luxury Penthouse with Panoramic Views"</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>Luxury Penthouse with Panoramic Views<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Apartment details<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>:
-  <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">b</span><span class="p">&gt;</span>Location:<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;</span>789 Skyline Drive, Metropolis<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">b</span><span class="p">&gt;</span>Price:<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;</span> $1,200,000<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">b</span><span class="p">&gt;</span>Bedrooms:<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;</span> 3<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">b</span><span class="p">&gt;</span>Bathrooms:<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;</span> 3<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://vmts.ch/en/portfolio/project-hallenbad/"</span><span class="p">&gt;</span>Learn more<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>
-</pre></div>
-</div>
-</div>
-</li>
-</ul>
-<img alt="../../../_images/transforms-render-template.png" src="../../../_images/transforms-render-template.png"/>
-</li>
-<li><p>Add the following code to your dialog script:</p>
-<div class="literal-block-wrapper docutils container" id="id8">
-<div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
-<div class="highlight-alan notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nv">data = </span><span class="p">{</span>
-    <span class="s2">"properties"</span><span class="o">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Modern Apartment in the City Center"</span><span class="p">,</span>
-            <span class="s2">"location"</span><span class="o">:</span> <span class="s2">"123 Main Street, Cityville"</span><span class="p">,</span>
-            <span class="s2">"price"</span><span class="o">:</span> <span class="s2">"$500,000"</span><span class="p">,</span>
-            <span class="s2">"bedrooms"</span><span class="o">:</span> <span class="mf">2</span><span class="p">,</span>
-            <span class="s2">"bathrooms"</span><span class="o">:</span> <span class="mf">2</span><span class="p">,</span>
-            <span class="s2">"image"</span><span class="o">:</span> <span class="s2">"https://vmts.ch/wp-content/uploads/2017/06/v1.jpg"</span><span class="p">,</span>
-            <span class="s2">"url"</span><span class="o">:</span> <span class="s2">"https://vmts.ch/en/portfolio/project-gasterzimmer/"</span>
-        <span class="p">},</span>
-        <span class="p">{</span>
-            <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Suburban Family Home"</span><span class="p">,</span>
-            <span class="s2">"location"</span><span class="o">:</span> <span class="s2">"456 Oak Avenue, Suburbia"</span><span class="p">,</span>
-            <span class="s2">"price"</span><span class="o">:</span> <span class="s2">"$750,000"</span><span class="p">,</span>
-            <span class="s2">"bedrooms"</span><span class="o">:</span> <span class="mf">4</span><span class="p">,</span>
-            <span class="s2">"bathrooms"</span><span class="o">:</span> <span class="mf">3</span><span class="p">,</span>
-            <span class="s2">"image"</span><span class="o">:</span> <span class="s2">"https://vmts.ch/wp-content/uploads/2017/05/7-2.jpg"</span><span class="p">,</span>
-            <span class="s2">"url"</span><span class="o">:</span> <span class="s2">"https://vmts.ch/en/portfolio/project-niederteufen/"</span>
-        <span class="p">},</span>
-        <span class="p">{</span>
-            <span class="s2">"name"</span><span class="o">:</span> <span class="s2">"Luxury Penthouse with Panoramic Views"</span><span class="p">,</span>
-            <span class="s2">"location"</span><span class="o">:</span> <span class="s2">"789 Skyline Drive, Metropolis"</span><span class="p">,</span>
-            <span class="s2">"price"</span><span class="o">:</span> <span class="s2">"$1,200,000"</span><span class="p">,</span>
-            <span class="s2">"bedrooms"</span><span class="o">:</span> <span class="mf">3</span><span class="p">,</span>
-            <span class="s2">"bathrooms"</span><span class="o">:</span> <span class="mf">3</span><span class="p">,</span>
-            <span class="s2">"image"</span><span class="o">:</span> <span class="s2">"https://vmts.ch/wp-content/uploads/2017/06/Hallenbad_2-1.jpg"</span><span class="p">,</span>
-            <span class="s2">"url"</span><span class="o">:</span> <span class="s2">"https://vmts.ch/en/portfolio/project-hallenbad/"</span>
-        <span class="p">}</span>
-    <span class="p">]</span>
-<span class="p">}</span>
-
-<span class="kp">intent</span><span class="p">(</span><span class="s2">"Show available apartments"</span><span class="p">,</span> <span class="k">async</span> <span class="nx">p</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="k k-Alan">p.</span><span class="nx">play</span><span class="p">(</span><span class="s2">"Just a second..."</span><span class="p">);</span>
-
-    <span class="c1">// Transform apartments data</span>
-    <span class="kd">let</span> <span class="nv">a = </span><span class="k">await</span> <span class="nx">transforms</span><span class="p">.</span><span class="nx">render</span><span class="p">({</span>
-        <span class="nv">input: </span><span class="nx">data</span><span class="p">,</span>
-        <span class="nv">query: </span><span class="s1">'Show available apartments'</span>
-    <span class="p">});</span>
-    <span class="k k-Alan">p.</span><span class="nx">play</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span>
-<span class="p">});</span>
-</pre></div>
-</div>
-</div>
-<p>Here, the apartments data in JSON format are saved to <code class="docutils literal notranslate"><span class="pre">data</span></code>. When the user asks to show available apartments, the apartments data is rendered and presented using the defined template:</p>
-<img alt="../../../_images/transforms-render.png" src="../../../_images/transforms-render.png"/>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="section" id="transforms-explorer">
-<span id="id1"></span><h2>Transforms Explorer<a class="headerlink" href="#transforms-explorer" title="Permalink to this headline">¶</a></h2>
-<p>Alan AI Studio comes with the Transforms Explorer, a tool that enhances transparency and understanding of the data transformation process. The Transforms Explorer allows you to gain insight into the inner workings of the <code class="docutils literal notranslate"><span class="pre">transforms()</span></code> function and inspect all instances of data transformations that have been executed.</p>
-<p>To open the Transforms Explorer, click the magnifying glass icon to the left of the <code class="docutils literal notranslate"><span class="pre">transforms()</span></code> function in the dialog script.</p>
-<img alt="../../../_images/transforms-explorer-open.png" src="../../../_images/transforms-explorer-open.png"/>
-<p>For every transformation, the Transforms Explorer provides detailed information on the input and output data. You can examine these instances to better understand the impact of each transformation on the input data.</p>
-<p>Additionally, you can add successful transformation instances to the list of examples specified for the transform. To do this, to the right of the instance row in the table, click the add icon. Alan AI will use this example for any future data transformation.</p>
-<img alt="../../../_images/transforms-explorer.png" src="../../../_images/transforms-explorer.png"/>
-<div id="green-background"></div></div>
-</div>
-
+        <script type="text/javascript">
+    window.location.replace(window.location.protocol + "//" + window.location.host +  "/docs/" );
+</script>
       </article>
 	  <div class="alan-btn"></div>
 	  <script>
@@ -932,26 +604,8 @@ JSON to HTML</label><div class="tabbed-content docutils">
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../../widgets/">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">UI widgets</div>
-              </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
-            </a>
-          <a class="prev-page" href="../../semantic-search/table-api/">
-              <svg><use href="#svg-arrow-right"></use></svg>
-              <div class="page-info">
-                <div class="context">
-                  <span>Previous</span>
-                </div>
-                
-                <div class="title">Table API</div>
-                
-              </div>
-            </a>
+          
+          
         </div>
         
 	  <div class="alan-footer">
@@ -997,14 +651,7 @@ JSON to HTML</label><div class="tabbed-content docutils">
         </div>
         <div class="toc-tree-container">
           <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">Data transformation</a><ul>
-<li><a class="reference internal" href="#adding-transforms">Adding transforms</a></li>
-<li><a class="reference internal" href="#using-transforms">Using transforms</a></li>
-<li><a class="reference internal" href="#examples-of-use">Examples of use</a></li>
-<li><a class="reference internal" href="#transforms-explorer">Transforms Explorer</a></li>
-</ul>
-</li>
+            <ul class="simple">
 </ul>
 
           </div>

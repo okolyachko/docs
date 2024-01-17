@@ -24,10 +24,7 @@
    Dialog script concepts<server-api/script-concepts>
    Sending data from the app<server-api/sending-data/communication>
    User data<server-api/user-data/overview>
-   Question answering<server-api/question-answering/overview>
-   Generative AI<server-api/generative-ai/overview>
-   Semantic search<server-api/semantic-search/overview>
-   Data transformation<server-api/transforms/overview>
+   Question answering<server-api/qna>
    UI widgets<server-api/widgets>
    API reference<server-api/api/api-reference>  
 

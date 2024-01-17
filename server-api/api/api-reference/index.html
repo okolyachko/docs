@@ -550,7 +550,6 @@
 <h2>Commands and responses<a class="headerlink" href="#commands-and-responses" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="intent">
 <h3>Intent<a class="headerlink" href="#intent" title="Permalink to this headline">¶</a></h3>
-<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
 <p><code class="docutils literal notranslate"><span class="pre">intent()</span></code> is a predefined function to define a voice or text command. In the function, you specify expected user inputs — <a class="reference internal" href="../../patterns/"><span class="doc">patterns</span></a>, conditions on when the command must be available for the user — <a class="reference internal" href="../../sending-data/visual-state/"><span class="doc">visual
 filters</span></a>, and actions that must occur when the user’s input matches one of the <a class="reference internal" href="../../patterns/"><span class="doc">patterns</span></a>. For details, see <a class="reference internal" href="../../commands-and-responses/#intent"><span class="std std-ref">Intent</span></a>.</p>
 <p><strong>Syntax</strong></p>
@@ -593,7 +592,6 @@ filters</span></a>, and actions that must occur when the user’s input matches 
 </div>
 <div class="section" id="play">
 <h3>Play<a class="headerlink" href="#play" title="Permalink to this headline">¶</a></h3>
-<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
 <p><code class="docutils literal notranslate"><span class="pre">play()</span></code> is a predefined function used to provide voice or text responses or to send <code class="docutils literal notranslate"><span class="pre">JSON</span></code> commands to the web/mobile client app. If more than one response is passed to the <code class="docutils literal notranslate"><span class="pre">play()</span></code> function, only one response will be played at random. For details, see <a class="reference internal" href="../../commands-and-responses/#play"><span class="std std-ref">play()</span></a>.</p>
 <p><strong>Syntax</strong></p>
 <div class="syntax admonition">
@@ -656,7 +654,6 @@ filters</span></a>, and actions that must occur when the user’s input matches 
 </div>
 <div class="section" id="reply">
 <h3>Reply<a class="headerlink" href="#reply" title="Permalink to this headline">¶</a></h3>
-<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
 <p><code class="docutils literal notranslate"><span class="pre">reply()</span></code> is a predefined action function providing the specified voice or text response to the user. If more than one response is passed to the <code class="docutils literal notranslate"><span class="pre">reply()</span></code> function, only one response will be played at random. For details, see <a class="reference internal" href="../../commands-and-responses/#reply"><span class="std std-ref">reply()</span></a>.</p>
 <p><strong>Syntax</strong></p>
 <div class="syntax admonition">
@@ -689,7 +686,6 @@ filters</span></a>, and actions that must occur when the user’s input matches 
 <h2>Contexts<a class="headerlink" href="#contexts" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="then">
 <span id="id1"></span><h3>Then<a class="headerlink" href="#then" title="Permalink to this headline">¶</a></h3>
-<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
 <p><code class="docutils literal notranslate"><span class="pre">then()</span></code> is a predefined function used to activate the <a class="reference internal" href="../../contexts/"><span class="doc">context</span></a>. If you need to share data between the current context and the activated one, you can pass this data with the <a class="reference internal" href="../../objects/#state"><span class="std std-ref">state</span></a> object. For details, see <a class="reference internal" href="../../contexts/#activating-contexts"><span class="std std-ref">Activating contexts</span></a>.</p>
 <p><strong>Syntax</strong></p>
 <div class="syntax admonition">
@@ -723,7 +719,6 @@ filters</span></a>, and actions that must occur when the user’s input matches 
 </div>
 <div class="section" id="resolve">
 <h3>Resolve<a class="headerlink" href="#resolve" title="Permalink to this headline">¶</a></h3>
-<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
 <p><code class="docutils literal notranslate"><span class="pre">resolve()</span></code> is a predefined function used to manually deactivate the current <a class="reference internal" href="../../contexts/"><span class="doc">context</span></a> and return to its parent context. You can pass any data to it, this data will be available in the parrent context. For details, see <a class="reference internal" href="../../contexts/#exiting-contexts"><span class="std std-ref">Exiting contexts</span></a>.</p>
 <p><strong>Syntax</strong></p>
 <div class="syntax admonition">
@@ -753,7 +748,6 @@ filters</span></a>, and actions that must occur when the user’s input matches 
 </div>
 <div class="section" id="fallback">
 <span id="id2"></span><h3>Fallback<a class="headerlink" href="#fallback" title="Permalink to this headline">¶</a></h3>
-<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
 <p>For each <a class="reference internal" href="../../contexts/"><span class="doc">context</span></a>, you can define a fallback response which will be activated if this context is active and no <a class="reference internal" href="../../commands-and-responses/#intent"><span class="std std-ref">intent</span></a> from this context has been matched. For details, see <a class="reference internal" href="../../error-handling/"><span class="doc">Error handling and re-prompts</span></a>.</p>
 <p><strong>Syntax</strong></p>
 <div class="syntax admonition">
@@ -783,7 +777,6 @@ filters</span></a>, and actions that must occur when the user’s input matches 
 </div>
 <div class="section" id="nocontext">
 <h3>noContext<a class="headerlink" href="#nocontext" title="Permalink to this headline">¶</a></h3>
-<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
 <p>The <code class="docutils literal notranslate"><span class="pre">noContext</span></code> function wraps all intents that must not switch the current context, for example, general questions in the dialog. For details, see <a class="reference internal" href="../../contexts/#nocontext-intents"><span class="std std-ref">noContext intents</span></a>.</p>
 <p><strong>Syntax</strong></p>
 <div class="syntax admonition">
@@ -813,12 +806,10 @@ filters</span></a>, and actions that must occur when the user’s input matches 
 </div>
 <div class="section" id="state">
 <h3>State<a class="headerlink" href="#state" title="Permalink to this headline">¶</a></h3>
-<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
 <p>Each <a class="reference internal" href="../../contexts/"><span class="doc">context</span></a> has a special predefined object — <code class="docutils literal notranslate"><span class="pre">state</span></code>. You can access it via <code class="docutils literal notranslate"><span class="pre">p.state</span></code>. This object should be treated as the knowledge base that is available to Alan AI in the current conversational context. You can store any data in it. For details, see <a class="reference internal" href="../../objects/#state"><span class="std std-ref">state</span></a>.</p>
 </div>
 <div class="section" id="onenter">
 <span id="id3"></span><h3>onEnter<a class="headerlink" href="#onenter" title="Permalink to this headline">¶</a></h3>
-<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
 <p><code class="docutils literal notranslate"><span class="pre">onEnter()</span></code> is a special predefined callback activated each time the script enters a <a class="reference internal" href="../../contexts/"><span class="doc">context</span></a>. For details, see <a class="reference internal" href="../../contexts/#using-onenter-function"><span class="std std-ref">Using onEnter() function</span></a>.</p>
 <p><strong>Syntax</strong></p>
 <div class="syntax admonition">
@@ -848,7 +839,6 @@ filters</span></a>, and actions that must occur when the user’s input matches 
 </div>
 <div class="section" id="title">
 <h3>Title<a class="headerlink" href="#title" title="Permalink to this headline">¶</a></h3>
-<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
 <p><code class="docutils literal notranslate"><span class="pre">title()</span></code> is a special predefined function used to label a <a class="reference internal" href="../../contexts/"><span class="doc">context</span></a>. For details, see <a class="reference internal" href="../../contexts/#labeling-contexts"><span class="std std-ref">Labeling contexts</span></a>.</p>
 <p><strong>Syntax</strong></p>
 <div class="syntax admonition">
@@ -878,7 +868,6 @@ filters</span></a>, and actions that must occur when the user’s input matches 
 </div>
 <div class="section" id="resetcontext">
 <span id="id4"></span><h3>resetContext<a class="headerlink" href="#resetcontext" title="Permalink to this headline">¶</a></h3>
-<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
 <p><code class="docutils literal notranslate"><span class="pre">resetContext()</span></code> is a special predefined function used to deactivate all current contexts at a time. For details, see <a class="reference internal" href="../../contexts/#resetting-contexts"><span class="std std-ref">Resetting contexts</span></a>.</p>
 <p><strong>Syntax</strong></p>
 <div class="syntax admonition">
@@ -892,18 +881,15 @@ filters</span></a>, and actions that must occur when the user’s input matches 
 <p>Session-specific objects and methods are available via the predefined <code class="docutils literal notranslate"><span class="pre">p</span></code> object. These methods and objects persist during a user session, until the session is terminated. The user session is terminated after 30 minutes of inactivity or if the user quits the app.</p>
 <div class="section" id="userdata">
 <h3>userData<a class="headerlink" href="#userdata" title="Permalink to this headline">¶</a></h3>
-<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
 <p><code class="docutils literal notranslate"><span class="pre">p.userData</span></code> is a runtime object that can be used to store any data. You can access it at any time from any script of your project regardless of the context. Take a note that the data stored in <code class="docutils literal notranslate"><span class="pre">p.userData</span></code> is available only during the given user session. For details, see <a class="reference internal" href="../../objects/#userdata"><span class="std std-ref">userData</span></a>.</p>
 </div>
 <div class="section" id="authdata">
 <h3>authData<a class="headerlink" href="#authdata" title="Permalink to this headline">¶</a></h3>
-<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
 <p><code class="docutils literal notranslate"><span class="pre">p.authData</span></code> is a runtime object that can be used to provide static device- or user-specific data, such as the user’s credentials, to Alan AI. If you need to receive dynamic data from the app, use the <a class="reference internal" href="../../sending-data/visual-state/"><span class="doc">visual state</span></a> instead.</p>
 <p>For details, see <a class="reference internal" href="../../sending-data/authdata/"><span class="doc">authData</span></a>.</p>
 </div>
 <div class="section" id="visual">
 <h3>visual<a class="headerlink" href="#visual" title="Permalink to this headline">¶</a></h3>
-<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
 <p><code class="docutils literal notranslate"><span class="pre">p.visual</span></code> is a runtime object that can contain an arbitrary JSON object. It should be used to provide any dynamic data of the app state to Alan’s script or project. For details, see <a class="reference internal" href="../../sending-data/visual-state/"><span class="doc">Visual state</span></a>.</p>
 </div>
 </div>
@@ -911,7 +897,6 @@ filters</span></a>, and actions that must occur when the user’s input matches 
 <h2>Global objects and methods<a class="headerlink" href="#global-objects-and-methods" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="project">
 <h3>project<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h3>
-<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
 <p><code class="docutils literal notranslate"><span class="pre">project</span></code> is a global object that can be used to store any data you may need in separate dialog scripts of your project. When Alan AI builds the dialog model for your project, it loads scripts in the order defined in the scripts panel, from top to bottom. The <code class="docutils literal notranslate"><span class="pre">project</span></code> object will be available in any script that is below the script where it is defined.</p>
 <div class="literal-block-wrapper docutils container" id="id16">
 <div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id16" title="Permalink to this code">¶</a></div>
@@ -926,7 +911,6 @@ filters</span></a>, and actions that must occur when the user’s input matches 
 </div>
 <div class="section" id="project-api">
 <h3>project API<a class="headerlink" href="#project-api" title="Permalink to this headline">¶</a></h3>
-<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
 <p>The project API can be used if you want to send data from the client app to the dialog script or perform some script logic without a voice or text command from the user. This can be done by setting up the logic for the project API and then calling it with Alan AI SDK method — <a class="reference internal" href="../../../client-api/methods/common-api/#callprojectapi"><span class="std std-ref">callProjectApi()</span></a>. For details, see <a class="reference internal" href="../../sending-data/project-api/"><span class="doc">Project API</span></a>.</p>
 <p><strong>Syntax</strong></p>
 <div class="syntax admonition">
@@ -986,7 +970,6 @@ filters</span></a>, and actions that must occur when the user’s input matches 
 </ul>
 <div class="section" id="corpus">
 <span id="id5"></span><h3>corpus<a class="headerlink" href="#corpus" title="Permalink to this headline">¶</a></h3>
-<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
 <p><code class="docutils literal notranslate"><span class="pre">corpus</span></code> is a predefined function that allow specifying from which websites and resources to retrieve content to conduct a conversation between the AI assistant and users. For details, see <a class="reference internal" href="../../qna/"><span class="doc">Q&amp;A virtual assistant</span></a>.</p>
 <p><strong>Syntax</strong></p>
 <div class="syntax admonition">
@@ -1036,7 +1019,6 @@ filters</span></a>, and actions that must occur when the user’s input matches 
 </div>
 <div class="section" id="generator-api">
 <span id="id6"></span><h3>generator API<a class="headerlink" href="#generator-api" title="Permalink to this headline">¶</a></h3>
-<p><strong>Runtime version</strong>: <span class="versions">v4.1 or later</span></p>
 <p>The <code class="docutils literal notranslate"><span class="pre">generator</span> <span class="pre">API</span></code> allows generating a structured response — report, product descrription and so on — based on the JSON-formatted data provided to it. For details, see <a class="reference internal" href="../../generative-ai/generator-api/"><span class="doc">Generator API</span></a>.</p>
 <p><strong>Syntax</strong></p>
 <div class="syntax admonition">
@@ -1123,7 +1105,6 @@ filters</span></a>, and actions that must occur when the user’s input matches 
 </div>
 <div class="section" id="query-api">
 <span id="id7"></span><h3>query API<a class="headerlink" href="#query-api" title="Permalink to this headline">¶</a></h3>
-<p><strong>Runtime version</strong>: <span class="versions">v4.1 or later</span></p>
 <p>The <code class="docutils literal notranslate"><span class="pre">query</span> <span class="pre">API</span></code> allows querying corpus data programmatically to retrieve a response that can be further used in the dialog flow. For details, see <a class="reference internal" href="../../question-answering/query-api/"><span class="doc">Query API</span></a>.</p>
 <p><strong>Syntax</strong></p>
 <div class="syntax admonition">
@@ -1208,7 +1189,6 @@ filters</span></a>, and actions that must occur when the user’s input matches 
 <p>You can use the following API for semantic search: <a class="reference external" href="#table-api">table API</a>.</p>
 <div class="section" id="table-api">
 <span id="id8"></span><h3>table API<a class="headerlink" href="#table-api" title="Permalink to this headline">¶</a></h3>
-<p><strong>Runtime version</strong>: <span class="versions">v4.1 or later</span></p>
 <p>The <code class="docutils literal notranslate"><span class="pre">table</span> <span class="pre">API</span></code> allows creating a table with data passed to it and enables semantic search across this data. For details, see <a class="reference internal" href="../../semantic-search/table-api/"><span class="doc">Table API</span></a>.</p>
 <p><strong>Syntax</strong></p>
 <div class="syntax admonition">
@@ -1350,7 +1330,6 @@ filters</span></a>, and actions that must occur when the user’s input matches 
 <p>You can use the following function for data preprocessing and transformation: <a class="reference external" href="#transforms">transforms</a>.</p>
 <div class="section" id="transforms">
 <h3>transforms<a class="headerlink" href="#transforms" title="Permalink to this headline">¶</a></h3>
-<p><strong>Runtime version</strong>: <span class="versions">v4.2 or later</span></p>
 <p>The <code class="docutils literal notranslate"><span class="pre">transforms()</span></code> function can be used to pre-process and format the input data to the required format using the defined template. For details, see <a class="reference internal" href="../../transforms/overview/"><span class="doc">Data transformation</span></a>.</p>
 <p><strong>Syntax</strong></p>
 <div class="syntax admonition">
@@ -1421,7 +1400,6 @@ filters</span></a>, and actions that must occur when the user’s input matches 
 <h2>Speech recognition biasing<a class="headerlink" href="#speech-recognition-biasing" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="recognition-hints">
 <span id="id9"></span><h3>Recognition hints<a class="headerlink" href="#recognition-hints" title="Permalink to this headline">¶</a></h3>
-<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
 <p><code class="docutils literal notranslate"><span class="pre">recognitionHints</span></code> allow you to provide a list of hints for the AI assistant to help it recognize specific terms, words or phrase patterns that are not used in everyday life but are expected in the user’s input. Use it to avoid frequent errors in speech recognition.</p>
 <p><strong>Syntax</strong></p>
 <div class="syntax admonition">
@@ -1462,7 +1440,6 @@ filters</span></a>, and actions that must occur when the user’s input matches 
 </div>
 <div class="section" id="homophone">
 <span id="homophones"></span><h3>Homophone<a class="headerlink" href="#homophone" title="Permalink to this headline">¶</a></h3>
-<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
 <p><code class="docutils literal notranslate"><span class="pre">homophone()</span></code> helps eliminate ambiguity and improve matching of intents containing terminology or domain-specific words. In the <code class="docutils literal notranslate"><span class="pre">homophone</span></code> function, you must specify a term expected in the user’s input and a list of its homophones — words that are pronounced in a similar way but are different in meaning. This will prevent the AI assistant from failing to match the intent when the user mispronounces or mistypes this term.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1525,7 +1502,6 @@ data.</p>
 </ul>
 <div class="section" id="oncreateproject">
 <span id="id11"></span><h3>onCreateProject<a class="headerlink" href="#oncreateproject" title="Permalink to this headline">¶</a></h3>
-<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
 <p><code class="docutils literal notranslate"><span class="pre">onCreateProject</span></code> is invoked when the dialog model for the dialog script is created. You can use this function to perform activities required immediately after the dialog model is built, for example, for any data initialization.</p>
 <p><strong>Syntax</strong></p>
 <div class="syntax admonition">
@@ -1565,7 +1541,6 @@ data.</p>
 </div>
 <div class="section" id="oncreateuser">
 <span id="id12"></span><h3>onCreateUser<a class="headerlink" href="#oncreateuser" title="Permalink to this headline">¶</a></h3>
-<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
 <p><code class="docutils literal notranslate"><span class="pre">onCreateUser</span></code> is invoked when a new user starts a dialog session. You can use this function to set user-specific data.</p>
 <p><strong>Syntax</strong></p>
 <div class="syntax admonition">
@@ -1609,7 +1584,6 @@ data.</p>
 </div>
 <div class="section" id="oncleanupuser">
 <span id="id13"></span><h3>onCleanupUser<a class="headerlink" href="#oncleanupuser" title="Permalink to this headline">¶</a></h3>
-<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
 <p><code class="docutils literal notranslate"><span class="pre">onCleanupUser</span></code> is invoked when the user session ends. You can use this function for any cleanup activities.</p>
 <p><strong>Syntax</strong></p>
 <div class="syntax admonition">
@@ -1653,7 +1627,6 @@ data.</p>
 </div>
 <div class="section" id="onvisualstate">
 <span id="id14"></span><h3>onVisualState<a class="headerlink" href="#onvisualstate" title="Permalink to this headline">¶</a></h3>
-<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
 <p><code class="docutils literal notranslate"><span class="pre">onVisualState</span></code> is invoked when the visual state object is set. You can use this function, for example, to process data passed in the visual state.</p>
 <p><strong>Syntax</strong></p>
 <div class="syntax admonition">
@@ -1721,7 +1694,6 @@ data.</p>
 </div>
 <div class="section" id="onuserevent">
 <span id="id15"></span><h3>onUserEvent<a class="headerlink" href="#onuserevent" title="Permalink to this headline">¶</a></h3>
-<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
 <p><code class="docutils literal notranslate"><span class="pre">onUserEvent</span></code> is invoked when Alan AI emits a specific event driven by users’ interactions with the AI assistant. For the events list, see <a class="reference internal" href="../../user-data/events/"><span class="doc">User events</span></a>.</p>
 <p><strong>Syntax</strong></p>
 <div class="syntax admonition">
@@ -1775,7 +1747,6 @@ data.</p>
 <h2>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="console-log">
 <h3>console.log<a class="headerlink" href="#console-log" title="Permalink to this headline">¶</a></h3>
-<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
 <p>The <code class="docutils literal notranslate"><span class="pre">console.log()</span></code> function is used to write all sort of info messages to <a class="reference internal" href="../../../usage/guides/logs/"><span class="doc">Alan AI Studio logs</span></a>. With it, you can check objects, variables and slots values, capture events and so on.</p>
 <p><strong>Syntax</strong></p>
 <div class="syntax admonition">
@@ -1815,7 +1786,6 @@ data.</p>
 </div>
 <div class="section" id="console-error">
 <h3>console.error<a class="headerlink" href="#console-error" title="Permalink to this headline">¶</a></h3>
-<p><strong>Runtime version</strong>: <span class="versions">v3.x or later</span></p>
 <p>The <code class="docutils literal notranslate"><span class="pre">console.error()</span></code> function is used to write error messages to <a class="reference internal" href="../../../usage/guides/logs/"><span class="doc">Alan AI Studio logs</span></a>. With it, you can troubleshoot and debug your dialog script.</p>
 <p><strong>Syntax</strong></p>
 <div class="syntax admonition">

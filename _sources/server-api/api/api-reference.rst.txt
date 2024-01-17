@@ -13,8 +13,6 @@ Commands and responses
 Intent
 ~~~~~~
 
-**Runtime version**: :versions:`v3.x or later`
-
 ``intent()`` is a predefined function to define a voice or text command. In the function, you specify expected user inputs — :doc:`patterns <../patterns>`, conditions on when the command must be available for the user — :doc:`visual
 filters <../sending-data/visual-state>`, and actions that must occur when the user's input matches one of the :doc:`patterns <../patterns>`. For details, see :ref:`Intent`.
 
@@ -42,8 +40,6 @@ filters <../sending-data/visual-state>`, and actions that must occur when the us
 
 Play
 ~~~~
-
-**Runtime version**: :versions:`v3.x or later`
 
 ``play()`` is a predefined function used to provide voice or text responses or to send ``JSON`` commands to the web/mobile client app. If more than one response is passed to the ``play()`` function, only one response will be played at random. For details, see :ref:`play()<play()>`.
 
@@ -93,8 +89,6 @@ Or
 Reply
 ~~~~~
 
-**Runtime version**: :versions:`v3.x or later`
-
 ``reply()`` is a predefined action function providing the specified voice or text response to the user. If more than one response is passed to the ``reply()`` function, only one response will be played at random. For details, see :ref:`reply()<reply()>`.
 
 **Syntax**
@@ -123,8 +117,6 @@ Contexts
 Then
 ~~~~
 
-**Runtime version**: :versions:`v3.x or later`
-
 ``then()`` is a predefined function used to activate the :doc:`context <../contexts>`. If you need to share data between the current context and the activated one, you can pass this data with the :ref:`state` object. For details, see :ref:`Activating contexts`.
 
 **Syntax**
@@ -147,8 +139,6 @@ Then
 
 Resolve
 ~~~~~~~
-
-**Runtime version**: :versions:`v3.x or later`
 
 ``resolve()`` is a predefined function used to manually deactivate the current :doc:`context <../contexts>` and return to its parent context. You can pass any data to it, this data will be available in the parrent context. For details, see :ref:`Exiting contexts`.
 
@@ -173,8 +163,6 @@ Resolve
 Fallback
 ~~~~~~~~
 
-**Runtime version**: :versions:`v3.x or later`
-
 For each :doc:`context <../contexts>`, you can define a fallback response which will be activated if this context is active and no :ref:`intent<Intent>` from this context has been matched. For details, see :doc:`Error handling and re-prompts <../error-handling>`.
 
 **Syntax**
@@ -195,8 +183,6 @@ For each :doc:`context <../contexts>`, you can define a fallback response which 
 
 noContext
 ~~~~~~~~~
-
-**Runtime version**: :versions:`v3.x or later`
 
 The ``noContext`` function wraps all intents that must not switch the current context, for example, general questions in the dialog. For details, see :ref:`noContext intents`.
 
@@ -219,8 +205,6 @@ The ``noContext`` function wraps all intents that must not switch the current co
 State
 ~~~~~
 
-**Runtime version**: :versions:`v3.x or later`
-
 Each :doc:`context <../contexts>` has a special predefined object — ``state``. You can access it via ``p.state``. This object should be treated as the knowledge base that is available to Alan AI in the current conversational context. You can store any data in it. For details, see :ref:`state`.
 
 
@@ -228,8 +212,6 @@ Each :doc:`context <../contexts>` has a special predefined object — ``state``.
 
 onEnter
 ~~~~~~~
-
-**Runtime version**: :versions:`v3.x or later`
 
 ``onEnter()`` is a special predefined callback activated each time the script enters a :doc:`context <../contexts>`. For details, see :ref:`Using onEnter() function`.
 
@@ -251,8 +233,6 @@ onEnter
 
 Title
 ~~~~~
-
-**Runtime version**: :versions:`v3.x or later`
 
 ``title()`` is a special predefined function used to label a :doc:`context <../contexts>`. For details, see :ref:`Labeling contexts`.
 
@@ -277,8 +257,6 @@ Title
 resetContext
 ~~~~~~~~~~~~
 
-**Runtime version**: :versions:`v3.x or later`
-
 ``resetContext()`` is a special predefined function used to deactivate all current contexts at a time. For details, see :ref:`Resetting contexts`.
 
 **Syntax**
@@ -297,15 +275,11 @@ Session-specific objects and methods are available via the predefined ``p`` obje
 userData
 ~~~~~~~~
 
-**Runtime version**: :versions:`v3.x or later`
-
 ``p.userData`` is a runtime object that can be used to store any data. You can access it at any time from any script of your project regardless of the context. Take a note that the data stored in ``p.userData`` is available only during the given user session. For details, see :ref:`userData`.
 
 
 authData
 ~~~~~~~~
-
-**Runtime version**: :versions:`v3.x or later`
 
 ``p.authData`` is a runtime object that can be used to provide static device- or user-specific data, such as the user's credentials, to Alan AI. If you need to receive dynamic data from the app, use the :doc:`visual state <../sending-data/visual-state>` instead.
 
@@ -314,8 +288,6 @@ For details, see :doc:`authData <../sending-data/authdata>`.
 visual
 ~~~~~~
 
-**Runtime version**: :versions:`v3.x or later`
-
 ``p.visual`` is a runtime object that can contain an arbitrary JSON object. It should be used to provide any dynamic data of the app state to Alan's script or project. For details, see :doc:`Visual state <../sending-data/visual-state>`.
 
 Global objects and methods
@@ -323,8 +295,6 @@ Global objects and methods
 
 project
 ~~~~~~~
-
-**Runtime version**: :versions:`v3.x or later`
 
 ``project`` is a global object that can be used to store any data you may need in separate dialog scripts of your project. When Alan AI builds the dialog model for your project, it loads scripts in the order defined in the scripts panel, from top to bottom. The ``project`` object will be available in any script that is below the script where it is defined.
 
@@ -339,8 +309,6 @@ project
 
 project API
 ~~~~~~~~~~~
-
-**Runtime version**: :versions:`v3.x or later`
 
 The project API can be used if you want to send data from the client app to the dialog script or perform some script logic without a voice or text command from the user. This can be done by setting up the logic for the project API and then calling it with Alan AI SDK method — :ref:`callProjectApi()`. For details, see :doc:`Project API <../sending-data/project-api>`.
 
@@ -390,8 +358,6 @@ You can use the following functions and APIs to let your AI assistant query the 
 corpus
 ~~~~~~
 
-**Runtime version**: :versions:`v3.x or later`
-
 ``corpus`` is a predefined function that allow specifying from which websites and resources to retrieve content to conduct a conversation between the AI assistant and users. For details, see :doc:`Q&A virtual assistant <../qna>`.
 
 **Syntax**
@@ -432,8 +398,6 @@ corpus
    
 generator API
 ~~~~~~~~~~~~~
-
-**Runtime version**: :versions:`v4.1 or later`
 
 The ``generator API`` allows generating a structured response --- report, product descrription and so on --- based on the JSON-formatted data provided to it. For details, see :doc:`Generator API <../generative-ai/generator-api>`.
 
@@ -514,8 +478,6 @@ In the example below, when the user says: ``Tell me about iPhone 13 Pro, include
 query API
 ~~~~~~~~~
 
-**Runtime version**: :versions:`v4.1 or later`
-
 The ``query API`` allows querying corpus data programmatically to retrieve a response that can be further used in the dialog flow. For details, see :doc:`Query API <../question-answering/query-api>`.
 
 **Syntax**
@@ -586,8 +548,6 @@ You can use the following API for semantic search: `table API <#table-api>`__.
    
 table API
 ~~~~~~~~~
-
-**Runtime version**: :versions:`v4.1 or later`
 
 The ``table API`` allows creating a table with data passed to it and enables semantic search across this data. For details, see :doc:`Table API <../semantic-search/table-api>`.
 
@@ -720,8 +680,6 @@ You can use the following function for data preprocessing and transformation: `t
 transforms
 ~~~~~~~~~~
 
-**Runtime version**: :versions:`v4.2 or later`
-
 The ``transforms()`` function can be used to pre-process and format the input data to the required format using the defined template. For details, see :doc:`Data transformation <../transforms/overview>`.
 
 **Syntax**
@@ -780,8 +738,6 @@ Speech recognition biasing
 Recognition hints
 ~~~~~~~~~~~~~~~~~
 
-**Runtime version**: :versions:`v3.x or later`
-
 ``recognitionHints`` allow you to provide a list of hints for the AI assistant to help it recognize specific terms, words or phrase patterns that are not used in everyday life but are expected in the user's input. Use it to avoid frequent errors in speech recognition. 
 
 **Syntax**
@@ -814,8 +770,6 @@ Recognition hints
 
 Homophone
 ~~~~~~~~~
-
-**Runtime version**: :versions:`v3.x or later`
 
 ``homophone()`` helps eliminate ambiguity and improve matching of intents containing terminology or domain-specific words. In the ``homophone`` function, you must specify a term expected in the user's input and a list of its homophones --- words that are pronounced in a similar way but are different in meaning. This will prevent the AI assistant from failing to match the intent when the user mispronounces or mistypes this term.
 
@@ -877,8 +831,6 @@ To perform actions at different stages of the dialog lifecycle, you can use the 
 onCreateProject
 ~~~~~~~~~~~~~~~
 
-**Runtime version**: :versions:`v3.x or later`
-
 ``onCreateProject`` is invoked when the dialog model for the dialog script is created. You can use this function to perform activities required immediately after the dialog model is built, for example, for any data initialization.
 
 **Syntax**
@@ -913,8 +865,6 @@ In the example below, ``onCreateProject`` is used to define values for ``project
 
 onCreateUser
 ~~~~~~~~~~~~
-
-**Runtime version**: :versions:`v3.x or later`
 
 ``onCreateUser`` is invoked when a new user starts a dialog session. You can use this function to set user-specific data.
 
@@ -952,8 +902,6 @@ In the example below, the ``onCreateUser`` function is used to assign the value 
 onCleanupUser
 ~~~~~~~~~~~~~
 
-**Runtime version**: :versions:`v3.x or later`
-
 ``onCleanupUser`` is invoked when the user session ends. You can use this function for any cleanup activities.
 
 **Syntax**
@@ -989,8 +937,6 @@ In the example below, the ``onCleanupUser`` function is used to reset ``p.userDa
 
 onVisualState
 ~~~~~~~~~~~~~
-
-**Runtime version**: :versions:`v3.x or later`
 
 ``onVisualState`` is invoked when the visual state object is set. You can use this function, for example, to process data passed in the visual state.
 
@@ -1051,8 +997,6 @@ Retrieving values and making the items list in the dialog script
 onUserEvent
 ~~~~~~~~~~~
 
-**Runtime version**: :versions:`v3.x or later`
-
 ``onUserEvent`` is invoked when Alan AI emits a specific event driven by users’ interactions with the AI assistant. For the events list, see :doc:`User events <../user-data/events>`.
 
 **Syntax**
@@ -1095,8 +1039,6 @@ Debugging
 console.log
 ~~~~~~~~~~~
 
-**Runtime version**: :versions:`v3.x or later`
-
 The ``console.log()`` function is used to write all sort of info messages to :doc:`Alan AI Studio logs <../../usage/guides/logs>`. With it, you can check objects, variables and slots values, capture events and so on. 
 
 **Syntax**
@@ -1126,8 +1068,6 @@ The ``console.log()`` function is used to write all sort of info messages to :do
    
 console.error
 ~~~~~~~~~~~~~
-
-**Runtime version**: :versions:`v3.x or later`
 
 The ``console.error()`` function is used to write error messages to :doc:`Alan AI Studio logs <../../usage/guides/logs>`. With it, you can troubleshoot and debug your dialog script.
 

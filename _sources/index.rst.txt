@@ -4,39 +4,37 @@ Get started
 
 .. raw:: html
   
-  <p style="font-size: 18px">Want to create a Generative AI assistant? Follow the steps below to get started with the Alan AI Platform. </p>
+  <p style="font-size: 20px">Want to create a Generative AI Assistant? <br/>Watch the video or follow the steps below to get started with the Alan AI Platform. </p>
+  <br/>
+  <div class="video-container" style="border-radius: 12px">
+       <iframe class="responsive-iframe" src="https://www.youtube.com/embed/-5ehF8TT3t0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   </div>
+
+|   
    
-1. Create an Alan AI Studio account
+1. Set up an Alan AI Studio account
 -----------------------------------
 
-`Sign up for Alan AI Studio <https://studio.alan.app/register>`__, Alan AI's web-based IDE, to create a project for the AI assistant, test the dialog and customize your assistant.
+`Sign up for Alan AI Studio <https://studio.alan.app/register>`__, a web-based IDE from Alan AI. Alan AI Studio  provides a complete toolkit for creating an AI assistant project, testing and debugging the dialog, customizing and deploying your assistant.
 
-.. raw:: html
-
-   <div class="video-container" style="border-radius: 12px">
-       <iframe class="responsive-iframe" src="https://www.youtube.com/embed/j__wtb5CDCM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-   </div>
-   
 |
    
-2. Write a dialog script
-------------------------
+2. Define your datasets and commands
+------------------------------------
 
-In Alan Studio, write a dialog script. Dialog scripts describe the structure of the dialog with the user, or the expected conversation scenario.
+In Alan Studio, compose a dialog script for your AI assistant. Get started quickly:
 
-Get started swiftly:
+- :doc:`Define the data sources <server-api/qna>` that will fuel the AI assistant
+- :doc:`Add text and voice commands <server-api/commands-and-responses>` for the AI assistant to handle
 
-- Go to :doc:`Dialog script concepts <server-api/script-concepts>` to learn what Alan AI's functionality you can use to create a dialog script.
-- Check `Example scripts <https://github.com/alan-ai/voice-assistant-scripts>`__ on `Alan AI's GitHub <https://github.com/alan-ai>`__.
-
-.. image:: _static/assets/img/about/get-started-scripts.png 
+.. image:: /_static/assets/img/about/get-started-scripts.png 
 
 |
  
-3. Integrate the AI assistant with your app
+3. Integrate the AI assistant into your app
 -------------------------------------------
 
-Alan AI offers SDKs for different platforms, frameworks and languages to embed an AI assistant to your app. Select your platform to learn about :doc:`integration details <client-api/integration>`. Upon integration, you'll see a small draggable button on top of the app's UI.
+Alan AI provides SDKs for several platforms, frameworks and languages to embed an AI assistant to your app. To learn about :doc:`integration details <client-api/integration>`, select your platform from the list below. Upon integration, you'll see a small draggable button on top of the app's UI.
  
 |
    
@@ -95,32 +93,109 @@ Alan AI offers SDKs for different platforms, frameworks and languages to embed a
     </div>
 	<br/>
 	
-Check the :doc:`Alan AI resource library <usage/additional/library>` to explore helpful resources and start creating an AI assistant for your app.
+Explore :doc:`Alan AI's resource library <usage/additional/library>` to find helpful resources and start building an AI assistant for your app.
 
 |
 
-4. Analyze and iterate
+4. Choose your AI assistant type
+--------------------------------
+
+With Alan AI, you can:
+
+- :doc:`Add an AI-powered chat <usage/button/chat>` to you app
+- :doc:`Create voice AI assistant <usage/button/customization>` for you app
+
+Choose your AI assistant type and change the way your AI assistant looks and feels using :doc:`numerous customization options <usage/button/customization>`.
+
+.. image:: /_static/assets/img/about/get-started-customize.png 
+
+|
+
+5. Analyze and iterate
 ----------------------
 	  
-Alan AI provides you with advanced conversational analytics and success metrics through its :doc:`Logs <usage/guides/logs>` and :doc:`Analytics View<usage/guides/analytics-view>`. Use these tools to:
+Alan AI offers advanced  :doc:`conversational analytics and success metrics <usage/guides/analytics-view>`. Use these tools to:
 
-- Gain insight into the users' experience
+- Gain insight into the users' conversational experience
 - Analyze their behavior and flows
 - Identify unhandled requests 
-- Optimize the AI assistant effectiveness
+- Optimize and enhance the AI assistant
 
-
-.. image:: _static/assets/img/about/get-started-analytics.png 
+.. image:: /_static/assets/img/about/get-started-analytics.png 
    
 | 
+
+
+What's next?
+------------
+
+Explore advanced Alan AI's functionality to build an AI-powered assistant for your business:
+
+.. panels::
+   :column: col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2
+
+   ---
+   :card: border-0 + custom-style-res + transform
+   
+   .. link-button:: /server-api/transforms/overview
+      :type: ref
+      :text: 
+      :classes: stretched-link panel
+	  
+   .. raw:: html
+      
+	  <p style="font-weight: 600">Data transforming</p>
+   
+   Preprocess and format your data with the Alan AI transforms functionality
+   
+   ---
+   :card: border-0 + custom-style-res + search
+   
+   .. link-button:: /server-api/semantic-search/overview
+      :type: ref
+      :text:
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-weight: 600">Semantic search</p>
+   
+   Use Alan AI's semantic search to increase search efficiency and let users find anything using natural language
+
+   ---
+   :card: border-0 + custom-style-res + doc
+   
+   .. link-button:: /server-api/generative-ai/overview
+      :type: ref
+      :text:
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-weight: 600">Reporting</p>
+   
+   Leverage the Generator API to convert raw and semi-structured data into comprehensive reports
+   
+   ---
+   :card: border-0 + custom-style-res + sdk
+   
+   .. link-button:: /server-api/commands-and-responses
+      :type: ref
+      :text:
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-weight: 600">Actions in the app</p>
+   
+   Enable your users take actions in the app with text and voice commands
+
 
 Still have questions?
 ---------------------
    
 .. panels::
    :column: col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2
-   
-
 
    ---
    :card: border-0 + custom-style-res + lib
@@ -242,4 +317,6 @@ Still have questions?
 		canonical.href = window.location.protocol + "//" + window.location.host +  "/docs/";
    </script>
    
-   <div id="main-page"></div>
+   <div id="wide-content"></div>
+   
+

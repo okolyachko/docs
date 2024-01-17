@@ -1,5 +1,5 @@
-Q&A service
-===========
+Question answering
+==================
 
 The Q&A service allows you to add a conversational layer on top of your existing content. With it, you can instantly create an intelligent Q&A AI assistant. The Q&A assistant leverages the combination of :doc:`question answering <question-answering/overview>` and :doc:`semantic search <semantic-search/overview>` technologies to automatically provide the most appropriate answer using your knowledge base and maintain multi-turn contextual conversations.
 
