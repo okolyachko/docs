@@ -1,5 +1,5 @@
-Q&A service
-===========
+Question answering
+==================
 
 The Q&A service allows you to add a conversational layer on top of your existing content. With it, you can instantly create an intelligent Q&A AI assistant. The Q&A assistant leverages the combination of :doc:`question answering <question-answering/overview>` and :doc:`semantic search <semantic-search/overview>` technologies to automatically provide the most appropriate answer using your knowledge base and maintain multi-turn contextual conversations.
 
@@ -30,116 +30,61 @@ To define the content for the Q&A assistant, use the :ref:`corpus() <corpus()>` 
 - ``depth``: :ref:`crawl depth <Setting crawl depth>`
 - ``maxPages``: maximum number of pages to index
 
-.. note::
+.. code-block:: alan
+   :caption: Dialog script
+   
+   corpus({urls: ["https://alan.app/", "https://alan.app/docs", "https://alan.app/blog/"], 
+           depth: 1, 
+           maxPages: 100
+          });
+   
+If necessary, you can specify separate data crawling settings for each URL you pass to ``corpus()``:
 
-   The ``corpus()`` syntax differs between Alan AI SLU versions. Select the appropriate SLU version using the tabs below. 
+.. code-block:: alan
+   :caption: Dialog script
    
-.. tabbed:: SLU 4.2
+   corpus(
+       {url: "https://alan.app/", depth: 1, maxPages: 50},
+       {url: "https://alan.app/docs", depth: 2, maxPages: 100},
+       {url: "https://alan.app/blog/", depth: 2, maxPages: 50}
+   );
+   
+You can also add the content for the Q&A assistant directly to the ``corpus()`` function as plain text strings:
 
-   .. code-block:: alan
-      :caption: Dialog script
+.. code-block:: alan
+   :caption: Dialog script
    
-      corpus({urls: ["https://alan.app/", "https://alan.app/docs", "https://alan.app/blog/"],
-              depth: 1,
-              maxPages: 100
-             });
+   corpus(`
+       Alan AI is a complete Actionable AI Platform to build, deploy and manage AI Assistants in a few days.
+       With Alan AI, a conversational experience for your app can be built by a single developer, rather than a team of Machine Learning and DevOps experts
+   `);
    
-   You can also add the content for the Q&A assistant directly to the ``corpus()`` function as plain text strings:
+If you want the AI assistant to provide a specific response to a certain question, define question-answer pairs in the ``corpus()`` function:
+   
+.. code-block:: alan
+   :caption: Dialog script
+   
+   corpus(`
+       Are you a human? No, I am an intelligent AI assistant.
+       What is your name? My name is Alan.
+   `);
+   
+The Q&A service supports the mixed data mode, with the content provided in different formats. In this case, the service will create a separate index for the data sources added to different ``corpus()`` functions and will use all created indices to conduct the dialog with the user. 
 
-   .. code-block:: alan
-      :caption: Dialog script
+.. code-block:: alan
+   :caption: Dialog script
    
-      corpus(`
-          Alan AI is a complete Actionable AI Platform to build, deploy and manage AI Assistants in a few days.
-          With Alan AI, a conversational experience for your app can be built by a single developer, rather than a team of Machine Learning and DevOps experts
-      `);
+   corpus({urls: ["https://alan.app/", "https://alan.app/docs", "https://alan.app/blog/"], 
+           depth: 1, 
+           maxPages: 100
+          });
    
-   If you want the AI assistant to provide a specific response to a certain question, define question-answer pairs in the ``corpus()`` function:
-   
-   .. code-block:: alan
-      :caption: Dialog script
-   
-      corpus(`
-          Are you a human? No, I am an intelligent AI assistant.
-          What is your name? My name is Alan.
-      `);
-   
-   The Q&A service supports the mixed data mode, with the content provided in different formats. In this case, the service will create a separate index for the data sources added to different ``corpus()`` functions and will use all created indices to conduct the dialog with the user. 
-
-   .. code-block:: alan
-      :caption: Dialog script
-   
-      corpus({urls: ["https://alan.app/", "https://alan.app/docs", "https://alan.app/blog/"], 
-              depth: 1, 
-              maxPages: 100
-             });
-   
-      corpus(`
-          Are you a human? No, I am an intelligent AI assistant.
-          What is your name? My name is Alan.
-          Alan AI is a complete Actionable AI Platform to build, deploy and manage AI Assistants in a few days.
-          With Alan AI, a conversational experience for your app can be built by a single developer, rather than a team of Machine Learning and DevOps experts
-      `);
-
-
-   
-.. tabbed:: SLU 4.1 and earlier
-
-   .. code-block:: alan
-      :caption: Dialog script
-   
-      corpus({urls: ["https://alan.app/", "https://alan.app/docs", "https://alan.app/blog/"], 
-              depth: 1, 
-              maxPages: 100
-             });
-   
-   If necessary, you can specify separate data crawling settings for each URL you pass to ``corpus()``:
-
-   .. code-block:: alan
-      :caption: Dialog script
-   
-      corpus(
-          {url: "https://alan.app/", depth: 1, maxPages: 50},
-          {url: "https://alan.app/docs", depth: 2, maxPages: 100},
-          {url: "https://alan.app/blog/", depth: 2, maxPages: 50}
-      );
-   
-   You can also add the content for the Q&A assistant directly to the ``corpus()`` function as plain text strings:
-
-   .. code-block:: alan
-      :caption: Dialog script
-   
-      corpus(`
-          Alan AI is a complete Actionable AI Platform to build, deploy and manage AI Assistants in a few days.
-          With Alan AI, a conversational experience for your app can be built by a single developer, rather than a team of Machine Learning and DevOps experts
-      `);
-   
-   If you want the AI assistant to provide a specific response to a certain question, define question-answer pairs in the ``corpus()`` function:
-   
-   .. code-block:: alan
-      :caption: Dialog script
-   
-      corpus(`
-          Are you a human? No, I am an intelligent AI assistant.
-          What is your name? My name is Alan.
-      `);
-   
-   The Q&A service supports the mixed data mode, with the content provided in different formats. In this case, the service will create a separate index for the data sources added to different ``corpus()`` functions and will use all created indices to conduct the dialog with the user. 
-
-   .. code-block:: alan
-      :caption: Dialog script
-   
-      corpus({urls: ["https://alan.app/", "https://alan.app/docs", "https://alan.app/blog/"], 
-              depth: 1, 
-              maxPages: 100
-             });
-   
-      corpus(`
-          Are you a human? No, I am an intelligent AI assistant.
-          What is your name? My name is Alan.
-          Alan AI is a complete Actionable AI Platform to build, deploy and manage AI Assistants in a few days.
-          With Alan AI, a conversational experience for your app can be built by a single developer, rather than a team of Machine Learning and DevOps experts
-      `);
+   corpus(`
+       Are you a human? No, I am an intelligent AI assistant.
+       What is your name? My name is Alan.
+       Alan AI is a complete Actionable AI Platform to build, deploy and manage AI Assistants in a few days.
+       With Alan AI, a conversational experience for your app can be built by a single developer, rather than a team of Machine Learning and DevOps experts
+   `);
    
 
 .. note::
@@ -202,35 +147,6 @@ Mind the following requirements and limitations for the Q&A service:
 - Make sure the websites and pages you define in the ``corpus()`` function are not protected from crawling. The Q&A service cannot retrieve the content from such resources.
 - Do not add URLs and text strings to the same ``corpus()`` function. Otherwise, the information provided in text strings will be ignored.
 - The maximum number of indexed pages is limited to 1000 for free Alan AI plans and 5000 for paid plans.
-
-.. _corpus explorer:
-
-Corpus Explorer
----------------
-
-.. note::
-
-   The Corpus Explorer is available in SLU 4.2 and later.
-
-Alan AI Studio comes with the Corpus Explorer, a tool that enables you to examine data sources used for AI assistant interactions. The Corpus Explorer displays all indexed pages, PDF documents and text data, allowing you to explore and understand the content that serves as the foundation for the AI's knowledge and responses.
-
-To open the Corpus Explorer, click the magnifying glass icon to the left of the ``corpus()`` function in the dialog script.
-
-.. image:: /_static/assets/img/script-concepts/corpus-explorer-open.png
-
-To explore the indexed data, in the left pane, expand the data source tree and select the necessary page. 
-
-You can also search to find the data:
-
-- To switch between data representation, from the **Content format** list in the top right corner, select **text** or **markdown**.
-- To search by page name, enter your query in the search field at the top of the left pane.
-- To search by keywords, enter your query in the **Search** field at the top of the main section.
-- To search by a specific question, enter your question in the **Question** field at the top of the main section.
-- To control the length of the output text, use the **Max tokens** list in the top right corner. This parameter specifies the maximum number of tokens (words and subwords) that Alan AI displays in response to the search query.
-
-
-.. image:: /_static/assets/img/script-concepts/corpus-explorer.png
-
 
 See also
 --------

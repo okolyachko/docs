@@ -569,20 +569,23 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">depth</span></code>: <a class="reference internal" href="#setting-crawl-depth"><span class="std std-ref">crawl depth</span></a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxPages</span></code>: maximum number of pages to index</p></li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">corpus()</span></code> syntax differs between Alan AI SLU versions. Select the appropriate SLU version using the tabs below.</p>
-</div>
-<div class="tabbed-set docutils">
-<input checked="checked" id="41b63ad0-e641-451c-920f-66d860e8fea4" name="e712e869-a774-4c4a-8d36-28bb4530b274" type="radio"/>
-<label class="tabbed-label" for="41b63ad0-e641-451c-920f-66d860e8fea4">
-SLU 4.2</label><div class="tabbed-content docutils">
-<div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
 <div class="highlight-alan notranslate"><div class="highlight"><pre><span></span><span class="kp">corpus</span><span class="p">({</span><span class="nv">urls: </span><span class="p">[</span><span class="s2">"https://alan.app/"</span><span class="p">,</span> <span class="s2">"https://alan.app/docs"</span><span class="p">,</span> <span class="s2">"https://alan.app/blog/"</span><span class="p">],</span>
         <span class="nv">depth: </span><span class="mf">1</span><span class="p">,</span>
         <span class="nv">maxPages: </span><span class="mf">100</span>
        <span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<p>If necessary, you can specify separate data crawling settings for each URL you pass to <code class="docutils literal notranslate"><span class="pre">corpus()</span></code>:</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-alan notranslate"><div class="highlight"><pre><span></span><span class="kp">corpus</span><span class="p">(</span>
+    <span class="p">{</span><span class="nv">url: </span><span class="s2">"https://alan.app/"</span><span class="p">,</span> <span class="nv">depth: </span><span class="mf">1</span><span class="p">,</span> <span class="nv">maxPages: </span><span class="mf">50</span><span class="p">},</span>
+    <span class="p">{</span><span class="nv">url: </span><span class="s2">"https://alan.app/docs"</span><span class="p">,</span> <span class="nv">depth: </span><span class="mf">2</span><span class="p">,</span> <span class="nv">maxPages: </span><span class="mf">100</span><span class="p">},</span>
+    <span class="p">{</span><span class="nv">url: </span><span class="s2">"https://alan.app/blog/"</span><span class="p">,</span> <span class="nv">depth: </span><span class="mf">2</span><span class="p">,</span> <span class="nv">maxPages: </span><span class="mf">50</span><span class="p">}</span>
+<span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -623,69 +626,6 @@ SLU 4.2</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-</div>
-<input id="43e66ad2-2cfc-4393-bc90-a16e6a3319d3" name="e712e869-a774-4c4a-8d36-28bb4530b274" type="radio"/>
-<label class="tabbed-label" for="43e66ad2-2cfc-4393-bc90-a16e6a3319d3">
-SLU 4.1 and earlier</label><div class="tabbed-content docutils">
-<div class="literal-block-wrapper docutils container" id="id7">
-<div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
-<div class="highlight-alan notranslate"><div class="highlight"><pre><span></span><span class="kp">corpus</span><span class="p">({</span><span class="nv">urls: </span><span class="p">[</span><span class="s2">"https://alan.app/"</span><span class="p">,</span> <span class="s2">"https://alan.app/docs"</span><span class="p">,</span> <span class="s2">"https://alan.app/blog/"</span><span class="p">],</span>
-        <span class="nv">depth: </span><span class="mf">1</span><span class="p">,</span>
-        <span class="nv">maxPages: </span><span class="mf">100</span>
-       <span class="p">});</span>
-</pre></div>
-</div>
-</div>
-<p>If necessary, you can specify separate data crawling settings for each URL you pass to <code class="docutils literal notranslate"><span class="pre">corpus()</span></code>:</p>
-<div class="literal-block-wrapper docutils container" id="id8">
-<div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
-<div class="highlight-alan notranslate"><div class="highlight"><pre><span></span><span class="kp">corpus</span><span class="p">(</span>
-    <span class="p">{</span><span class="nv">url: </span><span class="s2">"https://alan.app/"</span><span class="p">,</span> <span class="nv">depth: </span><span class="mf">1</span><span class="p">,</span> <span class="nv">maxPages: </span><span class="mf">50</span><span class="p">},</span>
-    <span class="p">{</span><span class="nv">url: </span><span class="s2">"https://alan.app/docs"</span><span class="p">,</span> <span class="nv">depth: </span><span class="mf">2</span><span class="p">,</span> <span class="nv">maxPages: </span><span class="mf">100</span><span class="p">},</span>
-    <span class="p">{</span><span class="nv">url: </span><span class="s2">"https://alan.app/blog/"</span><span class="p">,</span> <span class="nv">depth: </span><span class="mf">2</span><span class="p">,</span> <span class="nv">maxPages: </span><span class="mf">50</span><span class="p">}</span>
-<span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<p>You can also add the content for the Q&amp;A assistant directly to the <code class="docutils literal notranslate"><span class="pre">corpus()</span></code> function as plain text strings:</p>
-<div class="literal-block-wrapper docutils container" id="id9">
-<div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id9" title="Permalink to this code">¶</a></div>
-<div class="highlight-alan notranslate"><div class="highlight"><pre><span></span><span class="kp">corpus</span><span class="p">(</span><span class="sb">`</span>
-<span class="sb">    Alan AI is a complete Actionable AI Platform to build, deploy and manage AI Assistants in a few days.</span>
-<span class="sb">    With Alan AI, a conversational experience for your app can be built by a single developer, rather than a team of Machine Learning and DevOps experts</span>
-<span class="sb">`</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<p>If you want the AI assistant to provide a specific response to a certain question, define question-answer pairs in the <code class="docutils literal notranslate"><span class="pre">corpus()</span></code> function:</p>
-<div class="literal-block-wrapper docutils container" id="id10">
-<div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id10" title="Permalink to this code">¶</a></div>
-<div class="highlight-alan notranslate"><div class="highlight"><pre><span></span><span class="kp">corpus</span><span class="p">(</span><span class="sb">`</span>
-<span class="sb">    Are you a human? No, I am an intelligent AI assistant.</span>
-<span class="sb">    What is your name? My name is Alan.</span>
-<span class="sb">`</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<p>The Q&amp;A service supports the mixed data mode, with the content provided in different formats. In this case, the service will create a separate index for the data sources added to different <code class="docutils literal notranslate"><span class="pre">corpus()</span></code> functions and will use all created indices to conduct the dialog with the user.</p>
-<div class="literal-block-wrapper docutils container" id="id11">
-<div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id11" title="Permalink to this code">¶</a></div>
-<div class="highlight-alan notranslate"><div class="highlight"><pre><span></span><span class="kp">corpus</span><span class="p">({</span><span class="nv">urls: </span><span class="p">[</span><span class="s2">"https://alan.app/"</span><span class="p">,</span> <span class="s2">"https://alan.app/docs"</span><span class="p">,</span> <span class="s2">"https://alan.app/blog/"</span><span class="p">],</span>
-        <span class="nv">depth: </span><span class="mf">1</span><span class="p">,</span>
-        <span class="nv">maxPages: </span><span class="mf">100</span>
-       <span class="p">});</span>
-
-<span class="kp">corpus</span><span class="p">(</span><span class="sb">`</span>
-<span class="sb">    Are you a human? No, I am an intelligent AI assistant.</span>
-<span class="sb">    What is your name? My name is Alan.</span>
-<span class="sb">    Alan AI is a complete Actionable AI Platform to build, deploy and manage AI Assistants in a few days.</span>
-<span class="sb">    With Alan AI, a conversational experience for your app can be built by a single developer, rather than a team of Machine Learning and DevOps experts</span>
-<span class="sb">`</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Mind the following:</p>
@@ -705,8 +645,8 @@ SLU 4.1 and earlier</label><div class="tabbed-content docutils">
 <div class="section" id="example-of-use">
 <h2>Example of use<a class="headerlink" href="#example-of-use" title="Permalink to this headline">¶</a></h2>
 <p>Let’s assume you want to build an AI assistant to answer diet and nutrition questions based on the information available in articles at <code class="docutils literal notranslate"><span class="pre">https://www.myfooddata.com/articles/</span></code>. You can add the following functions to your script:</p>
-<div class="literal-block-wrapper docutils container" id="id12">
-<div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id12" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
 <div class="highlight-alan notranslate"><div class="highlight"><pre><span></span><span class="kp">corpus</span><span class="p">(</span><span class="sb">`</span>
 <span class="sb">    Hi, I am your AI-powered assistant.</span>
 <span class="sb">    I can provide you with any information you need.</span>
@@ -738,26 +678,6 @@ SLU 4.1 and earlier</label><div class="tabbed-content docutils">
 <li><p>The maximum number of indexed pages is limited to 1000 for free Alan AI plans and 5000 for paid plans.</p></li>
 </ul>
 </div>
-<div class="section" id="corpus-explorer">
-<span id="id2"></span><h2>Corpus Explorer<a class="headerlink" href="#corpus-explorer" title="Permalink to this headline">¶</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The Corpus Explorer is available in SLU 4.2 and later.</p>
-</div>
-<p>Alan AI Studio comes with the Corpus Explorer, a tool that enables you to examine data sources used for AI assistant interactions. The Corpus Explorer displays all indexed pages, PDF documents and text data, allowing you to explore and understand the content that serves as the foundation for the AI’s knowledge and responses.</p>
-<p>To open the Corpus Explorer, click the magnifying glass icon to the left of the <code class="docutils literal notranslate"><span class="pre">corpus()</span></code> function in the dialog script.</p>
-<img alt="../../_images/corpus-explorer-open.png" src="../../_images/corpus-explorer-open.png">
-<p>To explore the indexed data, in the left pane, expand the data source tree and select the necessary page.</p>
-<p>You can also search to find the data:</p>
-<ul class="simple">
-<li><p>To switch between data representation, from the <strong>Content format</strong> list in the top right corner, select <strong>text</strong> or <strong>markdown</strong>.</p></li>
-<li><p>To search by page name, enter your query in the search field at the top of the left pane.</p></li>
-<li><p>To search by keywords, enter your query in the <strong>Search</strong> field at the top of the main section.</p></li>
-<li><p>To search by a specific question, enter your question in the <strong>Question</strong> field at the top of the main section.</p></li>
-<li><p>To control the length of the output text, use the <strong>Max tokens</strong> list in the top right corner. This parameter specifies the maximum number of tokens (words and subwords) that Alan AI displays in response to the search query.</p></li>
-</ul>
-<img alt="../../_images/corpus-explorer.png" src="../../_images/corpus-explorer.png"/>
-</img></div>
 <div class="section" id="see-also">
 <h2>See also<a class="headerlink" href="#see-also" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference internal" href="../../tutorials/list/building-ai-chat/"><span class="doc">Create an AI chat for a website</span></a></p>
@@ -892,7 +812,6 @@ SLU 4.1 and earlier</label><div class="tabbed-content docutils">
 <li><a class="reference internal" href="#setting-the-crawl-depth">Setting the crawl depth</a></li>
 <li><a class="reference internal" href="#example-of-use">Example of use</a></li>
 <li><a class="reference internal" href="#requirements-and-limitations">Requirements and limitations</a></li>
-<li><a class="reference internal" href="#corpus-explorer">Corpus Explorer</a></li>
 <li><a class="reference internal" href="#see-also">See also</a></li>
 </ul>
 </li>

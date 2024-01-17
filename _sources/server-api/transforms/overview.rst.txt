@@ -1,10 +1,6 @@
 Data transformation
 ===================
 
-.. note::
-
-   The transforms functionality is available in SLU 4.2 and later.
-
 Data preprocessing and transformation is an important step in AI assistant design. When working with raw or semi-structured data, it may be necessary to pass this data through a series of transforms to prepare it for interactions. For example, you may want to modify input data, format it in a proper way and enhance it before it can be displayed in the Alan AI Chat or used in the dialog logic. 
 
 Alan AI supports the following formats for data transformations:
