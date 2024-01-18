@@ -16,9 +16,12 @@ body {
 
 h1 {
 	color: var(--text-color) !important;
-	font-family: 'Inter ExtraBold', sans-serif !important;
+	font-family: 'Inter Bold' !important;
+	font-family: 'Inter ExtraBold' !important;
 	font-size: 32px !important;
+	font-weight: 800 !important;
 }
+
 
 h2, h3, h4 {
 	font-family: 'Inter Bold', sans-serif !important;
@@ -79,6 +82,10 @@ article {
 .sidebar-drawer {
 	background-color: #ffffff !important;
 	border-right: 0px !important;
+}
+
+.sidebar-tree {
+	margin-bottom: 3em !important;
 }
 
 .sidebar-tree .current > .reference {

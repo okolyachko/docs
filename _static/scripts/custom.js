@@ -66,7 +66,7 @@ $(document).ready(function () {
 // Fixing sticky header error
 
 $(document).ready(function () {
-    $(".headerlink").parent('h1, h2, h3, h4').addClass("anchor-fixed");
+    $(".headerlink").parent('h2, h3, h4').addClass("anchor-fixed");
 });
 
 
