@@ -347,12 +347,6 @@ The project API can be used if you want to send data from the client app to the 
 Generative AI
 -------------
 
-You can use the following functions and APIs to let your AI assistant query the data corpus and provide a response to the user:
-
-- `corpus <#corpus>`__
-- `generator API <#generator-api>`__
-- `query API <#query-api>`__
-
 .. _corpus():
 
 corpus
