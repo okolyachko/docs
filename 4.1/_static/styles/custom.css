@@ -430,7 +430,6 @@ button.dropbtn:hover  {
 .how-to-anchor {
 	visibility:hidden;
 	height: 0px; 
-	padding-top: 70px !important;
 }
 
 
@@ -1735,6 +1734,10 @@ div.d-flex.col-lg-2.col-md-4.col-sm-6.col-xs-12.docutils{
 
 	.code-block-caption .caption-text:before, .alan-caption .caption-text:before, button.copybtn {
 		top: -25px;
+	}
+
+	.docs {
+		border-left: 0px !important;
 	}
 
 @media (max-width: 67em) {
