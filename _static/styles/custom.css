@@ -604,7 +604,7 @@ li.scroll-current > a {
 /* Images */
 
 .section img {
-	border: 1px solid #f6f6f6;
+	border: 2px solid #f6f6f6 !important;
 	border-radius: 12px;
 }
 
@@ -739,7 +739,7 @@ p.admonition-title {
 
 .highlight .hll {
 	display:block;
-	background-color: #426699  !important;
+	background-color: #000  !important;
 }
 
 .highlight  {
@@ -924,12 +924,6 @@ table.docutils td {
 table.docutils td:last-child {
     border-right: none !important;
 }
-
-.docutils img {
-	border:inherit !important;
-}
-
-
 
 tr.row-odd {
 	background-color: rgba(237, 239, 243, 0.5);
@@ -1570,6 +1564,11 @@ div.d-flex.col-lg-2.col-md-4.col-sm-6.col-xs-12.docutils{
 .logos a {
 	border-bottom: 0px;
 }
+
+.logos a img {
+	border: 0px !important;
+}
+
 
 /* Footer */
 
