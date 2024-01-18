@@ -242,4 +242,4 @@ Still have questions?
 		canonical.href = window.location.protocol + "//" + window.location.host +  "/docs/";
    </script>
    
-   <div id="main-page"></div>
+   <div id="wide-content"></div>
