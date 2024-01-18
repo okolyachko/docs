@@ -430,6 +430,7 @@ button.dropbtn:hover  {
 .how-to-anchor {
 	visibility:hidden;
 	height: 0px; 
+	padding-top: 115px !important;
 }
 
 
