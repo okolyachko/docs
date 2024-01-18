@@ -6,63 +6,50 @@ Alan AI Ionic Framework
 You can add the Alan AI button to an Ionic app built with one of the following frameworks:
 
 .. panels::
-   :column: col-lg-4 col-md-6 col-sm-6 col-xs-12 p-2
+   :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2
 
-   
    ---
-   :card: border-0 + custom-style-blue
-   
-   .. image:: /_static/assets/img/about/ionic-react.svg
-   
-   .. raw:: html
-   
-     <p style="font-size: 20px; font-weight: 700;">Ionic React</p>
-   
-   Integrate an Ionic app built with the React framework with Alan AI.
-   
-   |
+   :card: border-0 + custom-style-res + sdk
    
    .. link-button:: ionic-react
-        :type: ref
-        :text: Learn more
-        :classes: btn-outline-primary
-   
-   
-   ---
-   :card: border-0 + custom-style-blue
-   
-   .. image:: /_static/assets/img/about/ionic-angular.svg
-   
+      :type: ref
+      :text: 
+      :classes: stretched-link panel
+	  
    .. raw:: html
+      
+	  <p style="font-weight: 600">Ionic React</p>
    
-     <p style="font-size: 20px; font-weight: 700;">Ionic Angular</p>
+   Integrate an Ionic app built with the React framework with Alan AI.
+
+   ---
+   :card: border-0 + custom-style-res + sdk
+   
+   .. link-button:: ionic-angular
+      :type: ref
+      :text: 
+      :classes: stretched-link panel
+	  
+   .. raw:: html
+      
+	  <p style="font-weight: 600">Ionic Angular</p>
    
    Integrate an Ionic app built with the Angular framework with Alan AI.
    
-   |
-   
-   .. link-button:: ionic-angular
-        :type: ref
-        :text: Learn more
-        :classes: btn-outline-primary
    
    ---
-   :card: border-0 + custom-style-blue
-   
-   .. image:: /_static/assets/img/about/ionic-vue.svg
-   
-   .. raw:: html
-   
-     <p style="font-size: 20px; font-weight: 700;">Ionic Vue</p>
-   
-   Integrate an Ionic app built with the Vue framework with Alan AI.
-   
-   |
+   :card: border-0 + custom-style-res + sdk
    
    .. link-button:: ionic-vue
-        :type: ref
-        :text: Learn more
-        :classes: btn-outline-primary
+      :type: ref
+      :text: 
+      :classes: stretched-link panel
+	  
+   .. raw:: html
+      
+	  <p style="font-weight: 600">Ionic Vue</p>
+   
+   Integrate an Ionic app built with the Vue framework with Alan AI.
 	  
 
 

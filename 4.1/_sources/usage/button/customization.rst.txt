@@ -348,11 +348,11 @@ To use a custom wake word:
 
    The custom wake word (version 3.0) requires specific versions of Alan AI SDK. You can get the latest version here:
 
-   - `Alan AI SDK for iOS <https://github.com/alan-ai/alan-sdk-ios/releases>`__  (version 3.7.0 or higher)
-   - `Alan AI SDK for Android <https://github.com/alan-ai/alan-sdk-android/releases/>`__ (version 4.21.0 or higher)
-   - `Alan AI SDK for Flutter <https://pub.dev/packages/alan_voice/versions>`__ (version 4.1.0 or higher)
-   - `Alan AI SDK for React Native <https://www.npmjs.com/package/@alan-ai/alan-sdk-react-native?activeTab=versions>`__ (version 2.1.0 or higher)
-   - `Alan AI SDK for Ionic <https://www.npmjs.com/package/@alan-ai/cordova-plugin-alan-voice?activeTab=versions>`__ (version 3.0.0 or higher)
+   - `Alan AI SDK for iOS <https://github.com/alan-ai/alan-sdk-ios/releases>`__  (version 3.7.0 or later)
+   - `Alan AI SDK for Android <https://github.com/alan-ai/alan-sdk-android/releases/>`__ (version 4.21.0 or later)
+   - `Alan AI SDK for Flutter <https://pub.dev/packages/alan_voice/versions>`__ (version 4.1.0 or later)
+   - `Alan AI SDK for React Native <https://www.npmjs.com/package/@alan-ai/alan-sdk-react-native?activeTab=versions>`__ (version 2.1.0 or later)
+   - `Alan AI SDK for Ionic <https://www.npmjs.com/package/@alan-ai/cordova-plugin-alan-voice?activeTab=versions>`__ (version 3.0.0 or later)
   
 +----------------------+-------------------+
 | **Default**          | off               |

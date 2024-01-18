@@ -4,115 +4,91 @@ Web frameworks
 You can add the Alan AI button to web pages and apps built with the following frameworks:
 
 .. panels::
-   :column: col-lg-4 col-md-6 col-sm-6 col-xs-12 p-2
+   :column: col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2
 
    ---
-   :card: border-0 + custom-style-blue
-   
-   .. image:: /_static/assets/img/about/react-logo.svg
-   
-   .. raw:: html
-   
-     <p style="font-size: 20px; font-weight: 700;">React</p>
-   
-   Integrate a web app built with the React framework with Alan AI.
-   
-   |
+   :card: border-0 + custom-style-res + sdk
    
    .. link-button:: react
-        :type: ref
-        :text: Learn more
-        :classes: btn-outline-primary
-   
-   ---
-   :card: border-0 + custom-style-blue
-   
-   .. image:: /_static/assets/img/about/angular-logo.svg
-   
+      :type: ref
+      :text: 
+      :classes: stretched-link panel
+	  
    .. raw:: html
+      
+	  <p style="font-weight: 600">React</p>
    
-     <p style="font-size: 20px; font-weight: 700;">Angular</p>
-   
-   Integrate a web app built with the Angular framework with Alan AI.
-   
-   |
+   Integrate a web app built with the React framework with Alan AI.
+
+   ---
+   :card: border-0 + custom-style-res + sdk
    
    .. link-button:: angular
-        :type: ref
-        :text: Learn more
-        :classes: btn-outline-primary
-   
-   ---
-   :card: border-0 + custom-style-blue
-   
-   .. image:: /_static/assets/img/about/vue-logo.svg
-   
+      :type: ref
+      :text: 
+      :classes: stretched-link panel
+	  
    .. raw:: html
+      
+	  <p style="font-weight: 600">Angular</p>
    
-     <p style="font-size: 20px; font-weight: 700;">Vue</p>
-   
-   Integrate a web app built with the Vue framework with Alan AI.
-   
-   |
+   Integrate a web app built with the Angular framework with Alan AI.
+
+   ---
+   :card: border-0 + custom-style-res + sdk
    
    .. link-button:: vue
-        :type: ref
-        :text: Learn more
-        :classes: btn-outline-primary
-   
-    ---
-   :card: border-0 + custom-style-blue
-   
-   .. image:: /_static/assets/img/about/ember-logo.svg
-   
+      :type: ref
+      :text: 
+      :classes: stretched-link panel
+	  
    .. raw:: html
+      
+	  <p style="font-weight: 600">Vue</p>
    
-     <p style="font-size: 20px; font-weight: 700;">Ember</p>
-   
-   Integrate a web app built with the Ember framework with Alan AI.
-   
-   |
+   Integrate a web app built with the Vue framework with Alan AI.
+
+   ---
+   :card: border-0 + custom-style-res + sdk
    
    .. link-button:: ember
-        :type: ref
-        :text: Learn more
-        :classes: btn-outline-primary
-   
-   ---
-   :card: border-0 + custom-style-blue
-   
-   .. image:: /_static/assets/img/about/js-logo.svg
-   
+      :type: ref
+      :text: 
+      :classes: stretched-link panel
+	  
    .. raw:: html
+      
+	  <p style="font-weight: 600">Ember</p>
    
-     <p style="font-size: 20px; font-weight: 700;">JavaScript</p>
-   
-   Integrate a web app or page built with JavaScript with Alan AI.
-   
-   |
+   Integrate a web app built with the Ember framework with Alan AI.
+
+   ---
+   :card: border-0 + custom-style-res + sdk
    
    .. link-button:: vanilla
-        :type: ref
-        :text: Learn more
-        :classes: btn-outline-primary 
-   
-   ---
-   :card: border-0 + custom-style-blue
-   
-   .. image:: /_static/assets/img/about/electron-logo.svg
-   
+      :type: ref
+      :text: 
+      :classes: stretched-link panel
+	  
    .. raw:: html
+      
+	  <p style="font-weight: 600">JavaScript</p>
    
-     <p style="font-size: 20px; font-weight: 700;">Electron</p>
-   
-   Integrate a web app built with the Electron framework with Alan AI.
-   
-   |
+   Integrate a web app built with JavaScript with Alan AI.
+
+   ---
+   :card: border-0 + custom-style-res + sdk
    
    .. link-button:: electron
-        :type: ref
-        :text: Learn more
-        :classes: btn-outline-primary shadow-none
+      :type: ref
+      :text: 
+      :classes: stretched-link panel
+	  
+   .. raw:: html
+      
+	  <p style="font-weight: 600">Electron</p>
+   
+   Integrate a web app built with the Electron framework with Alan AI.
 
 
 .. toctree::

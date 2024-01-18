@@ -317,24 +317,21 @@ What's next?
 ------------
 
 .. panels::
-   :column: col-lg-12 col-md-12 col-sm-12 col-xs-12 p-2
-   
+   :column: col-lg-12 col-md-12 col-sm-6 col-xs-12 p-2
+
    ---
-   :card: border-0 + custom-style-blue
+   :card: border-0 + custom-style-res + git
    
-   .. image:: /_static/assets/img/about/git-purple.svg
-   
-   .. raw:: html
-	 
-	  <p style="font-size: 20px; font-weight: 700;">Example apps</p>
-	  <p>Find and explore examples of voice-enabled apps on the <a href="https://github.com/alan-ai" target="_blank">Alan AI GitHub repository.</p>
-	  
    .. link-button:: https://github.com/alan-ai/alan-sdk-ionic/tree/master/examples
-        :type: url
-        :text: View on GitHub
-        :classes: btn-outline-primary
-
-
+      :type: url
+      :text: 
+      :classes: stretched-link panel
+	  
+   .. raw:: html
+      
+	  <p style="font-weight: 600">Example apps</p>
+   
+   Find and explore examples of AI assistants in Alan AI GitHub.
 
 .. raw:: html
 

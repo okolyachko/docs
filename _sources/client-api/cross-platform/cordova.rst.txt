@@ -142,64 +142,23 @@ Step 3. Build and run the app
 What's next?
 ------------
 
-Upon integration, your app gets the in-app assistant that can be activated with the Alan AI button displayed on top of the app’s UI. 
-
-To build a full-fledged multimodal UX, you can use Alan AI SDK toolkit:
-
 .. panels::
-   :column: col-lg-4 col-md-4 col-sm-12 col-xs-12 p-2
+   :column: col-lg-12 col-md-12 col-sm-6 col-xs-12 p-2
 
    ---
-   :card: border-0 + custom-style-blue
+   :card: border-0 + custom-style-res + git
    
-   .. image:: /_static/assets/img/about/method.svg
-   
-   .. raw:: html
-	 
-	  <p style="font-size: 20px; font-weight: 700;">Client API methods</p>
-	  <p>Enable communication between the client app and Alan AI and perform actions in the app.</p>
-	  
-   |
-	  
-   .. link-button:: ../methods/common-api
-        :type: ref
-        :text: Learn more
-        :classes: btn-outline-primary
-   
-   ---
-   :card: border-0 + custom-style-blue
-   
-   .. image:: /_static/assets/img/about/handler.svg
-   
-   .. raw:: html
-	 
-	  <p style="font-size: 20px; font-weight: 700;">Alan AI handlers</p>
-	  <p>Handle commands, understand the button state and capture events in the client app.</p>
-	  
-   |
-	  
-   .. link-button:: ../methods/handlers
-        :type: ref
-        :text: Learn more
-        :classes: btn-outline-primary
-   
-   ---
-   :card: border-0 + custom-style-blue
-   
-   .. image:: /_static/assets/img/about/git-purple.svg
-   
-   .. raw:: html
-	 
-	  <p style="font-size: 20px; font-weight: 700;">Example app</p>
-	  <p>Find and explore an example of a voice-enabled app on the Alan AI GitHub repository.</p>
-	  
-   |
-	  
    .. link-button:: https://github.com/alan-ai/alan-sdk-cordova/tree/master/examples/AlanBasicExample
-        :type: url
-        :text: View on GitHub
-        :classes: btn-outline-primary
+      :type: url
+      :text: 
+      :classes: stretched-link panel
 	  
+   .. raw:: html
+      
+	  <p style="font-weight: 600">Example apps</p>
+   
+   Find and explore examples of AI assistants in Alan AI GitHub.
+    
    
 .. raw:: html
 

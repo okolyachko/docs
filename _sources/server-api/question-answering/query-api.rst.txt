@@ -92,12 +92,7 @@ Examples of use
 
 .. tabbed:: Answer transforming
 
-   In some cases, you may need to present answers from the Q&A services transformed and formatted in a specific way. To do this, you can utilize the ``transforms()`` function in Alan AI. The ``transforms()`` function allows you to pre-process and transform input data using the templates and rules that you define. For details, see :doc:`Data transformation <../transforms/overview>`.
-   
-   .. note::
-
-      The transforms functionality is available in SLU 4.2 and later.
-   
+   In some cases, you may need to present answers from the Q&A services transformed and formatted in a specific way. To do this, you can utilize the ``transforms()`` function in Alan AI. The ``transforms()`` function allows you to pre-process and transform input data using the templates and rules that you define. For details, see :doc:`Data transformation <../transforms/overview>`.  
    
    Let's assume you want to display all answers using the following format:
    

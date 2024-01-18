@@ -2,7 +2,7 @@
 <html class="no-js">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex/" /><link rel="search" title="Search" href="../../../search/" /><link rel="next" title="Generative AI" href="../../generative-ai/overview/" /><link rel="prev" title="Q&amp;A service" href="../../qna/" />
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex/" /><link rel="search" title="Search" href="../../../search/" /><link rel="next" title="Generative AI" href="../../generative-ai/overview/" /><link rel="prev" title="Question answering" href="../../qna/" />
 
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/><meta name="generator" content="sphinx-3.5.4, furo 2021.04.11.beta34"/>
         <title>Query API | Alan Docs</title>
@@ -367,7 +367,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../semantic-search/table-api/">Table API</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../transforms/overview/">Data transformation</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../widgets/">UI widgets</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label for="toctree-checkbox-16"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../chat-cards/">Chat cards</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../chat-buttons/">Chat buttons</a></li>
@@ -580,8 +579,8 @@
 <div class="section" id="examples-of-use">
 <h2>Examples of use<a class="headerlink" href="#examples-of-use" title="Permalink to this headline">¶</a></h2>
 <div class="tabbed-set docutils">
-<input checked="checked" id="77b39c52-6b36-4553-9cd8-497cf3d7d86b" name="253889c9-aaea-42df-b990-a8a4e7bf25c5" type="radio"/>
-<label class="tabbed-label" for="77b39c52-6b36-4553-9cd8-497cf3d7d86b">
+<input checked="checked" id="dd5fc2b9-bd7f-41ba-91e2-25c53d404892" name="2726e2c2-b55c-43a7-b1bd-ec26571aeaf7" type="radio"/>
+<label class="tabbed-label" for="dd5fc2b9-bd7f-41ba-91e2-25c53d404892">
 Text corpus</label><div class="tabbed-content docutils">
 <p>Let’s assume you want to get an answer to a question from the FAQ data you have in plain text. For this, you can add the following code to the dialog script:</p>
 <div class="literal-block-wrapper docutils container" id="id2">
@@ -608,8 +607,8 @@ Text corpus</label><div class="tabbed-content docutils">
 </div>
 <p>Here, the corpus data is saved to <code class="docutils literal notranslate"><span class="pre">FAQ</span></code>. The user question is captured with the <code class="docutils literal notranslate"><span class="pre">QUERY</span></code> slot and then passed to <code class="docutils literal notranslate"><span class="pre">api.query_v1</span></code> together with the corpus data. To get the answer, the <code class="docutils literal notranslate"><span class="pre">gather()</span></code> method is used that collects the final response. The result is then written to Alan Studio logs.</p>
 </div>
-<input id="6bc8c9dc-28c2-495c-ae2f-5ba3115cd56b" name="253889c9-aaea-42df-b990-a8a4e7bf25c5" type="radio"/>
-<label class="tabbed-label" for="6bc8c9dc-28c2-495c-ae2f-5ba3115cd56b">
+<input id="58cc8b42-c5f5-423c-a3e0-100899b3e92b" name="2726e2c2-b55c-43a7-b1bd-ec26571aeaf7" type="radio"/>
+<label class="tabbed-label" for="58cc8b42-c5f5-423c-a3e0-100899b3e92b">
 Web corpus</label><div class="tabbed-content docutils">
 <p>Let’s assume you want to get an answer to a question from the FAQ data published in a web page. For this, you can add the following code to the dialog script:</p>
 <div class="literal-block-wrapper docutils container" id="id3">
@@ -637,106 +636,6 @@ Web corpus</label><div class="tabbed-content docutils">
 <li><p><code class="docutils literal notranslate"><span class="pre">What</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">merchant</span> <span class="pre">account?</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">How</span> <span class="pre">can</span> <span class="pre">I</span> <span class="pre">dropship</span> <span class="pre">with</span> <span class="pre">Shopify?</span></code></p></li>
 </ul>
-</div>
-<input id="8d9905e6-e67d-4113-b2f0-aa0f07280642" name="253889c9-aaea-42df-b990-a8a4e7bf25c5" type="radio"/>
-<label class="tabbed-label" for="8d9905e6-e67d-4113-b2f0-aa0f07280642">
-Answer transforming</label><div class="tabbed-content docutils">
-<p>In some cases, you may need to present answers from the Q&amp;A services transformed and formatted in a specific way. To do this, you can utilize the <code class="docutils literal notranslate"><span class="pre">transforms()</span></code> function in Alan AI. The <code class="docutils literal notranslate"><span class="pre">transforms()</span></code> function allows you to pre-process and transform input data using the templates and rules that you define. For details, see <a class="reference internal" href="../../transforms/overview/"><span class="doc">Data transformation</span></a>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The transforms functionality is available in SLU 4.2 and later.</p>
-</div>
-<p>Let’s assume you want to display all answers using the following format:</p>
-<p><strong>Question</strong></p>
-<p>User query</p>
-<p><strong>Answer</strong></p>
-<p>Answer from FAQ</p>
-<p><strong>Steps to take</strong></p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://accounts.shopify.com/">Start a free trial</a></p></li>
-<li><p><a class="reference external" href="https://accounts.shopify.com/">Log in</a></p></li>
-</ul>
-<p>For that, do the following:</p>
-<ol class="arabic">
-<li><p>Add a transform named <code class="docutils literal notranslate"><span class="pre">format</span></code> with the following rules:</p>
-<p><strong>Example 1</strong></p>
-<ul>
-<li><p><strong>Common prompt</strong>: <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">input</span> <span class="pre">contains</span> <span class="pre">the</span> <span class="pre">initial</span> <span class="pre">response</span> <span class="pre">provided</span> <span class="pre">by</span> <span class="pre">the</span> <span class="pre">AI</span> <span class="pre">assistant,</span> <span class="pre">the</span> <span class="pre">query</span> <span class="pre">contains</span> <span class="pre">a</span> <span class="pre">sample</span> <span class="pre">question,</span> <span class="pre">the</span> <span class="pre">result</span> <span class="pre">shows</span> <span class="pre">how</span> <span class="pre">the</span> <span class="pre">text</span> <span class="pre">must</span> <span class="pre">be</span> <span class="pre">formatted</span></code></p></li>
-<li><p><strong>Input</strong>: <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">merchant</span> <span class="pre">account</span> <span class="pre">is</span> <span class="pre">an</span> <span class="pre">account</span> <span class="pre">where</span> <span class="pre">your</span> <span class="pre">money</span> <span class="pre">is</span> <span class="pre">deposited</span> <span class="pre">after</span> <span class="pre">your</span> <span class="pre">customers’</span> <span class="pre">payments</span> <span class="pre">have</span> <span class="pre">been</span> <span class="pre">authorized</span> <span class="pre">and</span> <span class="pre">processed.</span> <span class="pre">It</span> <span class="pre">is</span> <span class="pre">used</span> <span class="pre">to</span> <span class="pre">accept</span> <span class="pre">payments</span> <span class="pre">from</span> <span class="pre">customers</span> <span class="pre">and</span> <span class="pre">is</span> <span class="pre">typically</span> <span class="pre">provided</span> <span class="pre">by</span> <span class="pre">a</span> <span class="pre">third-party</span> <span class="pre">payment</span> <span class="pre">processor</span> <span class="pre">(also</span> <span class="pre">known</span> <span class="pre">as</span> <span class="pre">a</span> <span class="pre">payment</span> <span class="pre">provider</span> <span class="pre">or</span> <span class="pre">payment</span> <span class="pre">gateway).</span> <span class="pre">The</span> <span class="pre">payment</span> <span class="pre">processor</span> <span class="pre">will</span> <span class="pre">authorize</span> <span class="pre">and</span> <span class="pre">process</span> <span class="pre">the</span> <span class="pre">payments</span> <span class="pre">and</span> <span class="pre">then</span> <span class="pre">deposit</span> <span class="pre">the</span> <span class="pre">funds</span> <span class="pre">into</span> <span class="pre">the</span> <span class="pre">merchant</span> <span class="pre">account.</span></code>, input format: <strong>text</strong></p></li>
-<li><p><strong>Query</strong>: <code class="docutils literal notranslate"><span class="pre">What</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">merchant</span> <span class="pre">account?</span></code></p></li>
-<li><p><strong>Result</strong>: example of output data, output format: <strong>markdown</strong>:</p>
-<div class="literal-block-wrapper docutils container" id="id4">
-<div class="code-block-caption"><span class="caption-text">Result field</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
-<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gs">**Question**</span>:
-
-What is a merchant account?
-
-<span class="gs">**Answer**</span>:
-
-A merchant account is an account where your money is deposited after your customers’ payments have been authorized and processed. It is used to accept payments from customers and is typically provided by a third-party payment processor (also known as a payment provider or payment gateway). The payment processor will authorize and process the payments and then deposit the funds into the merchant account.
-
-<span class="gs">**Steps to take**</span>
-
-<span class="k">-</span><span class="w"> </span>[<span class="nt">Start a free trial</span>](<span class="na">https://accounts.shopify.com/</span>)
-<span class="k">-</span><span class="w"> </span>[<span class="nt">Log in</span>](<span class="na">https://accounts.shopify.com/</span>)
-</pre></div>
-</div>
-</div>
-</li>
-</ul>
-<p><strong>Example 2</strong></p>
-<ul>
-<li><p><strong>Common prompt</strong>: <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">input</span> <span class="pre">contains</span> <span class="pre">the</span> <span class="pre">initial</span> <span class="pre">response</span> <span class="pre">provided</span> <span class="pre">by</span> <span class="pre">the</span> <span class="pre">AI</span> <span class="pre">assistant,</span> <span class="pre">the</span> <span class="pre">query</span> <span class="pre">contains</span> <span class="pre">a</span> <span class="pre">sample</span> <span class="pre">question,</span> <span class="pre">the</span> <span class="pre">result</span> <span class="pre">shows</span> <span class="pre">how</span> <span class="pre">the</span> <span class="pre">text</span> <span class="pre">must</span> <span class="pre">be</span> <span class="pre">formatted</span></code></p></li>
-<li><p><strong>Input</strong>: <code class="docutils literal notranslate"><span class="pre">No,</span> <span class="pre">you</span> <span class="pre">don’t</span> <span class="pre">need</span> <span class="pre">to</span> <span class="pre">ship</span> <span class="pre">items</span> <span class="pre">yourself.</span> <span class="pre">You</span> <span class="pre">can</span> <span class="pre">use</span> <span class="pre">a</span> <span class="pre">third-party</span> <span class="pre">fulfilment</span> <span class="pre">service</span> <span class="pre">to</span> <span class="pre">prepare</span> <span class="pre">and</span> <span class="pre">ship</span> <span class="pre">your</span> <span class="pre">orders</span> <span class="pre">for</span> <span class="pre">you.</span></code>, input format: <strong>text</strong></p></li>
-<li><p><strong>Query</strong>: <code class="docutils literal notranslate"><span class="pre">Do</span> <span class="pre">I</span> <span class="pre">need</span> <span class="pre">to</span> <span class="pre">ship</span> <span class="pre">items</span> <span class="pre">myself?</span></code></p></li>
-<li><p><strong>Result</strong>: example of output data, output format: <strong>markdown</strong>:</p>
-<div class="literal-block-wrapper docutils container" id="id5">
-<div class="code-block-caption"><span class="caption-text">Result field</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
-<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gs">**Question**</span>:
-
-Do I need to ship items myself?
-
-<span class="gs">**Answer**</span>:
-
-No, you don’t need to ship items yourself. You can use a third-party fulfilment service to prepare and ship your orders for you.
-
-<span class="gs">**Steps to take**</span>
-
-<span class="k">-</span><span class="w"> </span>[<span class="nt">Start a free trial</span>](<span class="na">https://accounts.shopify.com/</span>)
-<span class="k">-</span><span class="w"> </span>[<span class="nt">Log in</span>](<span class="na">https://accounts.shopify.com/</span>)
-</pre></div>
-</div>
-</div>
-</li>
-</ul>
-<img alt="../../../_images/query-api-transforms.png" src="../../../_images/query-api-transforms.png"/>
-</li>
-<li><p>Add the following code to your dialog script:</p>
-<div class="literal-block-wrapper docutils container" id="id6">
-<div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
-<div class="highlight-alan notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nv">FAQ = </span><span class="kp">corpus</span><span class="p">({</span><span class="nv">url: </span><span class="s2">"https://www.shopify.com/faq"</span><span class="p">,</span> <span class="nv">depth: </span><span class="mf">1</span><span class="p">,</span> <span class="nx">maxPages</span><span class="o">:</span><span class="mf">10</span><span class="p">});</span>
-
-<span class="kp">intent</span><span class="p">(</span><span class="sb">`$(QUERY* .+)`</span><span class="p">,</span> <span class="k">async</span> <span class="nx">p</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="kd">let</span> <span class="nv">query = </span><span class="k k-Alan">p.</span><span class="nx">QUERY</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
-    <span class="kd">let</span> <span class="nv">answer = </span><span class="k">await</span> <span class="nx">api</span><span class="p">.</span><span class="nx">query_v1</span><span class="p">({</span><span class="kp">corpus</span><span class="o">:</span> <span class="nx">FAQ</span><span class="p">,</span> <span class="nv">question: </span><span class="nx">query</span><span class="p">});</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">answer</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">let</span> <span class="kr">final</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">answer</span><span class="p">.</span><span class="nx">gather</span><span class="p">();</span>
-        <span class="kd">let</span> <span class="nv">formattedAnswer = </span><span class="k">await</span> <span class="nx">transforms</span><span class="p">.</span><span class="nx">format</span><span class="p">({</span>
-            <span class="nv">input: </span><span class="kr">final</span><span class="p">,</span>
-            <span class="nv">query: </span><span class="nx">query</span>
-        <span class="p">});</span>
-        <span class="k k-Alan">p.</span><span class="nx">play</span><span class="p">(</span><span class="nx">formattedAnswer</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="k k-Alan">p.</span><span class="nx">play</span><span class="p">(</span><span class="sb">`Sorry, I cannot help you with that`</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">});</span>
-</pre></div>
-</div>
-</div>
-</li>
-</ol>
-<p>Here, the corpus data is saved to <code class="docutils literal notranslate"><span class="pre">FAQ</span></code>. The user question is captured with the <code class="docutils literal notranslate"><span class="pre">QUERY</span></code> slot and then passed to <code class="docutils literal notranslate"><span class="pre">api.query_v1</span></code> together with the corpus data. The answer obtained from the Query API is then formatted using the rules defined in the <code class="docutils literal notranslate"><span class="pre">format</span></code> transform and displayed in the Alan AI Chat:</p>
-<img alt="../../../_images/query-api-transforms-example.png" src="../../../_images/query-api-transforms-example.png"/>
 </div>
 </div>
 <div id="green-background"></div></div>
@@ -815,7 +714,7 @@ No, you don’t need to ship items yourself. You can use a third-party fulfilmen
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Q&amp;A service</div>
+                <div class="title">Question answering</div>
                 
               </div>
             </a>
