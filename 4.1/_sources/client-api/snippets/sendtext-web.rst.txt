@@ -1,4 +1,0 @@
-.. code-block:: javascript
-   :caption: Client app
-
-   alanBtnInstance.sendText("Hello, Alan, can you help me?");

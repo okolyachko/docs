@@ -1,9 +1,0 @@
-.. code-block:: objective-c
-   :caption: Client app
-	
-
-   /// Sending any text message
-   - (void)sendText {
-     /// Providing text as string param
-     [self.button sendText:@"Hello Alan, can you help me?"];
-   }

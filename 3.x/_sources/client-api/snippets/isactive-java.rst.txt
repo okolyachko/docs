@@ -1,4 +1,0 @@
-.. code-block:: java
-   :caption: Client app
-
-   alanButton.isActive();
