@@ -1,6 +1,0 @@
-.. code-block:: javascript
-   :caption: Client app
-
-   alanBtnInstance.callProjectApi("setClientData", {value:"your data"}, function (error, result){
-     // Handling error and result
-   });
