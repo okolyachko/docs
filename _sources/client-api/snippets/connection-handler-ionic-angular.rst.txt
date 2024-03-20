@@ -1,7 +1,0 @@
-.. code-block:: javascript
-   :caption: Client app
-
-   this.alanBtnComponent.nativeElement.addEventListener('connectionStatus', (data) => {
-     const connectionData = (<CustomEvent>data).detail;
-     console.info('Received status: ', connectionData);
-   });

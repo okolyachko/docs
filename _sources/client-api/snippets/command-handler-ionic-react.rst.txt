@@ -1,9 +1,0 @@
-.. code-block:: javascript
-   :caption: Client app
-
-   alanBtnComponent.current.addEventListener('command', (data: CustomEvent) => {
-     const commandData = data.detail;
-     if (commandData.command === 'navigation') {
-        // call client code that will react to the received command
-     }
-   });
