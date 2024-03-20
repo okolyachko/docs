@@ -1,0 +1,74 @@
+.. raw:: html
+
+   <div id="orange-background"></div>
+   <div id="wide-content"></div>
+
+Alan AI Chat tutorials
+======================
+
+Use these tutorials to build a text and voice AI chat using the Alan AI Platform:
+
+.. panels::
+   :column: col-lg-12 col-md-12 col-sm-12 col-xs-12 p-2
+   
+   ---
+   :card: border-0 + custom-style-list
+   
+   .. link-button:: building-ai-chat
+      :type: ref
+      :text: Create an AI chat for a website
+      :classes: stretched-link panel
+	  
+   Learn how to create an AI chat using your custom dataset and embed it to a website
+   
+   ---
+   :card: border-0 + custom-style-list
+   
+   .. link-button:: adding-greeting
+      :type: ref
+      :text: Add a greeting to the AI chat
+      :classes: stretched-link panel
+	  
+   Learn how to add a greeting to be displayed to chat users
+   
+   ---
+   :card: border-0 + custom-style-list
+   
+   .. link-button:: using-buttons
+      :type: ref
+      :text: Use buttons in the AI chat
+      :classes: stretched-link panel
+	  
+   Learn how to use buttons to trigger actions in the AI chat
+    
+   ---
+   :card: border-0 + custom-style-list
+   
+   .. link-button:: collecting-data-chat
+      :type: ref
+      :text: Collect data with the AI chat
+      :classes: stretched-link panel
+	  
+   Learn how to collect data with the AI chat and save the collected data
+   
+   ---
+   :card: border-0 + custom-style-list
+   
+   .. link-button:: sending-emails
+      :type: ref
+      :text: Send emails from the AI chat
+      :classes: stretched-link panel
+	  
+   Learn how to send emails from the Alan AI Chat
+   
+.. toctree::
+   :caption: Web
+   :maxdepth: 1
+   :hidden:
+   
+   Create an AI chat for a website<building-ai-chat>
+   Add a greeting to the AI chat<adding-greeting>
+   Use buttons in the AI chat<using-buttons>
+   Collect data with the AI chat<collecting-data-chat>
+   Send emails from the AI chat<sending-emails>
+	

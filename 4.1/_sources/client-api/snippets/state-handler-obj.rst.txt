@@ -1,0 +1,6 @@
+.. code-block:: obj-c
+   :caption: Client app
+
+   self.button.onButtonState = ^(AlanSDKButtonState state) {
+     NSLog(@"%ld", (long)state);
+   };

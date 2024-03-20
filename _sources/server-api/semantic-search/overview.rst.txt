@@ -1,0 +1,36 @@
+Semantic search
+===============
+
+To enhance the UX of your app, you can equip your AI assistant with semantic search capabilities. Alan AI provides the following semantic search tools:
+
+.. panels::
+   :column: col-lg-12 col-md-12 col-sm-12 col-xs-12 p-2
+
+   ---
+   :card: border-0 + custom-style-list
+   
+   .. link-button:: table-api
+      :type: ref
+      :text: Table API
+      :classes: stretched-link panel
+	  
+   Learn how to let users query information with natural language, improve search accuracy and knowledge discovery
+   
+See also
+--------
+
+- :doc:`Q&A service <../qna>`
+- :doc:`Query API <../question-answering/query-api>`
+
+  
+.. raw:: html
+
+   <div id="green-background"></div>
+   <div id="wide-content"></div>
+
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+   
+   Table API<table-api>
+

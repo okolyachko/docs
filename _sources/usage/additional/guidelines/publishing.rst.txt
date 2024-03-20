@@ -1,0 +1,24 @@
+Preparing for rollout and releasing
+===================================
+
+Releasing an AI assistant is a big step forward. The Alan AI Platform offers a bunch of features to make the rollout process safe, secure and reduce possible risks.
+
+  
+1. Customize your assistant
+---------------------------
+
+In Alan AI Studio, AI assistant settings are defined separately for every environment. If you are ready to do the testing and then go live, do not forget to :doc:`customize the assistant <../../button/customization>` in the **Testing** and **Production** environments.
+
+  
+2. Roll out gradually
+---------------------
+
+To improve the AI assistant launch, use :doc:`Alan AI's cohorts <../../button/cohorts>`. Cohorts enable you to deploy the assistant by degrees, making it available for a small group of users at first, rather than publishing it to all of customers at once. Once you receive the initial users' feedback, you will be able to examine the progress, make changes on the fly and refine the AI assistant rollout.
+
+
+.. raw:: html
+
+   <div id="orange-background"></div>
+
+
+   

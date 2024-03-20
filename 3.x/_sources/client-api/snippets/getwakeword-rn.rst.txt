@@ -1,0 +1,13 @@
+.. code-block:: typescript
+   :caption: Client app
+   
+   import { NativeModules } from 'react-native';
+   const { AlanManager } = NativeModules;
+
+   AlanManager.getWakewordEnabled((error, result) => {
+     if (error) {
+       console.error(error);
+     } else {
+       console.log(`getWakewordEnabled ${result}`);
+     }
+   });

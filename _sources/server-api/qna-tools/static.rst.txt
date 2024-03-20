@@ -1,0 +1,135 @@
+Static corpus
+=============
+
+The Q&A service lets you create a Q&A AI assistant that uses static data sources: company website pages, product manuals, guidelines, FAQ pages, articles and so on. 
+
+You can define the following types of static corpuses in the dialog script: 
+
+- `Web corpus <#web-corpus>`__: retrieve information from website pages and PDF files available online
+- `Text corpus <#text-corpus>`__: use plain text as an information source
+
+Web corpus
+----------
+
+To define a web corpus for your Q&A AI assistant, use the :ref:`corpus() <corpus()>` function.
+
+.. note::
+
+   The ``corpus()`` syntax differs between Alan AI SLU versions. Select the appropriate SLU version using the tabs below. 
+   
+.. tabbed:: SLU 4.2
+
+   .. code-block:: alan
+      :caption: Dialog script
+	  
+      corpus({    
+          title: `HTTP corpus`,
+          urls: [
+              `https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview`,
+              `https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages`,
+              `https://developer.mozilla.org/en-US/docs/Web/HTTP/Session`],
+          exclude: [`https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP`],
+          depth: 1, 
+          maxPages: 5,
+          priority: 0, 
+      });
+	  
+   .. image:: /_static/assets/img/script-concepts/corpus-testing.png
+
+   .. raw:: html
+
+      <h3>Corpus parameters</h3>
+
+   +---------------+------------------+----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | **Name**      | **Type**         | **Is Required**      |**Description**                                                                                                                                                                   |
+   +===============+==================+======================+==================================================================================================================================================================================+
+   | ``title``     | string           | False                | Corpus title.                                                                                                                                                                    |
+   +---------------+------------------+----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | ``urls``      | string array     | True                 | List of URLs from which information must be retrieved. You can define URLs of website folders and pages.                                                                         |
+   +---------------+------------------+----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | ``exclude``   | string array     | False                | List of URLs to be excluded from indexing. You can define URLs of website folders and pages.                                                                                     |
+   +---------------+------------------+----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | ``depth``     | integer          | False                | Crawl depth for web and PDF resources. The minimum value is 0 (crawling only the page content without linked resources). For details, see `Data crawling <#data-crawling-4.2>`__.|
+   +---------------+------------------+----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | ``maxPages``  | integer          | True                 | Maximum number of pages and files to index. If not set, only 1 page with the defined URL will be indexed.                                                                        |
+   +---------------+------------------+----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | ``priority``  | integer          | False                | Priority level assigned to the corpus. Corpuses with higher priority are considered more relevant when user requests are processed.                                              |
+   +---------------+------------------+----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | ``query``     |function          | False                | Transforms function used to process user queries. For details, see :doc:`Corpus transforms <../transforms/corpus-transforms>`.                                                   |
+   +---------------+------------------+----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | ``transforms``| function         | False                | Transforms function used to format the corpus output. For details, see :doc:`Corpus transforms <../transforms/corpus-transforms>`.                                               |
+   +---------------+------------------+----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   
+   .. note::
+
+      Mind the following: 
+   
+      - Make sure the websites and pages you define in the ``corpus()`` function are not protected from crawling. The Q&A service cannot retrieve content from such resources.
+      - The indexing process may take some time. To check the progress and results, use the :doc:`Alan AI Studio logs <../../usage/guides/logs>`.
+      - The maximum number of indexed pages depends on your pricing plan. For details, contact the `Alan AI Sales Team <mailto:sales@alan.app>`__.
+   
+
+   .. raw:: html
+
+      <h3 id="data-crawling-4.2" class="anchor-fixed">Data crawling</h3>
+
+   The crawl depth defines how 'far' down the resource hierarchy the crawler must go to retrieve the content for the Q&A assistant. For example, if you set the crawl depth to ``1``, the crawler will access the page accessible at the start URL, extract all unique links to other pages in the same domain from this page and retrieve information from the start and linked pages. 
+
+   Choose the crawl depth wisely. The deeper the level, the more likely users are to receive accurate answers to their questions. However, a deeper crawl depth may have an impact on the Q&A service's performance.
+
+.. tabbed:: SLU 4.1 and earlier
+
+
+   .. code-block:: alan
+      :caption: Dialog script
+
+      corpus({    
+          url: `https://developer.mozilla.org/en-US/docs/Web/HTTP/`,
+          depth: 1, 
+          maxPages: 10,
+      });
+
+   .. raw:: html
+
+      <h3>Corpus parameters</h3>
+
+   +---------------+------------------+----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | **Name**      | **Type**         | **Is Required**      |**Description**                                                                                                                                                                   |
+   +===============+==================+======================+==================================================================================================================================================================================+
+   | ``url``       | string           | True                 | Resource URLs from which information must be retrieved. You can define a URL of a website folder and page.                                                                       |
+   +---------------+------------------+----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | ``depth``     | integer          | False                | Crawl depth for web and PDF resources. The minimum value is 0 (crawling only the page content without linked resources). For details, see `Data crawling <#data-crawling-4.1>`__.|
+   +---------------+------------------+----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | ``maxPages``  | integer          | True                 | Maximum number of pages and files to index. If not set, only 1 page with the defined URL will be indexed.                                                                        |
+   +---------------+------------------+----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+   .. raw:: html
+
+      <h3 id="data-crawling-4.1" class="anchor-fixed">Data crawling</h3>
+
+   The crawl depth defines how 'far' down the resource hierarchy the crawler must go to retrieve the content for the Q&A assistant. For example, if you set the crawl depth to ``1``, the crawler will access the page accessible at the start URL, extract all unique links to other pages in the same domain from this page and retrieve information from the start and linked pages. 
+
+   Choose the crawl depth wisely. The deeper the level, the more likely users are to receive accurate answers to their questions. However, a deeper crawl depth may have an impact on the Q&A service's performance. 
+   
+   .. note::
+
+      Mind the following: 
+   
+      - Make sure the websites and pages you define in the ``corpus()`` function are not protected from crawling. The Q&A service cannot retrieve the content from such resources.
+      - The indexing process may take some time. To check the progress and results, use the :doc:`Alan AI Studio logs <../../usage/guides/logs>`.
+      - The maximum number of indexed pages depends on your pricing plan. For details, contact the `Alan AI Sales Team <mailto:sales@alan.app>`__.
+
+Text corpus
+-----------
+
+To define a text corpus for the Q&A AI assistant, add plain text strings to the ``corpus()`` function:
+
+.. code-block:: alan
+   :caption: Dialog script
+	  
+   corpus(`
+       Hi, I am your HTTP AI assistant.
+       I'm here to offer insights into the HTTP protocol. 
+       I can answer any questions regarding HTTP requests and responses, status codes, sessions and more.
+       Need assistance unraveling the complexities of HTTP protocol? I'm at your service with clear explanations.
+   `)

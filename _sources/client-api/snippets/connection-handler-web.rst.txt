@@ -1,0 +1,9 @@
+.. code-block:: javascript
+   :caption: Client app
+
+   alanBtn({
+     key: 'YOUR_KEY_FROM_ALAN_STUDIO_HERE',
+     onConnectionStatus: function(status) {
+       console.log("The status is " + status);
+     },
+   });

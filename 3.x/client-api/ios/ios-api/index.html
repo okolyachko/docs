@@ -1,0 +1,1539 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex/" /><link rel="search" title="Search" href="../../../search/" /><link rel="next" title="Alan Android SDK" href="../../android/android-api/" /><link rel="prev" title="Server-side rendering" href="../../web/server-side-rendering/" />
+
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/><meta name="generator" content="sphinx-3.5.4, furo 2021.04.11.beta34"/>
+        <title>Alan AI iOS SDK | Alan Docs</title>
+      <link rel="stylesheet" href="../../../_static/styles/furo.css?digest=59ab60ac09ea94ccfe6deddff6d715cce948a6fc">
+    <link rel="stylesheet" href="../../../_static/pygments.css">
+    <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../../../_static/pygments_dark.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+
+
+<style>
+  :root {
+    --color-code-background: #ffffff;
+  --color-code-foreground: black;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+
+  /* For allowing end-user-specific overrides */
+  .override-light {
+    --color-code-background: #ffffff;
+  --color-code-foreground: black;
+  
+  }
+  .override-dark {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+</style><link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/algolia.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/typesense-docsearch.js@latest/dist/cdn/docsearch.min.css" />
+    <link rel="stylesheet" href="../../../_static/styles/furo-extensions.css?digest=d391b54134226e4196576da3bdb6dddb7e05ba2b">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../_static/favicon.ico">
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+	<link rel="canonical" href="https://alan.app/docs/client-api/ios/ios-api/"/>
+    <script type="text/javascript" src= "https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-QTCQV2T397"></script>
+        <script>
+        	window.dataLayer = window.dataLayer || [];
+        	function gtag(){dataLayer.push(arguments);}
+        	gtag('js', new Date());
+		
+        	gtag('config', window.location.hostname === "alan.app" ? 'G-QTCQV2T397' : 'G-H4F9QS7RMX');
+	</script>
+</head>
+  <body dir="">
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z"/>
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="-5 -3 24 24"
+      stroke="currentColor"
+      class="feather feather-chevron-right">
+      <path d="M11 9l-6 5.25V3.75z"></path>
+    </svg>
+  </symbol>
+</svg>
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="../../../_static/favicon.ico">
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+	<link rel="canonical" href="https://alan.app/docs/client-api/ios/ios-api/"/>
+    <script type="text/javascript" src= "https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-QTCQV2T397"></script>
+        <script>
+        	window.dataLayer = window.dataLayer || [];
+        	function gtag(){dataLayer.push(arguments);}
+        	gtag('js', new Date());
+		
+        	gtag('config', window.location.hostname === "alan.app" ? 'G-QTCQV2T397' : 'G-H4F9QS7RMX');
+	</script>
+
+
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+
+<div class="header-new">
+<div class="header-content">
+		<div class="logo-part">
+			<div class="logo"> 
+			
+             <div class="sidebar-logo-container">
+				<div class="alan-logo"><a href="https://alan.app"><img class="sidebar-logo" src="../../../_static/alan-logo.svg" alt="Logo"/></a></div>
+				<div class="docs">
+					
+					<a href="../../../"> 
+					
+					</div>
+				</div>
+			
+			</div>
+			
+			
+			</a>
+		</div>
+        
+		
+		<div class="right-block">
+		
+		<!-- First Dropdown -->
+		<div class="dropdown" id="version">
+			<button class="dropbtn">4.2</button>
+			<div class="dropdown-content">
+				<a href="javascript:void(0);">4.2</a>
+				<a href="javascript:void(0);">3.x</a>
+			</div>
+		</div>
+
+		<!-- Second Dropdown -->
+		<div class="dropdown" id="platform">
+			<button class="dropbtn">Framework/language</button>
+			<div class="dropdown-content">
+				<a href="javascript:void(0);">Web (React, Angular, etc.)</a>
+				<a href="javascript:void(0);">Objective-C</a>
+				<a href="javascript:void(0);">Swift</a>
+				<a href="javascript:void(0);">Kotlin</a>
+				<a href="javascript:void(0);">Java</a>
+				<a href="javascript:void(0);">Flutter</a>
+				<a href="javascript:void(0);">Ionic</a>
+				<a href="javascript:void(0);">React Native</a>
+
+			</div>
+		</div>
+		
+		
+		<div class="goto"><a class="docs-tooltip-link" target="_blank"></a>
+		<span class="docs-tooltip">Go to docs</span>
+		</div>
+		
+		<div class="search-box">   
+			<form class="sidebar-search-container" >
+				<input class="sidebar-search" placeholder=Search name="q" ={sendRequestDebounce}>
+				<input type="hidden" name="check_keywords" value="yes">
+				<input type="hidden" name="area" value="default">
+			</form>
+			
+			
+		</div>
+		<div class="social">
+			<a href="https://alanaigroup.slack.com/join/shared_invite/enQtNzMzOTE5MTIwMjg4LWI4ZmM4MTNkMTdmY2M0ZWEwODlmZDQ5Y2ZkMjUzNmMyZDJiMzA0Y2M1NDdhYzZjYWFlZTA5NjM4OTU0MWFmNWU#/shared-invite/email" target="_blank" class="fa-brands fa-slack fa-lg"></a>
+			<a href="https://github.com/alan-ai" target="_blank" class="fa-brands fa-github fa-lg"></a>
+        </div>
+		</div>
+		</div>
+	<div class="version-note"><p>You are viewing the documentation for an earlier version of the Alan AI Platform.</p></div>		
+    </div>
+
+	  
+		
+		
+	
+	</div>
+<div class="page">
+  
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <div class="logo-part">
+			<div class="logo"> 
+			
+             <div class="sidebar-logo-container">
+				<a href="https://alan.app"><img class="sidebar-logo" src="../../../_static/alan-logo.svg" alt="Logo"/></a>
+			</div>
+			
+			</div>
+			
+			<div class="docs">
+			
+			<a href="../../../"> 
+			
+			</div>
+			</a>
+		</div>
+    </div>
+    <div class="header-right">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="../../../contents/">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../../../_static/alan-logo.svg" alt="Logo"/>
+  </div>
+  
+  
+</a><form class="sidebar-search-container">
+  <input class="sidebar-search search-mobile" placeholder=Search name="q">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../">Get started</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../usage/how-works/about/">How Alan AI works</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/how-works/basics/">Alan AI basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/how-works/infrastructure/">Alan AI infrastructure</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../usage/how-works/deployment/">Deployment options</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label for="toctree-checkbox-2"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/how-works/cloud-deployment/">Cloud deployment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/how-works/hybrid-deployment/">Hybrid deployment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/how-works/on-premises-deployment/">On-premises deployment</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/how-works/voice-processing/">Voice processing</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../usage/guides/studio/">Alan AI Studio</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label for="toctree-checkbox-3"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/guides/projects/">Alan AI projects</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../usage/guides/scripts/">Dialog scripts</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label for="toctree-checkbox-4"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/guides/managing-scripts/">Managing scripts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/guides/importing-scripts/">Exporting and importing scripts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/guides/sharing-github/">Sharing and keeping scripts in GitHub</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/guides/using-shortcuts/">Using shortcuts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/guides/changing-theme/">Changing the theme and font size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/guides/viewing-flowchart/">Viewing the script flowchart</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/guides/versioning/">Versions and environments</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../usage/guides/script-testing/">Testing and debugging</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label for="toctree-checkbox-5"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/guides/debugging-chat/">Debugging Chat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/guides/studio-test-tools/">Tools to simulate in-app behavior</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/guides/test-view/">Test View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/guides/logs/">Alan AI Studio logs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/guides/in-app-testing/">In-app testing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/guides/playground/">Alan AI Playground</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../usage/guides/analytics/">Conversational analytics</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label for="toctree-checkbox-6"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/guides/dashboard/">Projects dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/guides/analytics-view/">Analytics View</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/guides/billing/">Billing and subscriptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/guides/plugin/">Alan AI Plugin</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../usage/button/overview/">Alan AI assistant</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label for="toctree-checkbox-7"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/button/customization/">Customizing the AI assistant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/button/chat/">Enabling the Alan AI Chat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/button/cohorts/">Setting up cohorts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/button/activation/">Starting and stopping dialog sessions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usage/additional/supported-platforms/">Supported platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usage/additional/library/">Alan AI resource library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../release-notes/updates/">Recent Alan AI Platform updates</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Server API</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../server-api/script-concepts/">Dialog script concepts</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label for="toctree-checkbox-8"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../server-api/commands-and-responses/">Requests and responses</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label for="toctree-checkbox-9"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../server-api/intent-matching/">Intent matching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../server-api/voice-settings/">Voice settings</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/patterns/">Patterns</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../server-api/slots/">Slots</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label for="toctree-checkbox-10"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../server-api/user-defined-slots/">User-defined slots (static)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../server-api/dynamic-slots/">Dynamic slots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../server-api/regex-slots/">Regex slots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../server-api/predefined-slots/">Predefined slots</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/contexts/">Contexts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/objects/">Predefined script objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/built-in-javascript-libraries/">Built-in JavaScript libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/error-handling/">Error handling and re-prompts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/lifecycle/">Lifecycle callbacks</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../server-api/sending-data/communication/">Sending data from the app</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label for="toctree-checkbox-11"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/sending-data/authdata/">authData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/sending-data/visual-state/">Visual state</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/sending-data/project-api/">Project API</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../server-api/user-data/overview/">User data</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label for="toctree-checkbox-12"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/user-data/events/">User events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/user-data/client-object/">Client object</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../server-api/qna/">Question answering</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../server-api/widgets/">UI widgets</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label for="toctree-checkbox-13"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/chat-cards/">Chat cards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/chat-buttons/">Chat buttons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/popups/">Alan AI button popups</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../server-api/api/api-reference/">API reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Integration</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../integration/">Integration overview</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../web/web-api/">Web frameworks</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label for="toctree-checkbox-14"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../web/react/">React</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../web/angular/">Angular</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../web/vue/">Vue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../web/ember/">Ember</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../web/vanilla/">JavaScript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../web/electron/">Electron</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../web/web-component/">Cross-platform solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../web/server-side-rendering/">Server-side rendering</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">iOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../android/android-api/">Android</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../cross-platform/overview/">Cross-platform frameworks</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label for="toctree-checkbox-15"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../cross-platform/flutter/">Flutter</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../cross-platform/ionic/">Ionic</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label for="toctree-checkbox-16"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../cross-platform/ionic-react/">Ionic React</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cross-platform/ionic-angular/">Ionic Angular</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cross-platform/ionic-vue/">Ionic Vue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cross-platform/ionic-capacitor/">iOS and Android deployment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cross-platform/ionic-communicating/">Communication between components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cross-platform/ionic-troubleshooting/">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../cross-platform/react-native/">React Native</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cross-platform/cordova/">Apache Cordova</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Alan AI SDK toolkit</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../methods/common-api/">Client API methods</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../methods/handlers/">Alan AI handlers</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label for="toctree-checkbox-17"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../methods/command-handler/">onCommand handler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../methods/state-handler/">onButtonState handler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../methods/connection-handler/">onConnectionStatus handler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../methods/event-handler/">onEvent handler</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Samples &amp; Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials/how-tos/">How-tos</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../tutorials/list-all/">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label for="toctree-checkbox-18"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tutorials/list/chat-list/">Alan AI Chat</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label for="toctree-checkbox-19"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/list/building-ai-chat/">Create an AI chat for a website</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/list/adding-greeting/">Add a greeting to the AI chat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/list/using-buttons/">Use buttons in the AI chat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/list/collecting-data-chat/">Collect data with the AI chat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/list/sending-emails/">Send emails from the AI chat</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tutorials/list/web-list/">Web</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label for="toctree-checkbox-20"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/list/adding-voice-to-a-web-application/">Building a voice assistant for web</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../tutorials/list/food-delivery-tutorial/">Creating a voice-enabled food delivery app: complete tutorial</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label for="toctree-checkbox-21"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-create-app/">Step 1: Create a web app</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-create-voice-assistant/">Step 2: Create a voice assistant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-integrate/">Step 3: Integrate Alan AI with the app</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-add-command/">Step 4: Add a voice command</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-alternatives/">Step 5: Specify options and alternatives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-slots/">Step 6: Pick out important data with slots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-several-items/">Step 7: Add several items</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-display-items/">Step 8: Send a command to display items in the cart</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-slot-labels/">Step 9: Use slot labels to display the order</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-remove-items/">Step 10: Remove items with voice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-highlight-items/">Step 11: Highlight named items</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-checkout-context/">Step 12: Add the checkout context</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-time/">Step 13: Get the delivery time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-comment/">Step 14: Capture a comment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-populate-fields/">Step 15: Populate fields with the delivery details</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-api-call/">Step 16: Make an API call to get ingredients</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-visual-context/">Step 17: Get the app visual context</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-balance/">Step 18: Get the balance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-start-dialog/">Step 19: Let Alan start the dialog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-popup/">Step 20: Show a popup next to the Alan button</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/list/using-dynamic-slots/">Using dynamic slots in patterns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/list/making-web-api-call/">Making a Web API call from the dialog script</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tutorials/web/frameworks-list/">Web frameworks</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label for="toctree-checkbox-22"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/web/integrating-react-app/">Building a voice assistant for a React app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/web/integrating-angular-app/">Building a voice assistant for an Angular app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/web/integrating-vue-app/">Building a voice assistant for a Vue app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/web/integrating-ember-app/">Building a voice assistant for an Ember app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/web/integrating-electron-app/">Building a voice assistant for an Electron app</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tutorials/ios/ios-list/">iOS</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/><label for="toctree-checkbox-23"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/ios/integrating-swift/">Building a voice assistant for an iOS app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/ios/navigating-swift/">Navigating between views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/ios/sending-data-swift/">Passing the app state to the dialog script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/ios/highlighting-swift/">Highlighing items with voice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/ios/triggering-info-swift/">Triggering dialog script actions without commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/ios/greeting-swift/">Playing a greeting in an app</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tutorials/android/android-list/">Android</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/><label for="toctree-checkbox-24"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/android/integrating-java-kotlin/">Building a voice assistant for an Android Java or Kotlin app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/android/navigating-kotlin/">Navigating in an Android app with voice (Kotlin)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/android/sending-state-kotlin/">Passing the app state to the dialog script (Kotlin)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/android/sending-data-kotlin/">Sending data from the app to the dialog script (Kotlin)</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tutorials/flutter/flutter-list/">Flutter</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label for="toctree-checkbox-25"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/flutter/integrating-flutter/">Building a voice assistant for a Flutter app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/flutter/navigating-flutter/">Navigating between screens</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/flutter/sending-data-flutter/">Passing the app state to the dialog script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/flutter/project-api-flutter/">Sending data to the dialog script</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tutorials/ionic/ionic-list/">Ionic</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/><label for="toctree-checkbox-26"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/ionic/integrating-angular/">Building a voice assistant for an Ionic Angular app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/ionic/navigating-angular/">Navigating between tabs (Ionic Angular)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/ionic/sending-data-angular/">Passing the app state to the dialog script (Ionic Angular)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/ionic/integrating-react/">Building a voice assistant for an Ionic React app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/ionic/navigating-react/">Navigating between tabs (Ionic React)</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tutorials/react-native/react-native-list/">React Native</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/><label for="toctree-checkbox-27"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/react-native/integrating-react-native/">Building a voice assistant for a React Native app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/react-native/sending-commands-react-native/">Sending commands to the app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/react-native/sending-state-react-native/">Passing the app state to the dialog script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/react-native/triggering-activities-react-native/">Triggering activities without voice commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/react-native/navigating-react-native/">Navigating between screens with voice</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../usage/examples/github/">App showcase</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/><label for="toctree-checkbox-28"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/examples/appointment-app/">Appointment scheduling app (React)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/examples/shrine-app/">Shrine e-commerce app (Flutter)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/examples/food-delivery-ionic/">Food delivery app (Ionic)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/examples/order-drinks-app/">Order drinks app (Angular)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usage/additional/faq/">FAQ</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../usage/examples/overview/">Alan AI examples</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" type="checkbox"/><label for="toctree-checkbox-29"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/examples/predefined-examples/">Dialog script examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/examples/code/">Integration code examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../usage/additional/guidelines/overview/">Multimodal conversations design guide</a><input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" type="checkbox"/><label for="toctree-checkbox-30"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/additional/guidelines/planning/">Planning and drafting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/additional/guidelines/building/">Building the dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/additional/guidelines/testing/">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/additional/guidelines/publishing/">Preparing for rollout and releasing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/additional/guidelines/analyzing/">Analyzing users' behavior</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usage/additional/cheatsheet/">Alan AI cheat sheet</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <main class="main">
+    <div class="content">
+      <article role="main">
+        <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+        </label>
+        <div class="section" id="alan-ai-ios-sdk">
+<h1>Alan AI iOS SDK<a class="headerlink" href="#alan-ai-ios-sdk" title="Permalink to this headline">¶</a></h1>
+<a href="https://github.com/alan-ai/alan-sdk-ios/releases">
+<img align="left" src="https://img.shields.io/github/v/release/alan-ai/alan-sdk-ios"/></a>
+<br/><p>Alan AI can be integrated with iOS apps developed in Swift and Objective-C.</p>
+<div class="section" id="integrating-with-alan-ai">
+<h2>Integrating with Alan AI<a class="headerlink" href="#integrating-with-alan-ai" title="Permalink to this headline">¶</a></h2>
+<p>To add a conversational experience to an iOS app, you need to do the following:</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="#step-1-get-the-alan-ios-sdk-framework">Get the Alan iOS SDK framework</a></p></li>
+<li><p><a class="reference external" href="#step-2-integrate-with-the-app">Integrate with the app</a>: Swift or Objective-C. As part of this process, you will:</p>
+<ol class="loweralpha simple">
+<li><p><a class="reference external" href="#alanconfig-object">Add the Alan AI Config object to your app</a></p></li>
+<li><p><a class="reference external" href="#alan-button">Add the Alan AI button to your app</a></p></li>
+</ol>
+</li>
+</ol>
+<div class="section" id="step-1-get-the-alan-ai-ios-sdk-framework">
+<h3>Step 1. Get the Alan AI iOS SDK framework<a class="headerlink" href="#step-1-get-the-alan-ai-ios-sdk-framework" title="Permalink to this headline">¶</a></h3>
+<p>First, you need to get the Alan AI iOS SDK framework and set up your XCode project to be used with Alan AI. You can do it in two ways:</p>
+<ul class="simple">
+<li><p>Set up an XCode project with CocoaPods</p></li>
+<li><p>Set up an XCode project manually</p></li>
+</ul>
+<div class="tabbed-set docutils">
+<input checked="checked" id="bc19b6a7-e9e2-4516-8636-8f0e5ca735dc" name="6f291d0e-34d5-4435-b597-d7c7b38be637" type="radio"/>
+<label class="tabbed-label" for="bc19b6a7-e9e2-4516-8636-8f0e5ca735dc">
+Setup with CocoaPods</label><div class="tabbed-content docutils">
+<p id="setup-with-cocoapods">Do the following:</p>
+<ol class="arabic">
+<li><p>On the machine, open Terminal and install CocoaPods:</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Terminal</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">cocoapods</span>
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>Go to the project folder and create a Podfile for the project:</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Terminal</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pod</span> <span class="n">init</span>
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>Open the Podfile and edit it:</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">Podfile</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="n">use_frameworks!</span>
+<span class="n">platform</span><span class="w"> </span><span class="ss">:ios</span><span class="p">,</span><span class="w"> </span><span class="s1">'11.0'</span>
+<span class="n">target</span><span class="w"> </span><span class="s1">'&lt;Your Target Name&gt;'</span><span class="w"> </span><span class="k">do</span>
+<span class="n">pod</span><span class="w"> </span><span class="s1">'AlanSDK-iOS'</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>In the project folder, install the dependencies for the project:</p>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">Terminal</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pod</span> <span class="n">install</span>
+<span class="n">pod</span> <span class="n">update</span>
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>In iOS, the user must explicitly grant permission for an app to <a class="reference external" href="https://developer.apple.com/documentation/bundleresources/information_property_list/protected_resources">access the user’s data and resources</a>. An app with the Alan AI button requires access to:</p>
+<ul class="simple">
+<li><p>User’s device microphone for voice interactions</p></li>
+<li><p>User’s device camera for testing Alan AI projects on mobile</p></li>
+</ul>
+<p>To comply with this requirement, you must add <code class="docutils literal notranslate"><span class="pre">NSMicrophoneUsageDescription</span></code> and <code class="docutils literal notranslate"><span class="pre">NSCameraUsageDescription</span></code> keys to the <code class="docutils literal notranslate"><span class="pre">Info.plist</span></code> file of your app and provide a message why your app requires access to the microphone and camera. The message will be displayed only when Alan AI needs to activate the microphone or camera.</p>
+<p>To add the key:</p>
+<ol class="loweralpha simple">
+<li><p>In the Xcode project, go to the <strong>Info</strong> tab.</p></li>
+<li><p>In the <strong>Custom iOS Target Properties</strong> section, hover over any key in the list and click the plus icon to the right.</p></li>
+<li><p>From the list, select <strong>Privacy - Microphone Usage Description</strong>.</p></li>
+<li><p>In the <strong>Value</strong> field to the right, provide a description for the added key. This description will be displayed to the user when the app is launched.</p></li>
+<li><p>Repeat the steps above to add the <strong>Privacy - Camera Usage Description</strong> key.</p></li>
+</ol>
+<img alt="../../../_images/pods-mic.png" src="../../../_images/pods-mic.png"/>
+</li>
+<li><p>To allow the background mode for the iOS app, go to the <strong>Signing and Capabilities</strong> tab. In the top left corner, click <strong>+ Capability</strong> and in the capabilities list, double-click <strong>Background Modes</strong>. In the <strong>Modes</strong> list, select the <strong>Audio, AirPlay, and Picture in Picture</strong> check box.</p>
+<img alt="../../../_images/pods-background.png" src="../../../_images/pods-background.png"/>
+</li>
+<li><p>The background mode must also be turned on in the Alan AI Studio project. In Alan AI Studio, at the top of the code editor, click <strong>Integrations</strong>, go to the iOS tab and enable the <strong>Keep active while the app is in the background</strong> option.</p></li>
+</ol>
+</div>
+<input id="2917d5d8-15a4-4c30-8a80-2e5e05be9952" name="6f291d0e-34d5-4435-b597-d7c7b38be637" type="radio"/>
+<label class="tabbed-label" for="2917d5d8-15a4-4c30-8a80-2e5e05be9952">
+Manual setup</label><div class="tabbed-content docutils">
+<p id="manual-setup">Do the following:</p>
+<ol class="arabic simple">
+<li><p>Open the Alan AI iOS SDK release page on Alan AI GitHub.</p></li>
+<li><p>Download the <code class="docutils literal notranslate"><span class="pre">AlanSDK.xcframework_&lt;x.x.x&gt;.zip</span></code> file from the latest release and extract <code class="docutils literal notranslate"><span class="pre">AlanSDK.xcframework</span></code> from the ZIP archive.</p></li>
+</ol>
+<img alt="../../../_images/download.png" src="../../../_images/download.png"/>
+<ol class="arabic" start="3">
+<li><p>Drag <code class="docutils literal notranslate"><span class="pre">AlanSDK.xcframework</span></code> and drop it onto the root node of the Xcode project.</p></li>
+<li><p>Select the <strong>Copy items if needed</strong> check box if it is not selected.</p>
+<img alt="../../../_images/copy-2.png" src="../../../_images/copy-2.png"/>
+</li>
+<li><p>In the project tree, select the XCode project file and go to the <strong>General</strong> tab. Under the <strong>Frameworks, Libraries, and Embedded Content</strong> section, find <code class="docutils literal notranslate"><span class="pre">AlanSDK.xcframework</span></code> and select <strong>Embed &amp; Sign</strong> from the list.</p>
+<img alt="../../../_images/embedded.png" src="../../../_images/embedded.png"/>
+</li>
+<li><p>In iOS, the user must explicitly grant permission for an app to <a class="reference external" href="https://developer.apple.com/design/human-interface-guidelines/ios/app-architecture/accessing-user-data/">access the user’s data and resources</a>. An app with the Alan AI button requires access to:</p>
+<ul class="simple">
+<li><p>User’s device microphone for voice interactions</p></li>
+<li><p>User’s device camera for testing Alan AI projects on mobile</p></li>
+</ul>
+<p>To comply with this requirement, you must add <code class="docutils literal notranslate"><span class="pre">NSMicrophoneUsageDescription</span></code> and <code class="docutils literal notranslate"><span class="pre">NSCameraUsageDescription</span></code> keys to the <code class="docutils literal notranslate"><span class="pre">Info.plist</span></code> file of your app and provide a message why your app requires access to the microphone and camera. The message will be displayed only when Alan AI needs to activate the microphone or camera.
+To add the key:</p>
+<ol class="loweralpha simple">
+<li><p>In the Xcode project, go to the <strong>Info</strong> tab.</p></li>
+<li><p>In the <strong>Custom iOS Target Properties</strong> section, hover over any key in the list and click the plus icon to the right.</p></li>
+<li><p>From the list, select <strong>Privacy - Microphone Usage Description</strong>.</p></li>
+<li><p>In the <strong>Value</strong> field to the right, provide a description for the added key. This description will be displayed to the user when the app is launched.</p></li>
+<li><p>Repeat the steps above to add the <strong>Privacy - Camera Usage Description</strong> key.</p></li>
+</ol>
+<img alt="../../../_images/mic.png" src="../../../_images/mic.png"/>
+</li>
+<li><p>To allow the background mode for the iOS app, go to the <strong>Signing and Capabilities</strong> tab. In the top left corner, click <strong>+Capability</strong> and in the capabilities list, double-click <strong>Background Modes</strong>. In the <strong>Modes</strong> list, select the <strong>Audio, AirPlay, and Picture in Picture</strong> check box.</p>
+<img alt="../../../_images/background.png" src="../../../_images/background.png"/>
+</li>
+<li><p>The background mode must also be turned on in the Alan AI Studio project. In Alan AI Studio, at the top of the code editor, click <strong>Integrations</strong>, go to the iOS tab and enable the <strong>Keep active while the app is in the background</strong> option.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="section" id="step-2-integrate-with-the-app">
+<h3>Step 2. Integrate with the app<a class="headerlink" href="#step-2-integrate-with-the-app" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The instructions below apply to the Storyboard user interface.</p>
+</div>
+<p>You need to integrate Alan AI with your app written in:</p>
+<ul class="simple">
+<li><p>Swift</p></li>
+<li><p>Objective-C</p></li>
+</ul>
+<div class="tabbed-set docutils">
+<input checked="checked" id="1712f84a-b847-4247-ad0b-ff9dbe557bcd" name="6cd89f9b-5632-4e82-9719-47b891fd08e4" type="radio"/>
+<label class="tabbed-label" for="1712f84a-b847-4247-ad0b-ff9dbe557bcd">
+Swift</label><div class="tabbed-content docutils">
+<p>In the Xcode project, open the <code class="docutils literal notranslate"><span class="pre">ViewController.swift</span></code> file. You need to add the following Swift snippet to your view controller:</p>
+<ol class="arabic">
+<li><p>At the top of the file, import AlanSDK:</p>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">import</span> <span class="nc">AlanSDK</span>
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">ViewController</span></code> class, define the <code class="docutils literal notranslate"><span class="pre">AlanButton</span></code> variable:</p>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="n">fileprivate</span> <span class="kd">var</span> <span class="nv">button</span><span class="p">:</span> <span class="n">AlanButton</span><span class="p">!</span>
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>In <code class="docutils literal notranslate"><span class="pre">viewDidLoad()</span></code>, set up <code class="docutils literal notranslate"><span class="pre">AlanButton</span></code>. For more details, see <a class="reference external" href="#alanconfig-object">Alan AI Config object</a> and <a class="reference external" href="#alan-button">Alan AI button</a>.</p>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">import</span> <span class="nc">UIKit</span>
+<span class="kd">import</span> <span class="nc">AlanSDK</span>
+
+<span class="kd">class</span> <span class="nc">ViewController</span><span class="p">:</span> <span class="bp">UIViewController</span> <span class="p">{</span>
+
+  <span class="c1">/// Alan AI button</span>
+  <span class="n">fileprivate</span> <span class="kd">var</span> <span class="nv">button</span><span class="p">:</span> <span class="n">AlanButton</span><span class="p">!</span>
+  <span class="kr">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kc">super</span><span class="p">.</span><span class="n">viewDidLoad</span><span class="p">()</span>
+
+    <span class="c1">/// Setup the Alan AI button</span>
+    <span class="kc">self</span><span class="p">.</span><span class="n">setupAlan</span><span class="p">()</span>
+  <span class="p">}</span>
+
+  <span class="n">fileprivate</span> <span class="kd">func</span> <span class="nf">setupAlan</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="c1">/// Define the project key</span>
+    <span class="kd">let</span> <span class="nv">config</span> <span class="p">=</span> <span class="n">AlanConfig</span><span class="p">(</span><span class="n">key</span><span class="p">:</span> <span class="s">""</span><span class="p">)</span>
+
+    <span class="c1">///  Init the Alan AI button</span>
+    <span class="kc">self</span><span class="p">.</span><span class="n">button</span> <span class="p">=</span> <span class="n">AlanButton</span><span class="p">(</span><span class="n">config</span><span class="p">:</span> <span class="n">config</span><span class="p">)</span>
+
+    <span class="c1">/// Add the button to the view</span>
+    <span class="kc">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">addSubview</span><span class="p">(</span><span class="kc">self</span><span class="p">.</span><span class="n">button</span><span class="p">)</span>
+    <span class="kc">self</span><span class="p">.</span><span class="n">button</span><span class="p">.</span><span class="n">translatesAutoresizingMaskIntoConstraints</span> <span class="p">=</span> <span class="kc">false</span>
+
+    <span class="c1">/// Align the button on the view</span>
+    <span class="kd">let</span> <span class="nv">views</span> <span class="p">=</span> <span class="p">[</span><span class="s">"button"</span> <span class="p">:</span> <span class="kc">self</span><span class="p">.</span><span class="n">button</span><span class="p">!]</span>
+    <span class="kd">let</span> <span class="nv">verticalButton</span> <span class="p">=</span> <span class="bp">NSLayoutConstraint</span><span class="p">.</span><span class="n">constraints</span><span class="p">(</span><span class="n">withVisualFormat</span><span class="p">:</span> <span class="s">"V:|-(&gt;=0@299)-[button(64)]-40-|"</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="bp">NSLayoutConstraint</span><span class="p">.</span><span class="n">FormatOptions</span><span class="p">(),</span> <span class="n">metrics</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">views</span><span class="p">:</span> <span class="n">views</span><span class="p">)</span>
+    <span class="kd">let</span> <span class="nv">horizontalButton</span> <span class="p">=</span> <span class="bp">NSLayoutConstraint</span><span class="p">.</span><span class="n">constraints</span><span class="p">(</span><span class="n">withVisualFormat</span><span class="p">:</span> <span class="s">"H:|-(&gt;=0@299)-[button(64)]-20-|"</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="bp">NSLayoutConstraint</span><span class="p">.</span><span class="n">FormatOptions</span><span class="p">(),</span> <span class="n">metrics</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">views</span><span class="p">:</span> <span class="n">views</span><span class="p">)</span>
+    <span class="kc">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">addConstraints</span><span class="p">(</span><span class="n">verticalButton</span> <span class="o">+</span> <span class="n">horizontalButton</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>In <code class="docutils literal notranslate"><span class="pre">let</span> <span class="pre">config</span> <span class="pre">=</span> <span class="pre">AlanConfig(key:</span> <span class="pre">"")</span></code>, define the Alan AI SDK key for your Alan AI Studio project. To get the key, in Alan AI Studio, at the top of the code editor, click <strong>Integrations</strong> and copy the value from the <strong>Alan SDK Key</strong> field.</p></li>
+<li><p>Run the app and tap the Alan AI button to speak.</p></li>
+</ol>
+</div>
+<input id="000aef0f-c959-48f9-95dc-2e36f6df71e5" name="6cd89f9b-5632-4e82-9719-47b891fd08e4" type="radio"/>
+<label class="tabbed-label" for="000aef0f-c959-48f9-95dc-2e36f6df71e5">
+Objective-C</label><div class="tabbed-content docutils">
+<p>Add this Objective-C snippet to your view controller.</p>
+<ol class="arabic">
+<li><p>Import AlanSDK:</p>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="k">@import</span><span class="w"> </span><span class="n">AlanSDK</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>Define the <code class="docutils literal notranslate"><span class="pre">AlanButton</span></code> variable:</p>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id9" title="Permalink to this code">¶</a></div>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="k">@property</span><span class="w"> </span><span class="p">(</span><span class="k">nonatomic</span><span class="p">)</span><span class="w"> </span><span class="n">AlanButton</span><span class="o">*</span><span class="w"> </span><span class="n">button</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>In <code class="docutils literal notranslate"><span class="pre">viewDidLoad</span></code>, set up <code class="docutils literal notranslate"><span class="pre">AlanButton</span></code>. For more details, see <a class="reference external" href="#alanconfig-object">Alan AI Config object</a> and <a class="reference external" href="#alan-button">Alan AI button</a>.</p>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id10" title="Permalink to this code">¶</a></div>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="n">AlanConfig</span><span class="o">*</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[</span><span class="n">AlanConfig</span><span class="w"> </span><span class="n">alloc</span><span class="p">]</span><span class="w"> </span><span class="n">initWithKey</span><span class="o">:</span><span class="s">@"YOUR_KEY_FROM_ALAN_STUDIO_HERE"</span><span class="p">];</span>
+<span class="nb">self</span><span class="p">.</span><span class="n">button</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[</span><span class="n">AlanButton</span><span class="w"> </span><span class="n">alloc</span><span class="p">]</span><span class="w"> </span><span class="n">initWithConfig</span><span class="o">:</span><span class="n">config</span><span class="p">];</span>
+<span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">button</span><span class="w"> </span><span class="n">setTranslatesAutoresizingMaskIntoConstraints</span><span class="o">:</span><span class="nb">NO</span><span class="p">];</span>
+<span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">view</span><span class="w"> </span><span class="n">addSubview</span><span class="o">:</span><span class="nb">self</span><span class="p">.</span><span class="n">button</span><span class="p">];</span>
+<span class="bp">NSLayoutConstraint</span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="bp">NSLayoutConstraint</span><span class="w"> </span><span class="n">constraintWithItem</span><span class="o">:</span><span class="nb">self</span><span class="p">.</span><span class="n">button</span><span class="w"> </span><span class="n">attribute</span><span class="o">:</span><span class="n">NSLayoutAttributeBottom</span><span class="w"> </span><span class="n">relatedBy</span><span class="o">:</span><span class="n">NSLayoutRelationEqual</span><span class="w"> </span><span class="n">toItem</span><span class="o">:</span><span class="nb">self</span><span class="p">.</span><span class="n">view</span><span class="w"> </span><span class="n">attribute</span><span class="o">:</span><span class="n">NSLayoutAttributeBottom</span><span class="w"> </span><span class="n">multiplier</span><span class="o">:</span><span class="mi">1</span><span class="w"> </span><span class="n">constant</span><span class="o">:</span><span class="mf">-40.0</span><span class="p">];</span>
+<span class="bp">NSLayoutConstraint</span><span class="o">*</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="bp">NSLayoutConstraint</span><span class="w"> </span><span class="n">constraintWithItem</span><span class="o">:</span><span class="nb">self</span><span class="p">.</span><span class="n">button</span><span class="w"> </span><span class="n">attribute</span><span class="o">:</span><span class="n">NSLayoutAttributeRight</span><span class="w"> </span><span class="n">relatedBy</span><span class="o">:</span><span class="n">NSLayoutRelationEqual</span><span class="w"> </span><span class="n">toItem</span><span class="o">:</span><span class="nb">self</span><span class="p">.</span><span class="n">view</span><span class="w"> </span><span class="n">attribute</span><span class="o">:</span><span class="n">NSLayoutAttributeRight</span><span class="w"> </span><span class="n">multiplier</span><span class="o">:</span><span class="mi">1</span><span class="w"> </span><span class="n">constant</span><span class="o">:</span><span class="mi">-20</span><span class="p">];</span>
+<span class="bp">NSLayoutConstraint</span><span class="o">*</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="bp">NSLayoutConstraint</span><span class="w"> </span><span class="n">constraintWithItem</span><span class="o">:</span><span class="nb">self</span><span class="p">.</span><span class="n">button</span><span class="w"> </span><span class="n">attribute</span><span class="o">:</span><span class="n">NSLayoutAttributeWidth</span><span class="w"> </span><span class="n">relatedBy</span><span class="o">:</span><span class="n">NSLayoutRelationEqual</span><span class="w"> </span><span class="n">toItem</span><span class="o">:</span><span class="nb">nil</span><span class="w"> </span><span class="n">attribute</span><span class="o">:</span><span class="n">NSLayoutAttributeNotAnAttribute</span><span class="w"> </span><span class="n">multiplier</span><span class="o">:</span><span class="mi">1</span><span class="w"> </span><span class="n">constant</span><span class="o">:</span><span class="mf">64.0</span><span class="p">];</span>
+<span class="bp">NSLayoutConstraint</span><span class="o">*</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="bp">NSLayoutConstraint</span><span class="w"> </span><span class="n">constraintWithItem</span><span class="o">:</span><span class="nb">self</span><span class="p">.</span><span class="n">button</span><span class="w"> </span><span class="n">attribute</span><span class="o">:</span><span class="n">NSLayoutAttributeHeight</span><span class="w"> </span><span class="n">relatedBy</span><span class="o">:</span><span class="n">NSLayoutRelationEqual</span><span class="w"> </span><span class="n">toItem</span><span class="o">:</span><span class="nb">nil</span><span class="w"> </span><span class="n">attribute</span><span class="o">:</span><span class="n">NSLayoutAttributeNotAnAttribute</span><span class="w"> </span><span class="n">multiplier</span><span class="o">:</span><span class="mi">1</span><span class="w"> </span><span class="n">constant</span><span class="o">:</span><span class="mf">64.0</span><span class="p">];</span>
+<span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">view</span><span class="w"> </span><span class="n">addConstraints</span><span class="o">:</span><span class="l">@[</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="l">]</span><span class="p">];</span>
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>Run the app and tap the Alan AI button to speak.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="alanconfig-object">
+<h4>AlanConfig object<a class="headerlink" href="#alanconfig-object" title="Permalink to this headline">¶</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">AlanConfig</span></code> object describes the parameters that are provided for <code class="docutils literal notranslate"><span class="pre">AlanButton</span></code>.</p>
+<ol class="arabic">
+<li><p>Create a new <code class="docutils literal notranslate"><span class="pre">AlanConfig</span></code> instance with your Alan AI SDK key:</p>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id11" title="Permalink to this code">¶</a></div>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">instancetype</span><span class="p">)</span><span class="nf">initWithKey:</span><span class="p">(</span><span class="bp">NSString</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">key</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 14%"/>
+<col style="width: 14%"/>
+<col style="width: 71%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">key</span></code></p></td>
+<td><p>NSString</p></td>
+<td><p>The Alan AI SDK key for your project in Alan AI Studio.</p></td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li><p>Create a new <code class="docutils literal notranslate"><span class="pre">AlanConfig</span></code> instance with your Alan AI SDK key
+and custom data object:</p>
+<div class="literal-block-wrapper docutils container" id="id12">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id12" title="Permalink to this code">¶</a></div>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">instancetype</span><span class="p">)</span><span class="nf">initWithKey:</span><span class="p">(</span><span class="bp">NSString</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">key</span><span class="w"> </span><span class="nf">dataObject:</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">dataObject</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 8%"/>
+<col style="width: 7%"/>
+<col style="width: 85%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">key</span></code></p></td>
+<td><p>NSString</p></td>
+<td><p>The Alan AI SDK key for a project in Alan AI Studio.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">dataObject</span></code></p></td>
+<td><p>NSDictionary</p></td>
+<td><p>(Optional) A valid JSON string or JSON object with authentication or configuration data to be sent to the dialog script. For details, see <a class="reference internal" href="../../../server-api/sending-data/authdata/"><span class="doc">authData</span></a>.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>For example:</p>
+<div class="literal-block-wrapper docutils container" id="id13">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id13" title="Permalink to this code">¶</a></div>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="n">AlanConfig</span><span class="w"> </span><span class="o">*</span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[</span><span class="n">AlanConfig</span><span class="w"> </span><span class="n">alloc</span><span class="p">]</span><span class="w"> </span><span class="n">initWithKey</span><span class="o">:</span><span class="s">@"YOUR_KEY_FROM_ALAN_STUDIO_HERE"</span><span class="p">];</span>
+</pre></div>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="alan-ai-button">
+<h4>Alan AI button<a class="headerlink" href="#alan-ai-button" title="Permalink to this headline">¶</a></h4>
+<p>To add the Alan AI button to your app, use the <code class="docutils literal notranslate"><span class="pre">AlanButton</span></code> class. This class provides a view with the AI assistant button and instance methods to communicate with Alan AI Studio.</p>
+<p>Сreate a new <code class="docutils literal notranslate"><span class="pre">AlanButton</span></code> instance with the config object:</p>
+<div class="literal-block-wrapper docutils container" id="id14">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id14" title="Permalink to this code">¶</a></div>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">instancetype</span><span class="p">)</span><span class="nf">initWithConfig:</span><span class="p">(</span><span class="n">AlanConfig</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">config</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 15%"/>
+<col style="width: 15%"/>
+<col style="width: 71%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Name</strong></p></th>
+<th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">config</span></code></p></td>
+<td><p>AlanConfig</p></td>
+<td><p>The AlanConfig object for configuration which is described above</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>For example:</p>
+<div class="literal-block-wrapper docutils container" id="id15">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id15" title="Permalink to this code">¶</a></div>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="k">@interface</span> <span class="nc">ViewController</span><span class="w"> </span><span class="p">()</span>
+<span class="k">@property</span><span class="w"> </span><span class="p">(</span><span class="k">nonatomic</span><span class="p">)</span><span class="w"> </span><span class="n">AlanButton</span><span class="w"> </span><span class="o">*</span><span class="n">button</span><span class="p">;</span>
+<span class="k">@end</span>
+
+<span class="k">@implementation</span> <span class="nc">ViewController</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">viewDidLoad</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="p">[</span><span class="nb">super</span><span class="w"> </span><span class="n">viewDidLoad</span><span class="p">];</span>
+<span class="w">  </span><span class="n">AlanConfig</span><span class="w"> </span><span class="o">*</span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[</span><span class="n">AlanConfig</span><span class="w"> </span><span class="n">alloc</span><span class="p">]</span><span class="w"> </span><span class="n">initWithKey</span><span class="o">:</span><span class="s">@"YOUR_KEY_FROM_ALAN_STUDIO_HERE"</span><span class="p">];</span>
+<span class="w">  </span><span class="nb">self</span><span class="p">.</span><span class="n">button</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[</span><span class="n">AlanButton</span><span class="w"> </span><span class="n">alloc</span><span class="p">]</span><span class="w"> </span><span class="n">initWithConfig</span><span class="o">:</span><span class="n">config</span><span class="p">];</span>
+<span class="w">  </span><span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">button</span><span class="w"> </span><span class="n">setTranslatesAutoresizingMaskIntoConstraints</span><span class="o">:</span><span class="nb">NO</span><span class="p">];</span>
+<span class="w">  </span><span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">view</span><span class="w"> </span><span class="n">addSubview</span><span class="o">:</span><span class="nb">self</span><span class="p">.</span><span class="n">button</span><span class="p">];</span>
+
+<span class="w">  </span><span class="bp">NSLayoutConstraint</span><span class="w"> </span><span class="o">*</span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="bp">NSLayoutConstraint</span><span class="w"> </span><span class="n">constraintWithItem</span><span class="o">:</span><span class="nb">self</span><span class="p">.</span><span class="n">button</span><span class="w"> </span><span class="n">attribute</span><span class="o">:</span><span class="n">NSLayoutAttributeRight</span><span class="w"> </span><span class="n">relatedBy</span><span class="o">:</span><span class="n">NSLayoutRelationEqual</span><span class="w"> </span><span class="n">toItem</span><span class="o">:</span><span class="nb">self</span><span class="p">.</span><span class="n">view</span><span class="w"> </span><span class="n">attribute</span><span class="o">:</span><span class="n">NSLayoutAttributeRight</span><span class="w"> </span><span class="n">multiplier</span><span class="o">:</span><span class="mi">1</span><span class="w"> </span><span class="n">constant</span><span class="o">:</span><span class="mf">-20.0</span><span class="p">];</span>
+<span class="w">  </span><span class="bp">NSLayoutConstraint</span><span class="w"> </span><span class="o">*</span><span class="n">bottom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="bp">NSLayoutConstraint</span><span class="w"> </span><span class="n">constraintWithItem</span><span class="o">:</span><span class="nb">self</span><span class="p">.</span><span class="n">button</span><span class="w"> </span><span class="n">attribute</span><span class="o">:</span><span class="n">NSLayoutAttributeBottom</span><span class="w"> </span><span class="n">relatedBy</span><span class="o">:</span><span class="n">NSLayoutRelationEqual</span><span class="w"> </span><span class="n">toItem</span><span class="o">:</span><span class="nb">self</span><span class="p">.</span><span class="n">view</span><span class="w"> </span><span class="n">attribute</span><span class="o">:</span><span class="n">NSLayoutAttributeBottom</span><span class="w"> </span><span class="n">multiplier</span><span class="o">:</span><span class="mi">1</span><span class="w"> </span><span class="n">constant</span><span class="o">:</span><span class="mf">-20.0</span><span class="p">];</span>
+<span class="w">  </span><span class="bp">NSLayoutConstraint</span><span class="w"> </span><span class="o">*</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="bp">NSLayoutConstraint</span><span class="w"> </span><span class="n">constraintWithItem</span><span class="o">:</span><span class="nb">self</span><span class="p">.</span><span class="n">button</span><span class="w"> </span><span class="n">attribute</span><span class="o">:</span><span class="n">NSLayoutAttributeWidth</span><span class="w"> </span><span class="n">relatedBy</span><span class="o">:</span><span class="n">NSLayoutRelationEqual</span><span class="w"> </span><span class="n">toItem</span><span class="o">:</span><span class="nb">nil</span><span class="w"> </span><span class="n">attribute</span><span class="o">:</span><span class="n">NSLayoutAttributeNotAnAttribute</span><span class="w"> </span><span class="n">multiplier</span><span class="o">:</span><span class="mi">1</span><span class="w"> </span><span class="n">constant</span><span class="o">:</span><span class="mf">64.0</span><span class="p">];</span>
+<span class="w">  </span><span class="bp">NSLayoutConstraint</span><span class="w"> </span><span class="o">*</span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="bp">NSLayoutConstraint</span><span class="w"> </span><span class="n">constraintWithItem</span><span class="o">:</span><span class="nb">self</span><span class="p">.</span><span class="n">button</span><span class="w"> </span><span class="n">attribute</span><span class="o">:</span><span class="n">NSLayoutAttributeHeight</span><span class="w"> </span><span class="n">relatedBy</span><span class="o">:</span><span class="n">NSLayoutRelationEqual</span><span class="w"> </span><span class="n">toItem</span><span class="o">:</span><span class="nb">nil</span><span class="w"> </span><span class="n">attribute</span><span class="o">:</span><span class="n">NSLayoutAttributeNotAnAttribute</span><span class="w"> </span><span class="n">multiplier</span><span class="o">:</span><span class="mi">1</span><span class="w"> </span><span class="n">constant</span><span class="o">:</span><span class="mf">64.0</span><span class="p">];</span>
+<span class="w">  </span><span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">view</span><span class="w"> </span><span class="n">addConstraints</span><span class="o">:</span><span class="l">@[</span><span class="n">right</span><span class="p">,</span><span class="w"> </span><span class="n">bottom</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="l">]</span><span class="p">];</span>
+<span class="p">}</span>
+<span class="k">@end</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="using-client-api-methods">
+<h2>Using client API methods<a class="headerlink" href="#using-client-api-methods" title="Permalink to this headline">¶</a></h2>
+<p>You can use the following <a class="reference internal" href="../../methods/common-api/"><span class="doc">client API methods</span></a> in your app:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#setvisualstate">setVisualState()</a></p></li>
+<li><p><a class="reference internal" href="#callprojectapi">callProjectApi()</a></p></li>
+<li><p><a class="reference internal" href="#playtext">playText()</a></p></li>
+<li><p><a class="reference internal" href="#sendtext">sendText()</a></p></li>
+<li><p><a class="reference internal" href="#playcommand">playCommand()</a></p></li>
+<li><p><a class="reference internal" href="#activate">activate()</a></p></li>
+<li><p><a class="reference internal" href="#deactivate">deactivate()</a></p></li>
+<li><p><a class="reference internal" href="#isactive">isActive()</a></p></li>
+<li><p><a class="reference internal" href="#getwakewordenabled">getWakewordEnabled()</a></p></li>
+<li><p><a class="reference internal" href="#setwakewordenabled">setWakewordEnabled()</a></p></li>
+</ul>
+<div class="section" id="setvisualstate">
+<h3>setVisualState()<a class="headerlink" href="#setvisualstate" title="Permalink to this headline">¶</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">setVisualState()</span></code> method to inform the AI assistant about the app’s visual context. For details, see <a class="reference internal" href="../../methods/common-api/#setvisualstate"><span class="std std-ref">setVisualState()</span></a>.</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="65d5a19b-af49-468b-953a-5dc20ede168d" name="18e56ce2-bff8-495f-9d0c-fd93bb2a0ec6" type="radio"/>
+<label class="tabbed-label" for="65d5a19b-af49-468b-953a-5dc20ede168d">
+Objective-C</label><div class="tabbed-content docutils">
+<div class="literal-block-wrapper docutils container" id="id16">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id16" title="Permalink to this code">¶</a></div>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setVisualState</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">/// Providing any params</span>
+<span class="w">  </span><span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">button</span><span class="w"> </span><span class="n">setVisualState</span><span class="o">:</span><span class="l">@{</span><span class="s">@"data"</span><span class="o">:</span><span class="s">@"your data"</span><span class="l">}</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<input id="fe1550f2-a1f9-4cf4-92be-3eaa6c0c28af" name="18e56ce2-bff8-495f-9d0c-fd93bb2a0ec6" type="radio"/>
+<label class="tabbed-label" for="fe1550f2-a1f9-4cf4-92be-3eaa6c0c28af">
+Swift</label><div class="tabbed-content docutils">
+<div class="literal-block-wrapper docutils container" id="id17">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id17" title="Permalink to this code">¶</a></div>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nf">setVisualState</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">/// Providing any params</span>
+  <span class="kc">self</span><span class="p">.</span><span class="n">button</span><span class="p">.</span><span class="n">setVisualState</span><span class="p">([</span><span class="s">"data"</span><span class="p">:</span><span class="s">"your data"</span><span class="p">])</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="callprojectapi">
+<h3>callProjectApi()<a class="headerlink" href="#callprojectapi" title="Permalink to this headline">¶</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">callProjectApi()</span></code> method to send data from the client app to the dialog script and trigger activities without voice and text commands. For details, see <a class="reference internal" href="../../methods/common-api/#callprojectapi"><span class="std std-ref">callProjectApi()</span></a>.</p>
+<div class="literal-block-wrapper docutils container" id="id18">
+<div class="code-block-caption"><span class="caption-text">Dialog script</span><a class="headerlink" href="#id18" title="Permalink to this code">¶</a></div>
+<div class="highlight-alan notranslate"><div class="highlight"><pre><span></span><span class="nv">projectAPI.setClientData = </span><span class="kd">function</span><span class="p">(</span><span class="nx">p</span><span class="p">,</span> <span class="nx">param</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">param</span><span class="p">);</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+<div class="tabbed-set docutils">
+<input checked="checked" id="2f4f84e2-12ca-4848-a001-3577441e0734" name="5f81e512-1be4-4286-afc7-2727e622d03d" type="radio"/>
+<label class="tabbed-label" for="2f4f84e2-12ca-4848-a001-3577441e0734">
+Objective-C</label><div class="tabbed-content docutils">
+<div class="literal-block-wrapper docutils container" id="id19">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id19" title="Permalink to this code">¶</a></div>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">callProjectApi</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">/// Providing any params</span>
+<span class="w">  </span><span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">button</span><span class="w"> </span><span class="n">callProjectApi</span><span class="o">:</span><span class="s">@"script::funcName"</span><span class="w"> </span><span class="n">withData</span><span class="o">:</span><span class="l">@{</span><span class="s">@"data"</span><span class="o">:</span><span class="s">@"your data"</span><span class="l">}</span><span class="w"> </span><span class="n">callback</span><span class="o">:</span><span class="nb">nil</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<input id="4a5fd639-8d14-4f7d-9d97-7e69a64a6d8e" name="5f81e512-1be4-4286-afc7-2727e622d03d" type="radio"/>
+<label class="tabbed-label" for="4a5fd639-8d14-4f7d-9d97-7e69a64a6d8e">
+Swift</label><div class="tabbed-content docutils">
+<div class="literal-block-wrapper docutils container" id="id20">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id20" title="Permalink to this code">¶</a></div>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nf">callProjectApi</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">/// Providing any params</span>
+  <span class="kc">self</span><span class="p">.</span><span class="n">button</span><span class="p">.</span><span class="n">callProjectApi</span><span class="p">(</span><span class="s">"script::funcName"</span><span class="p">,</span> <span class="n">withData</span><span class="p">:</span> <span class="p">[</span><span class="s">"data"</span><span class="p">:</span><span class="s">"your data"</span><span class="p">],</span> <span class="n">callback</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="playtext">
+<h3>playText()<a class="headerlink" href="#playtext" title="Permalink to this headline">¶</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">playText()</span></code> method to play specific text in the client app. For details, see <a class="reference internal" href="../../methods/common-api/#playtext"><span class="std std-ref">playText()</span></a>.</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="5f7874b0-8c14-4c57-92b1-78861c559b10" name="eb67b6b0-f27a-443a-89d5-7d4fb4bc36a5" type="radio"/>
+<label class="tabbed-label" for="5f7874b0-8c14-4c57-92b1-78861c559b10">
+Objective-C</label><div class="tabbed-content docutils">
+<div class="literal-block-wrapper docutils container" id="id21">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id21" title="Permalink to this code">¶</a></div>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="c1">/// Playing any text message</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">playText</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">/// Providing text as string param</span>
+<span class="w">  </span><span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">button</span><span class="w"> </span><span class="n">playText</span><span class="o">:</span><span class="s">@"Hi"</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<input id="5adaad4d-4b4b-4496-9c3f-5b65edbaf307" name="eb67b6b0-f27a-443a-89d5-7d4fb4bc36a5" type="radio"/>
+<label class="tabbed-label" for="5adaad4d-4b4b-4496-9c3f-5b65edbaf307">
+Swift</label><div class="tabbed-content docutils">
+<div class="literal-block-wrapper docutils container" id="id22">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id22" title="Permalink to this code">¶</a></div>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="c1">/// Playing any text message</span>
+<span class="kd">func</span> <span class="nf">playText</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">/// Providing text as string param</span>
+  <span class="kc">self</span><span class="p">.</span><span class="n">button</span><span class="p">.</span><span class="n">playText</span><span class="p">(</span><span class="s">"Hi"</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="sendtext">
+<h3>sendText()<a class="headerlink" href="#sendtext" title="Permalink to this headline">¶</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">sendText()</span></code> method to send a text message to Alan AI as the user’s input. For details, see <a class="reference internal" href="../../methods/common-api/#sendtext"><span class="std std-ref">sendText()</span></a>.</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="36b994d4-490d-45ba-b290-aba01a130d4a" name="87f59340-d204-44d1-afa9-17cd6f98f9f4" type="radio"/>
+<label class="tabbed-label" for="36b994d4-490d-45ba-b290-aba01a130d4a">
+Objective-C</label><div class="tabbed-content docutils">
+<div class="literal-block-wrapper docutils container" id="id23">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id23" title="Permalink to this code">¶</a></div>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="c1">/// Sending any text message</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sendText</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">/// Providing text as string param</span>
+<span class="w">  </span><span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">button</span><span class="w"> </span><span class="n">sendText</span><span class="o">:</span><span class="s">@"Hello Alan, can you help me?"</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<input id="9820e545-d094-427a-853b-d39319cd509d" name="87f59340-d204-44d1-afa9-17cd6f98f9f4" type="radio"/>
+<label class="tabbed-label" for="9820e545-d094-427a-853b-d39319cd509d">
+Swift</label><div class="tabbed-content docutils">
+<div class="literal-block-wrapper docutils container" id="id24">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id24" title="Permalink to this code">¶</a></div>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="c1">/// Sending any text message</span>
+<span class="kd">func</span> <span class="nf">sendText</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">/// Providing text as string param</span>
+  <span class="kc">self</span><span class="p">.</span><span class="n">button</span><span class="p">.</span><span class="n">sendText</span><span class="p">(</span><span class="s">"Hello Alan, can you help me?"</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="playcommand">
+<h3>playCommand()<a class="headerlink" href="#playcommand" title="Permalink to this headline">¶</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">playCommand()</span></code> method to execute a specific command in the client app. For details, see <a class="reference internal" href="../../methods/common-api/#playcommand"><span class="std std-ref">playCommand()</span></a>.</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="015e4623-7396-4f30-89e7-6c7faf19f8a5" name="8652b3ac-84cd-4b91-8ec8-9734f3fe0d2a" type="radio"/>
+<label class="tabbed-label" for="015e4623-7396-4f30-89e7-6c7faf19f8a5">
+Objective-C</label><div class="tabbed-content docutils">
+<div class="literal-block-wrapper docutils container" id="id25">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id25" title="Permalink to this code">¶</a></div>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="c1">/// Executing a command locally</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">playCommand</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">/// Providing any params</span>
+<span class="w">  </span><span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">button</span><span class="w"> </span><span class="n">playCommand</span><span class="o">:</span><span class="l">@{</span><span class="s">@"action"</span><span class="o">:</span><span class="s">@"openSomePage"</span><span class="l">}</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<input id="6f9c7fc7-ba38-41d0-ae18-f1256f63d408" name="8652b3ac-84cd-4b91-8ec8-9734f3fe0d2a" type="radio"/>
+<label class="tabbed-label" for="6f9c7fc7-ba38-41d0-ae18-f1256f63d408">
+Swift</label><div class="tabbed-content docutils">
+<div class="literal-block-wrapper docutils container" id="id26">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id26" title="Permalink to this code">¶</a></div>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="c1">/// Executing a command locally</span>
+<span class="kd">func</span> <span class="nf">playCommand</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">/// Providing any params</span>
+  <span class="kc">self</span><span class="p">.</span><span class="n">button</span><span class="p">.</span><span class="n">playCommand</span><span class="p">([</span><span class="s">"action"</span><span class="p">:</span><span class="s">"openSomePage"</span><span class="p">])</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="activate">
+<h3>activate()<a class="headerlink" href="#activate" title="Permalink to this headline">¶</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">activate()</span></code> method to activate the Alan AI button programmatically. For details, see <a class="reference internal" href="../../methods/common-api/#activate"><span class="std std-ref">activate()</span></a>.</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="a5bb477c-cc55-49c4-aa02-ef2cc30a330f" name="dd6e2a11-a191-4891-8850-43c344ecf87e" type="radio"/>
+<label class="tabbed-label" for="a5bb477c-cc55-49c4-aa02-ef2cc30a330f">
+Objective-C</label><div class="tabbed-content docutils">
+<div class="literal-block-wrapper docutils container" id="id27">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id27" title="Permalink to this code">¶</a></div>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="c1">/// Activating the Alan AI button programmatically</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">activate</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">button</span><span class="w"> </span><span class="n">activate</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<input id="d5a0cfde-674c-46ff-aff2-67bbe75f2e97" name="dd6e2a11-a191-4891-8850-43c344ecf87e" type="radio"/>
+<label class="tabbed-label" for="d5a0cfde-674c-46ff-aff2-67bbe75f2e97">
+Swift</label><div class="tabbed-content docutils">
+<div class="literal-block-wrapper docutils container" id="id28">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id28" title="Permalink to this code">¶</a></div>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="c1">/// Activating the Alan AI button programmatically</span>
+<span class="kd">func</span> <span class="nf">activate</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kc">self</span><span class="p">.</span><span class="n">button</span><span class="p">.</span><span class="n">activate</span><span class="p">()</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="deactivate">
+<h3>deactivate()<a class="headerlink" href="#deactivate" title="Permalink to this headline">¶</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">deactivate()</span></code> method to deactivate the Alan AI button programmatically. For details, see <a class="reference internal" href="../../methods/common-api/#deactivate"><span class="std std-ref">deactivate()</span></a>.</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="19607ac3-29a8-444f-b518-a6c68b720131" name="a764a43a-c12e-4f79-863a-cce28c1a021c" type="radio"/>
+<label class="tabbed-label" for="19607ac3-29a8-444f-b518-a6c68b720131">
+Objective-C</label><div class="tabbed-content docutils">
+<div class="literal-block-wrapper docutils container" id="id29">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id29" title="Permalink to this code">¶</a></div>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="c1">/// Deactivating the Alan AI button programmatically</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">deactivate</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">button</span><span class="w"> </span><span class="n">deactivate</span><span class="p">];</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<input id="241ebfce-e97e-417d-b09e-a9dc88e42ccc" name="a764a43a-c12e-4f79-863a-cce28c1a021c" type="radio"/>
+<label class="tabbed-label" for="241ebfce-e97e-417d-b09e-a9dc88e42ccc">
+Swift</label><div class="tabbed-content docutils">
+<div class="literal-block-wrapper docutils container" id="id30">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id30" title="Permalink to this code">¶</a></div>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="c1">/// Deactivating the Alan AI button programmatically</span>
+<span class="kd">func</span> <span class="nf">deactivate</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kc">self</span><span class="p">.</span><span class="n">button</span><span class="p">.</span><span class="n">deactivate</span><span class="p">()</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="isactive">
+<h3>isActive()<a class="headerlink" href="#isactive" title="Permalink to this headline">¶</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">isActive()</span></code> method to check the Alan AI button state: active or not. For details, see <a class="reference internal" href="../../methods/common-api/#isactive"><span class="std std-ref">isActive()</span></a>.</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="462983be-b468-4f56-8f80-109137e9d35a" name="5dc9c1a3-d480-4ab8-8c80-09da991b8ae6" type="radio"/>
+<label class="tabbed-label" for="462983be-b468-4f56-8f80-109137e9d35a">
+Objective-C</label><div class="tabbed-content docutils">
+<div class="literal-block-wrapper docutils container" id="id31">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id31" title="Permalink to this code">¶</a></div>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">alanBtnInstance</span><span class="w"> </span><span class="n">isActive</span><span class="p">];</span>
+</pre></div>
+</div>
+</div>
+</div>
+<input id="c5d79ff1-0215-4aeb-9c0c-246171953a3f" name="5dc9c1a3-d480-4ab8-8c80-09da991b8ae6" type="radio"/>
+<label class="tabbed-label" for="c5d79ff1-0215-4aeb-9c0c-246171953a3f">
+Swift</label><div class="tabbed-content docutils">
+<div class="literal-block-wrapper docutils container" id="id32">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id32" title="Permalink to this code">¶</a></div>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="n">alanBtnInstance</span><span class="p">.</span><span class="n">isActive</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="getwakewordenabled">
+<h3>getWakewordEnabled()<a class="headerlink" href="#getwakewordenabled" title="Permalink to this headline">¶</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">getWakewordEnabled()</span></code> method to check the state of the wake word for the Alan AI button. For details, see <a class="reference internal" href="../../methods/common-api/#getwakewordenabled"><span class="std std-ref">getWakewordEnabled()</span></a>.</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="87a45a5d-c2d7-404a-84ba-4ea5100efedd" name="bf7608c3-cc2f-40a9-b41c-be5143a6841c" type="radio"/>
+<label class="tabbed-label" for="87a45a5d-c2d7-404a-84ba-4ea5100efedd">
+Objective-C</label><div class="tabbed-content docutils">
+<div class="literal-block-wrapper docutils container" id="id33">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id33" title="Permalink to this code">¶</a></div>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="kt">BOOL</span><span class="w"> </span><span class="n">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">alanButton</span><span class="w"> </span><span class="n">getWakewordEnabled</span><span class="p">];</span>
+</pre></div>
+</div>
+</div>
+</div>
+<input id="fa8a9df6-30d1-4fb9-93c6-8488578ce550" name="bf7608c3-cc2f-40a9-b41c-be5143a6841c" type="radio"/>
+<label class="tabbed-label" for="fa8a9df6-30d1-4fb9-93c6-8488578ce550">
+Swift</label><div class="tabbed-content docutils">
+<div class="literal-block-wrapper docutils container" id="id34">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id34" title="Permalink to this code">¶</a></div>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nv">enabled</span> <span class="p">=</span> <span class="n">button</span><span class="p">.</span><span class="n">getWakewordEnabled</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="setwakewordenabled">
+<h3>setWakewordEnabled()<a class="headerlink" href="#setwakewordenabled" title="Permalink to this headline">¶</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">setWakewordEnabled()</span></code> method to enable or disable the wake word for the Alan AI button. For details, see <a class="reference internal" href="../../methods/common-api/#setwakewordenabled"><span class="std std-ref">setWakewordEnabled()</span></a>.</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="2fd6b04f-d390-41a6-bf4b-f3c649795b69" name="0b35047f-21f5-4aca-aafd-b8773e547756" type="radio"/>
+<label class="tabbed-label" for="2fd6b04f-d390-41a6-bf4b-f3c649795b69">
+Objective-C</label><div class="tabbed-content docutils">
+<div class="literal-block-wrapper docutils container" id="id35">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id35" title="Permalink to this code">¶</a></div>
+<div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">alanButton</span><span class="w"> </span><span class="n">setWakewordEnabled</span><span class="o">:</span><span class="nb">YES</span><span class="p">];</span>
+</pre></div>
+</div>
+</div>
+</div>
+<input id="3b5b87e4-20d3-4e25-90dd-e394597ec554" name="0b35047f-21f5-4aca-aafd-b8773e547756" type="radio"/>
+<label class="tabbed-label" for="3b5b87e4-20d3-4e25-90dd-e394597ec554">
+Swift</label><div class="tabbed-content docutils">
+<div class="literal-block-wrapper docutils container" id="id36">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id36" title="Permalink to this code">¶</a></div>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="n">alanButton</span><span class="p">.</span><span class="n">setWakewordEnabled</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="using-handlers">
+<h2>Using handlers<a class="headerlink" href="#using-handlers" title="Permalink to this headline">¶</a></h2>
+<p>You can use the following <a class="reference internal" href="../../methods/handlers/"><span class="doc">Alan AI handlers</span></a> in your app:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#oncommand-handler">onCommand handler</a></p></li>
+<li><p><a class="reference internal" href="#onbuttonstate-handler">onButtonState handler</a></p></li>
+<li><p><a class="reference internal" href="#onevent-handler">onEvent handler</a></p></li>
+</ul>
+<div class="section" id="oncommand-handler">
+<h3>onCommand handler<a class="headerlink" href="#oncommand-handler" title="Permalink to this headline">¶</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">onCommand</span></code> handler to <a class="reference internal" href="../../../server-api/commands-and-responses/#sending-commands-to-the-app"><span class="std std-ref">handle commands sent from the dialog script</span></a>. For details, see <a class="reference internal" href="../../methods/command-handler/"><span class="doc">onCommand handler</span></a>.</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="c60f723f-8687-4f99-a19b-363916a59574" name="0b5fd4b5-ba10-451a-8794-96e2539e0a09" type="radio"/>
+<label class="tabbed-label" for="c60f723f-8687-4f99-a19b-363916a59574">
+Objective-C</label><div class="tabbed-content docutils">
+<div class="literal-block-wrapper docutils container" id="id37">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id37" title="Permalink to this code">¶</a></div>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="nb">self</span><span class="p">.</span><span class="n">button</span><span class="p">.</span><span class="n">onCommand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">^</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="w"> </span><span class="o">*</span><span class="n">command</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="bp">NSString</span><span class="o">*</span><span class="w"> </span><span class="n">commandName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">command</span><span class="w"> </span><span class="n">objectForKey</span><span class="o">:</span><span class="s">@"command"</span><span class="p">];</span>
+<span class="w">  </span><span class="n">NSLog</span><span class="p">(</span><span class="s">@"%@"</span><span class="p">,</span><span class="w"> </span><span class="n">commandName</span><span class="p">);</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+</div>
+<input id="eea0c01d-2c7c-442f-95d2-5da579cc8be3" name="0b5fd4b5-ba10-451a-8794-96e2539e0a09" type="radio"/>
+<label class="tabbed-label" for="eea0c01d-2c7c-442f-95d2-5da579cc8be3">
+Swift</label><div class="tabbed-content docutils">
+<div class="literal-block-wrapper docutils container" id="id38">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id38" title="Permalink to this code">¶</a></div>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kc">self</span><span class="p">.</span><span class="n">button</span><span class="p">.</span><span class="n">onCommand</span> <span class="p">=</span> <span class="p">{</span> <span class="n">command</span> <span class="k">in</span>
+  <span class="k">guard</span> <span class="kd">let</span> <span class="nv">commandName</span> <span class="p">=</span> <span class="n">command</span><span class="p">?[</span><span class="s">"command"</span><span class="p">]</span> <span class="k">as</span><span class="p">?</span> <span class="nb">String</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">return</span>
+  <span class="p">}</span>
+  <span class="bp">print</span><span class="p">(</span><span class="n">commandName</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="onbuttonstate-handler">
+<h3>onButtonState handler<a class="headerlink" href="#onbuttonstate-handler" title="Permalink to this headline">¶</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">onButtonState</span></code> handler to capture and handle the Alan AI button state changes. For details, see <a class="reference internal" href="../../methods/state-handler/"><span class="doc">onButtonState handler</span></a>.</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="03070aaf-6377-4d2c-8071-c74df1d36208" name="f1bc76eb-5f65-4190-aea2-c1339065ac8a" type="radio"/>
+<label class="tabbed-label" for="03070aaf-6377-4d2c-8071-c74df1d36208">
+Objective-C</label><div class="tabbed-content docutils">
+<div class="literal-block-wrapper docutils container" id="id39">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id39" title="Permalink to this code">¶</a></div>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="nb">self</span><span class="p">.</span><span class="n">button</span><span class="p">.</span><span class="n">onButtonState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">^</span><span class="p">(</span><span class="n">AlanSDKButtonState</span><span class="w"> </span><span class="n">state</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">NSLog</span><span class="p">(</span><span class="s">@"%ld"</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">long</span><span class="p">)</span><span class="n">state</span><span class="p">);</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+</div>
+<input id="ba926397-3d85-4680-aabc-35adb59aaa1a" name="f1bc76eb-5f65-4190-aea2-c1339065ac8a" type="radio"/>
+<label class="tabbed-label" for="ba926397-3d85-4680-aabc-35adb59aaa1a">
+Swift</label><div class="tabbed-content docutils">
+<div class="literal-block-wrapper docutils container" id="id40">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id40" title="Permalink to this code">¶</a></div>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kc">self</span><span class="p">.</span><span class="n">button</span><span class="p">.</span><span class="n">onButtonState</span> <span class="p">=</span> <span class="p">{</span> <span class="n">state</span> <span class="k">in</span>
+  <span class="bp">print</span><span class="p">(</span><span class="n">state</span><span class="p">.</span><span class="n">rawValue</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="onevent-handler">
+<h3>onEvent handler<a class="headerlink" href="#onevent-handler" title="Permalink to this headline">¶</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">onEvent</span></code> handler to capture and handle events emitted by Alan AI: get user’s utterances, assistant responses and so on. For details, see <a class="reference internal" href="../../methods/event-handler/"><span class="doc">onEvent handler</span></a>.</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="e91cf3f8-c993-4fb6-b0b7-14e95fa93d41" name="ed1e4bf0-df1c-41ea-ac04-fde43bbd4d31" type="radio"/>
+<label class="tabbed-label" for="e91cf3f8-c993-4fb6-b0b7-14e95fa93d41">
+Objective-C</label><div class="tabbed-content docutils">
+<div class="literal-block-wrapper docutils container" id="id41">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id41" title="Permalink to this code">¶</a></div>
+<div class="highlight-obj-c notranslate"><div class="highlight"><pre><span></span><span class="nb">self</span><span class="p">.</span><span class="n">button</span><span class="p">.</span><span class="n">onEvent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">^</span><span class="p">(</span><span class="bp">NSString</span><span class="w"> </span><span class="o">*</span><span class="n">payload</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="bp">NSData</span><span class="o">*</span><span class="w"> </span><span class="n">eventData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">payload</span><span class="w"> </span><span class="n">dataUsingEncoding</span><span class="o">:</span><span class="n">NSUTF8StringEncoding</span><span class="p">];</span>
+<span class="w">  </span><span class="bp">NSError</span><span class="o">*</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">nil</span><span class="p">;</span>
+<span class="w">  </span><span class="bp">NSDictionary</span><span class="o">*</span><span class="w"> </span><span class="n">eventDict</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="bp">NSJSONSerialization</span><span class="w"> </span><span class="n">JSONObjectWithData</span><span class="o">:</span><span class="n">eventData</span><span class="w"> </span><span class="n">options</span><span class="o">:</span><span class="mi">0</span><span class="w"> </span><span class="n">error</span><span class="o">:&amp;</span><span class="n">error</span><span class="p">];</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">error</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">nil</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="n">NSLog</span><span class="p">(</span><span class="s">@"%@"</span><span class="p">,</span><span class="w"> </span><span class="n">eventDict</span><span class="p">);</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+</div>
+<input id="fb0f8ec9-fcd2-48e7-8d20-fae3995458c8" name="ed1e4bf0-df1c-41ea-ac04-fde43bbd4d31" type="radio"/>
+<label class="tabbed-label" for="fb0f8ec9-fcd2-48e7-8d20-fae3995458c8">
+Swift</label><div class="tabbed-content docutils">
+<div class="literal-block-wrapper docutils container" id="id42">
+<div class="code-block-caption"><span class="caption-text">Client app</span><a class="headerlink" href="#id42" title="Permalink to this code">¶</a></div>
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kc">self</span><span class="p">.</span><span class="n">button</span><span class="p">.</span><span class="n">onEvent</span> <span class="p">=</span> <span class="p">{</span> <span class="n">event</span> <span class="k">in</span>
+  <span class="k">guard</span> <span class="kd">let</span> <span class="nv">eventData</span> <span class="p">=</span> <span class="n">event</span><span class="p">?.</span><span class="n">data</span><span class="p">(</span><span class="n">using</span><span class="p">:</span> <span class="p">.</span><span class="n">utf8</span><span class="p">,</span> <span class="n">allowLossyConversion</span><span class="p">:</span> <span class="kc">false</span><span class="p">),</span>
+    <span class="kd">let</span> <span class="nv">eventDict</span> <span class="p">=</span> <span class="k">try</span><span class="p">?</span> <span class="n">JSONSerialization</span><span class="p">.</span><span class="n">jsonObject</span><span class="p">(</span><span class="n">with</span><span class="p">:</span> <span class="n">eventData</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="p">.</span><span class="n">mutableContainers</span><span class="p">)</span>
+  <span class="k">else</span> <span class="p">{</span>
+    <span class="k">return</span>
+  <span class="p">}</span>
+  <span class="bp">print</span><span class="p">(</span><span class="n">eventDict</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="what-s-next">
+<h2>What’s next?<a class="headerlink" href="#what-s-next" title="Permalink to this headline">¶</a></h2>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 border-0 + custom-style-res git docutils">
+<div class="card-body docutils">
+<p class="card-text"><a class="sphinx-bs btn text-wrap stretched-link panel reference external" href="https://github.com/alan-ai/alan-sdk-ios/tree/master/examples"><span></span></a></p>
+<p style="font-weight: 600">Example apps</p><p class="card-text">Find and explore examples of AI assistants in Alan AI GitHub.</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 border-0 + custom-style-res doc docutils">
+<div class="card-body docutils">
+<p class="card-text"><a class="sphinx-bs btn text-wrap stretched-link panel reference internal" href="../../../tutorials/ios/ios-list/"><span class="doc"></span></a></p>
+<p style="font-weight: 600">Tutorials</p><p class="card-text">Learn how to implement common scenarios and workflows for an AI assistant built for an iOS app</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="purple-background"></div></div>
+</div>
+
+      </article>
+	  <div class="alan-btn"></div>
+	  <script>
+		function isLocalStorageAvailable() {
+            var result;
+
+            try {
+                localStorage.setItem('test', 1);
+                localStorage.getItem('test');
+                localStorage.removeItem('test');
+                result = true;
+            } catch (e) {
+                result = false;
+            }
+            return result;
+        }
+
+        function getProjectId() {
+            var key = 'beae1a6e1f7e512c4d0bf347580da6fd2e956eca572e1d8b807a3e2338fdd0dc/prod';
+            if (key) {
+                return key.substr(0, key.indexOf('/'));
+            }
+
+            return null;
+        }
+
+        console.info("Alan Lib is laoded.");
+        window.alanBtnInstance = window.alanBtn({
+            key: 'beae1a6e1f7e512c4d0bf347580da6fd2e956eca572e1d8b807a3e2338fdd0dc/prod',
+            zIndex: 999999,
+            onCommand: function (commandData) {
+
+                if (commandData && commandData.command === 'openURL') {
+                    if (commandData.target === '_blank'){
+                        window.open(commandData.url,'_newtab' + Math.floor(Math.random()*999999));
+                    } else {
+                        window.location.href = commandData.url;
+                    }
+
+                }
+            },
+            onConnectionStatus: function (status) {
+                if (status === 'authorized') {
+                    window.alanBtnInstance.setVisualState({ page: window.location.pathname, url: window.location.href });
+                    if(isLocalStorageAvailable()){
+                        if(!localStorage.getItem('alan-btn-session-'+ getProjectId())) {
+                            localStorage.setItem('alan-btn-session-'+ getProjectId(), 1)
+                            window.alanBtnInstance.callProjectApi("sendGreetingMessage");
+                        }
+                    }
+                }
+            },
+        });
+	  </script>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../../android/android-api/">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Alan Android SDK</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../../web/server-side-rendering/">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Server-side rendering</div>
+                
+              </div>
+            </a>
+        </div>
+        
+	  <div class="alan-footer">
+	  <div class="footer-logo-and-social-icons">
+		<div class="footer-logo-and-text">
+		<a class="footer-logo" aria-label="Link to alan.app" href="https://alan.app/"></a>
+		</div>
+		
+		<div class="footer-other">
+		<div class="footer-social">
+			<a href="https://twitter.com/alanvoiceai" target="_blank" class="fa-brands fa-twitter"></a>
+			<a href="http://linkedin.com/company/alanvoiceai" target="_blank" class="fa-brands fa-linkedin"></a>
+			<a href="https://www.facebook.com/alanvoiceai/" target="_blank" class="fa-brands fa-facebook"></a>
+			<a href="https://www.instagram.com/alanvoiceai/" target="_blank" class="fa-brands fa-instagram"></a>
+			<a href="https://www.youtube.com/channel/UCrsg0b32nL6L2j5jG7uxOuw" target="_blank" class="fa-brands fa-youtube"></a>
+			<a href="https://alanaigroup.slack.com/join/shared_invite/enQtNzMzOTE5MTIwMjg4LWI4ZmM4MTNkMTdmY2M0ZWEwODlmZDQ5Y2ZkMjUzNmMyZDJiMzA0Y2M1NDdhYzZjYWFlZTA5NjM4OTU0MWFmNWU#/shared-invite/email" target="_blank" class="fa-brands fa-slack"></a>
+			<a href="https://github.com/alan-ai" target="_blank" class="fa-brands fa-github"></a>
+        </div>
+		</div>
+	  </div>
+	  <div class="footer-badges">
+	  <div class="footer-badges-info">
+	  <div><span><sup>®</sup>2024 Alan AI, Inc. All rights reserved.</span></div>
+	  </div>
+	  
+	  </div>
+	  <div class="footer-badges-imgs">
+	  <a class="footer_badges_imgs_app-store" href="https://apps.apple.com/ca/app/alan-playground/id1474478921"></a>
+	  <a class="footer_badges_imgs_google-play" href="https://play.google.com/store/apps/details?id=app.alan.playground"></a>
+	  </div>
+	  
+      </footer>
+    </div>
+	
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Alan AI iOS SDK</a><ul>
+<li><a class="reference internal" href="#integrating-with-alan-ai">Integrating with Alan AI</a><ul>
+<li><a class="reference internal" href="#step-1-get-the-alan-ai-ios-sdk-framework">Step 1. Get the Alan AI iOS SDK framework</a></li>
+<li><a class="reference internal" href="#step-2-integrate-with-the-app">Step 2. Integrate with the app</a><ul>
+<li><a class="reference internal" href="#alanconfig-object">AlanConfig object</a></li>
+<li><a class="reference internal" href="#alan-ai-button">Alan AI button</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#using-client-api-methods">Using client API methods</a><ul>
+<li><a class="reference internal" href="#setvisualstate">setVisualState()</a></li>
+<li><a class="reference internal" href="#callprojectapi">callProjectApi()</a></li>
+<li><a class="reference internal" href="#playtext">playText()</a></li>
+<li><a class="reference internal" href="#sendtext">sendText()</a></li>
+<li><a class="reference internal" href="#playcommand">playCommand()</a></li>
+<li><a class="reference internal" href="#activate">activate()</a></li>
+<li><a class="reference internal" href="#deactivate">deactivate()</a></li>
+<li><a class="reference internal" href="#isactive">isActive()</a></li>
+<li><a class="reference internal" href="#getwakewordenabled">getWakewordEnabled()</a></li>
+<li><a class="reference internal" href="#setwakewordenabled">setWakewordEnabled()</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#using-handlers">Using handlers</a><ul>
+<li><a class="reference internal" href="#oncommand-handler">onCommand handler</a></li>
+<li><a class="reference internal" href="#onbuttonstate-handler">onButtonState handler</a></li>
+<li><a class="reference internal" href="#onevent-handler">onEvent handler</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#what-s-next">What’s next?</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  
+  </main>
+</div>
+</div>
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/custom.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/typesense-docsearch.js@latest/dist/cdn/docsearch.min.js"></script>
+    <script defer="defer" src="../../../_static/scripts/algolia.js"></script>
+    <script defer="defer" src="../../../_static/scripts/algolia-mobile.js"></script>
+    <script src="../../../_static/scripts/main.js?digest=e931d09b2a40c1bb82b542effe772014573baf67"></script></body>
+</html>

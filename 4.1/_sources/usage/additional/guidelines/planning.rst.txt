@@ -1,0 +1,71 @@
+Planning and drafting the dialog
+================================
+
+While visual user interfaces have already been there for decades, voice user interfaces are still fairly young. However, the core design principles are the same for both modalities. To build an effective conversational experience, you should start with design and prototyping, keeping your goals and audience in mind.
+
+1. Define your goals
+--------------------
+
+Before you start drafting the first version of your AI assistant, answer the following questions:
+
+- What is the goal of my virtual assistant?
+- What type of tasks is it going to address?
+- What are the benefits for end users?
+
+
+
+2. List features and functionality
+----------------------------------
+
+Outline an initial plan: define a list of features and functionality that your AI assistant should include. For example:
+
+- Perform tasks that your users typically do in your app with touch and type
+- Answer specific questions about your domain
+- Conduct a small talk
+- Gather the users' feedback
+
+Focus on the users' needs and motivation. Figure out where and how they are likely to use voice as an interaction method in your app. 
+
+3. Understand the constraints 
+-----------------------------
+
+Identify and understand the limitations for your AI assistant: list features and things that cannot be done through the voice channel. Try to avoid over-promises and misinformation at an early planning step.
+
+
+4. Prototype the conversational flow
+------------------------------------
+
+Draft a flow to cover the entire back-and-forth conversation between the user and AI assistant. Come up with as many variants of conversational paths as you can and try to capture every edge case.
+
+Each branch of your dialog must successfully guide the user; at the same time, the flow must be simple and natural. Make sure the user does not require much effort to interact with the assistant. 
+
+
+5. Think the flow through in details
+------------------------------------
+
+Drill down into every action in your dialog and elaborate it in detail. Create a ‘journey map’ for every task the user may perform: the beginning, options and alternatives and the ending.
+
+
+6. Outline the AI assistant look and feel
+-----------------------------------------
+
+To deliver a personalized look and feel for your assistant, outline how it should look, sound and behave in your app:
+
+- How will it be activated: through touch, :doc:`default wake word <../../button/activation>` or :ref:`custom wake word<Using the wake word>`? 
+- What :ref:`type of voice <Changing the voice>` is it going to have?
+- How will the :ref:`AI assistant button look like <Changing the button visual style>`?
+
+and so on. For more details, see :doc:`Customizing the AI assistant <../../button/customization>`.
+
+7.Plan for short release cycles
+-------------------------------
+
+With Alan AI, you can plan, design and release an AI assistant in a matter of days. We recommend that you plan for short release cycles, rather than a long one. Start with something simple, for example, Q&A virtual assistant, and gradually add new functionality to your assistant in the next releases. This approach guarantees rapid releases, faster users' response and a shorter wait for new features.
+
+
+.. raw:: html
+
+   <div id="orange-background"></div>
+
+
+   

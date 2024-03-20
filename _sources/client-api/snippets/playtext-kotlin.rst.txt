@@ -1,0 +1,8 @@
+.. code-block:: kotlin
+   :caption: Client app
+
+   /// Playing any text message
+   fun playText() {
+     /// Providing text as string param
+     alanButton?.playText("Hi")
+   }

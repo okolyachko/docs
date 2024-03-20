@@ -1,0 +1,205 @@
+Chat buttons
+============
+
+To enhance and streamline the user experience, you can display buttons in the Alan AI Chat.
+
+Buttons are clickable elements that present users with a list of options or actions they can take. When the user clicks a button, the AI assistant responds back or triggers some logic defined in the dialog script.
+
+Buttons can be used for a variety of purposes, including:
+
+- Presenting a menu of options
+- Initiating specific tasks or actions
+- Providing quick access to commonly used features
+- Confirming or denying users' actions
+- Submitting requests and more
+
+Chat buttons setup
+------------------
+
+To display buttons in the chat UI, use the ``showPopup()`` function in the script. 
+   
+In the example below, when a new dialog session starts, the AI assistant displays a greeting with two buttons: ``Talk to sales`` and ``Just browsing``:
+
+.. code-block:: alan
+   :caption: Dialog script
+
+   onCreateUser(p => {
+       // Chat greeting
+       const greetingImage = "https://storage.googleapis.com/alan-public-images/alan-webflow-website/alan-chat-logo.svg";
+       const greetingTitle = "Hi, this is Alan, your AI assistant!";
+       const greetingText = "You can talk to me, ask questions and perform tasks with text commands. For example, you can ask: \n - What pricing plans are available? \n - How do I contact Sales? \n - Where can I find Alan docs?";
+       const image = `<img style="display: block;margin-bottom: 20px; height:75px" src="${greetingImage}"/>`;
+       const title = `<div style="margin-bottom: 10px;font-weight: 700;font-size: 20px;">${greetingTitle}</div>`;
+       p.play(`${image}${title}${greetingText}`, opts({ force: true, markdown: true, audio: false, greeting: true}));
+
+       // Chat buttons
+       p.showPopup({
+           html:`<div class="alan-chat-buttons"><div send-text="Talk to sales" class="alan-chat-button">Talk to sales</div><div send-text="Just browsing" class="alan-chat-button">Just browsing</div></div>`,
+           style:`.alan-chat-buttons {width: 100%; text-align: right;} .alan-btn_text-chat-full-screen .alan-chat-buttons{text-align: left;} .alan-chat-button {display: inline-block; padding: 10px; background-color: #FFFFFF; color: #000; text-decoration: none; border: 1px solid #D4DDFF; border-radius: 10px; cursor: pointer; margin: 3px; transition: color 300ms ease-in-out, border-color 300ms ease-in-out, background-color 300ms ease-in-out;}  .alan-chat-button:hover { cursor: pointer; border-color: #2757FF; color: #2757FF; transition: color 300ms ease-in-out, border-color 300ms ease-in-out, background-color 300ms ease-in-out;}  .alan-chat-button:active { background-color: #E9EEFF; transition: color 300ms ease-in-out, border-color 300ms ease-in-out, background-color 300ms ease-in-out;}`,     
+           overlay: true,
+           force: false,
+           type: "chat",
+       });
+   });
+
+   intent("Talk to sales", p => {
+       p.play("Awesome, I just need to confirm some information first...");
+   });
+
+   intent("Just browsing", p => {
+       p.play("What would you like me to do?");
+   });
+   
+.. image:: /_static/assets/img/script-concepts/buttons.png
+
+Button parameters
+-----------------
+
+The ``showPopup()`` function takes the following parameters:
+
++---------------------------+---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Name**                  | **Type**      | **Description**                                                                                                                                                                                               |
++===========================+===============+===============================================================================================================================================================================================================+
+| ``html``                  | HTML markup   | Contains the HTML markup of buttons.                                                                                                                                                                          |
++---------------------------+---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``css``                   | CSS markup    | Contains the styles of buttons.                                                                                                                                                                               |
++---------------------------+---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``force``                 | Boolean       | If ``showPopop()`` is used after the ``play()`` function, defines whether buttons must be displayed immediately (``true``) or after the text specified in the ``play()`` function has been played (``false``).|
++---------------------------+---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``type``                  | String        | Defines the type of AI assistant: ``chat``.                                                                                                                                                                   |
++---------------------------+---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``params``                | Object        | Contains an input object to be applied to handlebar templates used in button text labels. For details, see `Button text values <#button-text-values>`__ .                                                     |
++---------------------------+---------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Button actions
+--------------
+
+When a button is clicked, the AI assistant can perform one of the following actions: 
+
+- `Invoke an intent <#intents>`__
+- `Call a project API method <#project-api>`__
+   
+Intents
+~~~~~~~
+	  
+On button click, you can invoke an intent in the dialog script. To do this, you must add the ``sendText(\'Your text\')`` parameter to ``<div>`` block of the button. The text in the ``send-text`` parameter must match the pattern of the intent you want to invoke.
+   
+In the example below, when the ``Talk to sales`` and ``Just browsing`` buttons are clicked, corresponding intents are invoked in the dialog script:
+
+.. code-block:: alan
+   :caption: Dialog script
+
+   onCreateUser(p => {
+       // Chat greeting
+       const greetingImage = "https://storage.googleapis.com/alan-public-images/alan-webflow-website/alan-chat-logo.svg";
+       const greetingTitle = "Hi, this is Alan, your AI assistant!";
+       const greetingText = "You can talk to me, ask questions and perform tasks with text commands. For example, you can ask: \n - What pricing plans are available? \n - How do I contact Sales? \n - Where can I find Alan docs?";
+       const image = `<img style="display: block;margin-bottom: 20px; height:75px" src="${greetingImage}"/>`;
+       const title = `<div style="margin-bottom: 10px;font-weight: 700;font-size: 20px;">${greetingTitle}</div>`;
+       p.play(`${image}${title}${greetingText}`, opts({ force: true, markdown: true, audio: false, greeting: true}));
+
+       // Chat buttons
+       p.showPopup({
+           html:`<div class="alan-chat-buttons"><div send-text="Talk to sales" class="alan-chat-button">Talk to sales</div><div send-text="Just browsing" class="alan-chat-button">Just browsing</div></div>`,
+           style:`.alan-chat-buttons {width: 100%; text-align: right;} .alan-btn_text-chat-full-screen .alan-chat-buttons{text-align: left;} .alan-chat-button {display: inline-block; padding: 10px; background-color: #FFFFFF; color: #000; text-decoration: none; border: 1px solid #D4DDFF; border-radius: 10px; cursor: pointer; margin: 3px; transition: color 300ms ease-in-out, border-color 300ms ease-in-out, background-color 300ms ease-in-out;}  .alan-chat-button:hover { cursor: pointer; border-color: #2757FF; color: #2757FF; transition: color 300ms ease-in-out, border-color 300ms ease-in-out, background-color 300ms ease-in-out;}  .alan-chat-button:active { background-color: #E9EEFF; transition: color 300ms ease-in-out, border-color 300ms ease-in-out, background-color 300ms ease-in-out;}`,     
+           overlay: true,
+           force: false,
+       });
+   });
+
+   intent("Talk to sales", p => {
+       p.play("Awesome, I just need to confirm some information first...");
+   });
+
+   intent("Just browsing", p => {
+       p.play("What would you like me to do?");
+   });   
+	  
+Project API
+~~~~~~~~~~~
+	  
+On button click, you can call a project API method in the dialog script. To do this, you must add the following parameters to the ``<div>`` block of the button:
+
+- ``call-project-api="methodName"``: in this parameter, define the name of the project API method you want to call
+- ``project-api-param=\'{"data":"Your data"}\'``: in this parameter, define the data you want to pass to the project API method
+   
+In the example below, when the ``Contact support`` button is clicked, the ``contactSupport()`` project API method is called:
+
+.. code-block:: alan
+   :caption: Dialog script
+	  
+   onCreateUser(p => {
+       // Chat greeting
+       const greetingImage = "https://storage.googleapis.com/alan-public-images/alan-webflow-website/alan-chat-logo.svg";
+       const greetingTitle = "Hi, this is Alan, your AI assistant!";
+       const greetingText = "You can talk to me, ask questions and perform tasks with text commands. For example, you can ask: \n - What pricing plans are available? \n - How do I contact Sales? \n - Where can I find Alan docs?";
+       const image = `<img style="display: block;margin-bottom: 20px; height:75px" src="${greetingImage}"/>`;
+       const title = `<div style="margin-bottom: 10px;font-weight: 700;font-size: 20px;">${greetingTitle}</div>`;
+       p.play(`${image}${title}${greetingText}`, opts({ force: true, markdown: true, audio: false, greeting: true}));
+
+       // Chat buttons
+       p.showPopup({
+           html:`<div class="alan-chat-buttons"><div class="alan-chat-button" call-project-api="contactSupport" project-api-param=\'{"data":"Your data"}\'>Contact support</div><div send-text="Just browsing" class="alan-chat-button">Just browsing</div></div>`,
+           style:`.alan-chat-buttons {width: 100%; text-align: right;} .alan-btn_text-chat-full-screen .alan-chat-buttons{text-align: left;} .alan-chat-button {display: inline-block; padding: 10px; background-color: #FFFFFF; color: #000; text-decoration: none; border: 1px solid #D4DDFF; border-radius: 10px; cursor: pointer; margin: 3px; transition: color 300ms ease-in-out, border-color 300ms ease-in-out, background-color 300ms ease-in-out;}  .alan-chat-button:hover { cursor: pointer; border-color: #2757FF; color: #2757FF; transition: color 300ms ease-in-out, border-color 300ms ease-in-out, background-color 300ms ease-in-out;}  .alan-chat-button:active { background-color: #E9EEFF; transition: color 300ms ease-in-out, border-color 300ms ease-in-out, background-color 300ms ease-in-out;}`,
+           overlay: true,
+           force: false,
+           type: "chat",
+       });
+   });
+
+   projectAPI.contactSupport = function(p, param, callback) {
+       p.play("Please provide a detailed description of the problem you have encountered...");
+       p.userData.data = param.data;
+       console.log(p.userData.data);
+       callback();
+   };
+
+   intent("Just browsing", p => {
+       p.play("What would you like me to do?");
+   });
+    
+
+Button text values
+------------------
+
+To set a value for the button text label, you can use `handlebar templates syntax <https://handlebarsjs.com/>`__. Handlebar expressions added to the button text allow you to customize and personalize the button appearance and content.
+
+To use handlebars with buttons, define an input object in the ``params`` parameter of the button code. After that, you can add handlebar expressions in double curly braces ``{{...}}`` to the button text.
+
+In the example below, when the user says: ``Schedule a meeting with sales``, the AI assistant displays three time slot options defined in the ``myParams`` object:
+
+.. code-block:: alan
+   :caption: Dialog script
+   
+   let timeSlots = {slot01: "10:00 AM", slot02: "11:00 AM", slot03: "12:00 PM"}
+
+   intent("Schedule a meeting with sales", p => {
+       p.play("Sure! When would you like to meet?");
+       p.showPopup({
+           html:`<div class="alan-chat-buttons"><div call-project-api="scheduleMeeting" project-api-param=\'{"time":"${timeSlots.slot01}"}\' class="alan-chat-button">{{slot01}}</div><div call-project-api="scheduleMeeting" project-api-param=\'{"time":"${timeSlots.slot02}"}\' class="alan-chat-button">{{slot02}}</div><div call-project-api="scheduleMeeting" project-api-param=\'{"time":"${timeSlots.slot03}"}\' class="alan-chat-button">{{slot03}}</div></div>`,
+           style:`.alan-chat-buttons {width: 100%; text-align: right;} .alan-btn_text-chat-full-screen .alan-chat-buttons{text-align: left;} .alan-chat-button {display: inline-block; padding: 10px; background-color: #FFFFFF; color: #000; text-decoration: none; border: 1px solid #D4DDFF; border-radius: 10px; cursor: pointer; margin: 3px; transition: color 300ms ease-in-out, border-color 300ms ease-in-out, background-color 300ms ease-in-out;}  .alan-chat-button:hover { cursor: pointer; border-color: #2757FF; color: #2757FF; transition: color 300ms ease-in-out, border-color 300ms ease-in-out, background-color 300ms ease-in-out;}  .alan-chat-button:active { background-color: #E9EEFF; transition: color 300ms ease-in-out, border-color 300ms ease-in-out, background-color 300ms ease-in-out;}`,
+           force: false,
+           type: "chat",
+           params: timeSlots
+       });
+   });
+
+   projectAPI.scheduleMeeting = function(p, param, callback) {
+       p.userData.time = param.time;
+       p.play(`Thanks! Let's meet at ${p.userData.time}`);
+       console.log(`Option selected: ${p.userData.time}`);
+       callback();
+   };
+
+.. image:: /_static/assets/img/script-concepts/buttons-handlebars.png
+
+Popup editor
+------------
+
+.. include:: snippets/popup-editor.rst
+
+.. raw:: html
+
+   <div id="green-background"></div>
+   
+

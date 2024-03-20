@@ -1,0 +1,284 @@
+Alan AI Flutter Framework
+=========================
+
+**Available on**: :badge:`Android,badge-danger` :badge:`iOS,badge-danger`
+
+.. raw:: html
+
+   <a href="https://pub.dev/packages/alan_voice">
+   <img src="https://img.shields.io/pub/v/alan_voice?logo=Flutter&style=for-the-badge" align="left" /></a>
+   
+   <br/><br/>
+
+.. raw:: html
+
+   <div class="video-container">
+   <iframe class="responsive-iframe" src="https://www.youtube.com/embed/Dxgx0MI3ENk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   </div>
+
+   
+The Alan AI Flutter plugin helps you to integrate your conversational experience into a Flutter app.
+
+.. note::
+
+   The ``alan_voice`` package version 3.0.0 supports null safety. If your app does not use null safety yet, upgrade the Dart version to 2.12 or higher or use a previous version of the ``alan_voice`` package.
+
+Integrating with Alan AI
+------------------------
+
+To integrate a Flutter app with Alan AI:
+
+1. In the ``pubspec.yaml`` file of your Flutter project, add the Alan AI dependency:
+
+   .. code-block:: yaml
+      :caption: pubspec.yaml
+
+      dependencies:
+        flutter:
+          sdk: flutter
+        alan_voice: 2.4.0
+
+2. Open the ``main.dart`` file and at the top of it, add the ``alan_voice`` package dependency:
+
+   .. code-block:: dart
+      :caption: main.dart
+
+      import 'package:alan_voice/alan_voice.dart';
+
+3. In the ``_MyHomePageState`` class, add the method for initializing the Alan AI button:
+
+   .. code-block:: dart
+      :caption: main.dart
+
+      class _MyHomePageState extends State<MyHomePage> {
+        _MyHomePageState() {
+          /// Initializing Alan AI with sample project id
+          AlanVoice.addButton(
+            "",
+            buttonAlign: AlanVoice.BUTTON_ALIGN_LEFT);
+       }
+
+4. In Alan AI Studio, go to **Integrations**, copy the value from the **Alan SDK Key** field and insert this value in the quotes.
+
+   .. code-block:: dart
+      :caption: main.dart
+
+      class _MyHomePageState extends State<MyHomePage> {
+        _MyHomePageState() {
+          /// Initializing Alan AI with sample project id
+          AlanVoice.addButton(
+            "314203787ccd9370974f1bf6b6929c1b2e956eca572e1d8b807a3e2338fdd0dc/prod",
+            buttonAlign: AlanVoice.BUTTON_ALIGN_LEFT);
+        }
+
+That's it. Now you can run the app, tap the Alan AI button and start interacting with Alan.
+
+Specifying the Alan AI button parameters
+----------------------------------------
+
+You can specify the following parameters for the Alan AI button added to your app:
+
++--------------------------------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Name**                             | **Type**      | **Description**                                                                                                                                     |
++======================================+===============+=====================================================================================================================================================+
+| ``projectId``                        | string        | The Alan AI SDK key for a project in Alan AI Studio.                                                                                                |
++--------------------------------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``authJson``                         | JSON object   | The authentication or configuration data to be sent to the dialog script. For details, see :doc:`authData <../../server-api/sending-data/authdata>`.|
++--------------------------------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``buttonAlign``                      | Int           | The Alan AI button position in the app. Use one of the two constants: ``BUTTON_ALIGN_LEFT`` or ``BUTTON_ALIGN_RIGHT``.                              |
++--------------------------------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
+Using client API methods
+------------------------
+
+You can use the following :doc:`client API methods <../methods/common-api>` in your app:
+
+-  `setVisualState()`_
+-  `callProjectApi()`_
+-  `playText()`_
+-  `sendText()`_
+-  `playCommand()`_
+-  `activate()`_
+-  `deactivate()`_
+-  `isActive()`_
+-  `getWakewordEnabled()`_
+-  `setWakewordEnabled()`_
+
+setVisualState()
+~~~~~~~~~~~~~~~~
+
+Use the ``setVisualState()`` method to inform the AI assistant about the app’s visual context. For details, see :ref:`setVisualState() <setVisualState()>`.
+
+.. include:: ../snippets/visual-state-flutter.rst
+   
+callProjectApi()
+~~~~~~~~~~~~~~~~
+
+Use the ``callProjectApi()`` method to send data from the client app to the dialog script and trigger activities without voice and text commands. For details, see :ref:`callProjectApi() <callProjectApi()>`.
+
+.. code-block:: alan
+   :caption: Dialog script
+
+   projectAPI.setClientData = function(p, param, callback) {
+     console.log(param);
+   };
+
+.. include:: ../snippets/project-api-flutter.rst
+   
+playText()
+~~~~~~~~~~
+
+Use the ``playText()`` method to play specific text in the client app. For details, see :ref:`playText() <playText()>`.
+
+.. include:: ../snippets/playtext-flutter.rst
+
+sendText()
+~~~~~~~~~~
+
+Use the ``sendText()`` method to send a text message to Alan AI as the user's input. For details, see :ref:`sendText() <sendText()>`.
+
+.. include:: ../snippets/sendtext-flutter.rst
+   
+playCommand()
+~~~~~~~~~~~~~
+
+Use the ``playCommand()`` method to execute a specific command in the client app. For details, see :ref:`playCommand() <playCommand()>`.
+
+.. include:: ../snippets/playcommand-flutter.rst
+   
+   
+activate()
+~~~~~~~~~~
+
+Use the ``activate()`` method to activate the Alan AI button programmatically. For details, see :ref:`activate() <activate()>`.
+
+.. include:: ../snippets/activate-flutter.rst
+   
+deactivate()
+~~~~~~~~~~~~
+
+Use the ``deactivate()`` method to deactivate the Alan AI button programmatically. For details, see :ref:`deactivate() <deactivate()>`.
+
+.. include:: ../snippets/deactivate-flutter.rst
+   
+isActive()
+~~~~~~~~~~
+
+Use the ``isActive()`` method to check the Alan AI button state: active or not. For details, see :ref:`isActive() <isActive()>`.
+
+.. include:: ../snippets/isactive-flutter.rst
+   
+   
+getWakewordEnabled()
+~~~~~~~~~~~~~~~~~~~~
+
+Use the ``getWakewordEnabled()`` method to check the state of the wake word for the Alan AI button. For details, see :ref:`getWakewordEnabled() <getWakewordEnabled()>`.
+
+.. include:: ../snippets/getwakeword-flutter.rst 
+   
+setWakewordEnabled()
+~~~~~~~~~~~~~~~~~~~~
+
+Use the ``setWakewordEnabled()`` method to enable or disable the wake word for the Alan AI button. For details, see :ref:`setWakewordEnabled() <setWakewordEnabled()>`.
+
+.. include:: ../snippets/setwakeword-flutter.rst
+
+Using handlers
+--------------
+
+You can use the following :doc:`Alan AI handlers <../methods/handlers>` in your app:
+
+-  `onCommand handler`_
+-  `onButtonState handler`_
+-  `onEvent handler`_
+
+onCommand handler
+~~~~~~~~~~~~~~~~~
+
+Use the ``onCommand`` handler to :ref:`handle commands sent from the dialog script <Sending commands to the app>`. For details, see :doc:`onCommand handler <../methods/command-handler>`.
+
+.. include:: ../snippets/command-handler-flutter.rst
+
+onButtonState handler
+~~~~~~~~~~~~~~~~~~~~~
+
+Use the ``onButtonState`` handler to capture and handle the Alan AI button state changes. For details, see :doc:`onButtonState handler <../methods/state-handler>`.
+
+.. include:: ../snippets/state-handler-flutter.rst
+
+onEvent handler
+~~~~~~~~~~~~~~~
+
+Use the ``onEvent`` handler to capture and handle events emitted by Alan AI: get user's utterances, assistant responses and so on. For details, see :doc:`onEvent handler <../methods/event-handler>`.
+
+.. include:: ../snippets/event-handler-flutter.rst
+
+
+Switching between logging levels
+--------------------------------
+
+By default, Alan AI does not log its system events such as change of the Alan AI button state to the IDE console. If you want to see messages from Alan AI, switch to the ``all`` logging level:
+
+.. code-block:: dart
+   :caption: main.dart
+
+   AlanVoice.setLogLevel("all");
+
+To disable logs, either remove the line above or switch to the ``none`` logging level:
+
+.. code-block:: dart
+   :caption: main.dart
+
+   AlanVoice.setLogLevel("none");
+	
+
+Troubleshooting
+---------------
+
+To troubleshoot problems you may have with your Flutter app, check the
+solutions below:
+
+-  The minimum possible Android SDK version required by the Alan AI SDK is 21. If the version in your project is lower, you may encounter the following error: ``AndroidManifest.xml Error: uses-sdk:minSdkVersion 16 cannot be smaller than version 21 declared in library [:alan_voice]``. Open the ``./android/app/build.gradle`` file, under ``defaultConfig``, locate ``minSdkVersion`` and change the version to 21.
+
+- Starting from version 3.0.0, the ``alan_voice`` package supports null safety. If you encounter the following error: ``Cannot run with sound null safety because dependencies don't support null safety``, upgrade to the latest package version.
+
+- (If running the app on an emulator) All virtual microphone options must be enabled. On the emulator settings bar, click **More (...)** > **Microphone** and make sure all toggles are set to the *On* position.
+
+What's next?
+------------
+
+.. panels::
+   :column: col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2
+
+   ---
+   :card: border-0 + custom-style-res + git
+   
+   .. link-button:: https://github.com/alan-ai/alan-sdk-flutter/tree/master/examples
+      :type: url
+      :text: 
+      :classes: stretched-link panel
+	  
+   .. raw:: html
+      
+	  <p style="font-weight: 600">Example apps</p>
+   
+   Find and explore examples of AI assistants in Alan AI GitHub.
+   
+   ---
+   :card: border-0 + custom-style-res + doc
+   
+   .. link-button:: ../../tutorials/flutter/flutter-list
+      :type: ref
+      :text: 
+      :classes: stretched-link panel 
+	  
+   .. raw:: html
+      
+	  <p style="font-weight: 600">Tutorials</p>
+   
+   Learn how to implement common scenarios and workflows for an AI assistant built for a Flutter app
+   
+.. raw:: html
+
+   <div id="purple-background"></div>

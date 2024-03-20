@@ -1,0 +1,219 @@
+.. raw:: html
+
+   <div id="orange-background"></div>
+
+Building a voice assistant for an Electron app
+==============================================
+
+With :doc:`Alan AI SDK for Web <../../client-api/web/electron>`, you can create a voice assistant or chatbot and embed it to your Electron app. The Alan AI Platform provides you with all the tools and leverages the industry’s best Automatic Speech Recognition (ASR), Spoken Language Understanding (SLU) and Speech Synthesis technologies to quickly build an AI assistant from scratch.
+
+In this tutorial, we will create a simple voice enabled Electron app. The app users will be able to click the voice assistant button and give custom voice commands, and the AI assistant will reply to them.
+
+What you will learn
+-------------------
+
+-  How to add a voice interface to an Electron app
+-  How to write simple voice commands for an Electron app
+
+What you will need
+------------------
+
+To go through this tutorial, make sure Node.js is installed on your machine.
+
+Step 1. Sign up for Alan AI Studio
+----------------------------------
+
+First, we need to sign up for Alan AI Studio — the web IDE where we will create the dialog script for our voice assistant.
+
+1. Go to Alan AI Studio.
+2. Sign up with a Google or GitHub account or with your email address.
+
+   .. note:: 
+   
+      When you sign up to Alan AI Studio, Alan AI adds free interactions to your balance to let you get started. To get additional interactions to your balance, link your Alan AI account with your GitHub account and give stars to `Alan AI repositories <https://github.com/alan-ai>`__. For details, see :ref:`Adding free interactions <Adding free interactions>`.
+
+3. In Alan AI Studio, click **Create Project**. Select to create an empty project and give it any name you want.
+
+Step 2: Create an Electron app
+------------------------------
+
+Now let's create a simple Electron app:
+
+1. On your machine, create a folder for the app and install Electron in it with the following commands:
+
+   .. code-block:: alan
+      :caption: Terminal
+   
+      mkdir my-electron-app && cd my-electron-app
+      npm init -y
+      npm i --save-dev electron
+	  
+	  
+2. In the app folder, create the ``main.js`` file with the following content:
+
+   .. code-block:: javascript
+      :caption: main.js
+
+      const { app, BrowserWindow } = require('electron')
+
+      function createWindow () {
+        const win = new BrowserWindow({
+          width: 800,
+          height: 600,
+          webPreferences: {
+            nodeIntegration: true
+          }
+        })
+
+        win.loadFile('index.html')
+        win.webContents.openDevTools()
+      }		
+
+      app.whenReady().then(createWindow)
+
+      app.on('window-all-closed', () => {
+        if (process.platform !== 'darwin') {
+          app.quit()
+        }
+      })
+
+      app.on('activate', () => {
+        if (BrowserWindow.getAllWindows().length === 0) {
+          createWindow()
+        }
+      })
+   
+   
+3. In the same folder, create the ``index.html`` file with the following content:
+
+   .. code-block:: html
+      :caption: index.html
+
+      <!DOCTYPE html>
+      <html>
+      <head>
+          <meta charset="UTF-8">
+          <title>Hello World!</title>
+      </head>
+      <body style="background: white;">
+          <h1>Hello World!</h1>
+          We are using node <script>document.write(process.versions.node)</script>,
+          Chrome <script>document.write(process.versions.chrome)</script>,
+          and Electron <script>document.write(process.versions.electron)</script>.
+      </body>
+      </html>
+
+4. Open the ``package.json`` file and update the main script name to ``main.js``:
+
+   .. code-block:: javascript
+      :caption: package.json
+
+      {
+          "name": "my-electron-app",
+          "version": "0.1.0",
+          "main": "main.js"
+      }
+
+5. Update ``"scripts"`` to ``"start": "electron ."`` to run the main script with Electron:
+
+   .. code-block:: javascript
+      :caption: package.json
+
+      {
+          "name": "my-electron-app",
+          "version": "0.1.0",
+          "main": "main.js",
+          "scripts": {
+              "start": "electron ."
+          }
+      }
+
+6. Run the app:
+
+   .. code-block::
+      :caption: Terminal
+
+      npm start
+	  
+   .. image:: /_static/assets/img/web-frameworks/electron-starter-app.png
+
+Step 3: Install the Alan AI Web component
+-----------------------------------------
+
+We need to add the Alan AI Web component to the app. In the app folder, install the Alan AI Web component with the following command:
+
+.. code-block::
+   :caption: Terminal
+
+   npm i @alan-ai/alan-sdk-web
+
+Step 4: Add the Alan AI button to the app
+-----------------------------------------
+
+Now we will update our app to add the Alan AI button to it.
+
+1. In the app folder, open the ``index.html`` file.
+2. To the ``<head>`` block, add the following line to import the Alan AI Web component:
+
+   .. code-block:: html
+      :caption: index.html
+
+      <script src="node_modules/@alan-ai/alan-sdk-web/dist/alan_lib.min.js"></script>
+
+3. To the <``body>`` block, add the code for the Alan AI button:
+
+   .. code-block:: html
+      :caption: index.html
+
+      <body style="background: white;">
+      <script>
+          alanBtn({ 
+              key: 'YOUR_KEY_FROM_ALAN_STUDIO_HERE',
+              onCommand: (commandData) => {
+                  if (commandData.command === 'go:back') {
+                      // Call the client code that will react to the received command
+                  }
+              },
+          });
+      </script>
+      </body>
+
+4. In the ``key`` field above, we need to replace ``YOUR_KEY_FROM_ALAN_STUDIO_HERE`` with the Alan AI SDK key for our Alan
+   AI Studio project. In Alan AI Studio, at the top of the code editor, click **Integrations**, copy the value provided in the **Alan SDK Key** field and paste this value to ``key``.
+
+   .. code-block::
+      :caption: index.html
+
+      <body style="background: white;>
+	  
+      <script>
+          alanBtn({ 
+              key: '28b4365114e0f2f67d43485dbc3cb44a2e956eca572e1d8b807a3e2338fdd0dc/stage',
+              onCommand: (commandData) => {
+                  if (commandData.command === 'go:back') {
+                      // Call the client code that will react to the received command
+                  }
+              },
+          });
+      </script>
+       </body>
+
+Step 5. Add voice commands
+--------------------------
+
+Let's add some :doc:`voice commands <../../server-api/commands-and-responses>` so that we can interact with our Ember app through voice. In Alan AI Studio, open the project and, in the code editor, add the following intents:
+
+.. code-block:: alan
+   :caption: Dialog script
+
+   intent(`What is your name?`, p => {
+       p.play(`It's Alan, and yours?`);
+   });
+
+   intent(`How are you doing?`, p => {
+       p.play(`Good, thank you. What about you?`);
+   });
+
+Now in the app click the Alan AI button and ask: ``What is your name?`` and ``How are you doing?`` The AI assistant will give responses provided in the intents.
+
+.. image:: /_static/assets/img/web-frameworks/electron-app-button.png

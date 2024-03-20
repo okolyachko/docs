@@ -1,0 +1,15 @@
+Changing the theme and font size
+================================
+
+If you want to change colors and the font size for the code in Alan AI Studio, you can do the following:
+
+-  To choose another color theme, in the top right corner, click the menu button and select **Color Theme** > theme you want to apply.
+-  To make the font size larger or smaller, in the top right corner, click the menu button and select **Font Size** > **Small**, **Medium** or **Large**.
+
+.. image:: /_static/assets/img/studio/color-theme.png
+
+
+.. raw:: html
+
+   <div id="blue-background"></div>
+   <div id="wide-content"></div>

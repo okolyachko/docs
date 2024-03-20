@@ -1,0 +1,450 @@
+.. raw:: html
+
+   <div id="orange-background"></div>
+   <div id="wide-content"></div>
+
+Alan AI tutorials
+=================
+
+The Alan AI tutorials teach you how to use the Alan AI Platform to build conversational interfaces for apps created for different platforms.
+
+Choose the necessary platform:
+
+.. tabbed:: Alan AI Chat
+
+   .. panels::
+      :column: col-lg-12 col-md-12 col-sm-12 col-xs-12 p-2
+	  
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: list/building-ai-chat
+         :type: ref
+         :text: Create an AI chat for a website
+         :classes: stretched-link panel
+	  
+      Learn how to create an AI chat using your custom dataset and embed it to a website
+	  
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: list/adding-greeting
+         :type: ref
+         :text: Add a greeting to the AI chat
+         :classes: stretched-link panel
+		
+      Learn how to add a greeting to be displayed to chat users  
+   
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: list/collecting-data-chat
+         :type: ref
+         :text: Collect data with the AI chat
+         :classes: stretched-link panel
+	  
+      Learn how to collect data with the AI chat and save the collected data
+
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: list/using-buttons
+         :type: ref
+         :text: Use buttons in the AI chat
+         :classes: stretched-link panel
+	  
+      Learn how to use buttons to trigger actions in the AI chat	     
+   
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: list/sending-emails
+         :type: ref
+         :text: Send emails from the AI chat
+         :classes: stretched-link panel
+	  
+      Learn how to send emails from the Alan AI Chat
+   
+.. tabbed:: Web
+
+   .. panels::
+      :column: col-lg-12 col-md-12 col-sm-12 col-xs-12 p-2
+   
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: list/adding-voice-to-a-web-application
+         :type: ref
+         :text: Building a voice assistant for web (JavaScript)
+         :classes: stretched-link panel
+	  
+      Learn how to to create a voice experience for a web app or a website from scratch and write simple voice commands.
+
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: list/food-delivery-tutorial
+         :type: ref
+         :text: Creating a voice-enabled food delivery app: complete tutorial
+         :classes: stretched-link panel
+	  
+      Learn how to create a completely voice-enabled food delivery application.
+
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: list/using-dynamic-slots
+         :type: ref
+         :text: Using dynamic slots in patterns
+         :classes: stretched-link panel
+	  
+      Learn how to make the dialog with your AI assistant flexible and adjusting to dynamically changing data.
+
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: list/making-web-api-call
+         :type: ref
+         :text: Making a Web API call from the dialog script
+         :classes: stretched-link panel
+	  
+      Learn how to make a call to a Web API from the dialog script and get data from an external source.
+
+.. tabbed:: Web frameworks
+
+   .. panels::
+      :column: col-lg-12 col-md-12 col-sm-12 col-xs-12 p-2
+   
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: web/integrating-react-app
+         :type: ref
+         :text: Building a voice assistant for a React app
+         :classes: stretched-link panel
+	  
+      Learn how to to create a voice assistant for a React app from scratch and write simple voice commands.
+
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: web/integrating-angular-app
+         :type: ref
+         :text: Building a voice assistant for an Angular app
+         :classes: stretched-link panel
+	  
+      Learn how to to create a voice assistant for an Angular app from scratch and write simple voice commands.
+ 
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: web/integrating-vue-app
+         :type: ref
+         :text: Building a voice assistant for a Vue app
+         :classes: stretched-link panel
+	  
+      Learn how to to create a voice assistant for a Vue app from scratch and write simple voice commands.
+     
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: web/integrating-ember-app
+         :type: ref
+         :text: Building a voice assistant for an Ember app
+         :classes: stretched-link panel
+	  
+      Learn how to to create a voice assistant for an Ember app from scratch and write simple voice commands.
+
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: web/integrating-electron-app
+         :type: ref
+         :text: Building a voice assistant for an Electron app
+         :classes: stretched-link panel
+	  
+      Learn how to to create a voice assistant for an Electron app from scratch and write simple voice commands. 
+	  
+.. tabbed:: iOS
+
+
+   .. panels::
+      :column: col-lg-12 col-md-12 col-sm-12 col-xs-12 p-2
+   
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: ios/integrating-swift
+         :type: ref
+         :text: Building a voice assistant for an iOS app
+         :classes: stretched-link panel
+	  
+      Learn how create a voice assistant for an iOS Swift app from scratch and write simple voice commands.
+
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: ios/navigating-swift
+         :type: ref
+         :text: Navigating between views (iOS)
+         :classes: stretched-link panel
+	  
+      Learn how to send commands to an iOS Swift app, handle commands on the app side and navigate between views with voice.
+   
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: ios/sending-data-swift
+         :type: ref
+         :text: Passing the app state to the dialog script (iOS)
+         :classes: stretched-link panel
+	  
+      Learn how to pass the app state from an iOS Swift app to the dialog script with visualState, access the data passed with visualState in the dialog script and filter intents by the app state.
+  
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: ios/highlighting-swift
+         :type: ref
+         :text: Highlighing items with voice (iOS)
+         :classes: stretched-link panel
+	  
+      Learn how to go through the list of items with voice and highlight the current item in the app UI.
+   
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: ios/triggering-info-swift
+         :type: ref
+         :text: Triggering dialog script actions without commands (iOS)
+         :classes: stretched-link panel
+	  
+      Learn how to make the AI assistant provide detailed information about an item selected in the app UI without giving a voice command.
+
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: ios/greeting-swift
+         :type: ref
+         :text: Playing a greeting in an app (iOS)
+         :classes: stretched-link panel
+	  
+      Learn how to make the AI assistant play a greeting to the user when the app is launched.
+	 
+.. tabbed:: Android
+
+   .. panels::
+      :column: col-lg-12 col-md-12 col-sm-12 col-xs-12 p-2
+   
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: android/integrating-java-kotlin
+         :type: ref
+         :text: Building a voice assistant for an Android Java or Kotlin app
+         :classes: stretched-link panel
+	  
+      Learn how create a voice interface for an Android Java or Kotlin app from scratch and write simple voice commands.
+
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: android/navigating-kotlin
+         :type: ref
+         :text: Navigating in an Android app with voice (Kotlin)
+         :classes: stretched-link panel
+	  
+      Learn how to send commands to an Android app, handle commands on the app side and navigate between tabs with voice.
+
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: android/sending-state-kotlin
+         :type: ref
+         :text: Passing the app state to the dialog script (Kotlin)
+         :classes: stretched-link panel
+	  
+      Learn how to create a context-aware voice assistant and send the Android app's state to the dialog script.
+  
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: android/sending-data-kotlin
+         :type: ref
+         :text: Sending data from the app to the dialog script (Kotlin)
+         :classes: stretched-link panel
+	  
+      Learn how to send data from an Android app to the dialog script and trigger activities without voice commands. 
+	 
+.. tabbed:: Flutter
+
+   .. panels::
+      :column: col-lg-12 col-md-12 col-sm-12 col-xs-12 p-2
+   
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: flutter/integrating-flutter
+         :type: ref
+         :text: Building a voice assistant for a Flutter app
+         :classes: stretched-link panel
+	  
+      Learn how create a voice assistant for a Flutter app from scratch and write simple voice commands.
+   
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: flutter/navigating-flutter
+         :type: ref
+         :text: Navigating between screens (Flutter)
+         :classes: stretched-link panel
+	  
+      Learn how to send commands to a Flutter app, handle commands on the app side and navigate between views with voice.
+
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: flutter/sending-data-flutter
+         :type: ref
+         :text: Passing the app state to the dialog script (Flutter)
+         :classes: stretched-link panel
+	  
+      Learn how to pass the app state from a Flutter app to the dialog script with visual state, access the data passed with visualState in the dialog script and filter intents by the app state.
+
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: flutter/project-api-flutter
+         :type: ref
+         :text: Sending data to the dialog script (Flutter)
+         :classes: stretched-link panel
+	  
+      Learn how to send data from a Flutter app to the dialog script and use it for other voice commands.
+	 
+.. tabbed:: Ionic
+
+   .. panels::
+      :column: col-lg-12 col-md-12 col-sm-12 col-xs-12 p-2
+   
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: ionic/integrating-angular
+         :type: ref
+         :text: Building a voice assistant for an Ionic Angular app
+         :classes: stretched-link panel
+	  
+      Learn how create a voice assistant for an Ionic Angular app from scratch and write simple voice commands.
+   
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: ionic/navigating-angular
+         :type: ref
+         :text: Navigating between tabs (Ionic Angular)
+         :classes: stretched-link panel
+	  
+      Learn how to send commands to an Ionic Angular app, handle commands on the app side and navigate between tabs with voice.
+   
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: ionic/sending-data-angular
+         :type: ref
+         :text: Passing the app state to the dialog script (Ionic Angular)
+         :classes: stretched-link panel
+	  
+      Learn how to pass the app state from an Ionic Angular app to the dialog script with visual state, access the data passed with visual state in the dialog script and filter intents by the app state.
+   
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: ionic/integrating-react
+         :type: ref
+         :text: Building a voice assistant for an Ionic React app
+         :classes: stretched-link panel
+	  
+      Learn how create a voice interface for an Ionic React app from scratch and write simple voice commands.
+     
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: ionic/navigating-react
+         :type: ref
+         :text: Navigating between tabs (Ionic React)
+         :classes: stretched-link panel
+	  
+      Learn how to send commands to an Ionic React app, handle commands on the app side and navigate between tabs with voice.   
+	 
+	 
+.. tabbed:: React Native
+
+   .. panels::
+      :column: col-lg-12 col-md-12 col-sm-12 col-xs-12 p-2
+   
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: react-native/integrating-react-native
+         :type: ref
+         :text: Building a voice assistant for a React Native app
+         :classes: stretched-link panel
+	  
+      Learn how create a voice assistant for React Native app from scratch and write simple voice commands.
+
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: react-native/sending-commands-react-native
+         :type: ref
+         :text: Sending commands to the app (React Native)
+         :classes: stretched-link panel
+	  
+      Learn how to send commands to perform activities in a React Native app with voice.
+ 
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: react-native/sending-state-react-native
+         :type: ref
+         :text: Passing the app state to the dialog script (React Native)
+         :classes: stretched-link panel
+	  
+      Learn how to create a context-aware voice assistant and send the React Native app's state to the dialog script.
+   
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: react-native/triggering-activities-react-native
+         :type: ref
+         :text: Triggering activities without voice commands (React Native)
+         :classes: stretched-link panel
+	  
+      Learn how to send arbitrary information from a React Native app to the dialog script and trigger activities without voice commands.
+   
+      ---
+      :card: border-0 + custom-style-list
+   
+      .. link-button:: react-native/navigating-react-native
+         :type: ref
+         :text: Navigating between screens with voice (React Native)
+         :classes: stretched-link panel
+	  
+      Learn how to move between screens in a React Native app with voice.
+	 
+
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+
+   Alan AI Chat<list/chat-list>   
+   Web<list/web-list>
+   Web frameworks<web/frameworks-list>
+   iOS<ios/ios-list>
+   Android<android/android-list>
+   Flutter<flutter/flutter-list>
+   Ionic<ionic/ionic-list>
+   React Native<react-native/react-native-list>
+   
+   
+	

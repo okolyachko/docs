@@ -1,0 +1,18 @@
+.. code-block:: 
+   :caption: Client app
+
+   <ion-content :fullscreen="true">
+     <alan-button v-on:event="event" alan-key="YOUR_KEY_FROM_ALAN_STUDIO_HERE" />  
+   </ion-content>		
+        
+   export default defineComponent({
+     methods: {
+       event: function(data:any) {
+         console.info('Received event: ', data.detail);
+       }
+     },
+   });
+	   
+.. note::
+      
+   To define the ``onEvent`` handler in Ionic Vue, use lowercase: ``v-on:event``. Otherwise the handler will not be working.

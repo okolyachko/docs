@@ -1,0 +1,223 @@
+Chat cards
+==========
+
+To present information in the Alan AI Chat in a structured and visually appealing way, you can display AI assistant messages as cards.
+
+A card is a container that can hold text, images, icons and other information. Cards are designed to present data in a simple and focused manner, making it easier for users to scan and comprehend the content. 
+
+You can use cards to showcase a variety of content, including:
+
+- Greeting messages
+- Recommendations or suggestions
+- Product details
+- Content summary and more
+
+Card display options
+--------------------
+
+To display cards in the chat UI, you can:
+
+- Add Markdown formatted text to the ``p.play()`` function
+- Use the ``showPopup()`` function in the script
+
+.. tabbed:: Markdown
+
+   You can display a card as Markdown formatted text in the ``p.play()`` function. To do this:
+
+   1. Format the card text using Markdown. For details, see `Markdown Basic Syntax <https://www.markdownguide.org/basic-syntax/>`__.
+   2. In the ``p.play()`` function, enable the ``markdown`` option: ``opts({markdown: true})``. For details, see :ref:`Play options <play-options>`.
+
+   In the example below, the AI assistant displays a greeting to the user when a new dialog session starts:
+
+   .. code-block:: alan
+      :caption: Dialog script
+   
+      onCreateUser(p => {
+          const greetingImage = "https://storage.googleapis.com/alan-public-images/alan-webflow-website/alan-chat-logo.svg";
+          const greetingTitle = "Hi, this is Alan, your AI assistant!";
+          const greetingText = "You can talk to me, ask questions and perform tasks with text commands. For example, you can ask: \n - What pricing plans are available? \n - How do I contact Sales? \n - Where can I find Alan docs?";
+          const img = `<img style="display: block;margin-bottom: 20px; height:75px" src="${greetingImage}"/>`;
+          const title = `<div style="margin-bottom: 10px;font-weight: 700;font-size: 20px;">${greetingTitle}</div>`;
+          p.play(`${img}${title}${greetingText}`, opts({ force: true, markdown: true, audio: false, greeting: true}));
+      });
+   
+   .. image:: /_static/assets/img/script-concepts/chat-card-markdown.png
+
+
+.. tabbed:: showPopup()
+
+   You can display a card using the ``showPopup()`` function. 
+   
+   In the example below, the AI assistant displays a greeting to the user when a new dialog session starts: 
+   
+   .. code-block:: alan
+      :caption: Dialog script
+   
+      onCreateUser(p => {
+          const greetingImage = "https://storage.googleapis.com/alan-public-images/alan-webflow-website/alan-chat-logo.svg";
+          const greetingTitle = "WELCOME!";
+          const greetingText = "I'm Alan, your AI Assistant, standing by to provide you with information and support";
+          const backgroundColor = "#f6f6f6";
+          const topBackgroundColor = "#fff";
+          const bottomHeight = "310px";
+
+          p.showPopup({
+              style:`.img {width: 240px;margin: 20px;}.info-popup {background: ${backgroundColor};max-width: 100%;height: ${bottomHeight};width: 100%;max-height: ${topBackgroundColor};box-shadow: 0px 1px 3px rgba(16, 39, 126, 0.2);overflow: hidden;border-radius: 10px;display: block;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column}.info-popup_header {background: ${topBackgroundColor};padding: 0px;display: block;color: #000;font-size: 22px;font-weight: 700;text-align: center;background: #fff;background-repeat: no-repeat;background-position: center center;background-size: 100% 100%}.info-popup_body {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;font-weight: 400;font-size: 23px;line-height: 48px;text-align: center;color: #000;padding: 9px ​50px;height: 89px;}.info-popup_pointer-button {margin: 20px 20px;line-height: 20px;}`,
+              html: `<div class="info-popup"><div class="info-popup_header" style="font-size: 21px;"><img type="image/svg+xml" class="img" src="${greetingImage}" alt="image" /></div><div class="info-popup_body"><div class="info-popup_pointer-button grey-arrow">${greetingTitle}<br/><span style="font-size:14px; font-weight:400; display: contents;">${greetingText}</span></div></div></div>`,
+              overlay: true,
+              buttonMarginInPopup: 15,
+              force: false,
+               type: "chat",
+          });
+      });
+
+   
+   .. image:: /_static/assets/img/script-concepts/chat-card.png  
+   
+   
+Card display events
+-------------------
+
+You can choose to display a card in the chat on different events, for example:
+
+- When the dialog transitions between different states: the user starts a new dialog session, the visual state is set, a specific Alan AI event is fired and so on. For details, see :doc:`Lifecycle callbacks <lifecycle>`.
+- When an intent is matched. For details, see :ref:`Intents <intent>`.
+- When a project API method is called. For details, see :doc:`Project API <sending-data/project-api>`.
+
+
+.. tabbed:: Callbacks
+
+   In the example below, the AI assistant displays a greeting card to the user when a new dialog session starts and the ``onCreateUser()`` predefined callback is invoked:
+
+   .. code-block:: alan
+      :caption: Dialog script
+   
+      onCreateUser(p => {
+          const greetingImage = "https://storage.googleapis.com/alan-public-images/alan-webflow-website/alan-chat-logo.svg";
+          const greetingTitle = "Hi, this is Alan, your AI assistant!";
+          const greetingText = "You can talk to me, ask questions and perform tasks with text commands. For example, you can ask: \n - What pricing plans are available? \n - How do I contact Sales? \n - Where can I find Alan docs?";
+          const image = `<img style="display: block;margin-bottom: 20px; height:75px" src="${greetingImage}"/>`;
+          const title = `<div style="margin-bottom: 10px;font-weight: 700;font-size: 20px;">${greetingTitle}</div>`;
+          p.play(`${image}${title}${greetingText}`, opts({ force: true, markdown: true, audio: false, greeting: true}));
+      });
+   
+   .. image:: /_static/assets/img/script-concepts/chat-card-markdown.png
+	  
+.. tabbed:: Intents
+
+
+   In the example below, the AI assistant displays a card to the user when the ``What platforms do you support?`` intent is matched:
+   
+   .. code-block:: alan
+      :caption: Dialog script
+   
+      intent('What platforms do you support?', p => {
+          const cardImage = "https://assets-global.website-files.com/64ec3fc5bb945b48c0a37b1c/650a990518d70919bfea06c8_integrate_benefit2.webp";
+          const cardText = "We support a broad range of languages and frameworks, including: \n\n - React \n\n - Angular \n\n - Flutter \n\n - Ionic and [more](https://alan.app/docs/client-api/integration/)";
+          const image = `<img style="display: block;margin-bottom: 20px;" src="${cardImage}"/>`;
+          p.play(`${image}${cardText}`, opts({ force: true, markdown: true, audio: false, greeting: true}));
+      });
+	  
+   .. image:: /_static/assets/img/script-concepts/chat-card-intent.png
+
+
+.. tabbed:: Project API
+
+   In the example below, the AI assistant displays a greeting when the Alan AI button is authorized and the  ``sendGreetingMessage()`` project API method is invoked in the app: 
+   
+   .. code-block:: alan
+      :caption: Dialog script
+   
+      projectAPI.sendGreetingMessage = function(p, param, callback) {
+          const greetingImage = "https://storage.googleapis.com/alan-public-images/alan-webflow-website/alan-chat-logo.svg";
+          const greetingTitle = "Hi, this is Alan, your AI assistant!";
+          const greetingText = "You can talk to me, ask questions and perform tasks with text commands. For example, you can ask: \n - What pricing plans are available? \n - How do I contact Sales? \n - Where can I find Alan docs?";
+          const image = `<img style="display: block;margin-bottom: 20px; height:75px" src="${greetingImage}"/>`;
+          const title = `<div style="margin-bottom: 10px;font-weight: 700;font-size: 20px;">${greetingTitle}</div>`;
+          p.play(`${image}${title}${greetingText}`, opts({ force: true, markdown: true, audio: false, greeting: true}));
+          callback();
+      };
+	   
+	  
+   .. code-block:: html
+      :caption: Client app
+   
+      <script>
+        var alanBtnInstance = alanBtn({
+          key: "YOUR_KEY_FROM_ALAN_STUDIO_HERE",
+          onConnectionStatus: function (status) {
+            if (status === 'authorized') {
+              window.alanBtnInstance.callProjectApi("sendGreetingMessage");
+            }
+          },
+          rootEl: document.getElementById("alan-btn"),
+        });
+      </script>
+	  
+   .. image:: /_static/assets/img/script-concepts/chat-card-markdown.png
+
+Card parameters
+---------------
+
+The ``showPopup()`` function displaying cards in the chat takes the following parameters:
+
++---------------------------+---------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Name**                  | **Type**      | **Description**                                                                                                                                                                                                |
++===========================+===============+================================================================================================================================================================================================================+
+| ``html``                  | HTML markup   | Contains the HTML markup of the card.                                                                                                                                                                          |
++---------------------------+---------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``css``                   | CSS markup    | Contains the styles of the card.                                                                                                                                                                               |
++---------------------------+---------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``force``                 | Boolean       | If ``showPopop()`` is used after the ``play()`` function, defines whether the card must be displayed immediately (``true``) or after the text specified in the ``play()`` function has been played (``false``).|
++---------------------------+---------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``type``                  | String        | Defines the type of AI assistant: ``chat``.                                                                                                                                                                    |
++---------------------------+---------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``params``                | Object        | Contains an input object to be applied to handlebar templates used in the card text. For details, see `Card text values <#card-text-values>`__ .                                                               |
++---------------------------+---------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
+ 
+Card text values
+----------------
+
+To set a value for the card message in the ``showPopup()`` function, you can use `handlebar templates syntax <https://handlebarsjs.com/>`__. Handlebar expressions added to the card text allow you to customize and personalize the card appearance and content.
+
+To use handlebars with cards, define an input object in the ``params`` parameter of the card code. After that, you can add handlebar expressions in double curly braces ``{{...}}`` to the card text.
+
+In the example below, handlebars are used to create a customized card text with the user's name: 
+
+.. code-block:: alan
+   :caption: Dialog script
+
+   let myParams = {name: "John Smith"}
+
+   onCreateUser(p => {
+       let greetingImage = "https://storage.googleapis.com/alan-public-images/alan-webflow-website/alan-chat-logo.svg";
+       let greetingTitle = "WELCOME!";
+       let greetingText = `Hi, {{name}}, I'm Alan, your AI Assistant, standing by to provide you with information and support`;
+       let backgroundColor = "#f6f6f6";
+       let topBackgroundColor = "#fff";
+       let bottomHeight = "320px";
+
+       p.showPopup({
+           style:`.img {width: 240px;margin: 20px;}.info-popup {background: ${backgroundColor};max-width: 100%;height: ${bottomHeight};width: 100%;max-height: ${bottomHeight};box-shadow: 0px 1px 3px rgba(16, 39, 126, 0.2);overflow: hidden;border-radius: 10px;display: block;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column}.info-popup_header {background: ${topBackgroundColor};padding: 0px;display: block;color: #000;font-size: 22px;font-weight: 700;text-align: center;background: #fff;background-repeat: no-repeat;background-position: center center;background-size: 100% 100%}.info-popup_body {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;font-weight: 400;font-size: 23px;line-height: 48px;text-align: center;color: #000;padding: 9px ​50px;height: 89px;}.info-popup_pointer-button {margin: 20px 20px;line-height: 20px;}`,
+           html: `<div class="info-popup"><div class="info-popup_header" style="font-size: 21px;"><img type="image/svg+xml" class="img" src="${greetingImage}" alt="image" /></div><div class="info-popup_body"><div class="info-popup_pointer-button grey-arrow">${greetingTitle}<br/><span style="font-size:14px; font-weight:400; display: contents;">${greetingText}</span></div></div></div>`,
+           overlay: true,
+           buttonMarginInPopup: 15,
+           force: false,
+           type: "chat",
+           params: myParams
+       });
+   });
+   
+.. image:: /_static/assets/img/script-concepts/chat-cards-handlebars.png
+
+Popup editor
+------------
+
+.. include:: snippets/popup-editor.rst
+
+
+.. raw:: html
+
+   <div id="green-background"></div>

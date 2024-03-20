@@ -1,0 +1,23 @@
+Alan AI Playground
+==================
+
+Alan AI offers the Alan AI Playground --- a mobile application that allows you to quickly preview and evaluate how AI assistants built with Alan AI work, as well as test your assistants for web, iOS or Android.
+
+The Alan Playground can run on iOS- and Android-based mobile devices. Download the Alan AI Playground application for `iOS <https://apps.apple.com/us/app/alan-playground/id1474478921?l=en>`__ or `Android <https://play.google.com/store/apps/details?id=app.alan.playground&hl=en_US>`__ and install it on your device. You can then use it to get familiar with Alan AI app examples or :ref:`test your voice
+scripts <Playground testing>`.
+
+In Alan AI Playground, you can experiment with Alan AI's example scripts, such as the CRM or Weather application. Each of these applications provides basic services and utilizes the script functionality described in the :doc:`Dialog script concepts <../../server-api/script-concepts>` section of documentation.
+
+To evaluate example scripts in Alan AI Playground:
+
+1. On your mobile device, launch Alan AI Playground.
+2. In the **Projects** section, tap the script you want to evaluate.
+3. For each script, Alan AI provides short instructions on how to get started with conversational AI. Follow them to start your customer journey with a conversational AI experience.
+
+.. image:: /_static/assets/img/studio/playground01.png
+   
+.. raw:: html
+
+   <div id="blue-background"></div>
+
+

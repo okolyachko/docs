@@ -1,0 +1,395 @@
+App showcase
+============
+
+.. raw:: html
+
+   <div id="main-page"></div>
+   <p style="font-size: 20px">Need more ideas and inspiration? Check out the apps below: </p>
+
+
+Newest apps
+-----------
+
+.. panels::
+
+   ---
+   :card: border-0 + custom-style-example
+   
+   .. raw:: html
+   
+	  <div class="example-container">
+		<img src="../../../_static/assets/img/about/appointment-app.png"/>
+		<div class="hover-container">	
+			<div class="hover-container-child">		
+			<p>Appointment app</p></div>		
+			<div class="hover-container-child" style="margin-bottom:1em">
+			<a href="../appointment-app"><img src="../../../_static/assets/img/about/more-white.svg" width="30px" /></a>
+			<a href="../../../client-api/web/react"><img src="../../../_static/assets/img/about/react-white.svg" width="30px" /></a>
+			<a href="https://github.com/alan-ai/alan-sdk-web/tree/master/examples/alan-example-integeration-react-appointment" target="_blank" ><img src="../../../_static/assets/img/about/git-white.svg" width="30px" /></a>
+			</div>
+		</div>
+	  </div>
+	  
+ 
+   ---
+   :card: border-0 + custom-style-example
+   
+   This app allows you to effortlessly schedule a doctor's appointment with just your voice. 
+   
+   **Platform**: Web, React
+   
+   **Type**: Medical app, Appointment app
+   
+   - `Play with a demo app <https://appointment-demo.alan.app/>`__ 
+   - `View code on GitHub <https://github.com/alan-ai/alan-sdk-web/tree/master/examples/alan-example-integeration-react-appointment>`__ 
+   - :doc:`Learn more <appointment-app>`
+   
+iOS
+---
+
+.. panels::
+
+
+   ---
+   :card: border-0 + custom-style-example
+   
+   .. raw:: html
+   
+	  <div class="example-container">
+		<img src="../../../_static/assets/img/about/swift-integration.png"/>
+		<div class="hover-container">
+			<div class="hover-container-child">
+			<p>Integration example</p></div>
+			<div class="hover-container-child" style="margin-bottom:1em">
+			<a href="../../../client-api/ios/ios-api"><img src="../../../_static/assets/img/about/swift-white.svg" width="30px" /></a>
+			<a href="https://github.com/alan-ai/alan-sdk-ios/tree/master/examples/alan-example-integration-swift" target="_blank" ><img src="../../../_static/assets/img/about/git-white.svg" width="30px" /></a>
+			</div>
+		</div>
+	  </div>
+	  
+   ---
+   :card: border-0 + custom-style-example
+   
+   .. raw:: html
+   
+	  <div class="example-container">
+		<img src="../../../_static/assets/img/about/swift-delivery.png"/>
+		<div class="hover-container">
+			<div class="hover-container-child">
+			<p>Food delivery app</p></div>
+			<div class="hover-container-child" style="margin-bottom:1em">
+			<a href="../../../client-api/ios/ios-api"><img src="../../../_static/assets/img/about/swift-white.svg" width="30px" /></a>
+			<a href="https://github.com/alan-ai/alan-sdk-ios/tree/master/examples/FoodApp" target="_blank" ><img src="../../../_static/assets/img/about/git-white.svg" width="30px" /></a>
+			</div>
+		</div>
+	  </div>
+	  
+   ---
+   :card: border-0 + custom-style-example
+   
+   .. raw:: html
+   
+	  <div class="example-container">
+		<img src="../../../_static/assets/img/about/objc-integration.png"/>
+		<div class="hover-container">
+			<div class="hover-container-child">
+			<p>Integration example</p></div>
+			<div class="hover-container-child" style="margin-bottom:1em">
+			<a href="../../../client-api/ios/ios-api"><img src="../../../_static/assets/img/about/objc-white.svg" width="30px" /></a>
+			<a href="https://github.com/alan-ai/alan-sdk-ios/tree/master/examples/alan-example-integration-objectivec" target="_blank" ><img src="../../../_static/assets/img/about/git-white.svg" width="30px" /></a>
+			</div>
+		</div>
+	  </div>
+	  
+	  
+   ---
+   :card: border-0 + custom-style-example
+   
+   .. raw:: html
+   
+	  <div class="example-container">
+		<img src="../../../_static/assets/img/about/sap-integration.png"/>
+		<div class="hover-container">
+			<div class="hover-container-child">
+			<p>Integration example</p></div>
+			<div class="hover-container-child" style="margin-bottom:1em">
+			<a href="https://github.com/alan-ai/alan-sdk-ios/tree/master/examples/SAP_SampleApplication" target="_blank" ><img src="../../../_static/assets/img/about/git-white.svg" width="30px" /></a>
+			</div>
+		</div>
+	  </div>
+   
+Android
+-------
+
+.. panels::
+
+   ---
+   :card: border-0 + custom-style-example
+   
+   .. raw:: html
+   
+	  <div class="example-container">
+		<img src="../../../_static/assets/img/about/kotlin-integration.png"/>
+		<div class="hover-container">
+			<div class="hover-container-child">
+			<p>Integration example</p></div>
+			<div class="hover-container-child" style="margin-bottom:1em">
+			<a href="../../../client-api/android/android-api"><img src="../../../_static/assets/img/about/kotlin-white.svg" width="30px" /></a>
+			<a href="https://github.com/alan-ai/alan-sdk-android/tree/master/examples/alan-example-integration-kotlin" target="_blank" ><img src="../../../_static/assets/img/about/git-white.svg" width="30px" /></a>
+			</div>
+		</div>
+	  </div>
+	  
+	  
+   ---
+   :card: border-0 + custom-style-example
+   
+   .. raw:: html
+   
+	  <div class="example-container">
+		<img src="../../../_static/assets/img/about/java-integration.png"/>
+		<div class="hover-container">
+			<div class="hover-container-child">
+			<p>Integration example</p></div>
+			<div class="hover-container-child" style="margin-bottom:1em">
+			<a href="../../../client-api/android/android-api"><img src="../../../_static/assets/img/about/java-white.svg" width="30px" /></a>
+			<a href="https://github.com/alan-ai/alan-sdk-android/tree/master/examples/alan-example-integration-java" target="_blank" ><img src="../../../_static/assets/img/about/git-white.svg" width="30px" /></a>
+			</div>
+		</div>
+	  </div>
+	  
+Flutter
+-------
+
+.. panels::
+
+
+   ---
+   :card: border-0 + custom-style-example
+   
+   .. raw:: html
+   
+	  <div class="example-container">
+		<img src="../../../_static/assets/img/about/flutter-integration.png"/>
+		<div class="hover-container">	
+			<div class="hover-container-child">		
+			<p>Integration example</p></div>		
+			<div class="hover-container-child" style="margin-bottom:1em">
+			<a href="../../../client-api/cross-platform/flutter"><img src="../../../_static/assets/img/about/flutter-white.svg" width="30px" /></a>
+			<a href="https://github.com/alan-ai/alan-sdk-flutter/tree/master/examples/alan_simple_app" target="_blank" ><img src="../../../_static/assets/img/about/git-white.svg" width="30px" /></a>
+			</div>
+		</div>
+	  </div>
+	  
+	  
+   ---
+   :card: border-0 + custom-style-example
+   
+   .. raw:: html
+   
+	  <div class="example-container">
+		<img src="../../../_static/assets/img/about/flutter-shrine.png"/>
+		<div class="hover-container">
+			<div class="hover-container-child">	
+			<p>E-commerce app</p></div>	
+			<div class="hover-container-child" style="margin-bottom:1em">
+			<a href="../shrine-app"><img src="../../../_static/assets/img/about/more-white.svg" width="30px" /></a>
+			<a href="../../../client-api/cross-platform/flutter"><img src="../../../_static/assets/img/about/flutter-white.svg" width="30px" /></a>
+			<a href="https://github.com/alan-ai/alan-sdk-flutter/tree/master/examples/ShrineApp" target="_blank" ><img src="../../../_static/assets/img/about/git-white.svg" width="30px" /></a>
+			</div>
+		</div>
+	  </div>
+   
+Ionic
+-----
+
+.. panels::
+
+
+   ---
+   :card: border-0 + custom-style-example
+   
+   .. raw:: html
+   
+	  <div class="example-container">
+		<img src="../../../_static/assets/img/about/ionic-integration.png"/>
+		<div class="hover-container">
+			<div class="hover-container-child">
+			<p>Integration example</p></div>
+			<div class="hover-container-child" style="margin-bottom:1em">
+			<a href="../../../client-api/cross-platform/ionic"><img src="../../../_static/assets/img/about/ionic-white.svg" width="30px" /></a>
+			<a href="https://github.com/alan-ai/alan-sdk-ionic/tree/master/examples/AlanBasicExample" target="_blank" ><img src="../../../_static/assets/img/about/git-white.svg" width="30px" /></a>
+			</div>
+		</div>
+	  </div>
+	  
+	  
+   ---
+   :card: border-0 + custom-style-example
+   
+   .. raw:: html
+   
+	  <div class="example-container">
+		<img src="../../../_static/assets/img/about/ionic-delivery.png"/>
+		<div class="hover-container">
+			<div class="hover-container-child">
+			<p>Food delivery app</p></div>
+			<div class="hover-container-child" style="margin-bottom:1em">
+			<a href="../food-delivery-ionic"><img src="../../../_static/assets/img/about/more-white.svg" width="30px" /></a>
+			<a href="../../../client-api/cross-platform/ionic"><img src="../../../_static/assets/img/about/ionic-white.svg" width="30px" /></a>
+			<a href="https://github.com/alan-ai/alan-sdk-ionic/tree/master/examples/AlanFoodDelivery" target="_blank" ><img src="../../../_static/assets/img/about/git-white.svg" width="30px" /></a>
+			</div>
+		</div>
+	  </div>
+
+   
+Web apps
+--------
+
+.. panels::
+   
+   
+   ---
+   :card: border-0 + custom-style-example
+   
+   .. raw:: html
+   
+	  <div class="example-container">
+		<img src="../../../_static/assets/img/about/default-create-react-app.png"/>
+		<div class="hover-container">
+			<div class="hover-container-child">
+			<p>Integration example</p></div>
+			<div class="hover-container-child" style="margin-bottom:1em">
+			<a href="../../../client-api/web/react"><img src="../../../_static/assets/img/about/react-white.svg" width="30px" /></a>
+			<a href="https://github.com/alan-ai/alan-sdk-web/tree/master/examples/alan-example-integration-react" target="_blank" ><img src="../../../_static/assets/img/about/git-white.svg" width="30px" /></a>
+			</div>
+		</div>
+	  </div>
+	  
+	  
+	  
+   ---
+   :card: border-0 + custom-style-example
+   
+   .. raw:: html
+   
+	  <div class="example-container">
+		<img src="../../../_static/assets/img/about/react-client-api.png"/>
+		<div class="hover-container">
+			<div class="hover-container-child">
+			<p>Client API methods</p></div>
+			<div class="hover-container-child" style="margin-bottom:1em">
+			<a href="../../../client-api/web/react"><img src="../../../_static/assets/img/about/react-white.svg" width="30px" /></a>
+			<a href="https://github.com/alan-ai/alan-sdk-web/tree/master/examples/alan-example-app-react-api-test" target="_blank" ><img src="../../../_static/assets/img/about/git-white.svg" width="30px" /></a>
+			</div>
+		</div>
+	  </div>
+	  
+	  
+   ---
+   :card: border-0 + custom-style-example
+   
+   .. raw:: html
+   
+	  <div class="example-container">
+		<img src="../../../_static/assets/img/about/angular-integration.png"/>
+		<div class="hover-container">
+			<div class="hover-container-child">
+			<p>Integration example</p></div>
+			<div class="hover-container-child" style="margin-bottom:1em">
+			<a href="../../../client-api/web/angular"><img src="../../../_static/assets/img/about/angular-white.svg" width="30px" /></a>
+			<a href="https://github.com/alan-ai/alan-sdk-web/tree/master/examples/alan-example-integration-angular" target="_blank" ><img src="../../../_static/assets/img/about/git-white.svg" width="30px" /></a>
+			</div>
+		</div>
+	  </div>
+	  
+	  
+	  
+   ---
+   :card: border-0 + custom-style-example
+   
+   .. raw:: html
+   
+	  <div class="example-container">
+		<img src="../../../_static/assets/img/about/order-drinks.png"/>
+		<div class="hover-container">
+			<div class="hover-container-child">
+			<p>Order drinks app</p></div>
+			<div class="hover-container-child" style="margin-bottom:1em">
+			<a href="../order-drinks-app"><img src="../../../_static/assets/img/about/more-white.svg" width="30px" /></a>
+			<a href="../../../client-api/web/angular"><img src="../../../_static/assets/img/about/angular-white.svg" width="30px" /></a>
+			<a href="https://github.com/alan-ai/alan-sdk-web/tree/master/examples/alan-example-app-angular-order-drinks" target="_blank" ><img src="../../../_static/assets/img/about/git-white.svg" width="30px" /></a>
+			</div>
+		</div>
+	  </div>
+	  
+	  
+   ---
+   :card: border-0 + custom-style-example
+   
+   .. raw:: html
+   
+	  <div class="example-container">
+		<img src="../../../_static/assets/img/about/vue-integration.png"/>
+		<div class="hover-container">
+			<div class="hover-container-child">
+			<p>Integration example</p></div>
+			<div class="hover-container-child" style="margin-bottom:1em">
+			<a href="../../../client-api/web/vue"><img src="../../../_static/assets/img/about/vue-white.svg" width="30px" /></a>
+			<a href="https://github.com/alan-ai/alan-sdk-web/tree/master/examples/alan-example-integration-vue " target="_blank" ><img src="../../../_static/assets/img/about/git-white.svg" width="30px" /></a>
+			</div>
+		</div>
+	  </div>
+	  
+	  
+   ---
+   :card: border-0 + custom-style-example
+   
+   .. raw:: html
+   
+	  <div class="example-container">
+		<img src="../../../_static/assets/img/about/ember-integration.png"/>
+		<div class="hover-container">
+			<div class="hover-container-child">
+			<p>Integration example</p></div>
+			<div class="hover-container-child" style="margin-bottom:1em">
+			<a href="../../../client-api/web/ember"><img src="../../../_static/assets/img/about/ember-white.svg" width="30px" /></a>
+			<a href="https://github.com/alan-ai/alan-sdk-web/tree/master/examples/alan-example-integration-ember " target="_blank" ><img src="../../../_static/assets/img/about/git-white.svg" width="30px" /></a>
+			</div>
+		</div>
+	  </div>
+
+
+   
+   ---
+   :card: border-0 + custom-style-example
+   
+   .. raw:: html
+   
+	  <div class="example-container">
+		<img src="../../../_static/assets/img/about/electron-integration.png"/>
+		<div class="hover-container">
+			<div class="hover-container-child">
+			<p>Integration example</p></div>
+			<div class="hover-container-child" style="margin-bottom:1em">
+			<a href="../../../client-api/web/electron"><img src="../../../_static/assets/img/about/electron-white.svg" width="30px" /></a>
+			<a href="https://github.com/alan-ai/alan-sdk-web/tree/master/examples/alan-example-integration-electron" target="_blank" ><img src="../../../_static/assets/img/about/git-white.svg" width="30px" /></a>
+			</div>
+		</div>
+	  </div>
+		
+		
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+   
+   Appointment scheduling app (React) <appointment-app>
+   Shrine e-commerce app (Flutter) <shrine-app>
+   Food delivery app (Ionic) <food-delivery-ionic>
+   Order drinks app (Angular) <order-drinks-app>
+   
+   
+   
+.. raw:: html
+
+   <div id="orange-background"></div>

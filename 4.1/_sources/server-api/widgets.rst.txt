@@ -1,0 +1,57 @@
+UI widgets
+==========
+
+To help you build a dynamic and interactive UI for your AI assistant, Alan AI provides UI widgets.
+
+UI widgets are user interface elements designed to enhance the functionality of voice- and text-based AI assistants. They serve as interactive components within the AI assistant interface, allowing users to receive information and perform actions in an intuitive and engaging way.
+
+In Alan AI, you can use the following UI widgets for your AI assistants:
+
+.. panels::
+   :column: col-lg-12 col-md-12 col-sm-12 col-xs-12 p-2
+   
+   ---
+   :card: border-0 + custom-style-list
+   
+   .. link-button:: chat-buttons
+      :type: ref
+      :text: Chat buttons
+      :classes: stretched-link panel
+	  
+   Learn how to display button to allow users to select options or trigger specific actions from the chat UI
+   
+   ---
+   :card: border-0 + custom-style-list
+   
+   .. link-button:: chat-cards
+      :type: ref
+      :text: Chat cards
+      :classes: stretched-link panel
+	  
+   Learn how to display cards in the Alan AI Chat UI to present information in a structured and visually appealing way
+   
+   ---
+   :card: border-0 + custom-style-list
+   
+   .. link-button:: popups
+      :type: ref
+      :text: Alan AI button popups
+      :classes: stretched-link panel
+	  
+   Learn how to display popups to make the Alan AI button more noticeable and engage users to interact with the AI assistant
+
+
+.. raw:: html
+
+   <div id="green-background"></div>
+   <div id="wide-content"></div>   
+   
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+   
+   Chat cards<chat-cards>
+   Chat buttons<chat-buttons>
+   Alan AI button popups<popups>
+   
+   

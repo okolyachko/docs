@@ -1,0 +1,76 @@
+JSON to markdown
+================
+
+Let's assume you have a JSON-formatted list of product reviews. You want to pre-process this data to:
+   
+- Present data in an aesthetic format using markdown
+- Extract pros and cons from the review text and present them as bulleted text
+
+For this, you can do the following:
+   
+1. Add a transform named ``summarize`` with the following rules:
+   
+   - **Instruction**: ``The input contains the initial JSON, the query contains fields description, the result shows what fields should be available and how the text should be formatted``
+      
+   - **Input**: ``{"Name": "Emily", "Rating": "4/5", "Review": "A solid fitness tracker with accurate measurements. I appreciate the waterproof design, which allows me to wear it while swimming. The battery life is decent, but I wish it had more customizable watch faces."}``, input format: **JSON**
+	  
+   - **Query**: ``Name is the name of the user who left feedback, rating is the rating set, review contains the product pro and cons``
+      
+   - **Result**: example of output data, output format: **markdown**
+	  
+     .. code-block:: markdown
+        :caption: Result field
+	  
+        # Product reviews
+
+        ## Name
+
+        - **Pros**: Accurate measurements, waterproof design, decent battery life 
+        - **Cons**: Few customizable watch faces
+        - **Rating**: rating
+		   
+   .. image:: /_static/assets/img/script-concepts/transforms.png 
+
+2. Add the following code to your dialog script:
+   
+   .. code-block:: alan
+      :caption: Dialog script
+		 
+      let productReviews = {
+          "reviews": [
+              {
+                  "name": "Sarah",
+                  "rating": "5/5",
+                  "review": "I've been using this fitness tracker for a few weeks now, and it's been a game-changer for my fitness journey. It accurately tracks my steps and heart rate. The sleep tracking feature is a bonus, helping me improve my sleep patterns. The app is user-friendly, and the battery life is impressive. Highly recommend!"
+              },
+              {
+                  "name": "Chris",
+                  "rating": "4/5",
+                  "review": "The fitness tracker is great for tracking my daily activities. The heart rate monitor is quite accurate, and I like the variety of sports modes. My only wish is for a brighter display in direct sunlight. Overall, a solid choice."
+              },
+              {
+                  "name": "Linda",
+                  "rating": "5/5",
+                  "review": "I love this fitness tracker. It's lightweight, comfortable to wear, and the battery lasts for days. The sleep tracking is a lifesaver, helping me identify areas for improvement. The app is intuitive, and it syncs seamlessly with my phone. Couldn't be happier!"
+              }
+          ]
+      }
+
+      intent(`Show product reviews`, async (p)=> {
+          p.play(`Collecting product reviews...`);
+             
+          // Transform review data
+          let r = await transforms.summarize({
+              input: productReviews,
+              query: 'JSON containing a list of product reviews'
+          });
+          p.play(r);    
+      });
+		 
+   Here, reviews in JSON format are saved to ``productReviews``. When the user asks to show reviews, the review data is summarized and formatted to be presented using the defined template:
+	 
+   .. image:: /_static/assets/img/script-concepts/transforms-summary.png
+  
+.. raw:: html
+
+   <div id="green-background"></div>

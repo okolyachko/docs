@@ -1,0 +1,7 @@
+.. code-block:: typescript
+   :caption: Client app
+
+   this.alanBtnComponent.nativeElement.addEventListener('event', (data) => {
+     const event = (<CustomEvent>data).detail;
+     this.eventSectionEl.nativeElement.innerText = this.eventSectionEl.nativeElement.innerText + JSON.stringify(event) + '\n\n';
+   });

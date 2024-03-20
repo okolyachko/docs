@@ -1,0 +1,61 @@
+Versions and environments
+=========================
+
+To update your AI assistant in an organized way and control the release process, you can use versions and environments in Alan AI Studio.
+
+Script versions
+---------------
+
+If a dialog script goes through many iterations, you can create multiple script versions in Alan AI Studio. A script version is a copy of the script made at a particular point in time. Script versions are immutable: once created, they cannot be modified.
+
+To create a script version: 
+
+1. In Alan AI Studio, open the AI assistant project. 
+
+2. At the top of the code editor, click **Save as New Version**. 
+
+3. In the **Version name** field, specify the name for the created version. 
+
+4. (Optional) To run the script version in the Test or Production environment, enable the **Run on Testing** and/or **Run on Production** option.
+
+5. Click **Save**.
+
+.. image:: /_static/assets/img/studio/versions.png
+
+You can manage script versions in the following way: 
+
+- To edit the version name, open the versions list, hover over the necessary version and to the right, click the edit icon. Then rename the script version. 
+- To delete a script version, open the versions list, hover over the necessary version and to the right, click the delete icon. 
+- To roll back to a specific script version, in the versions list, select the necessary version and click **Save to Last Version** to the right. 
+- To compare two script versions, at the top of the code editor, click **Compare** and select the script versions to compare.
+
+.. note::
+
+   - If you have multiple scripts in the project, operations with script versions affect all project scripts. For example, if you delete a script version for one script, the same version will be deleted for other scripts, too. 
+   - You cannot delete a script version running in the Production environment.
+
+.. _Environments:
+
+Environments
+------------
+
+Alan AI Studio offers three different environments to develop, test and run your script:
+
+-  The Development environment allows you to work on the dialog script, fix bugs and add new features to the script
+-  The Testing environment can be used to test your AI assistant
+-  The Production environment can be used to roll out the finalized script version to production
+
+You can deploy different script versions to different environments. To do this:
+
+1. In Alan AI Studio, at the top of the code editor, select the environment in which you want to run a script version.
+2. In the versions list to the right, select the script version.
+3. At the top of the code editor, click **Integrations**.
+4. In the **Alan SDK Key** field, check the last segment of the key value. It will refer to the environment you have selected.
+5. In the **Embed Code Example** section, click **Copy** to copy the code for the Alan AI button.
+6. Embed the copied code to the application to be run in the necessary environment.
+
+.. image:: /_static/assets/img/studio/sdk_environment.png
+
+.. raw:: html
+
+   <div id="blue-background"></div>

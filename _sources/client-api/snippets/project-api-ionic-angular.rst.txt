@@ -1,0 +1,10 @@
+.. code-block:: typescript
+   :caption: Client app
+
+   var myAlanBtn = document.getElementById('myAlanBtn');
+		
+   myAlanBtn.componentOnReady().then(function () {
+     myAlanBtn.callProjectApi("myFunc", {myData: 123}, function (error, result) {
+       console.log("cb from myFunc was received", error, result);
+     });
+   });

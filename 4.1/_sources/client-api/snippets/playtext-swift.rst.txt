@@ -1,0 +1,8 @@
+.. code-block:: swift
+   :caption: Client app
+
+   /// Playing any text message
+   func playText() {
+     /// Providing text as string param
+     self.button.playText("Hi")
+   }

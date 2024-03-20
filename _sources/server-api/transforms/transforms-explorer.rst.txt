@@ -1,0 +1,19 @@
+Transforms Explorer
+===================
+
+Alan AI Studio comes with the Transforms Explorer, a tool that enhances transparency and understanding of the data transformation process. The Transforms Explorer allows you to gain insight into the inner workings of the ``transforms()`` function and inspect all instances of data transformations that have been executed.
+
+To open the Transforms Explorer, click the magnifying glass icon to the left of the ``transforms()`` function in the dialog script. 
+
+.. image:: /_static/assets/img/script-concepts/transforms-explorer-open.png
+
+For every transformation, the Transforms Explorer provides detailed information on the input and output data. You can examine these instances to better understand the impact of each transformation on the input data. 
+
+Additionally, you can add successful transformation instances to the list of examples specified for the transform. To do this, to the right of the instance row in the table, click the add icon. Alan AI will use this example for any future data transformation. 
+
+.. image:: /_static/assets/img/script-concepts/transforms-explorer.png
+
+  
+.. raw:: html
+
+   <div id="green-background"></div>

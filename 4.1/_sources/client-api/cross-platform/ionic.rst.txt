@@ -1,0 +1,71 @@
+Alan AI Ionic Framework
+=======================
+
+**Available on**: :badge:`Web platform,badge-primary` :badge:`Android,badge-danger` :badge:`iOS,badge-danger`
+
+You can add the Alan AI button to an Ionic app built with one of the following frameworks:
+
+.. panels::
+   :column: col-lg-4 col-md-4 col-sm-6 col-xs-12 p-2
+
+   ---
+   :card: border-0 + custom-style-res + sdk
+   
+   .. link-button:: ionic-react
+      :type: ref
+      :text: 
+      :classes: stretched-link panel
+	  
+   .. raw:: html
+      
+	  <p style="font-weight: 600">Ionic React</p>
+   
+   Integrate an Ionic app built with the React framework with Alan AI.
+
+   ---
+   :card: border-0 + custom-style-res + sdk
+   
+   .. link-button:: ionic-angular
+      :type: ref
+      :text: 
+      :classes: stretched-link panel
+	  
+   .. raw:: html
+      
+	  <p style="font-weight: 600">Ionic Angular</p>
+   
+   Integrate an Ionic app built with the Angular framework with Alan AI.
+   
+   
+   ---
+   :card: border-0 + custom-style-res + sdk
+   
+   .. link-button:: ionic-vue
+      :type: ref
+      :text: 
+      :classes: stretched-link panel
+	  
+   .. raw:: html
+      
+	  <p style="font-weight: 600">Ionic Vue</p>
+   
+   Integrate an Ionic app built with the Vue framework with Alan AI.
+	  
+
+
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+   
+   Ionic React<ionic-react>
+   Ionic Angular<ionic-angular>
+   Ionic Vue<ionic-vue>
+   iOS and Android deployment<ionic-capacitor>
+   Communication between components<ionic-communicating>
+   Troubleshooting<ionic-troubleshooting>
+
+
+.. raw:: html
+
+   <div id="purple-background"></div>
+   <div id="wide-content"></div>

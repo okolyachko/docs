@@ -1,0 +1,151 @@
+onEvent handler
+===============
+
+Responsible for handling events received from Alan AI.
+
+While Alan AI interacts with the user and interpretes the user’s input, it emits a series of events. For each event, Alan AI generates JSON output
+with the event description. You can intercept the event information and use it in your app logic if needed.
+
+You can use the following Alan AI events:
+
+-  `recognized <#recognized-event>`__
+-  `parsed <#parsed-event>`__
+-  `text <#text-event>`__
+-  `scripts <#scripts-event>`__
+
+recognized event
+----------------
+
+The event is emitted during and upon the user’s input recognition. The event description contains interim results for the interpreted user's phrase and the recognition state in the ``final`` field:
+
+-  If the user’s input is still being recognized, the ``final`` field value is ``false``.
+
+   .. code-block:: javascript
+      :caption: Event object
+
+      {name: 'recognized', text: 'hello', final: false}
+   
+   
+-  If the user’s input has been recognized, the ``final`` field value is ``true``.
+
+   .. code-block:: javascript
+      :caption: Event object
+
+      {name: 'recognized', text: 'hello', final: true}
+
+.. _parsed-event:
+
+parsed event
+------------
+
+The event is emitted after the user’s input has been parsed and interpreted. The event description contains the final result for the interpreted user’s phrase.
+
+.. code-block:: javascript
+   :caption: Event object
+
+   {name: 'parsed', text: 'hello'}
+   
+.. _text-event:
+
+text event
+----------
+
+This event is emitted when Alan AI plays the reply to the user. The event description contains Alan AI’s response.
+
+.. code-block:: javascript
+   :caption: Event object
+
+   {name: 'text', text: 'I am here'}
+   
+   
+.. _scripts-event:
+   
+scripts event
+-------------
+
+.. note::
+   The ``scripts`` event is currently supported on the Web platform.
+   
+This event is emitted when a script in the assistant project in Alan AI Studio is saved.
+
+.. code-block:: javascript
+   :caption: Event object
+
+   {name: 'scripts'}
+   
+
+Examples
+--------
+
+.. tabbed:: Web (React, Angular, etc.)
+
+    .. include:: ../snippets/event-handler-web.rst
+
+.. tabbed:: Objective-C
+
+    .. include:: ../snippets/event-handler-obj.rst
+
+.. tabbed:: Swift
+
+    .. include:: ../snippets/event-handler-swift.rst
+
+.. tabbed:: Kotlin
+
+    .. include:: ../snippets/event-handler-kotlin.rst
+		
+.. tabbed:: Java
+
+    .. include:: ../snippets/event-handler-java.rst
+
+.. tabbed:: Flutter
+
+    .. include:: ../snippets/event-handler-flutter.rst
+		
+.. tabbed:: Ionic
+
+    **Ionic Angular**
+	
+    .. include:: ../snippets/event-handler-ionic-angular.rst
+
+
+    **Ionic React**	
+    
+    .. include:: ../snippets/event-handler-ionic-react.rst
+	
+	
+    **Ionic Vue**
+    
+    .. include:: ../snippets/event-handler-ionic-vue.rst
+	   
+	   
+.. tabbed:: React Native
+
+    .. include:: ../snippets/event-handler-rn.rst
+		
+**See also**
+	
+:ref:`How to capture user utterances as text <how-to-capture-user-utterances-as-text>`
+
+
+Identifying message pairs
+-------------------------
+
+The ``reqId`` field of the messages sent in ``parsed/recognized`` and ``text`` events contains a unique ID that allows you to identify request-response pairs to which these messages relate. For example, in the ``parsed`` event, the message format will be the following: 
+
+.. code-block:: javascript
+   :caption: Event object
+
+   {"reqId":"1666610864381/1", "text":"hi"} 
+
+In the ``text`` event, the message format will be the following:
+
+.. code-block:: javascript
+   :caption: Event object
+
+   {text: "Hello", ctx: {reqId: "1666610864381/1"}}
+		
+		
+		
+.. raw:: html
+
+   <div id="purple-background"></div>

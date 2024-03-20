@@ -1,0 +1,1189 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../genindex/" /><link rel="search" title="Search" href="../../../search/" /><link rel="next" title="Enabling the Alan AI Chat" href="../chat/" /><link rel="prev" title="Alan AI assistant" href="../overview/" />
+
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/><meta name="generator" content="sphinx-3.5.4, furo 2021.04.11.beta34"/>
+        <title>Customizing the AI assistant | Alan Docs</title>
+      <link rel="stylesheet" href="../../../_static/styles/furo.css?digest=59ab60ac09ea94ccfe6deddff6d715cce948a6fc">
+    <link rel="stylesheet" href="../../../_static/pygments.css">
+    <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../../../_static/pygments_dark.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+
+
+<style>
+  :root {
+    --color-code-background: #ffffff;
+  --color-code-foreground: black;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+
+  /* For allowing end-user-specific overrides */
+  .override-light {
+    --color-code-background: #ffffff;
+  --color-code-foreground: black;
+  
+  }
+  .override-dark {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+</style><link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/algolia.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/typesense-docsearch.js@latest/dist/cdn/docsearch.min.css" />
+    <link rel="stylesheet" href="../../../_static/styles/furo-extensions.css?digest=d391b54134226e4196576da3bdb6dddb7e05ba2b">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../_static/favicon.ico">
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+	<link rel="canonical" href="https://alan.app/docs/usage/button/customization/"/>
+    <script type="text/javascript" src= "https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-QTCQV2T397"></script>
+        <script>
+        	window.dataLayer = window.dataLayer || [];
+        	function gtag(){dataLayer.push(arguments);}
+        	gtag('js', new Date());
+		
+        	gtag('config', window.location.hostname === "alan.app" ? 'G-QTCQV2T397' : 'G-H4F9QS7RMX');
+	</script>
+</head>
+  <body dir="">
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z"/>
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="-5 -3 24 24"
+      stroke="currentColor"
+      class="feather feather-chevron-right">
+      <path d="M11 9l-6 5.25V3.75z"></path>
+    </svg>
+  </symbol>
+</svg>
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="../../../_static/favicon.ico">
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+	<link rel="canonical" href="https://alan.app/docs/usage/button/customization/"/>
+    <script type="text/javascript" src= "https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-QTCQV2T397"></script>
+        <script>
+        	window.dataLayer = window.dataLayer || [];
+        	function gtag(){dataLayer.push(arguments);}
+        	gtag('js', new Date());
+		
+        	gtag('config', window.location.hostname === "alan.app" ? 'G-QTCQV2T397' : 'G-H4F9QS7RMX');
+	</script>
+
+
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+
+<div class="header-new">
+<div class="header-content">
+		<div class="logo-part">
+			<div class="logo"> 
+			
+             <div class="sidebar-logo-container">
+				<div class="alan-logo"><a href="https://alan.app"><img class="sidebar-logo" src="../../../_static/alan-logo.svg" alt="Logo"/></a></div>
+				<div class="docs">
+					
+					<a href="../../../"> 
+					
+					</div>
+				</div>
+			
+			</div>
+			
+			
+			</a>
+		</div>
+        
+		
+		<div class="right-block">
+		
+		<!-- First Dropdown -->
+		<div class="dropdown" id="version">
+			<button class="dropbtn">4.2</button>
+			<div class="dropdown-content">
+				<a href="javascript:void(0);">4.2</a>
+				<a href="javascript:void(0);">3.x</a>
+			</div>
+		</div>
+
+		<!-- Second Dropdown -->
+		<div class="dropdown" id="platform">
+			<button class="dropbtn">Framework/language</button>
+			<div class="dropdown-content">
+				<a href="javascript:void(0);">Web (React, Angular, etc.)</a>
+				<a href="javascript:void(0);">Objective-C</a>
+				<a href="javascript:void(0);">Swift</a>
+				<a href="javascript:void(0);">Kotlin</a>
+				<a href="javascript:void(0);">Java</a>
+				<a href="javascript:void(0);">Flutter</a>
+				<a href="javascript:void(0);">Ionic</a>
+				<a href="javascript:void(0);">React Native</a>
+
+			</div>
+		</div>
+		
+		
+		<div class="goto"><a class="docs-tooltip-link" target="_blank"></a>
+		<span class="docs-tooltip">Go to docs</span>
+		</div>
+		
+		<div class="search-box">   
+			<form class="sidebar-search-container" >
+				<input class="sidebar-search" placeholder=Search name="q" ={sendRequestDebounce}>
+				<input type="hidden" name="check_keywords" value="yes">
+				<input type="hidden" name="area" value="default">
+			</form>
+			
+			
+		</div>
+		<div class="social">
+			<a href="https://alanaigroup.slack.com/join/shared_invite/enQtNzMzOTE5MTIwMjg4LWI4ZmM4MTNkMTdmY2M0ZWEwODlmZDQ5Y2ZkMjUzNmMyZDJiMzA0Y2M1NDdhYzZjYWFlZTA5NjM4OTU0MWFmNWU#/shared-invite/email" target="_blank" class="fa-brands fa-slack fa-lg"></a>
+			<a href="https://github.com/alan-ai" target="_blank" class="fa-brands fa-github fa-lg"></a>
+        </div>
+		</div>
+		</div>
+    </div>
+
+	  
+		
+		
+	
+	</div>
+<div class="page">
+  
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <div class="logo-part">
+			<div class="logo"> 
+			
+             <div class="sidebar-logo-container">
+				<a href="https://alan.app"><img class="sidebar-logo" src="../../../_static/alan-logo.svg" alt="Logo"/></a>
+			</div>
+			
+			</div>
+			
+			<div class="docs">
+			
+			<a href="../../../"> 
+			
+			</div>
+			</a>
+		</div>
+    </div>
+    <div class="header-right">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="../../../contents/">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../../../_static/alan-logo.svg" alt="Logo"/>
+  </div>
+  
+  
+</a><form class="sidebar-search-container">
+  <input class="sidebar-search search-mobile" placeholder=Search name="q">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../">Get started</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../how-works/about/">How Alan AI works</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../how-works/basics/">Alan AI basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../how-works/infrastructure/">Alan AI infrastructure</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../how-works/deployment/">Deployment options</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label for="toctree-checkbox-2"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../how-works/cloud-deployment/">Cloud deployment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../how-works/hybrid-deployment/">Hybrid deployment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../how-works/on-premises-deployment/">On-premises deployment</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../how-works/voice-processing/">Voice processing</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../guides/studio/">Alan AI Studio</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label for="toctree-checkbox-3"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../guides/projects/">Alan AI projects</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../guides/scripts/">Dialog scripts</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label for="toctree-checkbox-4"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../guides/managing-scripts/">Managing scripts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../guides/importing-scripts/">Exporting and importing scripts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../guides/sharing-github/">Sharing and keeping scripts in GitHub</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../guides/using-shortcuts/">Using shortcuts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../guides/changing-theme/">Changing the theme and font size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../guides/viewing-flowchart/">Viewing the script flowchart</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../guides/versioning/">Versions and environments</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../guides/script-testing/">Testing and debugging</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label for="toctree-checkbox-5"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../guides/debugging-chat/">Debugging Chat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../guides/studio-test-tools/">Tools to simulate in-app behavior</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../guides/test-view/">Test View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../guides/logs/">Alan AI Studio logs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../guides/in-app-testing/">In-app testing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../guides/playground/">Alan AI Playground</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../guides/analytics/">Conversational analytics</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label for="toctree-checkbox-6"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../guides/dashboard/">Projects dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../guides/analytics-view/">Analytics View</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../guides/billing/">Billing and subscriptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../guides/plugin/">Alan AI Plugin</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../overview/">Alan AI assistant</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label for="toctree-checkbox-7"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Customizing the AI assistant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chat/">Enabling the Alan AI Chat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cohorts/">Setting up cohorts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../activation/">Starting and stopping dialog sessions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../additional/supported-platforms/">Supported platforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../additional/library/">Alan AI resource library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../release-notes/updates/">Recent Alan AI Platform updates</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Server API</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../server-api/script-concepts/">Intent-driven dialogs</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label for="toctree-checkbox-8"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../server-api/commands-and-responses/">Requests and responses</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label for="toctree-checkbox-9"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../server-api/intent-matching/">Intent matching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../server-api/voice-settings/">Voice settings</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/patterns/">Patterns</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../server-api/slots/">Slots</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label for="toctree-checkbox-10"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../server-api/user-defined-slots/">User-defined slots (static)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../server-api/dynamic-slots/">Dynamic slots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../server-api/regex-slots/">Regex slots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../server-api/predefined-slots/">Predefined slots</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/contexts/">Contexts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/objects/">Predefined script objects</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../server-api/user-data/overview/">User data</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label for="toctree-checkbox-11"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../server-api/user-data/events/">User events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../server-api/user-data/client-object/">Client object</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/error-handling/">Error handling and re-prompts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/lifecycle/">Lifecycle callbacks</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../server-api/qna/">Question answering</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label for="toctree-checkbox-12"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/qna-tools/static/">Static corpus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/qna-tools/dynamic/">Dynamic corpus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/qna-tools/query-api/">Query API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/qna-tools/corpus-explorer/">Corpus Explorer</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../server-api/transforms/overview/">Data transformation</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label for="toctree-checkbox-13"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/transforms/corpus-transforms/">Corpus transforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/transforms/text-to-markdown/">Plain text to markdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/transforms/json-to-markdown/">JSON to markdown</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/transforms/json-to-html/">JSON to HTML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/transforms/transforms-explorer/">Transforms Explorer</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../server-api/generative-ai/overview/">Generative AI</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label for="toctree-checkbox-14"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/generative-ai/generator-api/">Generator API</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../server-api/semantic-search/overview/">Semantic search</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label for="toctree-checkbox-15"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/semantic-search/table-api/">Table API</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../server-api/sending-data/communication/">Sending data from the app</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label for="toctree-checkbox-16"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/sending-data/authdata/">authData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/sending-data/visual-state/">Visual state</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/sending-data/project-api/">Project API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../server-api/built-in-javascript-libraries/">Built-in JavaScript libraries</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../server-api/widgets/">UI widgets</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label for="toctree-checkbox-17"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/chat-cards/">Chat cards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/chat-buttons/">Chat buttons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../server-api/popups/">Alan AI button popups</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../server-api/api/api-reference/">API reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Integration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../client-api/integration/">Integration overview</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../client-api/web/web-api/">Web frameworks</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label for="toctree-checkbox-18"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../client-api/web/react/">React</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../client-api/web/angular/">Angular</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../client-api/web/vue/">Vue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../client-api/web/ember/">Ember</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../client-api/web/vanilla/">JavaScript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../client-api/web/electron/">Electron</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../client-api/web/web-component/">Cross-platform solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../client-api/web/server-side-rendering/">Server-side rendering</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../client-api/ios/ios-api/">iOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../client-api/android/android-api/">Android</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../client-api/cross-platform/overview/">Cross-platform frameworks</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label for="toctree-checkbox-19"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../client-api/cross-platform/flutter/">Flutter</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../client-api/cross-platform/ionic/">Ionic</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label for="toctree-checkbox-20"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../client-api/cross-platform/ionic-react/">Ionic React</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../client-api/cross-platform/ionic-angular/">Ionic Angular</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../client-api/cross-platform/ionic-vue/">Ionic Vue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../client-api/cross-platform/ionic-capacitor/">iOS and Android deployment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../client-api/cross-platform/ionic-communicating/">Communication between components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../client-api/cross-platform/ionic-troubleshooting/">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../client-api/cross-platform/react-native/">React Native</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../client-api/cross-platform/cordova/">Apache Cordova</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Alan AI SDK toolkit</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../client-api/methods/common-api/">Client API methods</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../client-api/methods/handlers/">Alan AI handlers</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label for="toctree-checkbox-21"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../client-api/methods/command-handler/">onCommand handler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../client-api/methods/state-handler/">onButtonState handler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../client-api/methods/connection-handler/">onConnectionStatus handler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../client-api/methods/event-handler/">onEvent handler</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Samples &amp; Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials/how-tos/">How-tos</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../tutorials/list-all/">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label for="toctree-checkbox-22"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tutorials/list/chat-list/">Alan AI Chat</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/><label for="toctree-checkbox-23"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/list/building-ai-chat/">Create an AI chat for a website</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/list/adding-greeting/">Add a greeting to the AI chat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/list/using-buttons/">Use buttons in the AI chat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/list/collecting-data-chat/">Collect data with the AI chat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/list/sending-emails/">Send emails from the AI chat</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tutorials/list/web-list/">Web</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/><label for="toctree-checkbox-24"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/list/adding-voice-to-a-web-application/">Building a voice assistant for web</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../tutorials/list/food-delivery-tutorial/">Creating a voice-enabled food delivery app: complete tutorial</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label for="toctree-checkbox-25"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-create-app/">Step 1: Create a web app</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-create-voice-assistant/">Step 2: Create a voice assistant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-integrate/">Step 3: Integrate Alan AI with the app</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-add-command/">Step 4: Add a voice command</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-alternatives/">Step 5: Specify options and alternatives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-slots/">Step 6: Pick out important data with slots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-several-items/">Step 7: Add several items</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-display-items/">Step 8: Send a command to display items in the cart</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-slot-labels/">Step 9: Use slot labels to display the order</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-remove-items/">Step 10: Remove items with voice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-highlight-items/">Step 11: Highlight named items</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-checkout-context/">Step 12: Add the checkout context</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-time/">Step 13: Get the delivery time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-comment/">Step 14: Capture a comment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-populate-fields/">Step 15: Populate fields with the delivery details</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-api-call/">Step 16: Make an API call to get ingredients</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-visual-context/">Step 17: Get the app visual context</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-balance/">Step 18: Get the balance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-start-dialog/">Step 19: Let Alan start the dialog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/list/food-delivery-popup/">Step 20: Show a popup next to the Alan button</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/list/using-dynamic-slots/">Using dynamic slots in patterns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/list/making-web-api-call/">Making a Web API call from the dialog script</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tutorials/web/frameworks-list/">Web frameworks</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/><label for="toctree-checkbox-26"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/web/integrating-react-app/">Building a voice assistant for a React app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/web/integrating-angular-app/">Building a voice assistant for an Angular app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/web/integrating-vue-app/">Building a voice assistant for a Vue app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/web/integrating-ember-app/">Building a voice assistant for an Ember app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/web/integrating-electron-app/">Building a voice assistant for an Electron app</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tutorials/ios/ios-list/">iOS</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/><label for="toctree-checkbox-27"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/ios/integrating-swift/">Building a voice assistant for an iOS app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/ios/navigating-swift/">Navigating between views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/ios/sending-data-swift/">Passing the app state to the dialog script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/ios/highlighting-swift/">Highlighing items with voice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/ios/triggering-info-swift/">Triggering dialog script actions without commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/ios/greeting-swift/">Playing a greeting in an app</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tutorials/android/android-list/">Android</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/><label for="toctree-checkbox-28"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/android/integrating-java-kotlin/">Building a voice assistant for an Android Java or Kotlin app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/android/navigating-kotlin/">Navigating in an Android app with voice (Kotlin)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/android/sending-state-kotlin/">Passing the app state to the dialog script (Kotlin)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/android/sending-data-kotlin/">Sending data from the app to the dialog script (Kotlin)</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tutorials/flutter/flutter-list/">Flutter</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" type="checkbox"/><label for="toctree-checkbox-29"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/flutter/integrating-flutter/">Building a voice assistant for a Flutter app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/flutter/navigating-flutter/">Navigating between screens</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/flutter/sending-data-flutter/">Passing the app state to the dialog script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/flutter/project-api-flutter/">Sending data to the dialog script</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tutorials/ionic/ionic-list/">Ionic</a><input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" type="checkbox"/><label for="toctree-checkbox-30"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/ionic/integrating-angular/">Building a voice assistant for an Ionic Angular app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/ionic/navigating-angular/">Navigating between tabs (Ionic Angular)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/ionic/sending-data-angular/">Passing the app state to the dialog script (Ionic Angular)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/ionic/integrating-react/">Building a voice assistant for an Ionic React app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/ionic/navigating-react/">Navigating between tabs (Ionic React)</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../tutorials/react-native/react-native-list/">React Native</a><input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" type="checkbox"/><label for="toctree-checkbox-31"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/react-native/integrating-react-native/">Building a voice assistant for a React Native app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/react-native/sending-commands-react-native/">Sending commands to the app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/react-native/sending-state-react-native/">Passing the app state to the dialog script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/react-native/triggering-activities-react-native/">Triggering activities without voice commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/react-native/navigating-react-native/">Navigating between screens with voice</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../examples/github/">App showcase</a><input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" type="checkbox"/><label for="toctree-checkbox-32"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/appointment-app/">Appointment scheduling app (React)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/shrine-app/">Shrine e-commerce app (Flutter)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/food-delivery-ionic/">Food delivery app (Ionic)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/order-drinks-app/">Order drinks app (Angular)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../additional/faq/">FAQ</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../examples/overview/">Alan AI examples</a><input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" type="checkbox"/><label for="toctree-checkbox-33"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/predefined-examples/">Dialog script examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../examples/code/">Integration code examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../additional/guidelines/overview/">Multimodal conversations design guide</a><input class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" type="checkbox"/><label for="toctree-checkbox-34"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../additional/guidelines/planning/">Planning and drafting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../additional/guidelines/building/">Building the dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../additional/guidelines/testing/">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../additional/guidelines/publishing/">Preparing for rollout and releasing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../additional/guidelines/analyzing/">Analyzing users' behavior</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../additional/cheatsheet/">Alan AI cheat sheet</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <main class="main">
+    <div class="content">
+      <article role="main">
+        <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+        </label>
+        <div class="section" id="customizing-the-ai-assistant">
+<h1>Customizing the AI assistant<a class="headerlink" href="#customizing-the-ai-assistant" title="Permalink to this headline">¶</a></h1>
+<p>You can customize your AI assistant to fit your app’s needs and color scheme. To access the customization options:</p>
+<ol class="arabic simple">
+<li><p>In Alan AI Studio, at the top of the code editor, click <strong>Integrations</strong>.</p></li>
+<li><p>Click the <strong>Web</strong>, <strong>iOS</strong> or <strong>Android</strong> tab and use the options below to set up the necessary style and behavior for your AI assistant.</p></li>
+</ol>
+<img alt="../../../_images/customization_button_options.png" src="../../../_images/customization_button_options.png"/>
+<p>You can do the following:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="#enabling-or-disabling-the-ai-assistant-button">Enable or disable the AI assistant button in the app</a></p></li>
+<li><p><a class="reference external" href="#enabling-or-disabling-the-speech-to-text-panel">Enable or disable the Speech-to-Text panel</a></p></li>
+<li><p><a class="reference external" href="#recording-intent-audio">Record intent audio</a></p></li>
+<li><p>(Web) <a class="reference external" href="#playing-the-ready-to-listen-sound">Play the ready-to-listen sound</a></p></li>
+<li><p>(Web) <a class="reference external" href="#changing-the-button-position">Change the button position</a></p></li>
+<li><p>(Web) <a class="reference external" href="#saving-the-button-position">Save the button position after drag-n-drop</a></p></li>
+<li><p>(Web) <a class="reference external" href="#sending-the-current-page-state">Send current page state to the server</a></p></li>
+<li><p><a class="reference external" href="#changing-the-button-visual-style">Change the button visual style</a></p></li>
+<li><p><a class="reference external" href="#changing-the-voice-type-accent-pitch-and-rate">Change the voice type, accent, pitch and rate</a></p></li>
+<li><p><a class="reference external" href="#setting-the-microphone-timeout">Set the microphone timeout</a></p></li>
+<li><p>(Web) <a class="reference external" href="#enabling-the-alan-ai-chat">Enable the Alan AI Chat</a></p></li>
+<li><p>(Web) <a class="reference external" href="#getting-the-app-code-for-the-alan-ai-plugin">Get the app code for the Alan AI Plugin</a></p></li>
+<li><p>(iOS/Android) <a class="reference external" href="#taking-screenshots">Take screenshots</a></p></li>
+<li><p>(iOS/Android) <a class="reference external" href="#keeping-the-session-active">Keep the session active</a></p></li>
+<li><p>(iOS/Android) <a class="reference external" href="#using-the-wake-word">Use the wake word</a></p></li>
+<li><p>(iOS/Android) <a class="reference external" href="#using-a-custom-wake-word">Use a custom wake word</a></p></li>
+<li><p>(iOS/Android) <a class="reference external" href="#enabling-the-qr-code-reader">Enable the QR code reader</a></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>The AI assistant settings are configured at the project level. If you have several projects, you need to define settings for them separately.</p></li>
+<li><p>You can define different settings for every environment in the project: Development, Testing or Production, and for each platform or SDK: web, iOS or Android.</p></li>
+<li><p>Some of the customization options are available on specific pricing plans. For details, see <a class="reference external" href="https://alan.app/pricing">Plans &amp; pricing</a>.</p></li>
+</ul>
+</div>
+<div class="section" id="enabling-or-disabling-the-ai-assistant-button">
+<h2>Enabling or disabling the AI assistant button<a class="headerlink" href="#enabling-or-disabling-the-ai-assistant-button" title="Permalink to this headline">¶</a></h2>
+<p>Use the <strong>Alan button is visible</strong> option to show or hide the AI assistant button in the app.</p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 54%"/>
+<col style="width: 46%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Default</strong></p></td>
+<td><p>on/visible</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Assistant type</strong></p></td>
+<td><p>AI Chat/voice</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Platforms</strong></p></td>
+<td><p>Web/iOS/Android</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="enabling-or-disabling-the-speech-to-text-panel">
+<h2>Enabling or disabling the Speech-to-Text panel<a class="headerlink" href="#enabling-or-disabling-the-speech-to-text-panel" title="Permalink to this headline">¶</a></h2>
+<p>Use the <strong>Show Speech to text panel</strong> option to show or hide the speech-to-text panel for users of the app. The speech-to-text panel is active when the user gives voice commands to the AI assistant, showing the recognized input, and helps with visual feedback.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The speech-to-text panel is not displayed in mobile web browsers on the Web platform.</p>
+</div>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 54%"/>
+<col style="width: 46%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Default</strong></p></td>
+<td><p>on/visible</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Assistant type</strong></p></td>
+<td><p>voice</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Platforms</strong></p></td>
+<td><p>Web/iOS/Android</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="recording-intent-audio">
+<span id="id1"></span><h2>Recording intent audio<a class="headerlink" href="#recording-intent-audio" title="Permalink to this headline">¶</a></h2>
+<p>Use the <strong>Record intent audio</strong> option to record voice commands given by users. Audio recordings are available in the project logs and in the <strong>Analytics</strong> view.</p>
+<p>Recording audio is a great way to debug user flows and adjust the dialog script. We have taken extra security measures to ensure all recordings are protected and available only to you as the project owner.</p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 54%"/>
+<col style="width: 46%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Default</strong></p></td>
+<td><p>off</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Assistant type</strong></p></td>
+<td><p>voice</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Platforms</strong></p></td>
+<td><p>Web/iOS/Android</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="playing-the-ready-to-listen-sound">
+<h2>Playing the ready-to-listen sound<a class="headerlink" href="#playing-the-ready-to-listen-sound" title="Permalink to this headline">¶</a></h2>
+<p>By default, when the user interacts with an AI assistant, a special sound is played when Alan AI is ready to listen to the user’s utterances. If you do not want the sound to be played, disable the <strong>Play ready-to-listen sound</strong> option.</p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 54%"/>
+<col style="width: 46%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Default</strong></p></td>
+<td><p>on</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Assistant type</strong></p></td>
+<td><p>voice</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Platforms</strong></p></td>
+<td><p>Web</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="changing-the-button-position">
+<h2>Changing the button position<a class="headerlink" href="#changing-the-button-position" title="Permalink to this headline">¶</a></h2>
+<p>The AI assistant button is draggable, so the user can change the button position in the app. If you do not want users to be able to drag the button around the page, disable the <strong>Allows changing the button position</strong> option.</p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 54%"/>
+<col style="width: 46%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Default</strong></p></td>
+<td><p>on</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Assistant type</strong></p></td>
+<td><p>AI Chat/voice</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Platforms</strong></p></td>
+<td><p>Web</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="saving-the-button-position">
+<h2>Saving the button position<a class="headerlink" href="#saving-the-button-position" title="Permalink to this headline">¶</a></h2>
+<p>Enable the <strong>Save the button position after drag-n-drop</strong> option to keep the latest button position after the page refresh.</p>
+<p>The button position is kept during the current dialog session. When a new dialog session starts, the button is put in the default position.</p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 54%"/>
+<col style="width: 46%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Default</strong></p></td>
+<td><p>off</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Assistant type</strong></p></td>
+<td><p>AI Chat/voice</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Platforms</strong></p></td>
+<td><p>Web</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="sending-the-current-page-state">
+<h2>Sending the current page state<a class="headerlink" href="#sending-the-current-page-state" title="Permalink to this headline">¶</a></h2>
+<p>By default, Alan AI sends information about the state of the page currently active in the app to the Alan AI Cloud. This information is required to make the dialog more accurate and contextual. If you do not want to send information about the page state to Alan AI, disable the <strong>Send current page state to the server automatically</strong> option.</p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 54%"/>
+<col style="width: 46%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Default</strong></p></td>
+<td><p>on</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Assistant type</strong></p></td>
+<td><p>AI Chat/voice</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Platforms</strong></p></td>
+<td><p>Web</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="changing-the-button-visual-style">
+<span id="id2"></span><h2>Changing the button visual style<a class="headerlink" href="#changing-the-button-visual-style" title="Permalink to this headline">¶</a></h2>
+<p>Use the <strong>Alan button visual style</strong> option to customize the visual style of the AI assistant button to match your brand design and color scheme. You can:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="#changing-the-button-styles">Change the button colors</a></p></li>
+<li><p><a class="reference external" href="#changing-the-button-size">Change the button size</a></p></li>
+<li><p><a class="reference external" href="#replacing-the-alan-logo">Replace the Alan AI logo with a custom icon</a></p></li>
+</ul>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 54%"/>
+<col style="width: 46%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Default</strong></p></td>
+<td><p>blue</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Assistant type</strong></p></td>
+<td><p>AI Chat/voice</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Platforms</strong></p></td>
+<td><p>Web/iOS/Android</p></td>
+</tr>
+</tbody>
+</table></div>
+<div class="section" id="changing-the-button-styles">
+<h3>Changing the button styles<a class="headerlink" href="#changing-the-button-styles" title="Permalink to this headline">¶</a></h3>
+<p>By default, the AI assistant button is blue. If the default color does not fit the color scheme of your site or app, you can change it.</p>
+<ol class="arabic simple">
+<li><p>In the <strong>Integrations</strong> view, to the right of the <strong>Alan button visual style</strong> field, click <strong>Change</strong>.</p></li>
+<li><p>In the <strong>Button Style</strong> section, choose the necessary colors for every button state.</p></li>
+<li><p>To save the configured color scheme, in the <strong>Integrations</strong> view, to the right of the <strong>Button Code</strong> field, click <strong>Save</strong> and define the scheme name. You can switch between the default color scheme and saved color schemes at any time.</p></li>
+</ol>
+<p>The button has the following states:</p>
+<ul class="simple">
+<li><p><strong>Idle State</strong>: the default state of the AI assistant button</p></li>
+<li><p><strong>Listening State</strong>: Alan AI is listening and waiting for the user’s input</p></li>
+<li><p><strong>Processing State</strong>: Alan AI is analyzing the user’s input</p></li>
+<li><p><strong>Speaking Back State</strong>: Alan AI is speaking back to the user</p></li>
+<li><p><strong>Text Chat State</strong>: the state of the button for the text chat</p></li>
+<li><p><strong>Text Chat Avatar State</strong>: the icon for the AI assistant in the full screen mode of the Alan AI Chat</p></li>
+</ul>
+<img alt="../../../_images/customization_button_style.png" src="../../../_images/customization_button_style.png"/>
+</div>
+<div class="section" id="changing-the-button-size">
+<h3>Changing the button size<a class="headerlink" href="#changing-the-button-size" title="Permalink to this headline">¶</a></h3>
+<p>The default size of the AI assistant button displayed in the app is 64px. You can define the necessary button size directly in Alan AI Studio. In the <strong>Button Size</strong> section, drag the slider right or left to make the button larger or smaller.</p>
+<img alt="../../../_images/button-size.png" src="../../../_images/button-size.png"/>
+</div>
+<div class="section" id="replacing-the-alan-ai-logo">
+<h3>Replacing the Alan AI logo<a class="headerlink" href="#replacing-the-alan-ai-logo" title="Permalink to this headline">¶</a></h3>
+<p>To customize the look and feel of the AI assistant button, you can replace the Alan AI logo on top of it with a custom icon or your company logo.</p>
+<ol class="arabic simple">
+<li><p>In the <strong>Integrations</strong> view, to the right of the <strong>Alan button visual style</strong> field, click <strong>Change</strong>.</p></li>
+<li><p>In the <strong>Logos settings</strong> section, click <strong>Add custom logos</strong> and select one or more image files.</p></li>
+<li><p>Use the right and left controls below each button state to assign the image to this state.</p></li>
+</ol>
+<p>For best results, the images you select must meet the following requirements:</p>
+<ul class="simple">
+<li><p>The image must be square.</p></li>
+<li><p>The recommended image size is 400x400 pixels.</p></li>
+<li><p>The images must be in the PNG, GIF or SVG format.</p></li>
+<li><p>The images should have transparent areas around the icon or logo.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The SVG format is currently supported only on the Web platform.</p>
+</div>
+<p>To switch back to the default logo, select the initial image for the necessary button state.</p>
+<img alt="../../../_images/customized-logo.png" src="../../../_images/customized-logo.png"/>
+</div>
+</div>
+<div class="section" id="changing-the-voice-type-accent-pitch-and-rate">
+<span id="changing-the-voice"></span><h2>Changing the voice type, accent, pitch and rate<a class="headerlink" href="#changing-the-voice-type-accent-pitch-and-rate" title="Permalink to this headline">¶</a></h2>
+<p>Use the <strong>Alan voice</strong> option to change the AI assistant’s voice:</p>
+<ol class="arabic simple">
+<li><p>In the <strong>Integrations</strong> view, to the right of the <strong>Alan voice</strong> field, click <strong>Change</strong>.</p></li>
+<li><p>In the languages list, select the language for the AI assistant, the regional accent and the voice type.</p></li>
+<li><p>To define the speaking rate (speed), use the upper slider. You can select a value in the range 0.3 to 2.5, where 1 is normal speed. For example, to set the speaking rate to half as fast, drag the slider to 0.5. To set the speaking rate to twice as fast, drag the slider to 2.</p></li>
+<li><p>To define the speaking pitch, use the lower slider. You can select a value in the range -20 to 20, where 20 means increase 20 semitones from the original pitch, -20 means decrease 20 semitones from the original pitch.</p></li>
+</ol>
+<img alt="../../../_images/language-type.png" src="../../../_images/language-type.png"/>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 23%"/>
+<col style="width: 77%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Default</strong></p></td>
+<td><p>English, US, Alan voice, normal speed (1), normal pitch (0)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Assistant type</strong></p></td>
+<td><p>AI Chat/voice</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Platforms</strong></p></td>
+<td><p>Web/iOS/Android</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="setting-the-microphone-timeout">
+<h2>Setting the microphone timeout<a class="headerlink" href="#setting-the-microphone-timeout" title="Permalink to this headline">¶</a></h2>
+<p>Use this option to set the period after which the AI assistant button is automatically deactivated. This option helps users save on battery/traffic and avoid unwanted commands. The microphone timeout functionality pairs great with <a class="reference external" href="#using-the-wake-word">using the wake word</a>.</p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 54%"/>
+<col style="width: 46%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Default</strong></p></td>
+<td><p>10 seconds</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Assistant type</strong></p></td>
+<td><p>AI Chat/voice</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Platforms</strong></p></td>
+<td><p>Web/iOS/Android</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="enabling-the-alan-ai-chat">
+<h2>Enabling the Alan AI Chat<a class="headerlink" href="#enabling-the-alan-ai-chat" title="Permalink to this headline">¶</a></h2>
+<p>Use the <strong>Text chat</strong> option to display a chat UI for the AI assistant in the app. The Alan AI Chat allows users to interact with the AI assistant through text or use two input channels - voice and text - at the same time.</p>
+<p>For details, see <a class="reference internal" href="../chat/"><span class="doc">Enabling the Alan AI Chat</span></a>.</p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 54%"/>
+<col style="width: 46%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Default</strong></p></td>
+<td><p>on/visible</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Assistant type</strong></p></td>
+<td><p>AI Chat</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Platforms</strong></p></td>
+<td><p>Web</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="getting-the-app-code-for-the-alan-ai-plugin">
+<h2>Getting the app code for the Alan AI Plugin<a class="headerlink" href="#getting-the-app-code-for-the-alan-ai-plugin" title="Permalink to this headline">¶</a></h2>
+<p>Use the <strong>Browser plugin</strong> option to copy the code for the Alan AI Plugin and display the AI assistant in any web app. </p>
+<p>For details, see <a class="reference internal" href="../../guides/plugin/"><span class="doc">Alan AI Plugin</span></a>.</p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 54%"/>
+<col style="width: 46%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Default</strong></p></td>
+<td><p>off</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Assistant type</strong></p></td>
+<td><p>AI Chat</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Platforms</strong></p></td>
+<td><p>Web</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="taking-screenshots">
+<span id="id3"></span><h2>Taking screenshots<a class="headerlink" href="#taking-screenshots" title="Permalink to this headline">¶</a></h2>
+<p>Use the <strong>Allows taking screenshots from devices</strong> option to take screenshots of the app with every voice command given by users. Screenshots are available in the Alan AI Studio logs and in the <strong>*Analytics</strong> view.
+Taking screenshots is a great way to debug user flows and adjust your dialog script accordingly. We have taken extra security measures to ensure that all screenshots are protected and available only to you as the project owner.</p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 54%"/>
+<col style="width: 46%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Default</strong></p></td>
+<td><p>off</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Assistant type</strong></p></td>
+<td><p>voice</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Platforms</strong></p></td>
+<td><p>iOS/Android</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="keeping-the-session-active">
+<h2>Keeping the session active<a class="headerlink" href="#keeping-the-session-active" title="Permalink to this headline">¶</a></h2>
+<p>Use the <strong>Keep active while the app is in the background</strong> option to keep the dialog session active even when the user puts the app in background mode. If this option is enabled, the user will be able to continue the conversation with the AI assistant even while actively using other apps.</p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 54%"/>
+<col style="width: 46%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Default</strong></p></td>
+<td><p>off</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Assistant type</strong></p></td>
+<td><p>voice</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Platforms</strong></p></td>
+<td><p>iOS/Android</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="using-the-wake-word">
+<span id="id4"></span><h2>Using the wake word<a class="headerlink" href="#using-the-wake-word" title="Permalink to this headline">¶</a></h2>
+<p>Use the <strong>Wake word</strong> option to allows users to activate the AI assistant in the app with a special word or phrase.</p>
+<p>The default wake words are <code class="docutils literal notranslate"><span class="pre">Hey,</span> <span class="pre">Alan</span></code> or <code class="docutils literal notranslate"><span class="pre">OK,</span> <span class="pre">Alan</span></code>. However, you can replace the default wake words with <a class="reference external" href="#using-a-custom-wake-word">custom ones</a>.</p>
+<p>To enable the wake word:</p>
+<ol class="arabic">
+<li><p>In the <strong>Integrations</strong> view, to the right of the <strong>Wake word</strong> field, click <strong>Change</strong>.</p></li>
+<li><p>To let users activate the AI assistant with a wake word, turn on the <strong>Enable wake word</strong> option.</p></li>
+<li><p>To allow using the wake word even if the app is put in the background mode, enable the <strong>Use wake word in background</strong> option.</p>
+<p>Mind the following:</p>
+<ul class="simple">
+<li><p>Together with this option, you must turn on the <strong>Enable wake word</strong> and <strong>Keep active while the app is in the background</strong> options. Otherwise, users will not be able to activate the AI assistant with a wake word when the app is in the background mode.</p></li>
+<li><p>(For iOS) To allow the background mode for an iOS app, in your XCode project, go to the <strong>Signing and Capabilities</strong> tab. In the top left corner, click <strong>+ Capability</strong> and in the capabilities list, double-click <strong>Background Modes</strong>. In the <strong>Modes</strong> list, select the <strong>Audio, AirPlay, and Picture in Picture</strong> check box.</p></li>
+<li><p>The app running in the background mode will remain collapsed. To bring the app to the foreground, the user will need to tap the microphone bar at the top of the device screen or the app icon itself.</p></li>
+<li><p>VoIP apps having a higher priority such as Skype or telephone can interrupt dialog sessions. If this happens, the wake word will not work until the user re-opens the app.</p></li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="section" id="using-a-custom-wake-word">
+<span id="id5"></span><h2>Using a custom wake word<a class="headerlink" href="#using-a-custom-wake-word" title="Permalink to this headline">¶</a></h2>
+<p>At present, custom wake word setup involves the Alan AI team.</p>
+<p>To use a custom wake word:</p>
+<ol class="arabic simple">
+<li><p>Contact the <a class="reference external" href="mailto:hello%40alan.app">Alan AI team</a> to obtain correct config data for the wake word you want to use.</p></li>
+<li><p>In the <strong>Integrations</strong> view, select the <strong>iOS</strong> or <strong>Android</strong> platform.</p></li>
+<li><p>To the right of <strong>Wake word</strong> field, click <strong>Change</strong>.</p></li>
+<li><p>Switch the <strong>Enable wake word</strong> toggle to the <em>On</em> position.</p></li>
+<li><p>To the right of the <strong>Wake word</strong> field, click <strong>Create custom wake word</strong>.</p></li>
+<li><p>In the <strong>Wake word name</strong> field, enter the name for the wake word you create.</p></li>
+<li><p>From the <strong>Acoustic model</strong> list, select the necessary acoustic model.</p></li>
+<li><p>In the <strong>Wake word model</strong> field, insert the JSON object obtained from the Alan AI team.</p></li>
+<li><p>Click <strong>Create wake word</strong>.</p></li>
+</ol>
+<img alt="../../../_images/wake-word.png" src="../../../_images/wake-word.png"/>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The custom wake word (version 3.0) requires specific versions of Alan AI SDK. You can get the latest version here:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/alan-ai/alan-sdk-ios/releases">Alan AI SDK for iOS</a>  (version 3.7.0 or later)</p></li>
+<li><p><a class="reference external" href="https://github.com/alan-ai/alan-sdk-android/releases/">Alan AI SDK for Android</a> (version 4.21.0 or later)</p></li>
+<li><p><a class="reference external" href="https://pub.dev/packages/alan_voice/versions">Alan AI SDK for Flutter</a> (version 4.1.0 or later)</p></li>
+<li><p><a class="reference external" href="https://www.npmjs.com/package/@alan-ai/alan-sdk-react-native?activeTab=versions">Alan AI SDK for React Native</a> (version 2.1.0 or later)</p></li>
+<li><p><a class="reference external" href="https://www.npmjs.com/package/@alan-ai/cordova-plugin-alan-voice?activeTab=versions">Alan AI SDK for Ionic</a> (version 3.0.0 or later)</p></li>
+</ul>
+</div>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 54%"/>
+<col style="width: 46%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Default</strong></p></td>
+<td><p>off</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Assistant type</strong></p></td>
+<td><p>voice</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Platforms</strong></p></td>
+<td><p>iOS/Android</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="section" id="enabling-the-qr-code-reader">
+<span id="id6"></span><h2>Enabling the QR code reader<a class="headerlink" href="#enabling-the-qr-code-reader" title="Permalink to this headline">¶</a></h2>
+<p>Use the <strong>Enable QR Code reader</strong> option to enable the QR code reader and <a class="reference internal" href="../../guides/in-app-testing/#id1"><span class="std std-ref">test how an AI assistant works in the app</span></a>.</p>
+<p>With this option enabled, you can tap the Alan AI button in the app, hold it for 8 seconds and scan the QR code in Alan AI Studio with the device camera to connect to the AI project and evaluate the conversational experience.</p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 54%"/>
+<col style="width: 46%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Default</strong></p></td>
+<td><p>off</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Assistant type</strong></p></td>
+<td><p>voice</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Platforms</strong></p></td>
+<td><p>iOS/Android</p></td>
+</tr>
+</tbody>
+</table></div>
+<div id="blue-background"></div></div>
+</div>
+
+      </article>
+	  <div class="alan-btn"></div>
+	  <script>
+		function isLocalStorageAvailable() {
+            var result;
+
+            try {
+                localStorage.setItem('test', 1);
+                localStorage.getItem('test');
+                localStorage.removeItem('test');
+                result = true;
+            } catch (e) {
+                result = false;
+            }
+            return result;
+        }
+
+        function getProjectId() {
+            var key = 'beae1a6e1f7e512c4d0bf347580da6fd2e956eca572e1d8b807a3e2338fdd0dc/prod';
+            if (key) {
+                return key.substr(0, key.indexOf('/'));
+            }
+
+            return null;
+        }
+
+        console.info("Alan Lib is laoded.");
+        window.alanBtnInstance = window.alanBtn({
+            key: 'beae1a6e1f7e512c4d0bf347580da6fd2e956eca572e1d8b807a3e2338fdd0dc/prod',
+            zIndex: 999999,
+            onCommand: function (commandData) {
+
+                if (commandData && commandData.command === 'openURL') {
+                    if (commandData.target === '_blank'){
+                        window.open(commandData.url,'_newtab' + Math.floor(Math.random()*999999));
+                    } else {
+                        window.location.href = commandData.url;
+                    }
+
+                }
+            },
+            onConnectionStatus: function (status) {
+                if (status === 'authorized') {
+                    window.alanBtnInstance.setVisualState({ page: window.location.pathname, url: window.location.href });
+                    if(isLocalStorageAvailable()){
+                        if(!localStorage.getItem('alan-btn-session-'+ getProjectId())) {
+                            localStorage.setItem('alan-btn-session-'+ getProjectId(), 1)
+                            window.alanBtnInstance.callProjectApi("sendGreetingMessage");
+                        }
+                    }
+                }
+            },
+        });
+	  </script>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../chat/">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Enabling the Alan AI Chat</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../overview/">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Alan AI assistant</div>
+                
+              </div>
+            </a>
+        </div>
+        
+	  <div class="alan-footer">
+	  <div class="footer-logo-and-social-icons">
+		<div class="footer-logo-and-text">
+		<a class="footer-logo" aria-label="Link to alan.app" href="https://alan.app/"></a>
+		</div>
+		
+		<div class="footer-other">
+		<div class="footer-social">
+			<a href="https://twitter.com/alanvoiceai" target="_blank" class="fa-brands fa-twitter"></a>
+			<a href="http://linkedin.com/company/alanvoiceai" target="_blank" class="fa-brands fa-linkedin"></a>
+			<a href="https://www.facebook.com/alanvoiceai/" target="_blank" class="fa-brands fa-facebook"></a>
+			<a href="https://www.instagram.com/alanvoiceai/" target="_blank" class="fa-brands fa-instagram"></a>
+			<a href="https://www.youtube.com/channel/UCrsg0b32nL6L2j5jG7uxOuw" target="_blank" class="fa-brands fa-youtube"></a>
+			<a href="https://alanaigroup.slack.com/join/shared_invite/enQtNzMzOTE5MTIwMjg4LWI4ZmM4MTNkMTdmY2M0ZWEwODlmZDQ5Y2ZkMjUzNmMyZDJiMzA0Y2M1NDdhYzZjYWFlZTA5NjM4OTU0MWFmNWU#/shared-invite/email" target="_blank" class="fa-brands fa-slack"></a>
+			<a href="https://github.com/alan-ai" target="_blank" class="fa-brands fa-github"></a>
+        </div>
+		</div>
+	  </div>
+	  <div class="footer-badges">
+	  <div class="footer-badges-info">
+	  <div><span><sup>®</sup>2024 Alan AI, Inc. All rights reserved.</span></div>
+	  </div>
+	  
+	  </div>
+	  <div class="footer-badges-imgs">
+	  <a class="footer_badges_imgs_app-store" href="https://apps.apple.com/ca/app/alan-playground/id1474478921"></a>
+	  <a class="footer_badges_imgs_google-play" href="https://play.google.com/store/apps/details?id=app.alan.playground"></a>
+	  </div>
+	  
+      </footer>
+    </div>
+	
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Customizing the AI assistant</a><ul>
+<li><a class="reference internal" href="#enabling-or-disabling-the-ai-assistant-button">Enabling or disabling the AI assistant button</a></li>
+<li><a class="reference internal" href="#enabling-or-disabling-the-speech-to-text-panel">Enabling or disabling the Speech-to-Text panel</a></li>
+<li><a class="reference internal" href="#recording-intent-audio">Recording intent audio</a></li>
+<li><a class="reference internal" href="#playing-the-ready-to-listen-sound">Playing the ready-to-listen sound</a></li>
+<li><a class="reference internal" href="#changing-the-button-position">Changing the button position</a></li>
+<li><a class="reference internal" href="#saving-the-button-position">Saving the button position</a></li>
+<li><a class="reference internal" href="#sending-the-current-page-state">Sending the current page state</a></li>
+<li><a class="reference internal" href="#changing-the-button-visual-style">Changing the button visual style</a><ul>
+<li><a class="reference internal" href="#changing-the-button-styles">Changing the button styles</a></li>
+<li><a class="reference internal" href="#changing-the-button-size">Changing the button size</a></li>
+<li><a class="reference internal" href="#replacing-the-alan-ai-logo">Replacing the Alan AI logo</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#changing-the-voice-type-accent-pitch-and-rate">Changing the voice type, accent, pitch and rate</a></li>
+<li><a class="reference internal" href="#setting-the-microphone-timeout">Setting the microphone timeout</a></li>
+<li><a class="reference internal" href="#enabling-the-alan-ai-chat">Enabling the Alan AI Chat</a></li>
+<li><a class="reference internal" href="#getting-the-app-code-for-the-alan-ai-plugin">Getting the app code for the Alan AI Plugin</a></li>
+<li><a class="reference internal" href="#taking-screenshots">Taking screenshots</a></li>
+<li><a class="reference internal" href="#keeping-the-session-active">Keeping the session active</a></li>
+<li><a class="reference internal" href="#using-the-wake-word">Using the wake word</a></li>
+<li><a class="reference internal" href="#using-a-custom-wake-word">Using a custom wake word</a></li>
+<li><a class="reference internal" href="#enabling-the-qr-code-reader">Enabling the QR code reader</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  
+  </main>
+</div>
+</div>
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/custom.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/typesense-docsearch.js@latest/dist/cdn/docsearch.min.js"></script>
+    <script defer="defer" src="../../../_static/scripts/algolia.js"></script>
+    <script defer="defer" src="../../../_static/scripts/algolia-mobile.js"></script>
+    <script src="../../../_static/scripts/main.js?digest=e931d09b2a40c1bb82b542effe772014573baf67"></script></body>
+</html>

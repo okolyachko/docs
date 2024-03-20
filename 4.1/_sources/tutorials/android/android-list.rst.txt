@@ -1,0 +1,65 @@
+.. raw:: html
+
+   <div id="orange-background"></div>
+   <div id="wide-content"></div>
+
+Android tutorials
+=================
+
+Use these tutorials to quickly voice enable Android apps written in Java and Kotlin:
+
+.. panels::
+   :column: col-lg-12 col-md-12 col-sm-12 col-xs-12 p-2
+   
+   ---
+   :card: border-0 + custom-style-list
+   
+   .. link-button:: integrating-java-kotlin
+      :type: ref
+      :text: Building a voice assistant for an Android Java or Kotlin app
+      :classes: stretched-link panel
+	  
+   Learn how create a voice interface for an Android Java or Kotlin app from scratch and write simple voice commands.
+
+   ---
+   :card: border-0 + custom-style-list
+   
+   .. link-button:: navigating-kotlin
+      :type: ref
+      :text: Navigating in an Android app with voice (Kotlin)
+      :classes: stretched-link panel
+	  
+   Learn how to send commands to an Android app, handle commands on the app side and navigate between tabs with voice.
+
+   ---
+   :card: border-0 + custom-style-list
+   
+   .. link-button:: sending-state-kotlin
+      :type: ref
+      :text: Passing the app state to the dialog script (Kotlin)
+      :classes: stretched-link panel
+	  
+   Learn how to create a context-aware voice assistant and send the Android app's state to the dialog script.
+  
+   ---
+   :card: border-0 + custom-style-list
+   
+   .. link-button:: sending-data-kotlin
+      :type: ref
+      :text: Sending data from the app to the dialog script (Kotlin)
+      :classes: stretched-link panel
+	  
+   Learn how to send data from an Android app to the dialog script and trigger activities without voice commands. 
+  
+
+  
+.. toctree::
+   :caption: Web
+   :maxdepth: 1
+   :hidden:
+   
+   Building a voice assistant for an Android Java or Kotlin app <integrating-java-kotlin>
+   Navigating in an Android app with voice (Kotlin) <navigating-kotlin>
+   Passing the app state to the dialog script (Kotlin) <sending-state-kotlin>
+   Sending data from the app to the dialog script (Kotlin) <sending-data-kotlin>
+  
