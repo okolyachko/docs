@@ -1,4 +1,0 @@
-.. code-block:: swift
-   :caption: Client app
-
-   alanBtnInstance.isActive()

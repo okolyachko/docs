@@ -1,8 +1,0 @@
-.. code-block:: objective-c
-   :caption: Client app
-
-   /// Playing any text message
-   - (void)playText {
-     /// Providing text as string param
-     [self.button playText:@"Hi"];
-   }

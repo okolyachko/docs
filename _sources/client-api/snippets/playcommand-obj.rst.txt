@@ -1,8 +1,0 @@
-.. code-block:: objective-c
-   :caption: Client app
-	
-   /// Executing a command locally
-   - (void)playCommand {
-     /// Providing any params
-     [self.button playCommand:@{@"action":@"openSomePage"}];
-   }

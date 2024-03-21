@@ -1,8 +1,0 @@
-.. code-block:: kotlin
-   :caption: Client app
-
-   /// Sending any text message
-   fun sendText() {
-     /// Providing text as string param
-     alanButton?.sendText("Hello Alan, can you help me?")
-   }	

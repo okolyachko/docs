@@ -1,9 +1,0 @@
-.. code-block:: dart
-   :caption: Client app
-
-   _MyHomePageState() {
-     /// Deactivating the Alan AI button programmatically
-     void _deactivate() {
-       AlanVoice.deactivate();
-     }
-   }
