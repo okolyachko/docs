@@ -237,32 +237,32 @@ function setLink(value) {
 }
 	
 // Load version and platform from localStorage
-$(document).ready(function () {
-	if ("framework" in localStorage) {
-		$('#platform button').html(localStorage.framework);
-		$('.goto').css('display', 'inline-block');
-		let value = localStorage.framework;
-		setLink(value);
-		$(".docs-tooltip").html("Open " + value + " docs");
-		$('.tabbed-label:contains("' + value + '")').prev().prop('checked', true);
-	}
-	if ("version" in sessionStorage) {
-		$('#version button').html(sessionStorage.version);
-	}
-});
+// $(document).ready(function () {
+	// if ("framework" in localStorage) {
+		// $('#platform button').html(localStorage.framework);
+		// $('.goto').css('display', 'inline-block');
+		// let value = localStorage.framework;
+		// setLink(value);
+		// $(".docs-tooltip").html("Open " + value + " docs");
+		// $('.tabbed-label:contains("' + value + '")').prev().prop('checked', true);
+	// }
+	// if ("version" in sessionStorage) {
+		// $('#version button').html(sessionStorage.version);
+	// }
+// });
 
-// Check if URL contains version
-$(document).ready(function () {
-	var url = window.location.href;
-	var versionMatch = url.match(/(\d+\.\d+)/);
-	if (versionMatch && versionMatch[1]) {
-		version = versionMatch[1];
-		$('#version a').closest('.dropdown').find('button').text(version);
-	} else if (url.indexOf('3.x') >= 0 ) {
-		version = url.split("docs/" )[1].slice(0).substring(0,3);
-		$('#version a').closest('.dropdown').find('button').text(version);
-	}
-});
+//Check if URL contains version
+// $(document).ready(function () {
+	// var url = window.location.href;
+	// var versionMatch = url.match(/(\d+\.\d+)/);
+	// if (versionMatch && versionMatch[1]) {
+		// version = versionMatch[1];
+		// $('#version a').closest('.dropdown').find('button').text(version);
+	// } else if (url.indexOf('3.x') >= 0 ) {
+		// version = url.split("docs/" )[1].slice(0).substring(0,3);
+		// $('#version a').closest('.dropdown').find('button').text(version);
+	// }
+// });
     
 // Scroll to the selected tab
 $(document).ready(function() {
