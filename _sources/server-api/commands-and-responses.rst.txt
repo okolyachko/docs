@@ -1,0 +1,122 @@
+.. role:: versions
+   :class: versions
+
+User commands
+=============
+
+To define user commands, use the ``intent()`` function. This function allows you to complete tasks requested by users or answer the user's questions.
+
+In the ``intent()`` function, you must specify:
+
+-  :doc:`Pattern <patterns>`: the user's phrase that invokes the command. You can specify one or more patterns in the ``intent()`` function.
+-  :ref:`Response <Response>`: a response phrase or action that must be executed when the command is invoked. 
+
+
+In the example below, when the user asks: ``Who are you?``, the intent is invoked and the AI assistant replies: ``I am your AI assistant``:
+
+.. code-block:: alan
+   :caption: Dialog script
+
+   intent('Who are you?', p => {
+       p.play('I am your AI assistant');
+   });
+
+
+.. _Response:
+
+Command responses
+-----------------
+
+To provide responses or execute actions for commands, use the following functions:
+
+-  `play() <#play()>`__: use this function to provide a response to the user or send a command to the app
+-  `reply() <#reply>`__: use this function to provide a response to the user 
+
+.. _play():
+
+Play()
+~~~~~~
+
+To provide a response to the user, add the ``play()`` function to ``intent()`` and define a response phrase:
+
+.. code-block:: alan
+   :caption: Dialog script
+
+   intent('How can you help me?', p => {
+       p.play('I can provide information, answer questions and offer suggestions');
+   });
+
+.. _sending commands to the app
+
+The ``play()`` function can also be used to send commands to the client app integrated with Alan AI. Such commands let you perform specific actions in the app, for example, navigate to another page, highlight UI elements on the screen and so on. This way, you can synchronize user commands and visuals and design a multimodal AI experience for your app.
+
+To send a command, pass a JSON object containing the command name and any further information to the ``play()`` function. To handle the command in the app and execute the requested action, you must add a handler for commands received from the dialog script. For details, see :doc:`onCommand handler <../client-api/methods/command-handler>`.
+
+.. code-block:: alan
+   :caption: Dialog script
+
+   intent('Open the product page', p => {
+       p.play({command: 'navigate', screen: 'product'});
+       p.play('Opening the product page');
+   });
+
+   intent('Go back', p => {
+       p.play({command: 'navigate', screen: 'back'});
+       p.play('Going back');
+   });
+
+When you send a command to the app, you most commonly accompany this command with the AI assistant's comment so that the user understands what actions are taking place at the moment. 
+
+- If you place the command before the AI assistant's message, Alan AI will send the command immediately when the intent is matched.
+- If you place the command after the AI assistant's message, the command will be sent after the message has been provided. 
+
+For example:
+
+.. code-block:: alan
+   :caption: Dialog script
+
+   // Sending a command when the intent is matched
+   intent('Open the product page', p => {
+       p.play({command: 'navigate', screen: 'product'});
+       p.play('Opening the product page');
+   });
+
+   // Sending a command after the message is provided
+   intent('Open the product page', p => {
+       p.play('Opening the product page');
+       p.play({command: 'navigate', screen: 'product'}); 
+   });
+   
+   
+.. note::
+
+   To send a command to the app using Alan AI Chat, set the play options for the command to ``force:true``. When you use the text interaction channel, the AI assistant button is inactive, and commands cannot be executed unless the ``force`` option is enabled.  For details, see :doc:`Play options <play-options>`.
+
+
+.. _reply():
+
+Reply
+~~~~~
+
+If you only need to respond to the user and do not need to take any action, add the ``reply()`` function to ``intent()``.
+
+.. code-block:: alan
+   :caption: Dialog script
+
+   intent('Who are you?',
+       reply('I am your AI assistant'));
+
+   
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+   
+   Patterns<patterns>
+   Play options<play-options>
+   Intent matching<intent-matching>
+   Voice settings <voice-settings>
+
+
+.. raw:: html
+
+   <div id="green-background"></div>

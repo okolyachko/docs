@@ -1,0 +1,59 @@
+Voice settings
+==============
+
+You can customize the voice of your AI assistant in two ways:
+
+- **At the global level**: you can specify voice settings for the AI assistant at the project level. For details, see :ref:`Changing the voice, accent and rate <Changing the voice>`.
+- **Granularly for every individual intent**: you can define how the AI assistant should sound when pronouncing specific phrases.
+
+To customize the voice of your assistant granularly, add the ``voice()`` parameter to the ``play()`` function. In the ``voice()`` parameter, you can define the following voice settings:
+
++-------------------------------------+---------------+-----------------------------------------------------------------------------------------------------------------------+
+| **Voice setting**                   | **Type**      | **Description**                                                                                                       |
++=====================================+===============+=======================================================================================================================+
+| ``language``                        | two-letter    | Language, or accent, in which the response must be played. Supported languages:                                       |
+|                                     | language code |                                                                                                                       |
+|                                     |               | - English (en)                                                                                                        |
+|                                     |               | - French (fr)                                                                                                         |
+|                                     |               | - German (de)                                                                                                         |
+|                                     |               | - Italian (it)                                                                                                        |
+|                                     |               | - Russian (ru)                                                                                                        |
+|                                     |               | - Spanish (es)                                                                                                        |
++-------------------------------------+---------------+-----------------------------------------------------------------------------------------------------------------------+
+| ``gender``                          | string        | Voice gender: male or female                                                                                          |
++-------------------------------------+---------------+-----------------------------------------------------------------------------------------------------------------------+
+| ``type``                            | number        | Voice type: 0 (standard for the selected gender) or 1 (custom voice)                                                  |
++-------------------------------------+---------------+-----------------------------------------------------------------------------------------------------------------------+
+| ``pitch``                           | number        | Speaking pitch in the range [-20.0, 20.0], where 20 means increase 20 semitones from the original pitch, -20 means    |
+|                                     |               | decrease 20 semitones from the original pitch.                                                                        |
++-------------------------------------+---------------+-----------------------------------------------------------------------------------------------------------------------+
+| ``speaking rate``                   | number        | Speaking rate (speed) in the range [0.25, 4.0], where 1 is normal speed; 2.0 is twice as fast and 0.5 is half as fast.|
++-------------------------------------+---------------+-----------------------------------------------------------------------------------------------------------------------+
+
+
+.. note::
+   For languages other than English, some voice settings may not be supported.
+   
+
+Assume you want your AI assistant to tell a fairy tale using different voices. To do this, you can add an intent of the following type:
+
+.. code-block:: alan
+   :caption: Dialog script
+   
+   let storyTellerVoice = voice(en, 'male', 0, 0, 1);
+   let motherVoice = voice(en, 'female', 0, 1, 1);
+   let redHatVoice = voice(en, 'female', 0, 10, 1.2);
+
+   intent("Alan, tell me a fairy tale", p => {
+       p.play(storyTellerVoice, "Once upon a time there was a sweet little girl who always wore a cap made of red velvet.");
+       p.play(storyTellerVoice, "One day her mother said to her");
+       p.play(motherVoice, "Come Little Red Cap. Here is a piece of cake and a bottle of wine. Take them to your grandmother.");
+       p.play(storyTellerVoice, "Little Red Cap said");
+       p.play(redHatVoice, "I'll do everything just right.");
+   });
+   
+
+.. raw:: html
+
+   <div id="green-background"></div>
+   <div id="wide-content"></div>

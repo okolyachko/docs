@@ -1,0 +1,81 @@
+Supported platforms
+===================
+
+JavaScript version
+------------------
+
+The Alan AI button JavaScript Library uses the WebRTC API and the Web Audio API and can be used on any web platform which supports these API's.
+
++-----------+----------------------+
+| Browser   | Supported Versions   |
++===========+======================+
+| Chrome    | 73+                  |
++-----------+----------------------+
+| Safari    | 12+                  |
++-----------+----------------------+
+| Edge      | 18+                  |
++-----------+----------------------+
+| Firefox   | 65+                  |
++-----------+----------------------+
+| IE        | Not supported        |
++-----------+----------------------+
+
+Alan AI Web Component
+---------------------
+
+The Alan AI web component uses the Web Component API, the WebRTC API and the Web Audio API and can be used on any web platform which supports these API's. The Alan AI button works on desktop browsers and on mobile devices.
+
+Mobile
+~~~~~~
+
++-----------+----------------------+
+| Browser   | Supported Versions   |
++===========+======================+
+| iOS       | 11+                  |
++-----------+----------------------+
+| Android   | 5.0+                 |
++-----------+----------------------+
+
+Desktop
+~~~~~~~
+
++-----------+----------------------+
+| Browser   | Supported Versions   |
++===========+======================+
+| Chrome    | 73+                  |
++-----------+----------------------+
+| Safari    | 12+                  |
++-----------+----------------------+
+| Firefox   | 65+                  |
++-----------+----------------------+
+| Edge      | 79+                  |
++-----------+----------------------+
+| IE        | Not supported        |
++-----------+----------------------+
+
+Support for 32-bit and 64-bit device applications
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Alan AI SDK provides full support for both 32-bit and 64-bit applications on iOS and Android devices. 
+
+.. note::
+   Apple App Store and Google Play Store do not support 32-bit applications and only allow 64-bit applications to be published.
+
+Alan AI SDK size
+----------------
+
+Total size of Alan AI SDK for all platforms is about 100 Mb.
+
++------------+----------------------------+
+| Platform   | SDK size                   |
++============+============================+
+| iOS        | ~30 Mb                     |
++------------+----------------------------+
+| Android    | ~30 Mb                     |
++------------+----------------------------+
+| Web        | alan\_lib.min.js ~ 92 Kb   |
++------------+----------------------------+
+
+.. raw:: html
+
+   <div id="blue-background"></div>

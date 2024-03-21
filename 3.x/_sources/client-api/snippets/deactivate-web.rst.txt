@@ -1,0 +1,4 @@
+.. code-block:: javascript
+   :caption: Client app
+
+   alanBtnInstance.deactivate();

@@ -1,0 +1,7 @@
+.. code-block:: obj-c
+   :caption: Client app
+
+   self.button.onCommand = ^(NSDictionary *command) {
+     NSString* commandName = [command objectForKey:@"command"];
+     NSLog(@"%@", commandName);
+   };

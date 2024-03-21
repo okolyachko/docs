@@ -1,0 +1,23 @@
+Alan AI assistant
+=================
+
+Learn how to set up and customize an AI assistant created with Alan AI in your app.
+
+.. raw:: html
+
+   <div id="blue-background"></div>
+   <div id="wide-content"></div>
+
+.. toctree::
+   :maxdepth: 1
+   :titlesonly:
+   
+   Customizing the AI assistant<customization>
+   Enabling the Alan AI Chat<chat>
+   Setting up cohorts<cohorts>
+   Starting and stopping dialog sessions<activation>
+
+
+
+
+

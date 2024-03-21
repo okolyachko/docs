@@ -1,0 +1,4 @@
+.. code-block:: kotlin
+   :caption: Client app
+
+   var enabled = alanButton?.getWakewordEnabled()

@@ -1,0 +1,4 @@
+.. code-block:: objective-c
+   :caption: Client app
+
+   BOOL enabled = [alanButton getWakewordEnabled];

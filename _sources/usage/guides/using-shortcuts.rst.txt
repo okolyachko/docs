@@ -1,0 +1,58 @@
+Using shortcuts
+===============
+
+In Alan AI Studio, you can perform multiple tasks using your keyboard. Here you can find a list of shortcuts that you may find helpful when writing the code. 
+
+General shortcuts
+-----------------
+
+.. tabbed:: macOS
+
+   - **Cmd** + **/** — comment out the current line or block of code or uncomment the previously commented one
+   - **Cmd** + **D** — duplicate the current line or block of code
+   - **Cmd** + **Del** — delete the current line or block of code
+   - **Cmd** + **Alt** + **L** — prettify (auto-format) the current script
+   - **Shift** + **Tab** — prettify (auto-format) the current line or block of code
+   - **Cmd** + **S** — save the changes
+   - **Cmd** + left mouse click on the function or variable — navigate to the function or variable definition
+   - **Shift** + **Backspace** — navigate back
+   
+.. tabbed:: Windows  
+
+   - **Ctrl** + **/** — comment out the current line or block of code or uncomment the previously commented one
+   - **Ctrl** + **D** — duplicate the current line or block of code
+   - **Ctrl** + **Del** — delete the current line or block of code-editor-theme-and-font-size
+   - **Ctrl** + **Alt** + **L** — prettify (auto-format) the current script
+   - **Shift** + **Tab** — prettify (auto-format) the current line or block of code
+   - **Ctrl** + **S** — save the changes
+   - **Ctrl** + left mouse click on the function or variable — navigate to the function or variable definition
+   - **Shift** + **Backspace** — navigate back
+
+
+Find and replace text shortcuts
+-------------------------------
+
+.. tabbed:: macOS
+
+   - **Cmd** + **F** — open the search bar
+   - **Cmd** + **Shift** + **F** — open the search and replace bar
+   - **Enter** — move to the next occurrence
+   - **Shift** + **Enter** — move to the previous occurrence
+   - (With the focus in the Replace field) **Enter** — replace the current occurrence with a new string
+   - **Cmd** + **Alt** + **Enter** — replace all occurrences with a new string
+   - **Esc** — close the search bar
+   
+.. tabbed:: Windows
+
+   - **Ctrl** + **F** — open the search bar
+   - **Ctrl** + **Shift** + **F** — open the search and replace bar
+   - **Enter** — move to the next occurrence
+   - **Shift** + **Enter** — move to the previous occurrence
+   - (With the focus in the Replace field) **Enter** — replace the current occurrence with a new string
+   - **Ctrl** + **Alt** + **Enter** — replace all occurrences with a new string
+   - **Esc** — close the search bar
+
+
+.. raw:: html
+
+   <div id="blue-background"></div>

@@ -1,0 +1,48 @@
+Analyzing users' behavior
+=========================
+
+Analytics is one of the most important sales and marketing tools essential to the customer experience. There are numerous toolkits, like Google Analytics, for measuring users' behavior with traditional UI, but what about voice?
+
+Alan offers most detailed and comprehensive voice analytics in its **Analytics** view in Alan Studio. It provides you with the key conversational metrics, enabling you to develop a deep understanding of how your users interact with your assistant. 
+
+To leverage Alan Analytics effectively, follow the advice below:
+
+1. Configure Alan analytics settings
+------------------------------------
+
+Alan's Analytics view visualizes its data through charts. To amplify it with audio and snapshots of situations in which the dialog occurred, enable the following options for your project:
+
+- Select to :ref:`record intent audio <Recording intent audio>` to keep the recording of every voice command given by users.
+- Allow Alan to :ref:`take screenshot <Taking screenshots>` at the moment when voice commands are given (supported on iOS and Android)
+
+Audio and screenshot data can be accessed in :doc:`Alan logs <../../guides/logs>` and :doc:`Analytics view <../../guides/analytics-view>`.
+
+2. Examine from different angles
+--------------------------------
+
+After you have launched your assistant, use the :doc:`Analytics view <../../guides/analytics-view>` to measure the users' performance:
+
+- Number of recognized vs. unrecognized interactions
+- The duration of dialog sessions and for how long the microphone was active
+- Users' location
+- Dialogs, interactions and users' path
+
+and so on. 
+
+3. Analyze unrecognized utterances
+----------------------------------
+
+Alan logs and aggregates all utterances your assistant was not able to respond to. To see a list of unhandled requests, use the **Unrecognized** filter in the **Interactions** widget. Unrecognized utterances are powerful indicators of what your users need and are looking for while communicating with the assistant. 
+
+4. Track performance on a regular basis
+---------------------------------------
+
+Consistency and regularity are key to success. Leverage Alan Analytics regularly to improve customer experience and satisfaction and plan for new features in future releases.
+
+
+.. raw:: html
+
+   <div id="orange-background"></div>
+
+
+   

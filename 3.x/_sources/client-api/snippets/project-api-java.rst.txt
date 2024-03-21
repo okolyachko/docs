@@ -1,0 +1,13 @@
+.. code-block:: java
+   :caption: Client app
+
+   void callProjectApi() {
+     /// Providing any params
+     JSONObject params = new JSONObject();
+     try {
+       params.put("data","your data");
+     } catch (JSONException e) {
+       Log.e("AlanButton", e.getMessage());
+     }
+     alanButton.callProjectApi("script::funcName", params.toString());
+   }

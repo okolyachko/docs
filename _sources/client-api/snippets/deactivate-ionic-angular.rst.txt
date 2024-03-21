@@ -1,0 +1,8 @@
+.. code-block:: typescript
+   :caption: Client app
+
+   var myAlanBtn = document.getElementById('myAlanBtn');
+
+   myAlanBtn.componentOnReady().then(function () {
+     myAlanBtn.deactivate();
+   });

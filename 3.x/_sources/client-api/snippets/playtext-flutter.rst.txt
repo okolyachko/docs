@@ -1,0 +1,10 @@
+.. code-block:: dart
+   :caption: Client app
+
+   _MyHomePageState() {
+     /// Playing any text message
+     void _playText() {
+       /// Providing text as string param
+       AlanVoice.playText("Hi");
+     }
+   }

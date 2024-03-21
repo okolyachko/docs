@@ -1,0 +1,32 @@
+Cloud deployment
+================
+
+By default, the Alan AI Platform is delivered as Platform-as-a-Service. All components, tools and services required for AI assistant implementation are hosted in the Alan AI Cloud fully managed by Alan AI. Developers and users can access the Alan AI Platform over the Internet. 
+
+Cloud deployment is the most convenient deployment option because it is immediately available and requires no additional preparation or maintenance.
+
+.. image:: /_static/assets/img/about/cloud.svg
+
+The cloud deployment option involves the following roles and components:
+
+1. **Script developer**: a person who writes scripts that define the dialog and business logic of the conversational experience, manages script deployment, analyzes conversational data and customers’ behavior in interactions with the AI assistant.
+
+   Dialog scripts are written, edited and controlled using Alan AI Studio (4) being a part of the Alan AI Cloud (5).
+  
+2. **Application users**: users interacting with the application with the Alan AI SDK embedded. The Alan AI SDK communicates with a dedicated VM in the Alan AI Cloud (3), transferring voice/text data and events over a TLS-encrypted TCP/IP connection.
+3.  **Alan AI Cloud**: a cloud-based environment that hosts Alan AI Studio (4), orchestrates VMs (5), administers storage (6) and performs other functions.
+4. **Alan AI Studio**: an interface to the Alan AI Platform, a web-based IDE comprising a script editor, version and deployment control, dialog script testing tools, logs and analytics.
+5. **Action Transformer**: a VM allocated for each AI assistant project. This VM is responsible for dialog management and execution of the business logic defined in the dialog script. The dialog scripts are loaded from the Alan AI Studio storage (6).
+6. **Storage**: the Alan AI Studio storage containing dialog scripts with version history, user behavior analytics and statistics.
+7. **Conversational services**: components responsible for speech recognition and generation. Conversational services may reside in the Alan AI Cloud (3) or as a third-party API.
+
+See also
+--------
+
+- :doc:`Hybrid deployment <hybrid-deployment>`
+- :doc:`On-premises deployment <on-premises-deployment>`
+- :doc:`Alan AI infrastructure <infrastructure>`
+
+.. raw:: html
+
+   <div id="blue-background"></div>

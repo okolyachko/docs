@@ -1,0 +1,25 @@
+Corpus Explorer
+===============
+
+.. note::
+
+   The Corpus Explorer is available in SLU 4.2 and later.
+
+Alan AI Studio comes with the Corpus Explorer, a tool that enables you to examine data sources used for AI assistant interactions. The Corpus Explorer displays all indexed pages, PDF documents and text data, allowing you to explore and understand the content that serves as the foundation for the AI's knowledge and responses.
+
+To open the Corpus Explorer, click the magnifying glass icon to the left of the ``corpus()`` function in the dialog script.
+
+.. image:: /_static/assets/img/script-concepts/corpus-explorer-open.png
+
+To explore the indexed data, in the left pane, expand the data source tree and select the necessary page. 
+
+You can also search to find the data:
+
+- To switch between data representation, from the **Content format** list in the top right corner, select **text** or **markdown**.
+- To search by page name, enter your query in the search field at the top of the left pane.
+- To search by keywords, enter your query in the **Search** field at the top of the main section.
+- To search by a specific question, enter your question in the **Question** field at the top of the main section.
+- To control the length of the output text, use the **Max tokens** list in the top right corner. This parameter specifies the maximum number of tokens (words and subwords) that Alan AI displays in response to the search query.
+
+
+.. image:: /_static/assets/img/script-concepts/corpus-explorer.png

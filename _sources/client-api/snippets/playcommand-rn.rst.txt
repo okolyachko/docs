@@ -1,0 +1,11 @@
+.. code-block:: typescript
+   :caption: Client app
+   
+   import { NativeModules } from 'react-native';
+   const { AlanManager } = NativeModules;
+
+   /// Executing a command locally
+   playCommand() {
+     /// Providing any params with json
+     AlanManager.playCommand({"action":"openSomePage"})
+   }

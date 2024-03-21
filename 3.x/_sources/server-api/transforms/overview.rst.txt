@@ -1,0 +1,5 @@
+.. raw:: html
+
+    <script type="text/javascript">
+        window.location.replace(window.location.protocol + "//" + window.location.host +  "/docs/3.x/" );
+    </script>

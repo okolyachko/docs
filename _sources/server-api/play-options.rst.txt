@@ -1,0 +1,54 @@
+.. role:: versions
+   :class: versions
+
+Play options
+============
+
+By default, Alan AI can respond or execute a command specified in the ``play()`` function only when the AI assistant button in the client app is activated. To change this behavior, pass the ``opts()`` parameter to the ``play()`` function. This parameter allows you to specify one or more play settings that determine how the AI assistant must behave when the ``play()`` function is executed.
+
+You can define the following options:
+
++-------------------+----------------------+------------------------+------------------------------------------------------------------------------------------------------------+
+| **Option**        | **Action type**      | **Assistant type**     |**Description**                                                                                             | 
++===================+======================+========================+============================================================================================================+
+|``force:true``     | command              |AI Chat, voice assistant| Execute a command even if the AI assistant button is not activated in the client app                       |
++-------------------+----------------------+------------------------+------------------------------------------------------------------------------------------------------------+
+|``activate:true``  | response, command    |AI Chat, voice assistant| Activate the AI assistant button in the client app before a response is given or command is executed       |
++-------------------+----------------------+------------------------+------------------------------------------------------------------------------------------------------------+
+|``deactivate:true``| response, command    |AI Chat, voice assistant|Deactivate the AI assistant button in the client app after a response is given or command is executed       |
++-------------------+----------------------+------------------------+------------------------------------------------------------------------------------------------------------+
+|``markdown:true``  | response             | AI Chat                |Allow displaying markdown-formatted text in responses                                                       |
++-------------------+----------------------+------------------------+------------------------------------------------------------------------------------------------------------+
+|``audio:false``    | response             | AI Chat                |Disable voice output for responses                                                                          |
++-------------------+----------------------+------------------------+------------------------------------------------------------------------------------------------------------+
+
+Assume you want to allow users to set a timer using Alan AI Chat on a web page. The AI assistant should behave in the following way:
+
+1. When the timer is set, the AI assistant sends a confirmation message.
+2. When the timer expires, an alert is displayed and the AI assistant sends a message: ``Time is up``.
+
+.. code-block:: alan
+   :caption: Dialog script
+
+   intent('Set a 1-minute timer', p => {
+       p.play('Sure, 1 minute, starting now');
+       setTimeout(() => {
+           p.play({command: 'stopTimer'}, opts({force:true}));
+           p.play('Time is up');
+       }, 60000)
+   })
+   
+.. code-block:: html
+   :caption: Client app
+   
+   <script>
+     var alanBtnInstance = alanBtn({
+       key: "YOUR-ALAN-AI-KEY",
+       onCommand: function (commandData) {
+         if (commandData.command === "stopTimer") {
+           alert('Timer is up')
+         } 
+       },
+       rootEl: document.getElementById("alan-btn"),
+     });
+   </script>

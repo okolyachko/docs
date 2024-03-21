@@ -1,0 +1,77 @@
+onButtonState handler
+=====================
+
+Responsible for handling the Alan AI button state change events.
+
+When the user launches an app with the Alan AI button, Alan AI connects to the project in the Alan AI Cloud, and the Alan AI button transitions through
+several states:
+
+-  **CONNECTING**: Alan AI is connecting to your AI assistant project in the Alan AI Cloud
+-  **ONLINE**: a connection to the project is established
+-  **LISTEN**: Alan AI is listening to the user input
+-  **PROCESS**: Alan AI is processing the user input
+-  **REPLY**: Alan AI is replying to the user
+-  **OFFLINE**: no connection to the Internet; the connection to the Alan AI Studio project cannot be established
+-  **NO_PERMISSION**: permission for the microphone has not been received from the user
+-  **NO_VOICE_SUPPORT**: voice is not supported on the device
+-  **INSECURE_ORIGIN**: the website or app does not have a secure origin and Alan AI is not able to access the microphone on the device
+
+If you need to perform activities in the app while the Alan AI button is in a specific state, you can use the ``onButtonState`` handler to listen to the Alan AI button state changes.
+
+Examples
+--------
+
+.. tabbed:: Web (React, Angular, etc.)
+
+   .. include:: ../snippets/state-handler-web.rst
+
+.. tabbed:: Objective-C
+
+   .. include:: ../snippets/state-handler-obj.rst
+
+.. tabbed:: Swift
+
+   .. include:: ../snippets/state-handler-swift.rst
+
+.. tabbed:: Kotlin
+
+   .. include:: ../snippets/state-handler-kotlin.rst
+		
+.. tabbed:: Java
+
+   .. include:: ../snippets/state-handler-java.rst
+
+.. tabbed:: Flutter
+
+   .. include:: ../snippets/state-handler-flutter.rst
+		
+.. tabbed:: Ionic
+
+    **Ionic Angular**
+
+    .. include:: ../snippets/state-handler-ionic-angular.rst
+		
+		
+    
+    **Ionic React**
+	
+    .. include:: ../snippets/state-handler-ionic-react.rst
+
+		
+    **Ionic Vue**
+	
+    .. include:: ../snippets/state-handler-ionic-vue.rst		 
+	   
+.. tabbed:: React Native
+
+    .. include:: ../snippets/state-handler-rn.rst
+		
+**See also**
+
+How-to: :ref:`Activate the Alan AI button programmatically and play a greeting <how-to-activate-the-alan-button-programmatically-and-play-a-greeting>`
+		
+		
+		
+.. raw:: html
+
+   <div id="purple-background"></div>

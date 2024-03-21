@@ -1,0 +1,121 @@
+Sharing and keeping scripts in GitHub
+=====================================
+
+Alan AI Studio lets you integrate your projects with GitHub to store dialog scripts and share them with other people. This option can be helpful if you are working on an in-app assistant in a team and want to safely merge every developer's work into a single project. You may also use it if you want to keep dialog scripts in GitHub repositories, outside Alan AI Studio.
+
+GitHub integration settings are configured separately for every AI assistant project. You can store data in personal and organization repositories, both public and private ones. 
+
+To be able to work with GitHub repositories, you need to:
+
+1. `Sync with GitHub <#syncing-with-github>`__
+2. `Add a regular GitHub repository <#adding-a-github-repository>`__ or `GitHub repository with a CI/CD workflow <#adding-a-github-repository-with-a-ci-cd-workflow>`__
+
+.. note::
+
+   Together with dialog scripts, Alan AI saves test cases created in the Test View. For details, see :ref:`Saving test cases to GitHub`.
+   
+Syncing with GitHub
+-------------------
+
+To connect your project to a GitHub repository:
+
+1. In Alan AI Studio, open your AI assistant project.
+
+2. In the left pane of the code editor, click **Sync with GitHub**.
+
+3. If you are not signed in yet, sign in to GitHub. 
+
+4. At the **Authorize Alan AI** step, review and confirm GitHub access settings:
+
+   *  If you want to store dialog scripts in an organization repository owned by you, next to the organization name, click **Grant**. 
+   * If you want to store dialog scripts in an organization repository owned by another person, next to the organization name, click **Request**. The organization owner will have to review and grant access to organization resources to Alan AI. For details, see `GitHub documentation <https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-user-account/managing-your-membership-in-organizations/requesting-organization-approval-for-oauth-apps>`__.
+
+   Then click **Authorize alan-ai** to allow Alan AI to access your personal and organization data. 
+
+.. image:: /_static/assets/img/studio/github-auth.png
+   
+   
+Adding a GitHub repository
+--------------------------
+
+To link your AI assistant project to a GitHub repository:
+
+1. In the left pane of the code editor, click **Add GitHub repo**. 
+
+2. On the **GitHub repository URL** tab, select the target:
+
+   a. From the **Select organization** list, select the type of repository in which you want to store dialog scripts: personal or organization. 
+   
+   b. From the **Select repository** list, select the repository. If you have access to multiple repositories, use search to find the necessary one.
+   
+   c. From the **Select branch** list, select the branch. 
+
+   d. To define a specific folder in the repository, in the files and folders list below, select the folder.
+   
+   e. At the bottom of the window, click **Add files**.
+
+.. image:: /_static/assets/img/studio/git-integration.png
+
+Once you connect to a GitHub repository, Alan AI automatically pulls its content (dialog script and test case files) and displays it in your project. You can do the following:
+
+- To pull the latest version of files from the repository, in the left pane of the code editor, click **Pull**. If the file version in Alan Studio conflicts with the repository one, use the **Merge Changes** window to resolve the conflict. You can merge the changes using your file version or the remote one.
+
+- To push an updated file version to the repository, in the left pane of the code editor, click **Push** and enter a comment on the pushed changes. If there are changes in the remote repository made by other team members, you will need to pull the remote file version before committing the local changes.
+
+- To disconnect from the repository, in the left pane, click the close icon next to the repository name.
+
+.. _ci workflow:
+
+Adding a GitHub repository with a CI/CD workflow
+------------------------------------------------
+
+If you are planning to work on an AI assistant in a team, you require finer-grained control over the development process. In a situation when several developers work on a single project simultaneously, it is good to know which team members made specific updates and make them available to others. 
+
+To follow this scenario, you can implement the CI/CD strategy for your AI assistant project. You can store dialog scripts in a specific GitHub branch to which the development team merge changes. Then, connect your project to this branch in Alan AI Studio. Alan AI Studio will pull the scripts and add them to your AI assistant project in the read-only mode. 
+
+From now on, as soon as any developer updates the scripts in the branch, Alan AI Studio will be immediately notified on these updates and load the most recent version of the dialog scripts in the code editor. You will then be able to test your AI assistant using the Debugging Chat, Test View and so on. 
+
+To link your AI assistant project to a GitHub repository with a CI/CD workflow:
+
+1. In the left pane of the code editor, click **Add GitHub repo**. 
+
+2. On the **GitHub CI/CD** tab, select the target:
+
+   a. From the **Select organization** list, select the type of repository in which you want to store dialog scripts: personal or organization. 
+   
+   b. From the **Select repository** list, select the repository. If you have access to multiple repositories, use search to find the necessary one.
+   
+   c. From the **Select branch** list, select the branch. 
+
+   d. To define a specific folder in the repository, in the files and folders list below, select the folder.
+   
+   e. At the bottom of the window, click **Add files**. Alan AI will automatically pull the target content and displays it in your project in the read-only mode. 
+   
+.. image:: /_static/assets/img/studio/git-integration-cicd.png
+
+
+To disconnect from the GitHub repository, in the left pane, click the close icon next to the repository name and choose to which scripts state you want to revert:
+
+- To keep the version of the scripts that is currently available in the linked GitHub repository, in the displayed window, enter the new version name and click **Save CI/CD state as a version**.
+- To revert to the version that was available before you linked your AI assistant project to the GitHub repository, click **Reset to Last**.
+
+
+
+.. _Re-authorizing Alan AI:
+
+Re-authorizing Alan AI
+----------------------
+
+If you already linked your Alan AI Studio account with GitHub and then were added to an organization, to be able to see the organization repositories in the repositories list, you need to re-authorize Alan AI.
+   
+1. In Alan AI Studio, click the main menu button and select **Profile**.
+
+2. In the **Linked Accounts** section, next to your GitHub account, click **Revoke GitHub access**. After revoking, sync with GitHub repositories and GitHub starring benefits will be disabled. 
+
+3. Then synch with GitHub again as described above.
+
+.. image:: /_static/assets/img/studio/github-org.png
+
+.. raw:: html
+
+   <div id="blue-background"></div>

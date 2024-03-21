@@ -1,0 +1,42 @@
+Debug chat on iOS and Android devices
+=====================================
+
+With the debug chat provided as part of the Alan AI SDKs, you can test and debug your assistants directly in the apps launched on iOS and Android devices. The debug chat is a chat panel that allows you to monitor how your assistant operates and track comprehensive information in the real time.
+
+To be able to use the debug chat, `enable it in Alan AI Studio <#enabling-the-debug-chat>`__. After that, you will be able to `launch and use it on the device <#using-the-debug-chat>`__. 
+
+Enabling the debug chat
+-----------------------
+
+To enable the debug chat:
+
+1. In Alan AI Studio, go to **Integrations**.
+2. Click **iOS** or **Android** to open mobile platform options.
+3. In the **Enable debug chat** field, set the toggle to the *On* position.
+
+.. image:: /_static/assets/img/studio/device-debug-chat.png
+
+Using the debug chat
+--------------------
+
+To use the debug chat on your iOS or Android device:
+
+1. Swipe the Alan AI button to the left. 
+2. At the top of the chat panel, tap the icons for the data type you want to be sent to the chat panel:
+
+   - **Auth data**: the key for your assistant project in Alan AI Studio and information sent with the :doc:`authData <../../server-api/sending-data/authdata>` object
+   - **Visual state**: information about the visual context sent with the :doc:`visual state <../../server-api/sending-data/visual-state>` object
+   - **Commands**: information about commands sent from the dialog script to the client app when intents are matched
+   - **Input phrases**: user's utterances
+   - **Output phrases**: assistant response phrases
+
+To clear all debug data, in the top right corner of the chat panel, click the **Clear logs** icon.
+
+To connect to a specific virtual assistant project in Alan AI Studio, in the top left corner of the chat panel, click the QR code icon and scan the QR code in the Debug chat or in the **Playground** view. For details, see :doc:`In-app testing <in-app-testing>`.
+
+
+
+
+.. raw:: html
+
+   <div id="blue-background"></div>

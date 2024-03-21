@@ -1,0 +1,10 @@
+.. code-block:: dart
+   :caption: Client app
+
+   _MyHomePageState() {
+     void _callProjectApi() {
+       /// Providing any params with json
+       var params = jsonEncode({"data":"your data"});
+       AlanVoice.callProjectApi("script::setClientData", params);
+     }
+   }

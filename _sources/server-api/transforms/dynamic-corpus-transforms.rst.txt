@@ -1,0 +1,9 @@
+Dynamic corpus transforms
+=========================
+
+If you plan to retrieve data from dynamic data sources and use it to answer user queries, you need to define a dynamic corpus in the dialog script and create two types of transforms in your AI assistant project:
+
+- **Query transforms** are used to process user queries and generate code to retrieve the necessary data from the dynamic data source.
+- [Optional] **Output transforms** are used to modify and format the corpus output.
+
+For more details, see :doc:`Dynamic corpus <../qna-tools/dynamic>`.

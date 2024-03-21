@@ -1,0 +1,55 @@
+Corpus targeting and prioritizing
+=================================
+
+Most AI assistant projects will include multiple data corpuses. Alan AI gives you control over which corpus to query when a user asks a specific sort of question.  You can:
+
+- :doc:`Set a corpus priority <../qna-tools/static>`
+- `Use the query transform to define how to handle specific queries <#example-of-use>`__
+
+Example of use
+--------------
+
+Assume you have two corpuses in the AI assistant project:
+
+- Dynamic corpus for retrieving information about VMs in the infrastructure 
+- Static corpus containing generic information about VM resources and families from documentation
+
+When the user asks a generic question, such as ``What types of VMs are available?``, you want Alan AI to query the static corpus and return information about available machine resources and families as indicated in the documentation.  To do this:
+
+1. Set up the dynamic corpus as specified in the :doc:`example of use <../qna-tools/dynamic>`.
+2. Add a static corpus to the dialog script:
+
+   .. code-block:: alan
+      :caption: Dialog script
+   
+      corpus({
+          title: `Dynamic corpus for infrastructure requests`,
+          input: project.objects,
+          query: transforms.vms_queries,
+          output: project.cleanObjects,
+          transforms: transforms.vms_answer,
+          priority: 1
+      });
+
+      corpus({
+          title: `Static corpus for docs requests`,
+          urls: [                      
+              `https://cloud.google.com/compute/docs/machine-resource`
+          ], 
+          maxPages: 10,
+          priority: 2
+      }); 
+
+3. In the Debugging Chat, ask the following question: ``What types of VMs are available?``
+
+   .. image:: /_static/assets/img/script-concepts/corpus-priority-initial.png
+   
+4. Under **Transforms**, select ``vm_queries`` and add a new example instructing Alan AI to return null when a generic question is asked:
+
+   .. image:: /_static/assets/img/script-concepts/corpus-priority-example.png
+   
+Now, if you ask the same question, Alan AI will return an answer from the static corpus, not the dynamic one:
+
+.. image:: /_static/assets/img/script-concepts/corpus-priority-result.png
+
+
